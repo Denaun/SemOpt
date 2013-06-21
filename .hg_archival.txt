@@ -1,0 +1,4 @@
+repo: 02a2f569908f882c599ab1ab9bc5f83862a9ba67
+node: a03eb00de6b52a8ae97f4a3a18778e86faaee127
+branch: brescia_studenti
+tag: 0.2alpha2-SCC

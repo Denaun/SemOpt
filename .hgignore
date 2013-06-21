@@ -1,0 +1,28 @@
+\.orig$
+\.orig\..*$
+\.chg\..*$
+\.rej$
+\.conflict\~$
+
+syntax: regexp
+^Release$
+syntax: regexp
+^docs$
+syntax: regexp
+^src/hgversion\.h$
+syntax: regexp
+^UnitTest$
+syntax: regexp
+^UnitTestDebug$
+syntax: regexp
+^Debug$
+syntax: regexp
+^Debug$
+syntax: regexp
+^Debug$
+syntax: regexp
+^Debug$
+syntax: regexp
+^Debug$
+syntax: regexp
+^Debug$
