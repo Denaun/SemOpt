@@ -1,7 +1,6 @@
 var classSetArguments =
 [
     [ "SetArguments", "classSetArguments.html#acbba23977f0c9fc09a827b0b1c9df7a3", null ],
-    [ "~SetArguments", "classSetArguments.html#aff18fbe9d86a04099461245c780e52a5", null ],
     [ "add_Argument", "classSetArguments.html#a989d8986ecf49baa0dc982766c0a5df4", null ],
     [ "begin", "classSetArguments.html#aaee058feaed861edf27739fa04f374ef", null ],
     [ "cardinality", "classSetArguments.html#a66d5b1cc6b684700c2394a8cf62ef7f0", null ],

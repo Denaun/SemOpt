@@ -1,7 +1,6 @@
 var classArgument =
 [
     [ "Argument", "classArgument.html#aa312e97860b77b102739b7c836f7c253", null ],
-    [ "~Argument", "classArgument.html#a43febc2f1e885cb422849b9bf9012acf", null ],
     [ "add_attackers", "classArgument.html#ad295236fa6d55121e37e90ec05289c8c", null ],
     [ "add_attacks", "classArgument.html#a8a5cddf583929099b8228ed9300e2759", null ],
     [ "get_af", "classArgument.html#ad2e1361e07c13c5ec5784d33e58ef76e", null ],

@@ -1,12 +1,19 @@
-/*
- * Preferred.cpp
- *
- *  Created on: 10 Jun 2013
- *      Author: geryo
+/**
+ * @file	Preferred.cpp
+ * @class	Preferred
+ * @brief	Class used to generate the preferred extensions
+ * @author	geryo
+ * @author	Mattia Rizzini
+ * @author	Maurizio Zucchelli
+ * @date	2013-06-10
+ * @date	2013-06-25
  */
 
 #include "Preferred.h"
 
+/**
+ * @brief Method to clean the labels
+ */
 void Preferred::cleanlabs()
 {
 	while (!this->labellings.empty())
@@ -277,6 +284,12 @@ bool Preferred::satlab(SATFormulae sat, Labelling *lab)
 	return false;
 }
 
+/**
+ * @brief Method to generate the Preferred Extensions
+ *
+ * @param[in] the_af	The AF on which calculate the extensions
+ * @param[in] the_c		The subset of arguments TODO
+ */
 void Preferred::prefSAT(AF *the_af, SetArguments *the_c)
 {
 	this->cleanlabs();
@@ -358,6 +371,9 @@ void Preferred::prefSAT(AF *the_af, SetArguments *the_c)
 	}
 }
 
+/**
+ * @brief Simple constructor
+ */
 Preferred::Preferred()
 {
 	this->encoding = 0;
@@ -365,16 +381,31 @@ Preferred::Preferred()
 	this->sat_new_pigreek = SATFormulae();
 }
 
+/**
+ * @brief Simple destructor
+ */
 Preferred::~Preferred()
 {
 
 }
 
+/**
+ * @brief Begin of the iterator for the preferred extension
+ *
+ * @return	An iterator pointing at the first element of
+ * 			the preferred extension
+ */
 Preferred::iterator Preferred::begin()
 {
 	return this->labellings.begin();
 }
 
+/**
+ * @brief End of the iterator for the preferred extension
+ *
+ * @return	An iterator pointing at the last element of
+ * 			the preferred extension
+ */
 Preferred::iterator Preferred::end()
 {
 	return this->labellings.end();

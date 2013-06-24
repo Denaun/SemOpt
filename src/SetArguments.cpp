@@ -121,7 +121,9 @@ bool SetArguments::is_subset(SetArguments *other)
 }
 
 /**
- * @brief Setmisun
+ * @brief Set Minus
+ * @details	Outputs a set containing the difference between this Set
+ * 			and the other one specified.
  * @param[in] other The other term of the subtraction
  * @param[out] res	The result of the subtraction
  * @retval void
