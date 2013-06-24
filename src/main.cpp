@@ -25,16 +25,44 @@ time_t start;
 
 int main(int argc, char *argv[])
 {
-	//debug = true; // more verbose
 	inputfile = string("test-input/scc-test.dl");
+
+	// Arguments parsing
+	int i = 0;
+	while ( ++i < argc )
+	{
+		if ( !strcmp( argv[ i ], "-d" ) )
+		{
+			// More verbose
+			debug = true;
+			
+			cerr << "Debug on.\n";
+		}
+		else
+		{
+			// Custom input file
+			inputfile = argv[ i ];
+
+			if ( debug )
+				cerr << "Input file: " << inputfile << endl;
+		}
+	}
+
 	AF framework = AF();
 	if (!framework.readFile(inputfile))
 	{
-		return -1;
+		// No file to be read: exit.
+		if ( debug )
+			cerr << "File not found.\n";
+
+		exit( EXIT_FAILURE );
 	}
 
+
+	// Use examples for scc-test.dl
 	Preferred p = Preferred();
 
+	// First: a1, a6
 	SetArguments C_set1 = SetArguments();
 	C_set1.add_Argument(framework.getArgumentByName("a1"));
 	C_set1.add_Argument(framework.getArgumentByName("a6"));
@@ -53,6 +81,7 @@ int main(int argc, char *argv[])
 		cout << *((*it).inargs()) << endl;
 	}
 
+	// Second: a2, a3, a4
 	SetArguments C_set2 = SetArguments();
 	C_set2.add_Argument(framework.getArgumentByName("a2"));
 	C_set2.add_Argument(framework.getArgumentByName("a3"));
