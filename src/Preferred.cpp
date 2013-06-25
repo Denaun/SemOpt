@@ -288,7 +288,7 @@ bool Preferred::satlab(SATFormulae sat, Labelling *lab)
  * @brief Method to generate the Preferred Extensions
  *
  * @param[in] the_af	The AF on which calculate the extensions
- * @param[in] the_c		The subset of arguments TODO
+ * @param[in] the_c		The subset of arguments to consider
  */
 void Preferred::prefSAT(AF *the_af, SetArguments *the_c)
 {
