@@ -5,5 +5,6 @@ var classPreferred =
     [ "begin", "classPreferred.html#a93ec882a74edb90e5852b2445312180a", null ],
     [ "boundcond", "classPreferred.html#a0a4fa3ee2de89bec2734da3ce392c750", null ],
     [ "end", "classPreferred.html#a8966d2602ab8c81706b9b26cffe57b92", null ],
+    [ "Grounded", "classPreferred.html#a62c734bd91fbc081011a94ef71161102", null ],
     [ "prefSAT", "classPreferred.html#a934eaa21aa97fc2e50a74a2f77a9ba33", null ]
 ];
