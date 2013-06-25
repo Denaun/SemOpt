@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-O3 -Wall -Wextra -DNDEBUG -DNLOGPRECO -DNSTATSPRECO $(PROF)
+CXXFLAGS=-O3 -static -Wall -Wextra -DNDEBUG -DNLOGPRECO -DNSTATSPRECO $(PROF)
 all: targets
 targets: precosat
 clean: clean-other clean-config

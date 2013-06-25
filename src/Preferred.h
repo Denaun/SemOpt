@@ -37,6 +37,15 @@ public:
 	Preferred();
 	virtual ~Preferred();
 	void prefSAT(AF *, SetArguments *);
+	// Metodi aggiunti
+	// Risoluzione, il secondo parametro conterrà i nodi della soluzione
+	void pref( AF*, SetArguments* );
+	// Restituisce due set contenente l'uno i nodi dell'insieme passato come secondo parametro che sono attaccati dai nodi del terzo parametro e l'altro tutti gli altri
+	void boundcond( AF*, SetArguments*, SetArguments* );
+	// Dato l'arg framework restituisce tutti i set SCC presenti ordinati per strati (il primo nella sequenza restituita non sarà attaccato da nessuno, i successivi possono essere attaccati solo dai precedenti)
+	void SCCSEQ( AF* );
+	// Cerca nell'AF i nodi che non sono attaccati da nessuno e li restituisce (altro valore restituito è il set di nodi non attaccati dai nodi liberi contenuti nel primo set)
+	void Grounded( AF*, SetArguments* );
 	iterator begin();
 	iterator end();
 };
