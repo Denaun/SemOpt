@@ -14,7 +14,7 @@
 #endif
 
 /**
- * @brief	Grounded Function
+ * @brief	Function to calculate the grounded extensions.
  * @details	Calculates the set containing every argument which, if used, ensures to win
  * 			the argument and the set of nodes which can be used on both sides
  *
@@ -25,6 +25,9 @@
  */
 void Preferred::Grounded( AF* theAF, SetArguments* theC, SetArguments* e, SetArguments* I )
 {
+	if ( debug )
+		cerr << "Entering Grounded\n";
+
 #ifndef NDEBUG
 	assert( e->empty() );
 	assert( I->empty() );
@@ -39,6 +42,9 @@ void Preferred::Grounded( AF* theAF, SetArguments* theC, SetArguments* e, SetArg
 
 	while ( true )
 	{
+		if ( debug )
+			cerr << "\tNew cycle\n";
+
 		SetArguments N = SetArguments();
 
 		// Search for a set of all non-attacked arguments
@@ -56,12 +62,22 @@ void Preferred::Grounded( AF* theAF, SetArguments* theC, SetArguments* e, SetArg
 			}
 
 			if ( !attacked )
+			{
 				N.add_Argument( (*it) );
+
+				if ( debug )
+					cerr << "\t\tAdded " << (*it) << endl;
+			}
 		}
 
 		// If no nodes have been found, we have finished.
 		if ( N.empty() )
+		{
+			if ( debug )
+				cerr << "\t\tNo grounded extension found. Returning\n";
+
 			return;
+		}
 
 		// Extend the extension and filter the indolents and the considered set
 		N.clone( e );
