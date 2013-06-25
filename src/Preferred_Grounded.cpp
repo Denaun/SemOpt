@@ -18,12 +18,10 @@
  * @details	Calculates the set containing every argument which, if used, ensures to win
  * 			the argument and the set of nodes which can be used on both sides
  *
- * @param[in]	theAF	The Argumentation Framework to be considered
- * @param[in]	theC	The set of arguments to consider
  * @param[out]	e		The extension
  * @param[out]	I		The set of the indolent arguments
  */
-void Preferred::Grounded( AF* theAF, SetArguments* theC, SetArguments* e, SetArguments* I )
+void Preferred::Grounded( SetArguments* e, SetArguments* I )
 {
 	if ( debug )
 		cerr << "Entering Grounded\n";
@@ -34,11 +32,11 @@ void Preferred::Grounded( AF* theAF, SetArguments* theC, SetArguments* e, SetArg
 #endif
 
 	// I <- A
-	theAF->get_arguments()->clone( I );
+	this->af->get_arguments()->clone( I );
 
 	// Copy of C to work on
 	SetArguments C = SetArguments();
-	theC->clone( &C );
+	this->C->clone( &C );
 
 	while ( true )
 	{
