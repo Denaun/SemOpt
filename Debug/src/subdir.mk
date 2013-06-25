@@ -9,6 +9,10 @@ CPP_SRCS += \
 ../src/Labelling.cpp \
 ../src/OrClause.cpp \
 ../src/Preferred.cpp \
+../src/Preferred_pref.cpp \
+../src/Preferred_boundcond.cpp \
+../src/Preferred_Grounded.cpp \
+../src/Preferred_sccsseq.cpp \
 ../src/SATFormulae.cpp \
 ../src/SetArguments.cpp \
 ../src/main.cpp \
@@ -20,6 +24,10 @@ OBJS += \
 ./src/Labelling.o \
 ./src/OrClause.o \
 ./src/Preferred.o \
+./src/Preferred_pref.o \
+./src/Preferred_boundcond.o \
+./src/Preferred_Grounded.o \
+./src/Preferred_sccsseq.o \
 ./src/SATFormulae.o \
 ./src/SetArguments.o \
 ./src/main.o \
@@ -31,6 +39,10 @@ CPP_DEPS += \
 ./src/Labelling.d \
 ./src/OrClause.d \
 ./src/Preferred.d \
+./src/Preferred_pref.d \
+./src/Preferred_boundcond.d \
+./src/Preferred_Grounded.d \
+./src/Preferred_sccsseq.d \
 ./src/SATFormulae.d \
 ./src/SetArguments.d \
 ./src/main.d \

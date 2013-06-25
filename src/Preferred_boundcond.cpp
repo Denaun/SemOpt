@@ -45,7 +45,7 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 	aSCC->setminus( I, O );
 
 	if ( debug )
-		cerr << "\tDetermined O: " << O << endl;
+		cerr << "\tDetermined O: " << *O << endl;
 
 	/* From the description:
 	 * I è il sottoinsieme dei nodi di S[ i ] \ O che
@@ -57,18 +57,22 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 	// I is already S[ i ] \ O
 	
 	if ( debug )
-		cerr << "\tDetermining I from: " << I << endl;
+		cerr << "\tDetermining I from: " << *I << endl;
 	
 	// Nodes of G not in S[ i ]
 	SetArguments external = SetArguments();
 	this->af->get_arguments()->setminus( aSCC, &external );
 
-	// Nodes of I attacked by externals
-	// => they can be kept iff they satisfy the second condition
+	// Keep the nodes of I not attacked by externals and filter the remaining
 	SetArguments toBeRemoved = SetArguments();
 	I->clone( &toBeRemoved );
 	for ( SetArgumentsIterator it = external.begin(); it != external.end(); ++it )
-		toBeRemoved.setminus( (*it)->get_attacks(), &toBeRemoved );
+		I->setminus( (*it)->get_attacks(), I );
+	
+	// Nodes of I attacked by externals
+	// => they can be kept iff they satisfy the second condition
+	toBeRemoved.setminus( I, &toBeRemoved );
+	SetArguments toBeKept = SetArguments();
 
 	if ( debug )
 		cerr << "\t\tNodes not satisfying the first condition: " << toBeRemoved << endl;
@@ -77,8 +81,7 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 	// 	- node in G \ ( S[ i ] U e )
 	// 	- node attacked by e
 	external.setminus( e, &external );
-	// The increment is done inside the for to avoid removal problems
-	for ( SetArgumentsIterator it = toBeRemoved.begin(); it != toBeRemoved.end(); )
+	for ( SetArgumentsIterator it = toBeRemoved.begin(); it != toBeRemoved.end(); ++it )
 	{
 		if ( external.exists( *it ) )
 		{
@@ -92,23 +95,24 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 			
 			if ( attacked )
 			{
-				Argument* previous = *it;
-				++it;
-
 				if ( debug )
-					cerr << "\t\tRemoving " << previous << endl;
+					cerr << "\t\tKeeping " << (*it)->getName() << endl;
 
-				toBeRemoved.remove( previous );
+				// Put the node in the set containing the nodes to be kept
+				toBeKept.add_Argument( *it );
 			}
-			else
-				++it;
+			else if ( debug )
+				cerr << "\t\t" << (*it)->getName() << " is not attacked.\n";
+
 		}
+		else if ( debug )
+			cerr << "\t\t" << (*it)->getName() << " is not external.\n";
 	}
 
-	// Remove the nodes from I
-	I->setminus( &toBeRemoved, I );
+	// Readd the nodes to I
+	toBeKept.clone( I );
 
 	if ( debug )
-		cerr << "\tDetermined I: " << I << endl;
+		cerr << "\tDetermined I: " << *I << endl;
 }
 

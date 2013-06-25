@@ -50,11 +50,11 @@ void Preferred::Grounded( SetArguments* e, SetArguments* I )
 		{
 			// For every element of C, check if it is attacked
 			// if not, add it to N and, later, remove it from C and I
-			bool attacked;
+			bool attacked = false;
 			SetArguments* attackers = (*it)->get_attackers();
 			for ( SetArgumentsIterator jt = attackers->begin(); jt != attackers->end(); ++jt )
 			{
-				attacked = I->exists( (*jt) );
+				attacked = I->exists( *jt );
 				if ( attacked )
 					break;
 			}
@@ -64,7 +64,7 @@ void Preferred::Grounded( SetArguments* e, SetArguments* I )
 				N.add_Argument( (*it) );
 
 				if ( debug )
-					cerr << "\t\tAdded " << (*it) << endl;
+					cerr << "\t\tAdded " << (*it)->getName() << endl;
 			}
 		}
 
@@ -72,7 +72,10 @@ void Preferred::Grounded( SetArguments* e, SetArguments* I )
 		if ( N.empty() )
 		{
 			if ( debug )
-				cerr << "\t\tNo grounded extension found. Returning\n";
+			{
+				cerr << "\t\tNo grounded extension found.\n";
+				cerr << "\t\tFinal I: " << *(I) << endl;
+			}
 
 			return;
 		}
@@ -83,8 +86,8 @@ void Preferred::Grounded( SetArguments* e, SetArguments* I )
 		I->setminus( &N, I );
 		for ( SetArgumentsIterator it = N.begin(); it != N.end(); ++it )
 		{
-			C.setminus( (*it)->get_attackers(), &C );
-			I->setminus( (*it)->get_attackers(), I );
+			C.setminus( (*it)->get_attacks(), &C );
+			I->setminus( (*it)->get_attacks(), I );
 		}
 	}
 

@@ -181,6 +181,7 @@ void SetArguments::intersect(SetArguments *other, SetArguments *res)
 {
 	for (SetArgumentsIterator it = this->begin(); it != this->end(); it++)
 	{
+		// TODO Could be much easier to just call exists.....
 		for (SetArgumentsIterator inner = other->begin(); inner != other->end();
 				inner++)
 		{

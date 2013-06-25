@@ -62,12 +62,13 @@ int main(int argc, char *argv[])
 	// Use examples for scc-test.dl
 	Preferred p = Preferred();
 
-	// First: a1, a6
-	SetArguments C_set1 = SetArguments();
-	C_set1.add_Argument(framework.getArgumentByName("a1"));
-	C_set1.add_Argument(framework.getArgumentByName("a6"));
-
-	p.prefSAT(&framework, &C_set1);
+//	// First: a1, a6
+//	SetArguments C_set1 = SetArguments();
+//	C_set1.add_Argument(framework.getArgumentByName("a1"));
+//	C_set1.add_Argument(framework.getArgumentByName("a6"));
+//
+//	p.prefSAT(&framework, &C_set1);
+	p.pref( &framework, framework.get_arguments() );
 
 	for (Preferred::iterator it = p.begin(); it != p.end(); it++)
 	{
@@ -81,19 +82,22 @@ int main(int argc, char *argv[])
 		cout << *((*it).inargs()) << endl;
 	}
 
-	// Second: a2, a3, a4
-	SetArguments C_set2 = SetArguments();
-	C_set2.add_Argument(framework.getArgumentByName("a2"));
-	C_set2.add_Argument(framework.getArgumentByName("a3"));
-	C_set2.add_Argument(framework.getArgumentByName("a4"));
+	cout << *(framework.get_arguments()) << endl;
 
-	p.prefSAT(&framework, &C_set2);
-
-	for (Preferred::iterator it = p.begin(); it != p.end(); it++)
-	{
-		cout << "Second extension " << endl;
-		cout << *((*it).inargs()) << endl;
-	}
+//	// Second: a2, a3, a4
+//	SetArguments C_set2 = SetArguments();
+//	C_set2.add_Argument(framework.getArgumentByName("a2"));
+//	C_set2.add_Argument(framework.getArgumentByName("a3"));
+//	C_set2.add_Argument(framework.getArgumentByName("a4"));
+//
+//	p.pref( &framework, &C_set2);
+//
+//
+//	for (Preferred::iterator it = p.begin(); it != p.end(); it++)
+//	{
+//		cout << "Second extension " << endl;
+//		cout << *((*it).inargs()) << endl;
+//	}
 
 	return 0;
 }
