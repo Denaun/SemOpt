@@ -88,6 +88,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a934eaa21aa97fc2e50a74a2f77a9ba33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreferred.html#a934eaa21aa97fc2e50a74a2f77a9ba33">prefSAT</a> (<a class="el" href="classAF.html">AF</a> *, <a class="el" href="classSetArguments.html">SetArguments</a> *)</td></tr>
 <tr class="memdesc:a934eaa21aa97fc2e50a74a2f77a9ba33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to generate the <a class="el" href="classPreferred.html" title="Class used to generate the preferred extensions. ">Preferred</a> Extensions.  <a href="#a934eaa21aa97fc2e50a74a2f77a9ba33">More...</a><br/></td></tr>
 <tr class="separator:a934eaa21aa97fc2e50a74a2f77a9ba33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a4fa3ee2de89bec2734da3ce392c750"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreferred.html#a0a4fa3ee2de89bec2734da3ce392c750">boundcond</a> (<a class="el" href="classAF.html">AF</a> *, <a class="el" href="classSetArguments.html">SetArguments</a> *, <a class="el" href="classSetArguments.html">SetArguments</a> *, <a class="el" href="classSetArguments.html">SetArguments</a> *, <a class="el" href="classSetArguments.html">SetArguments</a> *)</td></tr>
+<tr class="memdesc:a0a4fa3ee2de89bec2734da3ce392c750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function boundcond.  <a href="#a0a4fa3ee2de89bec2734da3ce392c750">More...</a><br/></td></tr>
+<tr class="separator:a0a4fa3ee2de89bec2734da3ce392c750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93ec882a74edb90e5852b2445312180a"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPreferred.html#a93ec882a74edb90e5852b2445312180a">begin</a> ()</td></tr>
 <tr class="memdesc:a93ec882a74edb90e5852b2445312180a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of the iterator for the preferred extension.  <a href="#a93ec882a74edb90e5852b2445312180a">More...</a><br/></td></tr>
 <tr class="separator:a93ec882a74edb90e5852b2445312180a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +100,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class used to generate the preferred extensions. </p>
+<p>Implementation of the function <code>boundcond</code></p>
 <dl class="section author"><dt>Author</dt><dd>geryo </dd>
 <dd>
 Mattia Rizzini </dd>
@@ -104,7 +108,10 @@ Mattia Rizzini </dd>
 Maurizio Zucchelli </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2013-06-10 </dd>
 <dd>
-2013-06-25 </dd></dl>
+2013-06-25</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Maurizio Zucchelli </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2013-06-25 </dd></dl>
 
 <p>Definition at line <a class="el" href="Preferred_8h_source.html#l00025">25</a> of file <a class="el" href="Preferred_8h_source.html">Preferred.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -125,6 +132,66 @@ Maurizio Zucchelli </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>An iterator pointing at the first element of the preferred extension </dd></dl>
 
 <p>Definition at line <a class="el" href="Preferred_8cpp_source.html#l00398">398</a> of file <a class="el" href="Preferred_8cpp_source.html">Preferred.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0a4fa3ee2de89bec2734da3ce392c750"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Preferred::boundcond </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classAF.html">AF</a> *&#160;</td>
+          <td class="paramname"><em>theAF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSetArguments.html">SetArguments</a> *&#160;</td>
+          <td class="paramname"><em>aSCC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSetArguments.html">SetArguments</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSetArguments.html">SetArguments</a> *&#160;</td>
+          <td class="paramname"><em>O</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSetArguments.html">SetArguments</a> *&#160;</td>
+          <td class="paramname"><em>I</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function boundcond. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">theAF</td><td>The <a class="el" href="classArgument.html" title="Class representing an Argument. ">Argument</a> Framework to be considered </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aSCC</td><td>The Strongly Connected Component to consider </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>The actual extension </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">O</td><td>First output set </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">I</td><td>Second output set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="Preferred__boundcond_8cpp_source.html#l00025">25</a> of file <a class="el" href="Preferred__boundcond_8cpp_source.html">Preferred_boundcond.cpp</a>.</p>
+
+<p>References <a class="el" href="SetArguments_8cpp_source.html#l00072">SetArguments::begin()</a>, <a class="el" href="SetArguments_8cpp_source.html#l00166">SetArguments::clone()</a>, <a class="el" href="SetArguments_8cpp_source.html#l00063">SetArguments::empty()</a>, <a class="el" href="SetArguments_8cpp_source.html#l00081">SetArguments::end()</a>, <a class="el" href="SetArguments_8cpp_source.html#l00146">SetArguments::exists()</a>, <a class="el" href="AF_8cpp_source.html#l00137">AF::get_arguments()</a>, <a class="el" href="SetArguments_8cpp_source.html#l00156">SetArguments::remove()</a>, and <a class="el" href="SetArguments_8cpp_source.html#l00131">SetArguments::setminus()</a>.</p>
 
 </div>
 </div>
@@ -190,6 +257,7 @@ Maurizio Zucchelli </dd></dl>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="Preferred_8h_source.html">Preferred.h</a></li>
 <li>src/<a class="el" href="Preferred_8cpp_source.html">Preferred.cpp</a></li>
+<li>src/<a class="el" href="Preferred__boundcond_8cpp_source.html">Preferred_boundcond.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -197,7 +265,7 @@ Maurizio Zucchelli </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classPreferred.html">Preferred</a></li>
-    <li class="footer">Generated on Tue Jun 25 2013 01:30:38 for SemOpt by
+    <li class="footer">Generated on Tue Jun 25 2013 16:53:09 for SemOpt by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>
