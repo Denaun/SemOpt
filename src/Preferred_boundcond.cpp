@@ -16,13 +16,12 @@
 /**
  * @brief Function boundcond.
  *
- * @param[in]	theAF	The Argument Framework to be considered
  * @param[in]	aSCC	The Strongly Connected Component to consider
  * @param[in]	e		The actual extension
  * @param[out]	O		First output set
  * @param[out]	I		Second output set
  */
-void Preferred::boundcond( AF* theAF, SetArguments* aSCC, SetArguments* e,
+void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 						   SetArguments* O, SetArguments* I )
 {
 	if ( debug )
@@ -62,7 +61,7 @@ void Preferred::boundcond( AF* theAF, SetArguments* aSCC, SetArguments* e,
 	
 	// Nodes of G not in S[ i ]
 	SetArguments external = SetArguments();
-	theAF->get_arguments()->setminus( aSCC, &external );
+	this->af->get_arguments()->setminus( aSCC, &external );
 
 	// Nodes of I attacked by externals
 	// => they can be kept iff they satisfy the second condition
