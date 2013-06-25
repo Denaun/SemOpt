@@ -5,6 +5,7 @@ var annotated =
     [ "Labelling", "classLabelling.html", "classLabelling" ],
     [ "OrClause", "classOrClause.html", "classOrClause" ],
     [ "Preferred", "classPreferred.html", "classPreferred" ],
+    [ "Preferrred", "classPreferrred.html", null ],
     [ "SATFormulae", "classSATFormulae.html", "classSATFormulae" ],
     [ "SetArguments", "classSetArguments.html", "classSetArguments" ],
     [ "SetArgumentsIterator", "classSetArgumentsIterator.html", null ],
