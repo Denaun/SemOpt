@@ -25,7 +25,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SemOpt
-   &#160;<span id="projectnumber">0.2alpha2-SCC</span>
+   &#160;<span id="projectnumber">0.2alpha3-SCC</span>
    </div>
   </td>
  </tr>
@@ -37,6 +37,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -74,37 +75,81 @@ $(document).ready(function(){initNavTree('Preferred__Grounded_8cpp_source.html',
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="classPreferred.html#a62c734bd91fbc081011a94ef71161102">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPreferred.html#a62c734bd91fbc081011a94ef71161102" title="Grounded Function. ">Preferred::Grounded</a>( <a class="code" href="classAF.html" title="Class encompassing an Argumentation Framework. ">AF</a>* theAF, <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>* theC, <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>* e, <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>* I )</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef NDEBUG</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span>        assert( e-&gt;<a class="code" href="classSetArguments.html#a91e548daa6d0859946c8604b1ebb8c5a" title="Check wether or not this set is empty. ">empty</a>() );</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        assert( I-&gt;<a class="code" href="classSetArguments.html#a91e548daa6d0859946c8604b1ebb8c5a" title="Check wether or not this set is empty. ">empty</a>() );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// Pseudocode:</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// e &lt;- Ø</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// I &lt;- A</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        theAF-&gt;<a class="code" href="classAF.html#ac415a440c526e9a06a938544503fe741" title="Returns a pointer to the set of arguments. ">get_arguments</a>()-&gt;<a class="code" href="classSetArguments.html#a3a3052b05dff877886f84ab99280d6f7" title="Clone this set. ">clone</a>( I );</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">while</span> ( <span class="keyword">true</span> )</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a> N();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="comment">// Search for a set of all non-attacked arguments</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">for</span> ( <a class="code" href="classSetArgumentsIterator.html" title="Class defining a const iterator for the elements of a set of arguments. ">SetArgumentsIterator</a> it = I-&gt;<a class="code" href="classSetArguments.html#aaee058feaed861edf27739fa04f374ef" title="Begin of the iterator for this set of arguments. ">begin</a>(); it != I-&gt;<a class="code" href="classSetArguments.html#a551272d71c803f64efc155b04f41e775" title="End of the iterator for this set of arguments. ">end</a>(); ++it )</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="classPreferred.html#a8ce3afaaf24ff1c15e81ad2a75badc37">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classPreferred.html#a8ce3afaaf24ff1c15e81ad2a75badc37" title="Function to calculate the grounded extensions. ">Preferred::Grounded</a>( <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>* e, <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>* I )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> ( debug )</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                cerr &lt;&lt; <span class="stringliteral">&quot;Entering Grounded\n&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef NDEBUG</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span>        assert( e-&gt;<a class="code" href="classSetArguments.html#a91e548daa6d0859946c8604b1ebb8c5a" title="Check wether or not this set is empty. ">empty</a>() );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        assert( I-&gt;<a class="code" href="classSetArguments.html#a91e548daa6d0859946c8604b1ebb8c5a" title="Check wether or not this set is empty. ">empty</a>() );</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// I &lt;- A</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        this-&gt;af-&gt;<a class="code" href="classAF.html#ac415a440c526e9a06a938544503fe741" title="Returns a pointer to the set of arguments. ">get_arguments</a>()-&gt;<a class="code" href="classSetArguments.html#a3a3052b05dff877886f84ab99280d6f7" title="Clone this set. ">clone</a>( I );</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// Copy of C to work on</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a> C = <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this-&gt;C-&gt;<a class="code" href="classSetArguments.html#a3a3052b05dff877886f84ab99280d6f7" title="Clone this set. ">clone</a>( &amp;C );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">while</span> ( <span class="keyword">true</span> )</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">if</span> ( debug )</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        cerr &lt;&lt; <span class="stringliteral">&quot;\tNew cycle\n&quot;</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a> N = <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="comment">// Search for a set of all non-attacked arguments</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">for</span> ( <a class="code" href="classSetArgumentsIterator.html" title="Class defining a const iterator for the elements of a set of arguments. ">SetArgumentsIterator</a> it = C.<a class="code" href="classSetArguments.html#aaee058feaed861edf27739fa04f374ef" title="Begin of the iterator for this set of arguments. ">begin</a>(); it != C.<a class="code" href="classSetArguments.html#a551272d71c803f64efc155b04f41e775" title="End of the iterator for this set of arguments. ">end</a>(); ++it )</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        <span class="comment">// For every element of C, check if it is attacked</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        <span class="comment">// if not, add it to N and, later, remove it from C and I</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        <span class="keywordtype">bool</span> attacked;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <a class="code" href="classSetArguments.html" title="Class encompassing a set of arguments. ">SetArguments</a>* attackers = (*it)-&gt;get_attackers();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        <span class="keywordflow">for</span> ( <a class="code" href="classSetArgumentsIterator.html" title="Class defining a const iterator for the elements of a set of arguments. ">SetArgumentsIterator</a> jt = attackers-&gt;<a class="code" href="classSetArguments.html#aaee058feaed861edf27739fa04f374ef" title="Begin of the iterator for this set of arguments. ">begin</a>(); jt != attackers-&gt;<a class="code" href="classSetArguments.html#a551272d71c803f64efc155b04f41e775" title="End of the iterator for this set of arguments. ">end</a>(); ++jt )</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                attacked = I-&gt;<a class="code" href="classSetArguments.html#a0be6b8f77319a6aec9127eccd3ee43d9" title="Check whether or not an argument exists in this set. ">exists</a>( (*jt) );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                <span class="keywordflow">if</span> ( attacked )</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        <span class="keywordflow">if</span> ( !attacked )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                N.<a class="code" href="classSetArguments.html#a989d8986ecf49baa0dc982766c0a5df4" title="Add an argument to the set. ">add_Argument</a>( (*it) );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                <span class="keywordflow">if</span> ( debug )</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                        cerr &lt;&lt; <span class="stringliteral">&quot;\t\tAdded &quot;</span> &lt;&lt; (*it) &lt;&lt; endl;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="comment">// If no nodes have been found, we have finished.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">if</span> ( N.<a class="code" href="classSetArguments.html#a91e548daa6d0859946c8604b1ebb8c5a" title="Check wether or not this set is empty. ">empty</a>() )</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        <span class="keywordflow">if</span> ( debug )</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                cerr &lt;&lt; <span class="stringliteral">&quot;\t\tNo grounded extension found. Returning\n&quot;</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="comment">// Extend the extension and filter the indolents and the considered set</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                N.<a class="code" href="classSetArguments.html#a3a3052b05dff877886f84ab99280d6f7" title="Clone this set. ">clone</a>( e );</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                C.<a class="code" href="classSetArguments.html#a80e626de391cabfc0a20da509c328055" title="Set Minus. ">setminus</a>( &amp;N, &amp;C );</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                I-&gt;<a class="code" href="classSetArguments.html#a80e626de391cabfc0a20da509c328055" title="Set Minus. ">setminus</a>( &amp;N, I );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">for</span> ( <a class="code" href="classSetArgumentsIterator.html" title="Class defining a const iterator for the elements of a set of arguments. ">SetArgumentsIterator</a> it = N.<a class="code" href="classSetArguments.html#aaee058feaed861edf27739fa04f374ef" title="Begin of the iterator for this set of arguments. ">begin</a>(); it != N.<a class="code" href="classSetArguments.html#a551272d71c803f64efc155b04f41e775" title="End of the iterator for this set of arguments. ">end</a>(); ++it )</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        C.<a class="code" href="classSetArguments.html#a80e626de391cabfc0a20da509c328055" title="Set Minus. ">setminus</a>( (*it)-&gt;get_attackers(), &amp;C );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        I-&gt;<a class="code" href="classSetArguments.html#a80e626de391cabfc0a20da509c328055" title="Set Minus. ">setminus</a>( (*it)-&gt;get_attackers(), I );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="Preferred__Grounded_8cpp.html">Preferred_Grounded.cpp</a></li>
-    <li class="footer">Generated on Tue Jun 25 2013 13:25:53 for SemOpt by
+    <li class="footer">Generated on Tue Jun 25 2013 19:46:17 for SemOpt by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.4 </li>
   </ul>

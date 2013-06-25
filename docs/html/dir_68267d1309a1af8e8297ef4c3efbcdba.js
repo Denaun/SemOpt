@@ -1,5 +1,6 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
+    [ "precosat", "dir_69e90594a788f98104874fc223099bb1.html", "dir_69e90594a788f98104874fc223099bb1" ],
     [ "AF.cpp", "AF_8cpp.html", null ],
     [ "AF.h", "AF_8h_source.html", null ],
     [ "Argument.cpp", "Argument_8cpp.html", null ],
@@ -12,11 +13,10 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "OrClause.h", "OrClause_8h_source.html", null ],
     [ "Preferred.cpp", "Preferred_8cpp.html", null ],
     [ "Preferred.h", "Preferred_8h_source.html", null ],
-<<<<<<< HEAD
     [ "Preferred_boundcond.cpp", "Preferred__boundcond_8cpp.html", null ],
-=======
     [ "Preferred_Grounded.cpp", "Preferred__Grounded_8cpp.html", null ],
->>>>>>> grounded
+    [ "Preferred_pref.cpp", "Preferred__pref_8cpp.html", null ],
+    [ "Preferred_sccsseq.cpp", "Preferred__sccsseq_8cpp.html", null ],
     [ "SATFormulae.cpp", "SATFormulae_8cpp.html", null ],
     [ "SATFormulae.h", "SATFormulae_8h_source.html", null ],
     [ "semopt.h", "semopt_8h.html", "semopt_8h" ],
