@@ -124,10 +124,14 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 			}
 
 			// Create the new Labellings
-			for ( vector<Labelling>::iterator EStar = p.begin();
+			// by merging the current Labelling with every Labelling found
+			for ( Preferred::iterator EStar = p.begin();
 					EStar != p.end(); ++EStar )
-				(*aLabelling)->clone( *Estar );
+				(*aLabelling).clone( &(*EStar) );
 		}
+		
+		// The generated Labellings are the new Labellings
+		this->labellings = p.labellings;
 	}
 }
 
