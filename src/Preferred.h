@@ -23,6 +23,7 @@ using namespace std;
 int precosat_lib(stringstream *the_cnf, int num_var, int num_cl, vector<int> *result);
 
 extern bool debug;
+extern bool stages;
 
 class Preferred
 {

@@ -26,14 +26,17 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	this->af = theAF;
 	this->C = theC;
 
-	if ( debug ) {
-		cerr << "\tAF initialized. Showing structure\n" << endl
-			 << this->af->toString();
+	if ( stages ) {
+		cerr << "AF initialized. Showing structure" << endl
+			 << this->af->toString() << endl;
 	}
 
 	SetArguments e = SetArguments(),
 				 I = SetArguments();
 	Grounded( &e, &I );
+
+	if ( stages )
+		cerr << "e: " << e << endl << "I: " << I << endl; 
 
 	// Convert Grounded's output into a Labelling
 	Labelling first = Labelling();
@@ -41,7 +44,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		first.add_label( *it, Labelling::lab_in );
 	// TODO: Label I as undec and everything else as out?
 
-	if ( debug )
+	if ( stages )
 		cerr << "\tFirst Labelling: " << *(first.inargs()) << endl;
 
 	// Add the Labelling to the solutions
@@ -60,8 +63,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	this->af->restrictTo( &I, restricted );
 	this->af = restricted;
 
-	if ( debug )
-		cerr << "\tNew AF:\n" << this->af->toString() << endl;
+	if ( stages )
+		cerr << "\tNew AF ( restricted ):\n" << this->af->toString() << endl;
 
 	// Structure used in SCCSSEQ
 	this->initDFSAF();
@@ -72,7 +75,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	// Calculate the Strongly Connected Components
 	list<SetArguments*> S = SCCSSEQ();
 
-	if ( debug )
+	if ( stages )
 		for ( list<SetArguments*>::iterator it = S.begin(); it != S.end(); ++it )
 			cerr << "\tSCC: " << **it << endl;
 
@@ -87,6 +90,9 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 			I = SetArguments();	// I already exists..
 
 			boundcond( *aSCC, (*aLabelling).inargs(), &O, &I );
+
+			if ( stages )
+				cerr << "O: " << O << endl << "I: " << I << endl;
 
 			if ( O.empty() )
 			{

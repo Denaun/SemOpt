@@ -166,7 +166,7 @@ string AF::toString() {
 	ostringstream desc;
 
 	for( SetArgumentsIterator i = this -> begin(); i != this -> end(); i++ ) {
-		desc << ( *i ) -> getName() << " attacks ";
+		desc << "Argument " << ( *i ) -> getName() << "\tattacks ";
 
 		SetArguments* attacks = ( *i ) -> get_attacks();
 		SetArgumentsIterator j = attacks -> begin();
@@ -179,6 +179,23 @@ string AF::toString() {
 		}
 
 		for( ; j != attacks -> end(); j++ )
+			desc << ", " << ( *j ) -> getName();
+
+		desc << endl;
+		
+		desc << "\t\tattacked by ";
+
+		SetArguments* attackers = ( *i ) -> get_attackers();
+		j = attackers -> begin();
+
+		if( j == attackers -> end() )
+			desc << "none";
+		else {
+			desc << ( *j ) -> getName();
+			j++;
+		}
+
+		for( ; j != attackers -> end(); j++ )
 			desc << ", " << ( *j ) -> getName();
 
 		desc << endl;

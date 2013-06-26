@@ -12,6 +12,7 @@
  * @brief Configuration variables
  */
 bool debug = false;
+bool stages = false;
 bool externalsat = true;
 string satsolver;
 int labellingconditions = 0;
@@ -35,8 +36,16 @@ int main(int argc, char *argv[])
 		{
 			// More verbose
 			debug = true;
+			stages = true;
 			
 			cerr << "Debug on.\n";
+		}
+		else if( !strcmp( argv[ i ], "-d2" ) )
+		{
+			// Verbose but not that much
+			stages = true;
+
+			cerr << "Stages output on.\n";
 		}
 		else
 		{
