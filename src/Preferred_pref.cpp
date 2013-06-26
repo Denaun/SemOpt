@@ -50,7 +50,11 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		return;
 	}
 
-	// Gereate G restricted to I
+	// Generate G restricted to I
+	AF* restricted = new AF();
+	this->af->restrictTo( &I, restricted );
+	this->af = restricted;
+	/*
 	SetArguments* A = this->af->get_arguments();
 	//delete A;
 	*A = I;
@@ -71,6 +75,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		//delete attackers;
 		*attackers = *temp;
 	}
+	*/
 
 	if ( debug )
 		cerr << "\tNew A: " << *(this->af->get_arguments()) << endl;
@@ -84,7 +89,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 	for ( list<SetArguments*>::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
-		Labelling partial = Labelling();
+		Preferred p = Preferred();
 
 		for ( vector<Labelling>::iterator aLabelling = this->labellings.begin();
 				aLabelling != this->labellings.end(); ++aLabelling )
@@ -94,27 +99,34 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 			boundcond( *aSCC, (*aLabelling).inargs(), &O, &I );
 
-			Preferred p = Preferred();
 			if ( O.empty() )
 			{
 				if ( debug )
 					cerr << "\tCalling prefSAT.\n";
 
+				AF restricted = AF();
+				this->af->restrictTo( *aSCC, &restricted );
 				// Should be G restricted to S[ i ] and I intersect C
 				// And done iff I != Ø (doesn't prefSAT return Ø otherwise..?)
-				//p.prefSAT( this->af, &I );
+				p.prefSAT( &restricted, &I );
 			}
 			else
 			{
 				if ( debug )
 					cerr << "\tCalling pref.\n";
 
+				SetArguments restriction = SetArguments();
+				(*aSCC)->setminus( &O, &restriction );
+				AF restricted = AF();
+				this->af->restrictTo( &restriction, &restricted );
 				// Should be G restricted to S[ i ] \ O and I intersect C
-				//p.pref( this->af, &I );
+				p.pref( &restricted, &I );
 			}
 
-			// TODO: the rest
-
+			// Create the new Labellings
+			for ( vector<Labelling>::iterator EStar = p.begin();
+					EStar != p.end(); ++EStar )
+				(*aLabelling)->clone( *Estar );
 		}
 	}
 }

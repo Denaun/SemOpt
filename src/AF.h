@@ -31,6 +31,12 @@ public:
 	Argument *getArgumentByName(string);
 	Argument *getArgumentByNumber(int position);
 	SetArguments *get_arguments() const;
+
+	// Added method
+	// Copies the Framework, restricting it to a subset of nodes and their
+	// relative non-suspended arcs
+	void restrictTo( SetArguments*, AF* );
+
 	SetArgumentsIterator begin();
 	SetArgumentsIterator end();
 };
