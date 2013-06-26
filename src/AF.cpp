@@ -113,6 +113,51 @@ Argument *AF::getArgumentByNumber(int num)
 }
 
 /**
+ * @brief Creates a copy of the Framework containing only the selected nodes 
+ * 			and their relative non-suspended arcs
+ *
+ * @param[in]	theSet	The restraining set.
+ * @param[out]	dst		The destination framework.
+ *
+ * @author	Maurizio Zucchelli
+ */
+void AF::restrictTo( SetArguments* theSet, AF* dst )
+{
+	// Gereate G restricted to I
+	SetArguments* A = dst->get_arguments();
+
+	// Create disjointed copies of the Arguments
+	for ( SetArgumentsIterator it = get_arguments()->begin();
+			it != get_arguments()->end(); ++it )
+		if ( theSet->exists( *it ) )
+			dst->get_arguments()->add_Argument(
+				new Argument
+				(
+					(*it)->getName(),
+					dst->numArgs(),
+					dst
+				) );
+
+
+	// Copy only non-suspended arcs
+	SetArguments* temp;
+	for ( SetArgumentsIterator it = dst->begin(); it != dst->end(); ++it )
+	{
+		Argument* original = getArgumentByName( (*it)->getName() );
+
+		temp = original->get_attacks();
+		for ( SetArgumentsIterator atk = temp->begin(); atk != temp->end(); ++atk )
+			if ( theSet->exists( *atk ) )
+				(*it)->add_attacks( dst->getArgumentByName( (*atk)->getName() ) );
+
+		temp = original->get_attackers();
+		for ( SetArgumentsIterator atker = temp->begin(); atker != temp->end(); ++atker )
+			if ( theSet->exists( *atker ) )
+				(*it)->add_attackers( dst->getArgumentByName( (*atker)->getName() ) );
+	}
+}
+
+/**
  * @brief 	Begin of the iterator for the set of arguments
  * @retval SetArgumentsIterator An iterator pointing at the first of the elements of the set of arguments
  */
