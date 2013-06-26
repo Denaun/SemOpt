@@ -78,10 +78,11 @@ int main(int argc, char *argv[])
 //
 //	p.prefSAT(&framework, &C_set1);
 	p.pref( &framework, framework.get_arguments() );
+	int n = 1;
 
 	for (Preferred::iterator it = p.begin(); it != p.end(); it++)
 	{
-		cout << "First extension " << endl;
+		cout << "Extension " << n++ << endl;
 		for (SetArgumentsIterator itarg = (*it).inargs()->begin();
 				itarg != (*it).inargs()->end(); itarg++)
 		{
