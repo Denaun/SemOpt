@@ -24,20 +24,24 @@ int precosat_lib(stringstream *the_cnf, int num_var, int num_cl, vector<int> *re
 
 extern bool debug;
 
-struct DFSNode {
-	Argument* argument;
-	int index;
-	int lowlink;
-	
-	DFSNode( Argument* _argument ) {
-		this -> argument = _argument;
-		this -> index = -1;
-		this -> lowlink = -1;
-	}
-};
-
 class Preferred
 {
+	// Mantengo una struttura a livello di classe che rappresenti l'AF associandovi dei valori necessari ad effettuare la ricerca in profondità
+	// Un DFSNode è l'elemento base di questa struttura
+	struct DFSNode {
+		Argument* argument;
+		int index;
+		int lowlink;
+		
+		DFSNode( Argument* _argument ) {
+			this -> argument = _argument;
+			this -> index = -1;
+			this -> lowlink = -1;
+		}
+	};
+
+	list< DFSNode* > DFSAF;
+
 	AF *af; //!< @brief The Argumentation Framework considered
 	SetArguments *C; //!< @brief the set of arguments to consider
 	int encoding;
@@ -66,13 +70,14 @@ private:
 	// Dato l'arg framework restituisce tutti i set SCC presenti ordinati per strati (il primo nella sequenza restituita non sarà attaccato da nessuno, i successivi possono essere attaccati solo dai precedenti)
 	// Gli SCCS sono trovati tramite l'algoritmo di Tarjan che prevede l'esecuzione multipla (su più vertici)
 	list< SetArguments* > SCCSSEQ();
-	void TarjanAlg( DFSNode*, list< DFSNode* >*, list< SetArguments* >*, stack< DFSNode* >*, int );
+	void TarjanAlg( DFSNode*, list< SetArguments* >*, stack< DFSNode* >*, int );
 	// Cerca nell'AF i nodi che non sono attaccati da nessuno e li restituisce (altro valore restituito è il set di nodi non attaccati dai nodi liberi contenuti nel primo set)
 	void Grounded( SetArguments*, SetArguments* );
 
 	// Metodi aggiuntivi per SCCSSEQ
+	void initDFSAF();
 	bool stackSearch( stack< DFSNode* >, DFSNode* );
-	DFSNode* searchArgument( Argument*, list< DFSNode* >* );
+	DFSNode* searchArgument( Argument* );
 };
 
 #endif /* PREFERRED_H_ */

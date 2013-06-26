@@ -10,6 +10,7 @@
 
 /**
  * @brief SCC sequence finder
+ *
  * @return A list containing the sets of Strongly
  *		Connected Components found by the algorithm
  */
@@ -17,12 +18,7 @@ list< SetArguments* > Preferred::SCCSSEQ() {
 	if ( debug )
 		cerr << "Entering SCCSSEQ.\n";
 
-	// L'algoritmo di Tarjan si basa sulla DFS (Depth-First Search), mi serve dunque una struttura ausiliaria per attribuire un indice relativo alla DFS ad ogni Argument (nodo)
-	// Definisco una lista contenente tutti gli Argument dell'AF a cui viene associato l'indice della DFS
-	list< DFSNode* > nodes = list< DFSNode* >();
-
-	for( SetArgumentsIterator i = af -> get_arguments() -> begin(); i != af -> get_arguments() -> end(); i++ )
-		nodes.push_back( new DFSNode( *i ) );
+	// La struttura dati per la DFS è inizializzata nel costruttore di Preferred 
 
 	// SCC sarà la lista dei set di componenti fortemente connesse, lo stack è ausiliario per Tarjan (contiene lo stack dei nodi visitati in una particolare invocazione)
 	list< SetArguments* > SCC = list< SetArguments* >();
@@ -31,13 +27,13 @@ list< SetArguments* > Preferred::SCCSSEQ() {
 	int index = 0;
 
 	// Si scorrono tutti i nodi assicurandosi che eventuali nodi non raggiungibili dal primo siano comunque visitati. Se il grafo è connesso il metodo TarjanAlg viene eseguito una sola volta (una sola ricerca in profondità)
-	for( list< DFSNode* >::iterator i = nodes.begin(); i != nodes.end(); i++ )
+	for( list< DFSNode* >::iterator i = DFSAF.begin(); i != DFSAF.end(); i++ )
 		if( (*i) -> index == -1 )
 		{
 			if ( debug )
 				cerr << "\tCalling TarjanAlg for " << (*i)->argument->getName() << endl;
 
-			TarjanAlg( *i, &nodes, &SCC, &s, index );
+			TarjanAlg( *i, &SCC, &s, index );
 		}
 
 	return SCC;
@@ -46,13 +42,12 @@ list< SetArguments* > Preferred::SCCSSEQ() {
 /**
  * @brief Tarjan Algorithm for SCC determination
  *
- * @param node	
- * @param nodes	
- * @param SCC	
- * @param s		
- * @param index	
+ * @param node	The Node for which the argument is executed
+ * @param SCC	The list of SCCs found
+ * @param s		A temporal stack containing the actual SCC
+ * @param index	An integer containing the level actually visited
  */
-void Preferred::TarjanAlg( DFSNode* node, list< DFSNode* >* nodes, list< SetArguments* >* SCC, stack< DFSNode* >* s, int index ) {
+void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFSNode* >* s, int index ) {
 	if ( debug )
 		cerr << "Entering TarjanAlg.\n";
 
@@ -70,7 +65,7 @@ void Preferred::TarjanAlg( DFSNode* node, list< DFSNode* >* nodes, list< SetArgu
 
 	for( SetArgumentsIterator i = successors -> begin(); i != successors -> end(); i++ ) {
 		// Devo ricavare il DFSNode associato all'argument attuale
-		DFSNode* actual = searchArgument( ( *i ), nodes );
+		DFSNode* actual = searchArgument( ( *i ) );
 		
 		if ( debug )
 			cerr << "\tLooking at " << actual->argument->getName() << endl;
@@ -80,7 +75,7 @@ void Preferred::TarjanAlg( DFSNode* node, list< DFSNode* >* nodes, list< SetArgu
 			if ( debug )
 				cerr << "\t\tNot yet visited. Reiterating\n";
 
-			TarjanAlg( actual, nodes, SCC, s, index );
+			TarjanAlg( actual, SCC, s, index );
 			node -> lowlink = min( node -> lowlink, actual -> lowlink );
 		} else if( stackSearch( *s, actual  ) ) {
 			if ( debug )
@@ -114,7 +109,21 @@ void Preferred::TarjanAlg( DFSNode* node, list< DFSNode* >* nodes, list< SetArgu
 }
 
 /**
+  * @brief Initialization of the support structur for DFS (called in constructor)
+  */
+void Preferred::initDFSAF() {
+	// Inizializzo la struttura dati e copio gli Argument
+	this -> DFSAF = list< DFSNode* >();
+
+	for( SetArgumentsIterator i = af -> get_arguments() -> begin(); i != af -> get_arguments() -> end(); i++ )
+		DFSAF.push_back( new DFSNode( *i ) );
+}
+
+/**
   * @brief Searches for an element in a stack
+  *
+  * @param s The stack to search in
+  * @param node The DFSNode to search for
   */
 bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node ) {
 	// pop rimuove l'elemento in testa ma non lo restituisce, per cui è necessario usare prima top() (che invece lo restituisce senza eliminarlo)
@@ -128,8 +137,13 @@ bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node ) {
 	return false;
 }
 
-DFSNode* Preferred::searchArgument( Argument* node, list< DFSNode* >* nodeList ) {
-	for( list< DFSNode* >::iterator i = nodeList -> begin(); i != nodeList -> end(); i++ )
+/**
+  * @brief Searches the DFSNode corresponding to the given Argument in DFSAF
+  *
+  * @param node The Argument to search for
+  */
+Preferred::DFSNode* Preferred::searchArgument( Argument* node ) {
+	for( list< DFSNode* >::iterator i = DFSAF.begin(); i != DFSAF.end(); i++ )
 		if( ( *i ) -> argument == node )
 			return ( *i );
 
