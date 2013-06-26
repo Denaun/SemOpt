@@ -3,6 +3,8 @@
  * @class 		AF
  * @brief 		Class encompassing an Argumentation Framework
  * @author 		Mauro Vallati <m.vallati@hud.ac.uk>
+ * @author		Mattia Rizzini
+ * @author		Maurizio Zucchelli
  * @copyright	GNU Public License v2
  */
 

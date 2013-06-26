@@ -27,14 +27,9 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	this->C = theC;
 
 	if ( debug ) {
-		cerr << "AF initialized. Showing structure" << endl \
-			<< this -> af -> toString();
+		cerr << "\tAF initialized. Showing structure\n" << endl
+			 << this->af->toString();
 	}
-	
-	this->initDFSAF();
-
-	if ( debug )
-		cerr << "DFSAF structure initialized\n";
 
 	SetArguments e = SetArguments(),
 				 I = SetArguments();
@@ -64,31 +59,15 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	AF* restricted = new AF();
 	this->af->restrictTo( &I, restricted );
 	this->af = restricted;
-	/*
-	SetArguments* A = this->af->get_arguments();
-	//delete A;
-	*A = I;
-
-	// Erase suspended arcs
-	SetArguments* temp;
-	for ( SetArgumentsIterator it = A->begin(); it != A->end(); ++it )
-	{
-		temp = new SetArguments();
-		SetArguments* attacks = (*it)->get_attacks();
-		attacks->intersect( &I, temp );
-		//delete attacks;
-		*attacks = *temp;
-
-		temp = new SetArguments();
-		SetArguments* attackers = (*it)->get_attackers();
-		attackers->intersect( &I, temp );
-		//delete attackers;
-		*attackers = *temp;
-	}
-	*/
 
 	if ( debug )
-		cerr << "\tNew A: " << *(this->af->get_arguments()) << endl;
+		cerr << "\tNew AF:\n" << this->af->toString() << endl;
+
+	// Structure used in SCCSSEQ
+	this->initDFSAF();
+
+	if ( debug )
+		cerr << "\tDFSAF structure initialized\n";
 
 	// Calculate the Strongly Connected Components
 	list<SetArguments*> S = SCCSSEQ();
@@ -133,11 +112,24 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				p.pref( &restricted, &I );
 			}
 
+			// prefSAT doesn't put newline at the end of its output...
+			if ( debug )
+				cerr << endl;
+
 			// Create the new Labellings
 			// by merging the current Labelling with every Labelling found
 			for ( Preferred::iterator EStar = p.begin();
 					EStar != p.end(); ++EStar )
+			{
+				if ( debug )
+					cerr << "\t\tFound " << *((*EStar).inargs()) << endl;
+
 				(*aLabelling).clone( &(*EStar) );
+
+				if ( debug )
+					cerr << "\t\t\tCreated: " << *((*EStar).inargs()) << endl;
+			}
+
 		}
 		
 		// The generated Labellings are the new Labellings

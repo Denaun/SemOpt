@@ -82,8 +82,6 @@ int main(int argc, char *argv[])
 		cout << *((*it).inargs()) << endl;
 	}
 
-	cout << *(framework.get_arguments()) << endl;
-
 //	// Second: a2, a3, a4
 //	SetArguments C_set2 = SetArguments();
 //	C_set2.add_Argument(framework.getArgumentByName("a2"));

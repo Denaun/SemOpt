@@ -6,6 +6,7 @@ arg(a5).
 arg(a6).
 arg(a7).
 arg(a8).
+arg(a9).
 att(a1,a5).
 att(a1,a7).
 att(a2,a8).
