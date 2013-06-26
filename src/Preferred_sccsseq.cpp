@@ -105,7 +105,7 @@ void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFS
 			new_SCC -> add_Argument( temp -> argument );
 		} while( temp -> argument != node -> argument  );
 
-		SCC -> push_back( new_SCC );
+		SCC -> push_front( new_SCC );
 	}
 
 	if ( debug )
