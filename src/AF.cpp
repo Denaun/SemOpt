@@ -158,6 +158,34 @@ void AF::restrictTo( SetArguments* theSet, AF* dst )
 }
 
 /**
+  * @brief	Returns a description of arguments and attacks
+  */
+string AF::toString() {
+	ostringstream desc;
+
+	for( SetArgumentsIterator i = this -> begin(); i != this -> end(); i++ ) {
+		desc << ( *i ) -> getName() << " attacks ";
+
+		SetArguments* attacks = ( *i ) -> get_attacks();
+		SetArgumentsIterator j = attacks -> begin();
+
+		if( j == attacks -> end() )
+			desc << "none";
+		else {
+			desc << ( *j ) -> getName();
+			j++;
+		}
+
+		for( ; j != attacks -> end(); j++ )
+			desc << ", " << ( *j ) -> getName();
+
+		desc << endl;
+	}
+
+	return desc.str();
+}
+
+/**
  * @brief 	Begin of the iterator for the set of arguments
  * @retval SetArgumentsIterator An iterator pointing at the first of the elements of the set of arguments
  */

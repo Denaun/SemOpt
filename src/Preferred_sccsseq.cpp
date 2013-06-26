@@ -49,7 +49,7 @@ list< SetArguments* > Preferred::SCCSSEQ() {
  */
 void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFSNode* >* s, int index ) {
 	if ( debug )
-		cerr << "Entering TarjanAlg.\n";
+		cerr << "\tEntering TarjanAlg.\n";
 
 	// Imposto la profondità del nodo in esame alla profondità minore finora incontrata
 	// Al termine della procedura, se il lowlink del nodo è ancora pari al suo indice significa che esso è la radice di un SCC che sarà contenuto nello stack s. Questo viene dunque poppato ed inserito in un nuovo SCC
@@ -68,29 +68,33 @@ void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFS
 		DFSNode* actual = searchArgument( ( *i ) );
 		
 		if ( debug )
-			cerr << "\tLooking at " << actual->argument->getName() << endl;
+			cerr << "\t\tLooking at " << actual->argument->getName() << endl;
 
 		// Scandisco tutti i nodi attaccati dal nodo attuale: se qualcuno non è ancora stato visitato lo visito, altrimenti determino quale dei due è più vicino alla radice
 		if( actual -> index == -1 ) {
 			if ( debug )
-				cerr << "\t\tNot yet visited. Reiterating\n";
+				cerr << "\t\t\tNot yet visited. Recurring\n";
 
 			TarjanAlg( actual, SCC, s, index );
 			node -> lowlink = min( node -> lowlink, actual -> lowlink );
 		} else if( stackSearch( *s, actual  ) ) {
 			if ( debug )
-				cerr << "\t\tIn stack.\n";
+				cerr << "\t\t\tFound in stack.\n";
 
 			node -> lowlink = min( node -> lowlink, actual -> lowlink );
-		}
+		} else if ( debug )
+			cerr << "\t\t\tNot found in stack.\n";
 
 		if ( debug )
-			cerr << "\tNode's lowlink: " << node->lowlink << endl;
+			cerr << "\t\t" << node -> argument -> getName() << "'s lowlink: " << node->lowlink << endl;
 	}
 
 	// Se il nodo node è un nodo radice allora s è un nuovo SCC, lo trasferisco interamente in un nuovo SetArguments all'interno di SCC (poppando tutti i nodi finchè non si giunge al nodo sul quale stiamo lavorando a questo livello di invocazione ricorsiva)
 	// Ovviamente la SCC non conterrà i DFSNode ma soltanto l'Argument
 	if( node -> lowlink == node -> index ) {
+		if ( debug )
+			cerr << "\t--- Building SCC ---" << endl;
+
 		SetArguments* new_SCC = new SetArguments();
 		DFSNode* temp;
 
@@ -105,13 +109,16 @@ void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFS
 	}
 
 	if ( debug )
-		cerr << "Finished TarjanAlg.\n";
+		cerr << "\tFinished TarjanAlg on node " << node -> argument -> getName() << endl;
 }
 
 /**
   * @brief Initialization of the support structur for DFS (called in constructor)
   */
 void Preferred::initDFSAF() {
+	if ( debug )
+		cerr << "Initializing DFSAF structure\n";
+
 	// Inizializzo la struttura dati e copio gli Argument
 	this -> DFSAF = list< DFSNode* >();
 
@@ -126,9 +133,18 @@ void Preferred::initDFSAF() {
   * @param node The DFSNode to search for
   */
 bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node ) {
+	if ( debug )
+		cerr << "\t\tSearching in stack for " << node -> argument -> getName() << endl;
+	
+	DFSNode* actual;
+
 	// pop rimuove l'elemento in testa ma non lo restituisce, per cui è necessario usare prima top() (che invece lo restituisce senza eliminarlo)
-	while( DFSNode* actual = s.top() ) {
+	while( !s.empty() ) {
+		actual = s.top();
 		s.pop();
+
+		if ( debug )
+			cerr << "\t\t\tNode in stack: " << actual -> argument -> getName() << endl;
 
 		if( actual -> argument == node -> argument )
 			return true;
@@ -143,6 +159,9 @@ bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node ) {
   * @param node The Argument to search for
   */
 Preferred::DFSNode* Preferred::searchArgument( Argument* node ) {
+	if ( debug )
+		cerr << "\t\tSearching DFSNode corresponding to Argument " << node -> getName() << endl;
+
 	for( list< DFSNode* >::iterator i = DFSAF.begin(); i != DFSAF.end(); i++ )
 		if( ( *i ) -> argument == node )
 			return ( *i );

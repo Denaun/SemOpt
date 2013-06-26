@@ -26,6 +26,16 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	this->af = theAF;
 	this->C = theC;
 
+	if ( debug ) {
+		cerr << "AF initialized. Showing structure" << endl \
+			<< this -> af -> toString();
+	}
+	
+	this->initDFSAF();
+
+	if ( debug )
+		cerr << "DFSAF structure initialized\n";
+
 	SetArguments e = SetArguments(),
 				 I = SetArguments();
 	Grounded( &e, &I );

@@ -9,6 +9,7 @@
 #define GRAPH_H_
 
 #include <map>
+#include <sstream>
 #include <fstream>
 
 #include "Argument.h"
@@ -36,6 +37,8 @@ public:
 	// Copies the Framework, restricting it to a subset of nodes and their
 	// relative non-suspended arcs
 	void restrictTo( SetArguments*, AF* );
+	// Returns a string containing a representation of the nodes and the attacks
+	string toString();
 
 	SetArgumentsIterator begin();
 	SetArgumentsIterator end();
