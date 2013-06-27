@@ -125,17 +125,14 @@ Argument *AF::getArgumentByNumber(int num)
  */
 void AF::restrictTo( SetArguments* theSet, AF* dst )
 {
-	// Gereate G restricted to I
-	SetArguments* A = dst->get_arguments();
-
 	// Create disjointed copies of the Arguments
-	for ( SetArgumentsIterator it = get_arguments()->begin();
-			it != get_arguments()->end(); ++it )
+	for ( SetArgumentsIterator it = this->begin(); it != this->end(); ++it )
 		if ( theSet->exists( *it ) )
 			dst->get_arguments()->add_Argument(
 				new Argument
 				(
 					(*it)->getName(),
+					//(*it)->getNumber(),
 					dst->numArgs(),
 					dst
 				) );

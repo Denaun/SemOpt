@@ -82,6 +82,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	for ( list<SetArguments*>::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
 		Preferred p = Preferred();
+		vector<Labelling> newLabellings = vector<Labelling>();
 
 		for ( vector<Labelling>::iterator aLabelling = this->labellings.begin();
 				aLabelling != this->labellings.end(); ++aLabelling )
@@ -101,8 +102,28 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 				AF restricted = AF();
 				this->af->restrictTo( *aSCC, &restricted );
-				// Should be G restricted to S[ i ] and I intersect C
-				// And done iff I != Ø (doesn't prefSAT return Ø otherwise..?)
+
+				// TODO: prefSAT problem: the nodes in I are different from
+				// the nodes in the restricted AF.
+				// Temporary solution: rebuild I.
+				for ( SetArgumentsIterator it = restricted.begin(); it != restricted.end(); ++it )
+				{
+					try
+					{
+						Argument* victim = I.getArgumentByName( (*it)->getName() );
+
+						// No exception: the Argument is inside I
+						// Remove it and substitute it with the new one
+						I.remove( victim );
+						I.add_Argument( *it );
+					}
+					catch ( const std::out_of_range& oor )
+					{
+						// The Argument is outside of I. Nothing to do.
+					}
+				}
+
+				// Should be done iff I != Ø (doesn't prefSAT return Ø otherwise..?)
 				p.prefSAT( &restricted, &I );
 			}
 			else
@@ -114,7 +135,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				(*aSCC)->setminus( &O, &restriction );
 				AF restricted = AF();
 				this->af->restrictTo( &restriction, &restricted );
-				// Should be G restricted to S[ i ] \ O and I intersect C
+				// TODO? the same as above for prefSAT.
+
 				p.pref( &restricted, &I );
 			}
 
@@ -124,22 +146,27 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 			// Create the new Labellings
 			// by merging the current Labelling with every Labelling found
-			for ( Preferred::iterator EStar = p.begin();
-					EStar != p.end(); ++EStar )
+			for ( Preferred::iterator EStar = p.begin(); EStar != p.end(); ++EStar )
 			{
 				if ( debug )
 					cerr << "\t\tFound " << *((*EStar).inargs()) << endl;
+
+				// TODO: Rebuild the Labelling using the original Arguments
+				// Not doing so could cause problems to next boundconds
+				// Currently not possible due to the structure of Labelling
 
 				(*aLabelling).clone( &(*EStar) );
 
 				if ( debug )
 					cerr << "\t\t\tCreated: " << *((*EStar).inargs()) << endl;
-			}
 
+				// Add it to the labellings found
+				newLabellings.push_back( *EStar );
+			}
 		}
 		
 		// The generated Labellings are the new Labellings
-		this->labellings = p.labellings;
+		this->labellings.assign( newLabellings.begin(), newLabellings.end() );
 	}
 }
 

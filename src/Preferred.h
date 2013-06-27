@@ -17,6 +17,7 @@
 #include "SATFormulae.h"
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 
 using namespace std;
 

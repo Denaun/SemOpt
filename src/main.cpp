@@ -73,22 +73,22 @@ int main(int argc, char *argv[])
 
 //	// First: a1, a6
 //	SetArguments C_set1 = SetArguments();
-//	C_set1.add_Argument(framework.getArgumentByName("a1"));
-//	C_set1.add_Argument(framework.getArgumentByName("a6"));
+//	C_set1.add_Argument(framework.getArgumentByName("a13"));
+//	C_set1.add_Argument(framework.getArgumentByName("a14"));
 //
 //	p.prefSAT(&framework, &C_set1);
 	p.pref( &framework, framework.get_arguments() );
-	int n = 1;
 
+	int n = 1;
 	for (Preferred::iterator it = p.begin(); it != p.end(); it++)
 	{
 		cout << "Extension " << n++ << endl;
-		for (SetArgumentsIterator itarg = (*it).inargs()->begin();
-				itarg != (*it).inargs()->end(); itarg++)
-		{
-			cout << (*itarg)->getName() << endl;
-		}
-		cout << "Or even " << endl;
+//		for (SetArgumentsIterator itarg = (*it).inargs()->begin();
+//				itarg != (*it).inargs()->end(); itarg++)
+//		{
+//			cout << (*itarg)->getName() << endl;
+//		}
+//		cout << "Or even " << endl;
 		cout << *((*it).inargs()) << endl;
 	}
 

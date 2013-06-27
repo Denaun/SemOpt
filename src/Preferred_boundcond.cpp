@@ -77,13 +77,63 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 	if ( debug )
 		cerr << "\t\tNodes not satisfying the first condition: " << toBeRemoved << endl;
 
-	// Remove from the set the nodes satisfying both the conditions:
+	// Remove from the set the nodes attacked by nodes satisfying both the conditions:
 	// 	- node in G \ ( S[ i ] U e )
 	// 	- node attacked by e
-	external.setminus( e, &external );
+	//external.setminus( e, &external );
 	for ( SetArgumentsIterator it = toBeRemoved.begin(); it != toBeRemoved.end(); ++it )
 	{
-		if ( external.exists( *it ) )
+		SetArguments attackers = SetArguments();
+		// Find the external attackers (could be done the opposite way, maybe faster)
+		for ( SetArgumentsIterator jt = external.begin(); jt != external.end(); ++jt )
+			if ( (*jt)->get_attacks()->exists( *it ) )
+				attackers.add_Argument( *jt );
+
+		// Check that no attackers are in e
+		int nAttackers = attackers.cardinality();
+		attackers.setminus( e, &attackers );
+		if ( attackers.cardinality() < nAttackers )
+		{
+			if ( debug )
+				cerr << "\t\t" << (*it)->getName() << " attacked by e.\n";
+
+			continue;
+		}
+
+		// Check that every attacker is itself attacked by e
+		bool safe = true;
+		for ( SetArgumentsIterator jt = attackers.begin(); jt != attackers.end(); ++jt )
+		{
+			bool attacked = false;
+			for ( SetArgumentsIterator kt = e->begin(); kt != e->end(); ++kt )
+			{
+				attacked = (*kt)->get_attacks()->exists( *jt );
+				if ( attacked )
+					break;
+			}
+
+//			safe &= attacked;
+//			if ( !safe )
+//				break;
+			if ( !attacked )
+			{
+				safe = false;
+				break;
+			}
+		}
+
+		if ( safe )
+		{
+			if ( debug )
+				cerr << "\t\t" << (*it)->getName() << "'s attackers are attacked by e.\n";
+
+			toBeKept.add_Argument( *it );
+		}
+		else if ( debug )
+			cerr << "\t\tNot every attacker of " << (*it)->getName() << " is attacked by e.\n";
+
+		/*
+		if ( !attackers.empty() )
 		{
 			bool attacked = false;
 			for ( SetArgumentsIterator jt = e->begin(); jt != e->end(); ++jt )
@@ -107,6 +157,7 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 		}
 		else if ( debug )
 			cerr << "\t\t" << (*it)->getName() << " is not external.\n";
+		*/
 	}
 
 	// Readd the nodes to I
