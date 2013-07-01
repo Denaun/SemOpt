@@ -33,7 +33,19 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 	SetArguments e = SetArguments(),
 				 I = SetArguments();
-	Grounded( &e, &I );
+	// Avoid calling Grounded if useless
+	if ( theC->cardinality() <= 1 && *theC == *(theAF->get_arguments()) )
+	{
+		if ( debug )
+			cerr << "\tNo need to call Grounded.\n";
+
+		// Empty: no extensions => null iteration
+		// Singlet: still have to iterate over I
+		for ( SetArgumentsIterator it = theC->begin(); it != theC->end(); ++it )
+			e.add_Argument( *it );
+	}
+	else
+		Grounded( &e, &I );
 
 	if ( stages )
 		cerr << "\te: " << e << endl << "\tI: " << I << endl; 
@@ -98,33 +110,80 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 			if ( O.empty() )
 			{
 				if ( debug )
-					cerr << "\tCalling prefSAT.\n";
+					cerr << "\tGoing to call prefSAT.\n";
 
-				AF restricted = AF();
-				this->af->restrictTo( *aSCC, &restricted );
+				// Avoid calling prefSAT if the two parameters are the same
+				// and the size is 2 or less:
+				// 	0:	out = { {} }
+				//	1:	out = { {singlet} }
+				//	2:	out = { {singlet}, {singlet} }
+				if ( (*aSCC)->cardinality() <= 2 && **aSCC == I )
+				{
+					if ( debug )
+						cerr << "\t\tNo need to call prefSAT.\n";
 
-				// prefSAT problem: the nodes in I are different from
-				// the nodes in the restricted AF.
-				// Temporary solution: rebuild I.
-				I.adaptTo( &restricted );
+					// Empty: no extensions => null iteration
+					// Singlet: still have to iterate over I
+					// Two element: Mutually exclusive arguments
+					for ( SetArgumentsIterator it = (*aSCC)->begin();
+							it != (*aSCC)->end(); ++it )
+					{
+						Labelling* temp = new Labelling();
+						temp->add_label( *it, Labelling::lab_in );
+						p.labellings.push_back( *temp );
+					}
+				}
+				else
+				{
+					AF restricted = AF();
+					this->af->restrictTo( *aSCC, &restricted );
 
-				// Should be done iff I != Ø (doesn't prefSAT return Ø otherwise..?)
-				p.prefSAT( &restricted, &I );
+					// prefSAT problem: the nodes in I are different from
+					// the nodes in the restricted AF.
+					// Temporary solution: rebuild I.
+					I.adaptTo( &restricted );
+
+					if ( debug )
+						cerr << "\t\tCalling prefSAT.\n";
+
+					p.prefSAT( &restricted, &I );
+				}
 			}
 			else
 			{
 				if ( debug )
-					cerr << "\tCalling pref.\n";
+					cerr << "\tGoing to call pref.\n";
 
 				SetArguments restriction = SetArguments();
 				(*aSCC)->setminus( &O, &restriction );
-				AF restricted = AF();
-				this->af->restrictTo( &restriction, &restricted );
+				if ( restriction.cardinality() <= 1 && restriction == I )
+				{
+					if ( debug )
+						cerr << "\t\tNo need to call pref.\n";
 
-				// The same as above for prefSAT.
-				I.adaptTo( &restricted );
+					// Empty: no extensions => null iteration
+					// Singlet: still have to iterate over I
+					for ( SetArgumentsIterator it = I.begin();
+							it != I.end(); ++it )
+					{
+						Labelling* temp = new Labelling();
+						temp->add_label( *it, Labelling::lab_in );
+						p.labellings.push_back( *temp );
+					}
+				}
+				else
+				{
+					if ( debug )
+						cerr << "\tCalling pref.\n";
 
-				p.pref( &restricted, &I );
+					AF restricted = AF();
+					this->af->restrictTo( &restriction, &restricted );
+					
+					// The same as above for prefSAT.
+					I.adaptTo( &restricted );
+
+					p.pref( &restricted, &I );
+				}
 			}
 
 			// prefSAT doesn't put newline at the end of its output...
