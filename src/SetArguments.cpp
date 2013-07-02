@@ -66,6 +66,25 @@ bool SetArguments::empty()
 }
 
 /**
+ * @brief	Build and return a SetArguments containing the args attacked by the local args outside the set
+ */
+SetArguments* SetArguments::get_attacks() const {
+	SetArguments* attacks = new SetArguments();
+
+	// Iterate over the arguments of the set
+	for( SetArgumentsIterator argument = this -> begin(); argument != this -> end(); argument++ ) {
+		SetArguments* local_attacks = ( *argument ) -> get_attacks();
+
+		// Iterate over the attacks of every argument. An attack is added to the attack list if it's not already there and it's directed to the outside
+		for( SetArgumentsIterator attack = local_attacks -> begin(); attack != local_attacks -> end(); attack++ )
+			if( !( this -> exists( *attack ) ) && !( attacks -> exists( *attack ) ) )
+				attacks -> add_Argument( *attack );
+	}
+
+	return attacks;
+}
+
+/**
  * @brief 	Begin of the iterator for this set of arguments
  * @retval SetArgumentsIterator An iterator pointing at the first of the elements of this set
  */
@@ -143,7 +162,7 @@ void SetArguments::setminus(SetArguments *other, SetArguments *result)
  * @param[in] arg
  * @retval bool
  */
-bool SetArguments::exists(Argument * arg)
+bool SetArguments::exists(Argument * arg) const
 {
 	return (this->arguments.find(arg->getName()) != this->arguments.end());
 }

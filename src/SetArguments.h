@@ -43,9 +43,10 @@ public:
 	Argument *getArgumentByNumber(int num);
 	int cardinality() const;
 	bool empty();
+	SetArguments* get_attacks() const;
 	SetArgumentsIterator begin() const;
 	SetArgumentsIterator end() const;
-	bool exists(Argument *);
+	bool exists(Argument *) const;
 	bool is_subset_equal(SetArguments *);
 	bool is_subset(SetArguments *);
 	void intersect(SetArguments *, SetArguments *);

@@ -26,6 +26,18 @@ int precosat_lib(stringstream *the_cnf, int num_var, int num_cl, vector<int> *re
 extern bool debug;
 extern bool stages;
 
+// Una SCC è composta da un SetArgument e dalla lista di SCC padri (necessario per i miglioramenti)
+// Deve essere una struttura globale
+	struct SCC {
+		SetArguments* argumentList;
+		list< SCC* > fathers;
+		
+		SCC( SetArguments* _argumentList ) {
+			this -> argumentList = _argumentList;
+		}
+	};
+
+
 class Preferred
 {
 	// Mantengo una struttura a livello di classe che rappresenti l'AF associandovi dei valori necessari ad effettuare la ricerca in profondità
@@ -71,12 +83,13 @@ private:
 	void boundcond( SetArguments*, SetArguments*, SetArguments*, SetArguments* );
 	// Dato l'arg framework restituisce tutti i set SCC presenti ordinati per strati (il primo nella sequenza restituita non sarà attaccato da nessuno, i successivi possono essere attaccati solo dai precedenti)
 	// Gli SCCS sono trovati tramite l'algoritmo di Tarjan che prevede l'esecuzione multipla (su più vertici)
-	list< SetArguments* > SCCSSEQ();
-	void TarjanAlg( DFSNode*, list< SetArguments* >*, stack< DFSNode* >*, int );
+	list< SCC* > SCCSSEQ();
+	void TarjanAlg( DFSNode*, list< SCC* >*, stack< DFSNode* >*, int );
 	// Cerca nell'AF i nodi che non sono attaccati da nessuno e li restituisce (altro valore restituito è il set di nodi non attaccati dai nodi liberi contenuti nel primo set)
 	void Grounded( SetArguments*, SetArguments* );
 
 	// Metodi aggiuntivi per SCCSSEQ
+	void SCCParenthood( list< SCC* >* );
 	void initDFSAF();
 	bool stackSearch( stack< DFSNode* >, DFSNode* );
 	DFSNode* searchArgument( Argument* );

@@ -14,14 +14,14 @@
  * @return A list containing the sets of Strongly
  *		Connected Components found by the algorithm
  */
-list< SetArguments* > Preferred::SCCSSEQ() {
+list< SCC* > Preferred::SCCSSEQ() {
 	if ( debug )
 		cerr << "Entering SCCSSEQ.\n";
 
 	// La struttura dati per la DFS è inizializzata nel costruttore di Preferred 
 
 	// SCC sarà la lista dei set di componenti fortemente connesse, lo stack è ausiliario per Tarjan (contiene lo stack dei nodi visitati in una particolare invocazione)
-	list< SetArguments* > SCC = list< SetArguments* >();
+	list< SCC* > SCCList = list< SCC* >();
 	stack< DFSNode* > s = stack< DFSNode* >();
 
 	int index = 0;
@@ -33,10 +33,31 @@ list< SetArguments* > Preferred::SCCSSEQ() {
 			if ( debug )
 				cerr << "\tCalling TarjanAlg for " << (*i)->argument->getName() << endl;
 
-			TarjanAlg( *i, &SCC, &s, index );
+			TarjanAlg( *i, &SCCList, &s, index );
 		}
 
-	return SCC;
+	// Determino i rapporti di parentela tra le SCC
+	SCCParenthood( &SCCList );
+
+	return SCCList;
+}
+
+/**
+  * @brief	Function to determine the parenthood between SCCs
+  *
+  * @param	SCC
+  */
+void Preferred::SCCParenthood( list< SCC* >* SCCList ) {
+	// Per ogni SCC nella lista i suoi padri possono essere soltanto i precedenti nella lista, faccio una scansione con doppio ciclo verificando se l'intersezione tra i nodi attaccati dalla SCC analizzata e la SCC attuale è vuota o meno (nel secondo caso la SCC analizzata è padre)
+	for( list< SCC* >::iterator aSCC = SCCList -> begin(); aSCC != SCCList -> end(); ++aSCC )
+		for( list< SCC* >::iterator fatherCandidate = SCCList -> begin(); fatherCandidate != aSCC; fatherCandidate++ ) {
+			SetArguments* intersection = new SetArguments();
+
+			( *aSCC ) -> argumentList -> intersect( ( *fatherCandidate ) -> argumentList -> get_attacks(), intersection );
+
+			if( !intersection -> empty() )
+				( *aSCC ) -> fathers.push_back( *fatherCandidate );
+		}
 }
 
 /**
@@ -47,7 +68,7 @@ list< SetArguments* > Preferred::SCCSSEQ() {
  * @param s		A temporal stack containing the actual SCC
  * @param index	An integer containing the level actually visited
  */
-void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFSNode* >* s, int index ) {
+void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode* >* s, int index ) {
 	if ( debug )
 		cerr << "\tEntering TarjanAlg.\n";
 
@@ -75,9 +96,9 @@ void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFS
 			if ( debug )
 				cerr << "\t\t\tNot yet visited. Recurring\n";
 
-			TarjanAlg( actual, SCC, s, index );
+			TarjanAlg( actual, SCCList, s, index );
 			node -> lowlink = min( node -> lowlink, actual -> lowlink );
-		} else if( stackSearch( *s, actual  ) ) {
+		} else if( stackSearch( *s, actual ) ) {
 			if ( debug )
 				cerr << "\t\t\tFound in stack.\n";
 
@@ -105,7 +126,7 @@ void Preferred::TarjanAlg( DFSNode* node, list< SetArguments* >* SCC, stack< DFS
 			new_SCC -> add_Argument( temp -> argument );
 		} while( temp -> argument != node -> argument  );
 
-		SCC -> push_front( new_SCC );
+		SCCList -> push_front( new SCC( new_SCC ) );
 	}
 
 	if ( debug )

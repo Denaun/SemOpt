@@ -3,7 +3,8 @@
  * @class	Preferred
  * @brief	Implementation of the recursive function `pref`
  * @author	Maurizio Zucchelli
- * @version	1
+ * @author	Mattia Rizzini
+ * @version	1.1
  * @date	2013-06-25
  */
 
@@ -85,13 +86,22 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		cerr << "\tDFSAF structure initialized\n";
 
 	// Calculate the Strongly Connected Components
-	list<SetArguments*> S = SCCSSEQ();
+	list< SCC* > S = SCCSSEQ();
 
+	
+
+	// Print SCC and parenthood
 	if ( stages )
-		for ( list<SetArguments*>::iterator it = S.begin(); it != S.end(); ++it )
-			cerr << "\tSCC: " << **it << endl;
+		for ( list< SCC* >::iterator it = S.begin(); it != S.end(); ++it ) {
+			cerr << "\tSCC: " << *( *it ) -> argumentList << endl;
 
-	for ( list<SetArguments*>::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
+			/*cerr << "aufhog:" << *( *it ) -> argumentList -> get_attacks() << endl;*/
+
+			for( list< SCC* >::iterator father = ( *it ) -> fathers.begin(); father != ( *it ) -> fathers.end(); father++ )
+				cerr << "\t\tFather: " << *( *father ) -> argumentList << endl;
+		}
+
+	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
 		Preferred p = Preferred();
 		vector<Labelling> newLabellings = vector<Labelling>();
@@ -102,7 +112,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 			SetArguments O = SetArguments();
 			I = SetArguments();							// I already exists..
 
-			boundcond( *aSCC, (*aLabelling).inargs(), &O, &I );
+			boundcond( ( *aSCC ) -> argumentList, (*aLabelling).inargs(), &O, &I );
 
 			if ( stages )
 				cerr << "O: " << O << endl << "I: " << I << endl;
@@ -117,7 +127,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				if ( (*aSCC)->cardinality() <= 2 && **aSCC == I )
+				if ( ( *aSCC ) -> argumentList -> cardinality() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
 						cerr << "\t\tNo need to call prefSAT.\n";
@@ -125,8 +135,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					// Empty: no extensions => null iteration
 					// Singlet: still have to iterate over I
 					// Two element: Mutually exclusive arguments
-					for ( SetArgumentsIterator it = (*aSCC)->begin();
-							it != (*aSCC)->end(); ++it )
+					for ( SetArgumentsIterator it = ( *aSCC ) -> argumentList -> begin();
+							it != ( *aSCC ) -> argumentList -> end(); ++it )
 					{
 						Labelling* temp = new Labelling();
 						temp->add_label( *it, Labelling::lab_in );
@@ -136,7 +146,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				else
 				{
 					AF restricted = AF();
-					this->af->restrictTo( *aSCC, &restricted );
+					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
 
 					// TODO: prefSAT problem: the nodes in I are different from
 					// the nodes in the restricted AF.
@@ -170,7 +180,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					cerr << "\tGoing to call pref.\n";
 
 				SetArguments restriction = SetArguments();
-				(*aSCC)->setminus( &O, &restriction );
+				( *aSCC ) -> argumentList -> setminus( &O, &restriction );
 				if ( restriction.cardinality() <= 1 && restriction == I )
 				{
 					if ( debug )
