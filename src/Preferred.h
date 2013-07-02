@@ -35,8 +35,11 @@ extern bool stages;
 		SCC( SetArguments* _argumentList ) {
 			this -> argumentList = _argumentList;
 		}
-	};
 
+		inline bool operator == ( const SCC &other ) const {
+			return this -> argumentList == other.argumentList;
+		}
+	};
 
 class Preferred
 {

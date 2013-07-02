@@ -88,31 +88,43 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	// Calculate the Strongly Connected Components
 	list< SCC* > S = SCCSSEQ();
 
-	
-
 	// Print SCC and parenthood
 	if ( stages )
 		for ( list< SCC* >::iterator it = S.begin(); it != S.end(); ++it ) {
 			cerr << "\tSCC: " << *( *it ) -> argumentList << endl;
 
-			/*cerr << "aufhog:" << *( *it ) -> argumentList -> get_attacks() << endl;*/
-
 			for( list< SCC* >::iterator father = ( *it ) -> fathers.begin(); father != ( *it ) -> fathers.end(); father++ )
 				cerr << "\t\tFather: " << *( *father ) -> argumentList << endl;
 		}
+
+	// Indicates to preserveO or not in the inner cycle (no boundcond recalculation after the first time, conditions described below)
+	bool preserveO = true;
 
 	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
 		Preferred p = Preferred();
 		vector<Labelling> newLabellings = vector<Labelling>();
 
+		// O is preserved throught the iterations because if the actual SCC has not a father in the previous one, then O remains always the same
+		// This is checked right before the reiteration of the previous cycle (for the first SCC the condition is always true)
+		SetArguments O = SetArguments();
+		// Same for I
+		I = SetArguments();
+
 		for ( vector<Labelling>::iterator aLabelling = this->labellings.begin();
 				aLabelling != this->labellings.end(); ++aLabelling )
 		{
-			SetArguments O = SetArguments();
-			I = SetArguments();							// I already exists..
+			//SetArguments O = SetArguments();
+			// I already exists
 
-			boundcond( ( *aSCC ) -> argumentList, (*aLabelling).inargs(), &O, &I );
+			// Determine if the call of boundcond can be avoided
+			// If the current SCC has no fathers, O = empty and I = SCC
+			if( preserveO && !O.empty() && stages )
+				cerr << "O preserved\n";
+			else if( ( *aSCC ) -> fathers.size() == 0 )
+				I = *( *aSCC ) -> argumentList;
+			else
+				boundcond( ( *aSCC ) -> argumentList, (*aLabelling).inargs(), &O, &I );
 
 			if ( stages )
 				cerr << "O: " << O << endl << "I: " << I << endl;
@@ -236,6 +248,19 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		
 		// The generated Labellings are the new Labellings
 		this->labellings.assign( newLabellings.begin(), newLabellings.end() );
+
+		// Check if the actual SCC is a father of the next one
+		preserveO = false;
+
+		list< SCC* >::iterator next = aSCC;
+		if( ++next == S.end() )
+			break;
+
+		for( list< SCC* >::iterator fathers = ( *( next ) ) -> fathers.begin(); fathers != ( *( next ) ) -> fathers.end(); fathers++ )
+			if( *fathers == *aSCC ) {
+				preserveO = true;
+				break;
+			}
 	}
 }
 
