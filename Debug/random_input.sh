@@ -2,11 +2,11 @@
 
 # File generation
 INPUT_PATH="./test-input/random_test_";
-NOW=$(date +"%d-%m-%Y_%H-%M-%S");
+NOW=$(date +"%d-%m-%Y_%H-%M-%S-%N");
 
 # As first parameter the number of nodes must be inserted
 # Generating nodes
-for ((i=1; i <= $1; i++));
+for ((i=1; i <= $1; i++))
 do
 	echo "arg(a$i)." >> $INPUT_PATH$NOW".dl";
 	DIAG=$(($(($1+1))*$(($i-1))+$i));
