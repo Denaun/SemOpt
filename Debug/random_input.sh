@@ -14,9 +14,9 @@ do
 done;
 
 # Then generate a random number of attacks
-ATTACKS=$(($RANDOM%$1+$1/2));
+ATTACKS=$(($RANDOM%$1+$1*3/2));
 
-echo $ATTACKS >> $INPUT_PATH$NOW".dl";
+#echo $ATTACKS >> $INPUT_PATH$NOW".dl";
 
 for ((i=1; i <= $ATTACKS; i++));
 do
