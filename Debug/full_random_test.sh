@@ -41,5 +41,6 @@ do
 	echo "" >> $SYNTHESIS_FILENAME;
 done;
 
-mkdir $RESULTS"/"$NOW;
-mv $RESULTS"/*.txt" $RESULTS"/"$NOW;
+mkdir $RESULTS$NOW;
+# Strange barbatrick
+$( $( echo mv $RESULTS"*.txt" $RESULTS$NOW ) );
