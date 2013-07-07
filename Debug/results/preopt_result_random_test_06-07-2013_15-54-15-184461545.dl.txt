@@ -1,0 +1,1736 @@
+Debug on.
+Input file: ./test-input/random_test_06-07-2013_15-54-15-184461545.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a295
+		attacked by none
+Argument a10	attacks a182, a281
+		attacked by a83
+Argument a100	attacks a170, a247
+		attacked by a11, a149, a273
+Argument a101	attacks a196, a249
+		attacked by a239, a293, a62
+Argument a102	attacks a113, a169
+		attacked by a284, a299
+Argument a103	attacks a276, a66
+		attacked by a173, a189, a207, a88
+Argument a104	attacks a289
+		attacked by none
+Argument a105	attacks none
+		attacked by a238, a255
+Argument a106	attacks a186, a72, a86
+		attacked by none
+Argument a107	attacks a115, a302
+		attacked by a205, a222, a276
+Argument a108	attacks a249, a56
+		attacked by none
+Argument a109	attacks a250
+		attacked by a162, a237
+Argument a11	attacks a100, a286, a290
+		attacked by a153, a262, a95
+Argument a110	attacks none
+		attacked by a154, a244, a57
+Argument a111	attacks a223, a278, a282
+		attacked by a271
+Argument a112	attacks a274, a62, a95
+		attacked by a123, a214
+Argument a113	attacks a195, a274
+		attacked by a102, a90
+Argument a114	attacks none
+		attacked by a81
+Argument a115	attacks a133, a256
+		attacked by a107, a34, a62
+Argument a116	attacks none
+		attacked by a288
+Argument a117	attacks a197, a243
+		attacked by none
+Argument a118	attacks a123, a205
+		attacked by a120, a54
+Argument a119	attacks a267
+		attacked by a131, a185, a75
+Argument a12	attacks a284
+		attacked by a52
+Argument a120	attacks a118, a235, a61
+		attacked by a71
+Argument a121	attacks none
+		attacked by none
+Argument a122	attacks a16, a285
+		attacked by a190
+Argument a123	attacks a112, a303, a94
+		attacked by a118
+Argument a124	attacks a64
+		attacked by a228
+Argument a125	attacks none
+		attacked by a212
+Argument a126	attacks a95
+		attacked by a17
+Argument a127	attacks none
+		attacked by a250, a85, a98
+Argument a128	attacks a220, a245, a295
+		attacked by a49, a62
+Argument a129	attacks a13, a4
+		attacked by a147
+Argument a13	attacks a192
+		attacked by a129, a164, a30, a55
+Argument a130	attacks a177, a256, a56
+		attacked by a15
+Argument a131	attacks a119, a95
+		attacked by a152, a205
+Argument a132	attacks a34
+		attacked by none
+Argument a133	attacks a18, a200
+		attacked by a115
+Argument a134	attacks none
+		attacked by none
+Argument a135	attacks none
+		attacked by a192, a299
+Argument a136	attacks a34
+		attacked by a67, a91
+Argument a137	attacks none
+		attacked by a277
+Argument a138	attacks a87
+		attacked by a245
+Argument a139	attacks a190
+		attacked by none
+Argument a14	attacks a214, a258, a289
+		attacked by a159
+Argument a140	attacks a192
+		attacked by a227, a234
+Argument a141	attacks a191, a33
+		attacked by a38
+Argument a142	attacks a216, a255
+		attacked by a230, a283
+Argument a143	attacks none
+		attacked by a93
+Argument a144	attacks a201, a276
+		attacked by a191
+Argument a145	attacks a190, a235
+		attacked by a151, a305
+Argument a146	attacks a252
+		attacked by none
+Argument a147	attacks a129, a214
+		attacked by none
+Argument a148	attacks none
+		attacked by none
+Argument a149	attacks a100
+		attacked by a250, a86
+Argument a15	attacks a130, a304
+		attacked by a18
+Argument a150	attacks a203, a95
+		attacked by a199
+Argument a151	attacks a145
+		attacked by none
+Argument a152	attacks a131, a191, a216
+		attacked by a278, a8
+Argument a153	attacks a11, a193
+		attacked by a215, a38
+Argument a154	attacks a110, a242
+		attacked by none
+Argument a155	attacks none
+		attacked by a221
+Argument a156	attacks none
+		attacked by none
+Argument a157	attacks a91
+		attacked by none
+Argument a158	attacks a235
+		attacked by none
+Argument a159	attacks a14, a83
+		attacked by none
+Argument a16	attacks a271
+		attacked by a122, a86
+Argument a160	attacks a162, a268, a80, a87
+		attacked by a301
+Argument a161	attacks a165
+		attacked by a260
+Argument a162	attacks a109, a255, a281
+		attacked by a160, a79
+Argument a163	attacks a39
+		attacked by a184, a31, a88
+Argument a164	attacks a13, a27
+		attacked by a37
+Argument a165	attacks a22, a90
+		attacked by a161, a58
+Argument a166	attacks a300, a65, a80
+		attacked by a272, a28, a287
+Argument a167	attacks none
+		attacked by none
+Argument a168	attacks a82
+		attacked by a201
+Argument a169	attacks a262, a93
+		attacked by a102
+Argument a17	attacks a126
+		attacked by a178, a248, a26, a273, a92
+Argument a170	attacks a40
+		attacked by a100, a27
+Argument a171	attacks a236, a239
+		attacked by none
+Argument a172	attacks a272
+		attacked by none
+Argument a173	attacks a103, a237, a295, a61
+		attacked by a270, a59, a96
+Argument a174	attacks none
+		attacked by none
+Argument a175	attacks a292
+		attacked by a246, a269, a286
+Argument a176	attacks a7
+		attacked by a188, a97
+Argument a177	attacks a69
+		attacked by a130, a29
+Argument a178	attacks a17, a245
+		attacked by a283, a3, a55
+Argument a179	attacks a269
+		attacked by a231
+Argument a18	attacks a15, a184, a275
+		attacked by a133, a225, a59
+Argument a180	attacks a298
+		attacked by none
+Argument a181	attacks a282
+		attacked by a76
+Argument a182	attacks a217, a22
+		attacked by a10
+Argument a183	attacks a241, a245
+		attacked by a248, a252
+Argument a184	attacks a163
+		attacked by a18, a242
+Argument a185	attacks a119, a31
+		attacked by a8
+Argument a186	attacks none
+		attacked by a106, a91
+Argument a187	attacks a21, a95
+		attacked by none
+Argument a188	attacks a176
+		attacked by none
+Argument a189	attacks a103, a207
+		attacked by none
+Argument a19	attacks a199
+		attacked by a82
+Argument a190	attacks a122, a7, a84
+		attacked by a139, a145, a91
+Argument a191	attacks a144
+		attacked by a141, a152
+Argument a192	attacks a135
+		attacked by a13, a140, a78, a87
+Argument a193	attacks none
+		attacked by a153, a268, a83
+Argument a194	attacks none
+		attacked by none
+Argument a195	attacks a225, a240, a71
+		attacked by a113, a212, a276, a56
+Argument a196	attacks a65
+		attacked by a101
+Argument a197	attacks none
+		attacked by a117
+Argument a198	attacks a297
+		attacked by a96
+Argument a199	attacks a150, a60
+		attacked by a19, a246, a3, a51
+Argument a2	attacks none
+		attacked by none
+Argument a20	attacks a92
+		attacked by none
+Argument a200	attacks none
+		attacked by a133, a245, a280, a87
+Argument a201	attacks a168, a38
+		attacked by a144
+Argument a202	attacks none
+		attacked by none
+Argument a203	attacks a31
+		attacked by a150, a218, a64
+Argument a204	attacks a56
+		attacked by a51
+Argument a205	attacks a107, a131, a207, a245, a290, a85
+		attacked by a118
+Argument a206	attacks a215
+		attacked by a216, a253, a5, a55
+Argument a207	attacks a103
+		attacked by a189, a205, a213, a50
+Argument a208	attacks a290
+		attacked by none
+Argument a209	attacks a223, a236
+		attacked by none
+Argument a21	attacks a27
+		attacked by a187, a244
+Argument a210	attacks none
+		attacked by a276, a288
+Argument a211	attacks a51
+		attacked by a291, a86
+Argument a212	attacks a125, a195
+		attacked by a48
+Argument a213	attacks a207
+		attacked by a222, a7
+Argument a214	attacks a112, a77
+		attacked by a14, a147, a263, a277, a50
+Argument a215	attacks a153, a222
+		attacked by a206
+Argument a216	attacks a206, a265, a275, a294
+		attacked by a142, a152, a243
+Argument a217	attacks none
+		attacked by a182, a224, a5, a80
+Argument a218	attacks a203
+		attacked by none
+Argument a219	attacks none
+		attacked by none
+Argument a22	attacks none
+		attacked by a165, a182, a298
+Argument a220	attacks none
+		attacked by a128, a261, a73
+Argument a221	attacks a155, a245
+		attacked by none
+Argument a222	attacks a107, a213, a237, a275, a301, a81
+		attacked by a215, a264
+Argument a223	attacks none
+		attacked by a111, a209
+Argument a224	attacks a217, a39, a58
+		attacked by none
+Argument a225	attacks a18, a241, a36
+		attacked by a195
+Argument a226	attacks a284
+		attacked by a304
+Argument a227	attacks a140
+		attacked by none
+Argument a228	attacks a124, a81
+		attacked by a248
+Argument a229	attacks none
+		attacked by a291, a80
+Argument a23	attacks a258, a56
+		attacked by a277
+Argument a230	attacks a142, a56, a97
+		attacked by a91
+Argument a231	attacks a179, a90
+		attacked by a251
+Argument a232	attacks a95
+		attacked by a45
+Argument a233	attacks none
+		attacked by a282, a83
+Argument a234	attacks a140
+		attacked by a271
+Argument a235	attacks a66
+		attacked by a120, a145, a158, a24
+Argument a236	attacks none
+		attacked by a171, a209
+Argument a237	attacks a109
+		attacked by a173, a222
+Argument a238	attacks a105, a79
+		attacked by a287, a82, a85
+Argument a239	attacks a101, a51, a78
+		attacked by a171
+Argument a24	attacks a235
+		attacked by a271, a28
+Argument a240	attacks none
+		attacked by a195, a61
+Argument a241	attacks none
+		attacked by a183, a225, a61
+Argument a242	attacks a184, a259
+		attacked by a154, a99
+Argument a243	attacks a216
+		attacked by a117
+Argument a244	attacks a110, a21, a56
+		attacked by none
+Argument a245	attacks a138, a200
+		attacked by a128, a178, a183, a205, a221, a75
+Argument a246	attacks a175, a199
+		attacked by none
+Argument a247	attacks none
+		attacked by a100
+Argument a248	attacks a17, a183, a228
+		attacked by none
+Argument a249	attacks a264
+		attacked by a101, a108, a276, a77
+Argument a25	attacks a254, a278
+		attacked by none
+Argument a250	attacks a127, a149, a37
+		attacked by a109
+Argument a251	attacks a231
+		attacked by a90
+Argument a252	attacks a183, a288
+		attacked by a146, a36
+Argument a253	attacks a206
+		attacked by a257
+Argument a254	attacks a292
+		attacked by a25, a290, a294
+Argument a255	attacks a105
+		attacked by a142, a162, a49
+Argument a256	attacks none
+		attacked by a115, a130, a276
+Argument a257	attacks a253, a39
+		attacked by none
+Argument a258	attacks none
+		attacked by a14, a23
+Argument a259	attacks none
+		attacked by a242
+Argument a26	attacks a17
+		attacked by a38
+Argument a260	attacks a161, a67
+		attacked by a288
+Argument a261	attacks a220
+		attacked by a78
+Argument a262	attacks a11, a302
+		attacked by a169
+Argument a263	attacks a214
+		attacked by none
+Argument a264	attacks a222, a64
+		attacked by a249, a65
+Argument a265	attacks none
+		attacked by a216
+Argument a266	attacks a99
+		attacked by none
+Argument a267	attacks a274, a81
+		attacked by a119, a286, a65
+Argument a268	attacks a193
+		attacked by a160
+Argument a269	attacks a175
+		attacked by a179, a276
+Argument a27	attacks a170
+		attacked by a164, a21, a282
+Argument a270	attacks a173
+		attacked by none
+Argument a271	attacks a111, a234, a24, a68
+		attacked by a16
+Argument a272	attacks a166
+		attacked by a172
+Argument a273	attacks a100, a17
+		attacked by none
+Argument a274	attacks none
+		attacked by a112, a113, a267, a98
+Argument a275	attacks a67
+		attacked by a18, a216, a222
+Argument a276	attacks a107, a195, a210, a249, a256, a269, a83
+		attacked by a103, a144
+Argument a277	attacks a137, a214, a23
+		attacked by a53
+Argument a278	attacks a152
+		attacked by a111, a25
+Argument a279	attacks a84
+		attacked by none
+Argument a28	attacks a166, a24
+		attacked by none
+Argument a280	attacks a200
+		attacked by a306
+Argument a281	attacks none
+		attacked by a10, a162, a96
+Argument a282	attacks a233, a27
+		attacked by a111, a181
+Argument a283	attacks a142, a178
+		attacked by none
+Argument a284	attacks a102
+		attacked by a12, a226
+Argument a285	attacks none
+		attacked by a122
+Argument a286	attacks a175, a267, a90
+		attacked by a11
+Argument a287	attacks a166, a238
+		attacked by a88
+Argument a288	attacks a116, a210, a260
+		attacked by a252
+Argument a289	attacks a88
+		attacked by a104, a14, a299
+Argument a29	attacks a177
+		attacked by none
+Argument a290	attacks a254, a6, a9
+		attacked by a11, a205, a208
+Argument a291	attacks a211, a229, a306, a40, a74
+		attacked by none
+Argument a292	attacks none
+		attacked by a175, a254
+Argument a293	attacks a101
+		attacked by none
+Argument a294	attacks a254, a5
+		attacked by a216
+Argument a295	attacks a72
+		attacked by a1, a128, a173, a38
+Argument a296	attacks none
+		attacked by a92
+Argument a297	attacks none
+		attacked by a198
+Argument a298	attacks a22
+		attacked by a180, a300, a81
+Argument a299	attacks a102, a135, a289
+		attacked by none
+Argument a3	attacks a178, a199
+		attacked by a54
+Argument a30	attacks a13
+		attacked by a31
+Argument a300	attacks a298, a37, a41, a72, a8
+		attacked by a166
+Argument a301	attacks a160
+		attacked by a222, a302, a92
+Argument a302	attacks a301
+		attacked by a107, a262
+Argument a303	attacks none
+		attacked by a123
+Argument a304	attacks a226
+		attacked by a15
+Argument a305	attacks a145, a54
+		attacked by none
+Argument a306	attacks a280
+		attacked by a291
+Argument a31	attacks a163, a30
+		attacked by a185, a203, a96
+Argument a32	attacks a46
+		attacked by a96
+Argument a33	attacks none
+		attacked by a141
+Argument a34	attacks a115
+		attacked by a132, a136
+Argument a35	attacks a99
+		attacked by none
+Argument a36	attacks a252, a46
+		attacked by a225
+Argument a37	attacks a164
+		attacked by a250, a300, a61
+Argument a38	attacks a141, a153, a26, a295
+		attacked by a201, a65
+Argument a39	attacks none
+		attacked by a163, a224, a257
+Argument a4	attacks none
+		attacked by a129, a76
+Argument a40	attacks none
+		attacked by a170, a291, a92
+Argument a41	attacks none
+		attacked by a300
+Argument a42	attacks none
+		attacked by none
+Argument a43	attacks a83
+		attacked by none
+Argument a44	attacks a47
+		attacked by none
+Argument a45	attacks a232, a88
+		attacked by none
+Argument a46	attacks a82
+		attacked by a32, a36
+Argument a47	attacks none
+		attacked by a44, a70
+Argument a48	attacks a212, a81
+		attacked by none
+Argument a49	attacks a128, a255
+		attacked by none
+Argument a5	attacks a206, a217
+		attacked by a294
+Argument a50	attacks a207, a214
+		attacked by none
+Argument a51	attacks a199, a204
+		attacked by a211, a239
+Argument a52	attacks a12
+		attacked by none
+Argument a53	attacks a277
+		attacked by none
+Argument a54	attacks a118, a3
+		attacked by a305
+Argument a55	attacks a13, a178, a206
+		attacked by none
+Argument a56	attacks a195
+		attacked by a108, a130, a204, a23, a230, a244
+Argument a57	attacks a110
+		attacked by none
+Argument a58	attacks a165
+		attacked by a224, a60, a75
+Argument a59	attacks a173, a18, a85
+		attacked by none
+Argument a6	attacks a75
+		attacked by a290, a93
+Argument a60	attacks a58
+		attacked by a199
+Argument a61	attacks a240, a241, a37
+		attacked by a120, a173
+Argument a62	attacks a101, a115, a128, a64, a78
+		attacked by a112, a66
+Argument a63	attacks a68
+		attacked by none
+Argument a64	attacks a203, a71, a97
+		attacked by a124, a264, a62
+Argument a65	attacks a264, a267, a38
+		attacked by a166, a196, a84
+Argument a66	attacks a62
+		attacked by a103, a235
+Argument a67	attacks a136
+		attacked by a260, a275
+Argument a68	attacks a98
+		attacked by a271, a63
+Argument a69	attacks none
+		attacked by a177
+Argument a7	attacks a213
+		attacked by a176, a190, a82
+Argument a70	attacks a47
+		attacked by none
+Argument a71	attacks a120
+		attacked by a195, a64
+Argument a72	attacks none
+		attacked by a106, a295, a300
+Argument a73	attacks a220
+		attacked by none
+Argument a74	attacks none
+		attacked by a291, a81
+Argument a75	attacks a119, a245, a58
+		attacked by a6
+Argument a76	attacks a181, a4
+		attacked by none
+Argument a77	attacks a249
+		attacked by a214
+Argument a78	attacks a192, a261
+		attacked by a239, a62
+Argument a79	attacks a162, a94
+		attacked by a238
+Argument a8	attacks a152, a185, a92
+		attacked by a300
+Argument a80	attacks a217, a229
+		attacked by a160, a166
+Argument a81	attacks a114, a298, a74
+		attacked by a222, a228, a267, a48, a91
+Argument a82	attacks a19, a238, a7
+		attacked by a168, a46
+Argument a83	attacks a10, a193, a233
+		attacked by a159, a276, a43
+Argument a84	attacks a65
+		attacked by a190, a279
+Argument a85	attacks a127, a238
+		attacked by a205, a59
+Argument a86	attacks a149, a16, a211
+		attacked by a106
+Argument a87	attacks a192, a200
+		attacked by a138, a160
+Argument a88	attacks a103, a163, a287
+		attacked by a289, a45
+Argument a89	attacks none
+		attacked by none
+Argument a9	attacks none
+		attacked by a290
+Argument a90	attacks a113, a251
+		attacked by a165, a231, a286
+Argument a91	attacks a136, a186, a190, a230, a81
+		attacked by a157
+Argument a92	attacks a17, a296, a301, a40
+		attacked by a20, a8
+Argument a93	attacks a143, a6
+		attacked by a169
+Argument a94	attacks none
+		attacked by a123, a79
+Argument a95	attacks a11
+		attacked by a112, a126, a131, a150, a187, a232
+Argument a96	attacks a173, a198, a281, a31, a32
+		attacked by none
+Argument a97	attacks a176
+		attacked by a230, a64
+Argument a98	attacks a127, a274
+		attacked by a68
+Argument a99	attacks a242
+		attacked by a266, a35
+
+Entering Grounded
+	New cycle
+		Added a1
+		Added a104
+		Added a106
+		Added a108
+		Added a117
+		Added a121
+		Added a132
+		Added a134
+		Added a139
+		Added a146
+		Added a147
+		Added a148
+		Added a151
+		Added a154
+		Added a156
+		Added a157
+		Added a158
+		Added a159
+		Added a167
+		Added a171
+		Added a172
+		Added a174
+		Added a180
+		Added a187
+		Added a188
+		Added a189
+		Added a194
+		Added a2
+		Added a20
+		Added a202
+		Added a208
+		Added a209
+		Added a218
+		Added a219
+		Added a221
+		Added a224
+		Added a227
+		Added a244
+		Added a246
+		Added a248
+		Added a25
+		Added a257
+		Added a263
+		Added a266
+		Added a270
+		Added a273
+		Added a279
+		Added a28
+		Added a283
+		Added a29
+		Added a291
+		Added a293
+		Added a299
+		Added a305
+		Added a35
+		Added a42
+		Added a43
+		Added a44
+		Added a45
+		Added a48
+		Added a49
+		Added a50
+		Added a52
+		Added a53
+		Added a55
+		Added a57
+		Added a59
+		Added a63
+		Added a70
+		Added a73
+		Added a76
+		Added a89
+		Added a96
+	New cycle
+		Added a10
+		Added a114
+		Added a122
+		Added a124
+		Added a125
+		Added a126
+		Added a137
+		Added a138
+		Added a15
+		Added a150
+		Added a169
+		Added a184
+		Added a196
+		Added a215
+		Added a23
+		Added a230
+		Added a247
+		Added a259
+		Added a280
+		Added a287
+		Added a288
+		Added a292
+		Added a296
+		Added a297
+		Added a3
+		Added a30
+		Added a300
+		Added a51
+		Added a60
+		Added a66
+		Added a69
+		Added a77
+		Added a9
+		Added a98
+	New cycle
+		Added a105
+		Added a11
+		Added a143
+		Added a152
+		Added a161
+		Added a164
+		Added a185
+		Added a226
+		Added a237
+		Added a264
+		Added a271
+		Added a6
+		Added a78
+		Added a79
+	New cycle
+		Added a144
+		Added a170
+		Added a22
+		Added a250
+		Added a265
+		Added a267
+		Added a275
+		Added a282
+		Added a294
+	New cycle
+		Added a136
+		Added a168
+		Added a38
+	New cycle
+		Added a19
+		Added a33
+		Added a7
+	New cycle
+		No grounded extension found.
+		Final I: {a107 a112 a113 a115 a118 a120 a123 a133 a160 a179 a193 a195 a205 a225 a231 a240 a241 a251 a256 a268 a269 a301 a302 a303 a36 a46 a61 a71 a80 a90}
+e: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+I: {a107 a112 a113 a115 a118 a120 a123 a133 a160 a179 a193 a195 a205 a225 a231 a240 a241 a251 a256 a268 a269 a301 a302 a303 a36 a46 a61 a71 a80 a90}
+	First Labelling: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+	New AF ( restricted ):
+Argument a107	attacks a115, a302
+		attacked by a205
+Argument a112	attacks none
+		attacked by a123
+Argument a113	attacks a195
+		attacked by a90
+Argument a115	attacks a133, a256
+		attacked by a107
+Argument a118	attacks a123, a205
+		attacked by a120
+Argument a120	attacks a118, a61
+		attacked by a71
+Argument a123	attacks a112, a303
+		attacked by a118
+Argument a133	attacks none
+		attacked by a115
+Argument a160	attacks a268, a80
+		attacked by a301
+Argument a179	attacks a269
+		attacked by a231
+Argument a193	attacks none
+		attacked by a268
+Argument a195	attacks a225, a240, a71
+		attacked by a113
+Argument a205	attacks a107
+		attacked by a118
+Argument a225	attacks a241, a36
+		attacked by a195
+Argument a231	attacks a179, a90
+		attacked by a251
+Argument a240	attacks none
+		attacked by a195, a61
+Argument a241	attacks none
+		attacked by a225, a61
+Argument a251	attacks a231
+		attacked by a90
+Argument a256	attacks none
+		attacked by a115
+Argument a268	attacks a193
+		attacked by a160
+Argument a269	attacks none
+		attacked by a179
+Argument a301	attacks a160
+		attacked by a302
+Argument a302	attacks a301
+		attacked by a107
+Argument a303	attacks none
+		attacked by a123
+Argument a36	attacks a46
+		attacked by a225
+Argument a46	attacks none
+		attacked by a36
+Argument a61	attacks a240, a241
+		attacked by a120
+Argument a71	attacks a120
+		attacked by a195
+Argument a80	attacks none
+		attacked by a160
+Argument a90	attacks a113, a251
+		attacked by a231
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a107
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a115
+		Looking at a115
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a133
+		Looking at a133
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a133
+		a115's lowlink: 1
+		Searching DFSNode corresponding to Argument a256
+		Looking at a256
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a256
+		a115's lowlink: 1
+	--- Building SCC ---
+	Finished TarjanAlg on node a115
+		a107's lowlink: 0
+		Searching DFSNode corresponding to Argument a302
+		Looking at a302
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a301
+		Looking at a301
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a160
+		Looking at a160
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a268
+		Looking at a268
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a193
+		Looking at a193
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a193
+		a268's lowlink: 4
+	--- Building SCC ---
+	Finished TarjanAlg on node a268
+		a160's lowlink: 3
+		Searching DFSNode corresponding to Argument a80
+		Looking at a80
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a80
+		a160's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a160
+		a301's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a301
+		a302's lowlink: 1
+	--- Building SCC ---
+	Finished TarjanAlg on node a302
+		a107's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a107
+	Calling TarjanAlg for a112
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a112
+	Calling TarjanAlg for a113
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a195
+		Looking at a195
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a225
+		Looking at a225
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a241
+		Looking at a241
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a241
+		a225's lowlink: 2
+		Searching DFSNode corresponding to Argument a36
+		Looking at a36
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a46
+		Looking at a46
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a46
+		a36's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a36
+		a225's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a225
+		a195's lowlink: 1
+		Searching DFSNode corresponding to Argument a240
+		Looking at a240
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a240
+		a195's lowlink: 1
+		Searching DFSNode corresponding to Argument a71
+		Looking at a71
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a120
+		Looking at a120
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a118
+		Looking at a118
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a123
+		Looking at a123
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a112
+		Looking at a112
+		Searching in stack for a112
+			Node in stack: a123
+			Node in stack: a118
+			Node in stack: a120
+			Node in stack: a71
+			Node in stack: a195
+			Node in stack: a113
+			Not found in stack.
+		a123's lowlink: 5
+		Searching DFSNode corresponding to Argument a303
+		Looking at a303
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a303
+		a123's lowlink: 5
+	--- Building SCC ---
+	Finished TarjanAlg on node a123
+		a118's lowlink: 4
+		Searching DFSNode corresponding to Argument a205
+		Looking at a205
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a107
+		Looking at a107
+		Searching in stack for a107
+			Node in stack: a205
+			Node in stack: a118
+			Node in stack: a120
+			Node in stack: a71
+			Node in stack: a195
+			Node in stack: a113
+			Not found in stack.
+		a205's lowlink: 5
+	--- Building SCC ---
+	Finished TarjanAlg on node a205
+		a118's lowlink: 4
+	--- Building SCC ---
+	Finished TarjanAlg on node a118
+		a120's lowlink: 3
+		Searching DFSNode corresponding to Argument a61
+		Looking at a61
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a240
+		Looking at a240
+		Searching in stack for a240
+			Node in stack: a61
+			Node in stack: a120
+			Node in stack: a71
+			Node in stack: a195
+			Node in stack: a113
+			Not found in stack.
+		a61's lowlink: 4
+		Searching DFSNode corresponding to Argument a241
+		Looking at a241
+		Searching in stack for a241
+			Node in stack: a61
+			Node in stack: a120
+			Node in stack: a71
+			Node in stack: a195
+			Node in stack: a113
+			Not found in stack.
+		a61's lowlink: 4
+	--- Building SCC ---
+	Finished TarjanAlg on node a61
+		a120's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a120
+		a71's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a71
+		a195's lowlink: 1
+	--- Building SCC ---
+	Finished TarjanAlg on node a195
+		a113's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a113
+	Calling TarjanAlg for a179
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a269
+		Looking at a269
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a269
+		a179's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a179
+	Calling TarjanAlg for a231
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a179
+		Looking at a179
+		Searching in stack for a179
+			Node in stack: a231
+			Not found in stack.
+		a231's lowlink: 0
+		Searching DFSNode corresponding to Argument a90
+		Looking at a90
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a113
+		Looking at a113
+		Searching in stack for a113
+			Node in stack: a90
+			Node in stack: a231
+			Not found in stack.
+		a90's lowlink: 1
+		Searching DFSNode corresponding to Argument a251
+		Looking at a251
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a231
+		Looking at a231
+		Searching in stack for a231
+			Node in stack: a251
+			Node in stack: a90
+			Node in stack: a231
+			Found in stack.
+		a251's lowlink: 0
+	Finished TarjanAlg on node a251
+		a90's lowlink: 0
+	Finished TarjanAlg on node a90
+		a231's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a231
+	SCC: {a231 a251 a90}
+	SCC: {a179}
+	SCC: {a269}
+	SCC: {a113}
+	SCC: {a195}
+	SCC: {a71}
+	SCC: {a120}
+	SCC: {a61}
+	SCC: {a118}
+	SCC: {a205}
+	SCC: {a123}
+	SCC: {a303}
+	SCC: {a240}
+	SCC: {a225}
+	SCC: {a36}
+	SCC: {a46}
+	SCC: {a241}
+	SCC: {a112}
+	SCC: {a107}
+	SCC: {a302}
+	SCC: {a301}
+	SCC: {a160}
+	SCC: {a80}
+	SCC: {a268}
+	SCC: {a193}
+	SCC: {a115}
+	SCC: {a256}
+	SCC: {a133}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a231 a251 a90}
+		Nodes not satisfying the first condition: {}
+	Determined I: {a231 a251 a90}
+O: {}
+I: {a231 a251 a90}
+	Calling prefSAT.
+Set arguments: 
+{a231 a251 a90}
+C set:
+{a231 a251 a90}
+predecessors of a231: a251 
+predecessors of a251: a90 
+predecessors of a90: a231 
+Preparing the satsolver
+1 4 7 0
+-1 -4 0
+-1 -7 0
+-4 -7 0
+-1 5 0
+-7 -2 0
+-5 1 0
+-7 8 0
+2 -8 7 0
+2 5 8 0
+-2 -5 0
+-2 -8 0
+-5 -8 0
+-2 6 0
+-8 -3 0
+-6 2 0
+-8 9 0
+3 -9 8 0
+3 6 9 0
+-3 -6 0
+-3 -9 0
+-6 -9 0
+-3 4 0
+-9 -1 0
+-4 3 0
+-9 7 0
+1 -7 9 0
+-2 4 0
+-4 2 0
+-3 5 0
+-5 3 0
+-1 6 0
+-6 1 0
+1 2 3 020
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a179}
+		Nodes not satisfying the first condition: {a179}
+		Not every attacker of a179 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a179
+Set arguments: 
+{a179}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a269}
+		Nodes not satisfying the first condition: {a269}
+		Not every attacker of a269 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a269
+Set arguments: 
+{a269}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a113}
+		Nodes not satisfying the first condition: {a113}
+		Not every attacker of a113 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a113
+Set arguments: 
+{a113}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a195}
+		Nodes not satisfying the first condition: {a195}
+		Not every attacker of a195 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a195
+Set arguments: 
+{a195}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a71}
+		Nodes not satisfying the first condition: {a71}
+		Not every attacker of a71 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a71
+Set arguments: 
+{a71}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a120}
+		Nodes not satisfying the first condition: {a120}
+		Not every attacker of a120 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a120
+Set arguments: 
+{a120}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a61}
+		Nodes not satisfying the first condition: {a61}
+		Not every attacker of a61 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a61
+Set arguments: 
+{a61}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a118}
+		Nodes not satisfying the first condition: {a118}
+		Not every attacker of a118 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a118
+Set arguments: 
+{a118}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a205}
+		Nodes not satisfying the first condition: {a205}
+		Not every attacker of a205 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a205
+Set arguments: 
+{a205}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a123}
+		Nodes not satisfying the first condition: {a123}
+		Not every attacker of a123 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a123
+Set arguments: 
+{a123}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a303}
+		Nodes not satisfying the first condition: {a303}
+		Not every attacker of a303 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a303
+Set arguments: 
+{a303}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a240}
+		Nodes not satisfying the first condition: {a240}
+		Not every attacker of a240 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a240
+Set arguments: 
+{a240}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a225}
+		Nodes not satisfying the first condition: {a225}
+		Not every attacker of a225 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a225
+Set arguments: 
+{a225}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a36}
+		Nodes not satisfying the first condition: {a36}
+		Not every attacker of a36 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a36
+Set arguments: 
+{a36}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a46}
+		Nodes not satisfying the first condition: {a46}
+		Not every attacker of a46 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a46
+Set arguments: 
+{a46}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a241}
+		Nodes not satisfying the first condition: {a241}
+		Not every attacker of a241 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a241
+Set arguments: 
+{a241}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a112}
+		Nodes not satisfying the first condition: {a112}
+		Not every attacker of a112 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a112
+Set arguments: 
+{a112}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a107}
+		Nodes not satisfying the first condition: {a107}
+		Not every attacker of a107 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a107
+Set arguments: 
+{a107}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a302}
+		Nodes not satisfying the first condition: {a302}
+		Not every attacker of a302 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a302
+Set arguments: 
+{a302}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a301}
+		Nodes not satisfying the first condition: {a301}
+		Not every attacker of a301 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a301
+Set arguments: 
+{a301}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a160}
+		Nodes not satisfying the first condition: {a160}
+		Not every attacker of a160 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a160
+Set arguments: 
+{a160}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a80}
+		Nodes not satisfying the first condition: {a80}
+		Not every attacker of a80 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a80
+Set arguments: 
+{a80}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a268}
+		Nodes not satisfying the first condition: {a268}
+		Not every attacker of a268 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a268
+Set arguments: 
+{a268}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a193}
+		Nodes not satisfying the first condition: {a193}
+		Not every attacker of a193 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a193
+Set arguments: 
+{a193}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a115}
+		Nodes not satisfying the first condition: {a115}
+		Not every attacker of a115 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a115
+Set arguments: 
+{a115}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a256}
+		Nodes not satisfying the first condition: {a256}
+		Not every attacker of a256 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a256
+Set arguments: 
+{a256}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a133}
+		Nodes not satisfying the first condition: {a133}
+		Not every attacker of a133 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Calling prefSAT.
+Subtraction a133
+Set arguments: 
+{a133}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}
+Extension 1
+{a1 a10 a104 a105 a106 a108 a11 a114 a117 a121 a122 a124 a125 a126 a132 a134 a136 a137 a138 a139 a143 a144 a146 a147 a148 a15 a150 a151 a152 a154 a156 a157 a158 a159 a161 a164 a167 a168 a169 a170 a171 a172 a174 a180 a184 a185 a187 a188 a189 a19 a194 a196 a2 a20 a202 a208 a209 a215 a218 a219 a22 a221 a224 a226 a227 a23 a230 a237 a244 a246 a247 a248 a25 a250 a257 a259 a263 a264 a265 a266 a267 a270 a271 a273 a275 a279 a28 a280 a282 a283 a287 a288 a29 a291 a292 a293 a294 a296 a297 a299 a3 a30 a300 a305 a33 a35 a38 a42 a43 a44 a45 a48 a49 a50 a51 a52 a53 a55 a57 a59 a6 a60 a63 a66 a69 a7 a70 a73 a76 a77 a78 a79 a89 a9 a96 a98}

@@ -1,0 +1,583 @@
+Debug on.
+Input file: ./test-input/random_test_06-07-2013_15-33-41-207794359.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a10, a14, a18, a5, a7
+		attacked by a15, a2, a20
+Argument a10	attacks none
+		attacked by a1, a17, a19, a21
+Argument a11	attacks none
+		attacked by a2, a8
+Argument a12	attacks a6
+		attacked by a13, a15, a17
+Argument a13	attacks a12, a19, a8
+		attacked by a2
+Argument a14	attacks a3
+		attacked by a1
+Argument a15	attacks a1, a12, a17, a3
+		attacked by a2, a3, a5
+Argument a16	attacks none
+		attacked by a4
+Argument a17	attacks a10, a12, a20, a21
+		attacked by a15, a21
+Argument a18	attacks a20
+		attacked by a1, a19, a4
+Argument a19	attacks a10, a18, a2
+		attacked by a13, a20
+Argument a2	attacks a1, a11, a13, a15
+		attacked by a19, a3
+Argument a20	attacks a1, a19, a3
+		attacked by a17, a18
+Argument a21	attacks a10, a17
+		attacked by a17, a5, a7
+Argument a22	attacks a8
+		attacked by none
+Argument a3	attacks a15, a2
+		attacked by a14, a15, a20, a9
+Argument a4	attacks a16, a18, a7
+		attacked by none
+Argument a5	attacks a15, a21, a6
+		attacked by a1, a7
+Argument a6	attacks none
+		attacked by a12, a5
+Argument a7	attacks a21, a5
+		attacked by a1, a4
+Argument a8	attacks a11
+		attacked by a13, a22
+Argument a9	attacks a3
+		attacked by none
+
+Entering Grounded
+	New cycle
+		Added a22
+		Added a4
+		Added a9
+	New cycle
+		No grounded extension found.
+		Final I: {a1 a10 a11 a12 a13 a14 a15 a17 a19 a2 a20 a21 a5 a6}
+	e: {a22 a4 a9}
+	I: {a1 a10 a11 a12 a13 a14 a15 a17 a19 a2 a20 a21 a5 a6}
+	First Labelling: {a22 a4 a9}
+	New AF ( restricted ):
+Argument a1	attacks a10, a14, a5
+		attacked by a15, a2, a20
+Argument a10	attacks none
+		attacked by a1, a17, a19, a21
+Argument a11	attacks none
+		attacked by a2
+Argument a12	attacks a6
+		attacked by a13, a15, a17
+Argument a13	attacks a12, a19
+		attacked by a2
+Argument a14	attacks none
+		attacked by a1
+Argument a15	attacks a1, a12, a17
+		attacked by a2, a5
+Argument a17	attacks a10, a12, a20, a21
+		attacked by a15, a21
+Argument a19	attacks a10, a2
+		attacked by a13, a20
+Argument a2	attacks a1, a11, a13, a15
+		attacked by a19
+Argument a20	attacks a1, a19
+		attacked by a17
+Argument a21	attacks a10, a17
+		attacked by a17, a5
+Argument a5	attacks a15, a21, a6
+		attacked by a1
+Argument a6	attacks none
+		attacked by a12, a5
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a1
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a10
+		Looking at a10
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a10
+		a1's lowlink: 0
+		Searching DFSNode corresponding to Argument a14
+		Looking at a14
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a14
+		a1's lowlink: 0
+		Searching DFSNode corresponding to Argument a5
+		Looking at a5
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a15
+		Looking at a15
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a1
+		Looking at a1
+		Searching in stack for a1
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Found in stack.
+		a15's lowlink: 0
+		Searching DFSNode corresponding to Argument a12
+		Looking at a12
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a6
+		Looking at a6
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a6
+		a12's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a12
+		a15's lowlink: 0
+		Searching DFSNode corresponding to Argument a17
+		Looking at a17
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a10
+		Looking at a10
+		Searching in stack for a10
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Not found in stack.
+		a17's lowlink: 3
+		Searching DFSNode corresponding to Argument a12
+		Looking at a12
+		Searching in stack for a12
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Not found in stack.
+		a17's lowlink: 3
+		Searching DFSNode corresponding to Argument a20
+		Looking at a20
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a1
+		Looking at a1
+		Searching in stack for a1
+			Node in stack: a20
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Found in stack.
+		a20's lowlink: 0
+		Searching DFSNode corresponding to Argument a19
+		Looking at a19
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a10
+		Looking at a10
+		Searching in stack for a10
+			Node in stack: a19
+			Node in stack: a20
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Not found in stack.
+		a19's lowlink: 5
+		Searching DFSNode corresponding to Argument a2
+		Looking at a2
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a1
+		Looking at a1
+		Searching in stack for a1
+			Node in stack: a2
+			Node in stack: a19
+			Node in stack: a20
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Found in stack.
+		a2's lowlink: 0
+		Searching DFSNode corresponding to Argument a11
+		Looking at a11
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a11
+		a2's lowlink: 0
+		Searching DFSNode corresponding to Argument a13
+		Looking at a13
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a12
+		Looking at a12
+		Searching in stack for a12
+			Node in stack: a13
+			Node in stack: a2
+			Node in stack: a19
+			Node in stack: a20
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Not found in stack.
+		a13's lowlink: 7
+		Searching DFSNode corresponding to Argument a19
+		Looking at a19
+		Searching in stack for a19
+			Node in stack: a13
+			Node in stack: a2
+			Node in stack: a19
+			Found in stack.
+		a13's lowlink: 5
+	Finished TarjanAlg on node a13
+		a2's lowlink: 0
+		Searching DFSNode corresponding to Argument a15
+		Looking at a15
+		Searching in stack for a15
+			Node in stack: a13
+			Node in stack: a2
+			Node in stack: a19
+			Node in stack: a20
+			Node in stack: a17
+			Node in stack: a15
+			Found in stack.
+		a2's lowlink: 0
+	Finished TarjanAlg on node a2
+		a19's lowlink: 0
+	Finished TarjanAlg on node a19
+		a20's lowlink: 0
+	Finished TarjanAlg on node a20
+		a17's lowlink: 0
+		Searching DFSNode corresponding to Argument a21
+		Looking at a21
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a10
+		Looking at a10
+		Searching in stack for a10
+			Node in stack: a21
+			Node in stack: a13
+			Node in stack: a2
+			Node in stack: a19
+			Node in stack: a20
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Not found in stack.
+		a21's lowlink: 4
+		Searching DFSNode corresponding to Argument a17
+		Looking at a17
+		Searching in stack for a17
+			Node in stack: a21
+			Node in stack: a13
+			Node in stack: a2
+			Node in stack: a19
+			Node in stack: a20
+			Node in stack: a17
+			Found in stack.
+		a21's lowlink: 0
+	Finished TarjanAlg on node a21
+		a17's lowlink: 0
+	Finished TarjanAlg on node a17
+		a15's lowlink: 0
+	Finished TarjanAlg on node a15
+		a5's lowlink: 0
+		Searching DFSNode corresponding to Argument a21
+		Looking at a21
+		Searching in stack for a21
+			Node in stack: a21
+			Found in stack.
+		a5's lowlink: 0
+		Searching DFSNode corresponding to Argument a6
+		Looking at a6
+		Searching in stack for a6
+			Node in stack: a21
+			Node in stack: a13
+			Node in stack: a2
+			Node in stack: a19
+			Node in stack: a20
+			Node in stack: a17
+			Node in stack: a15
+			Node in stack: a5
+			Node in stack: a1
+			Not found in stack.
+		a5's lowlink: 0
+	Finished TarjanAlg on node a5
+		a1's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a1
+	SCC: {a1 a13 a15 a17 a19 a2 a20 a21 a5}
+	SCC: {a11}
+	SCC: {a12}
+	SCC: {a6}
+	SCC: {a14}
+	SCC: {a10}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a1 a13 a15 a17 a19 a2 a20 a21 a5}
+		Nodes not satisfying the first condition: {}
+	Determined I: {a1 a13 a15 a17 a19 a2 a20 a21 a5}
+O: {}
+I: {a1 a13 a15 a17 a19 a2 a20 a21 a5}
+	Going to call prefSAT.
+		Calling prefSAT.
+Set arguments: 
+{a1 a13 a15 a17 a19 a2 a20 a21 a5}
+C set:
+{a1 a13 a15 a17 a19 a2 a20 a21 a5}
+predecessors of a1: a15 a2 a20 
+predecessors of a13: a2 
+predecessors of a15: a2 a5 
+predecessors of a17: a15 a21 
+predecessors of a19: a13 a20 
+predecessors of a2: a19 
+predecessors of a20: a17 
+predecessors of a21: a17 a5 
+predecessors of a5: a1 
+Preparing the satsolver
+1 10 19 0
+-1 -10 0
+-1 -19 0
+-10 -19 0
+-1 12 0
+-19 -3 0
+-1 15 0
+-19 -6 0
+-1 16 0
+-19 -7 0
+-12 -15 -16 1 0
+-19 21 24 25 0
+3 6 7 -21 19 0
+3 6 7 -24 19 0
+3 6 7 -25 19 0
+2 11 20 0
+-2 -11 0
+-2 -20 0
+-11 -20 0
+-2 15 0
+-20 -6 0
+-15 2 0
+-20 24 0
+6 -24 20 0
+3 12 21 0
+-3 -12 0
+-3 -21 0
+-12 -21 0
+-3 15 0
+-21 -6 0
+-3 18 0
+-21 -9 0
+-15 -18 3 0
+-21 24 27 0
+6 9 -24 21 0
+6 9 -27 21 0
+4 13 22 0
+-4 -13 0
+-4 -22 0
+-13 -22 0
+-4 12 0
+-22 -3 0
+-4 17 0
+-22 -8 0
+-12 -17 4 0
+-22 21 26 0
+3 8 -21 22 0
+3 8 -26 22 0
+5 14 23 0
+-5 -14 0
+-5 -23 0
+-14 -23 0
+-5 11 0
+-23 -2 0
+-5 16 0
+-23 -7 0
+-11 -16 5 0
+-23 20 25 0
+2 7 -20 23 0
+2 7 -25 23 0
+6 15 24 0
+-6 -15 0
+-6 -24 0
+-15 -24 0
+-6 14 0
+-24 -5 0
+-14 6 0
+-24 23 0
+5 -23 24 0
+7 16 25 0
+-7 -16 0
+-7 -25 0
+-16 -25 0
+-7 13 0
+-25 -4 0
+-13 7 0
+-25 22 0
+4 -22 25 0
+8 17 26 0
+-8 -17 0
+-8 -26 0
+-17 -26 0
+-8 13 0
+-26 -4 0
+-8 18 0
+-26 -9 0
+-13 -18 8 0
+-26 22 27 0
+4 9 -22 26 0
+4 9 -27 26 0
+9 18 27 0
+-9 -18 0
+-9 -27 0
+-18 -27 0
+-9 10 0
+-27 -1 0
+-10 9 0
+-27 19 0
+1 -19 27 0
+-3 10 0
+-6 10 0
+-7 10 0
+-10 3 6 7 0
+-6 11 0
+-11 6 0
+-6 12 0
+-9 12 0
+-12 6 9 0
+-3 13 0
+-8 13 0
+-13 3 8 0
+-2 14 0
+-7 14 0
+-14 2 7 0
+-5 15 0
+-15 5 0
+-4 16 0
+-16 4 0
+-4 17 0
+-9 17 0
+-17 4 9 0
+-1 18 0
+-18 1 0
+1 2 3 4 5 6 7 8 9 020
+		Found {}
+			Created: {a22 a4 a9}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a11}
+		Nodes not satisfying the first condition: {a11}
+		Not every attacker of a11 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a11
+Set arguments: 
+{a11}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a22 a4 a9}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a12}
+		Nodes not satisfying the first condition: {a12}
+		Not every attacker of a12 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a12
+Set arguments: 
+{a12}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a22 a4 a9}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a6}
+		Nodes not satisfying the first condition: {a6}
+		Not every attacker of a6 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a6
+Set arguments: 
+{a6}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a22 a4 a9}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a14}
+		Nodes not satisfying the first condition: {a14}
+		Not every attacker of a14 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a14
+Set arguments: 
+{a14}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a22 a4 a9}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a10}
+		Nodes not satisfying the first condition: {a10}
+		Not every attacker of a10 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a10
+Set arguments: 
+{a10}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a22 a4 a9}
+Extension 1
+{a22 a4 a9}

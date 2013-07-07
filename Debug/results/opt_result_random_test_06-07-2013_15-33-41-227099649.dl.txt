@@ -1,0 +1,58 @@
+Debug on.
+Input file: ./test-input/random_test_06-07-2013_15-33-41-227099649.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a10, a5, a7
+		attacked by a13
+Argument a10	attacks a7
+		attacked by a1, a14, a3, a7
+Argument a11	attacks a2
+		attacked by a14, a2
+Argument a12	attacks a16, a2, a5, a9
+		attacked by a17
+Argument a13	attacks a1, a2, a3
+		attacked by a17
+Argument a14	attacks a10, a11, a6
+		attacked by none
+Argument a15	attacks a9
+		attacked by none
+Argument a16	attacks none
+		attacked by a12, a9
+Argument a17	attacks a12, a13
+		attacked by a3, a8
+Argument a2	attacks a11, a4
+		attacked by a11, a12, a13, a5
+Argument a3	attacks a10, a17
+		attacked by a13
+Argument a4	attacks none
+		attacked by a2, a7
+Argument a5	attacks a2, a9
+		attacked by a1, a12, a9
+Argument a6	attacks none
+		attacked by a14
+Argument a7	attacks a10, a4
+		attacked by a1, a10
+Argument a8	attacks a17
+		attacked by none
+Argument a9	attacks a16, a5
+		attacked by a12, a15, a5
+
+Entering Grounded
+	New cycle
+		Added a14
+		Added a15
+		Added a8
+	New cycle
+		Added a12
+		Added a13
+	New cycle
+		Added a7
+	New cycle
+		No grounded extension found.
+		Final I: {}
+	e: {a12 a13 a14 a15 a7 a8}
+	I: {}
+	First Labelling: {a12 a13 a14 a15 a7 a8}
+	No unlabelled arguments left. Returning.
+Extension 1
+{a12 a13 a14 a15 a7 a8}

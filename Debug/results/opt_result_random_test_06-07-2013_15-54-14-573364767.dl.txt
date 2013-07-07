@@ -1,0 +1,944 @@
+Debug on.
+Input file: ./test-input/random_test_06-07-2013_15-54-14-573364767.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a288, a95
+		attacked by a134, a51, a6
+Argument a10	attacks none
+		attacked by a125, a227, a376
+Argument a100	attacks none
+		attacked by a363
+Argument a101	attacks a105, a110
+		attacked by a193
+Argument a102	attacks a161, a41, a61
+		attacked by a241, a294, a301, a318
+Argument a103	attacks a23, a235, a343
+		attacked by none
+Argument a104	attacks a69
+		attacked by none
+Argument a105	attacks a169, a288, a348, a383, a94
+		attacked by a101, a196, a210
+Argument a106	attacks a321, a35
+		attacked by a228, a382
+Argument a107	attacks a215, a221, a271, a78
+		attacked by a126, a71
+Argument a108	attacks a172, a174, a225
+		attacked by a146, a184, a221, a336, a82
+Argument a109	attacks a181, a294, a340, a51
+		attacked by a135
+Argument a11	attacks a81
+		attacked by a162, a205
+Argument a110	attacks a140, a18, a374, a52, a59, a8
+		attacked by a101, a136
+Argument a111	attacks a165, a226, a305, a90
+		attacked by a183, a207, a287
+Argument a112	attacks a154, a159, a38, a8
+		attacked by a17
+Argument a113	attacks a203, a9
+		attacked by a140, a261
+Argument a114	attacks a230
+		attacked by a242
+Argument a115	attacks a297, a75
+		attacked by a123, a309, a39
+Argument a116	attacks a139, a283
+		attacked by a352, a85
+Argument a117	attacks a363, a97
+		attacked by a188, a288, a54, a70
+Argument a118	attacks a365, a38
+		attacked by a122, a159, a176
+Argument a119	attacks none
+		attacked by a23, a290, a52
+Argument a12	attacks a180, a231, a70
+		attacked by a183
+Argument a120	attacks a128, a287, a310, a358
+		attacked by a222, a284, a314, a49
+Argument a121	attacks a259, a302
+		attacked by a146, a315, a54
+Argument a122	attacks a118, a145, a89
+		attacked by a304, a355
+Argument a123	attacks a115, a14, a228, a236, a333
+		attacked by a178, a82
+Argument a124	attacks a232, a255, a65
+		attacked by a221, a281
+Argument a125	attacks a10, a221, a286, a294, a99
+		attacked by a28, a321, a45, a56
+Argument a126	attacks a107, a288, a295, a35
+		attacked by a202
+Argument a127	attacks none
+		attacked by a142, a226, a232, a290, a54, a58
+Argument a128	attacks a204
+		attacked by a120, a255, a365
+Argument a129	attacks a308, a33
+		attacked by a15, a42
+Argument a13	attacks a41, a57, a71
+		attacked by a142, a242, a309
+Argument a130	attacks a140, a216
+		attacked by a198
+Argument a131	attacks a346
+		attacked by a22, a33, a76
+Argument a132	attacks a186
+		attacked by none
+Argument a133	attacks a167, a17, a221, a371, a39
+		attacked by a52
+Argument a134	attacks a1, a168, a19, a262, a320, a325, a355
+		attacked by a243, a93
+Argument a135	attacks a109, a192, a321
+		attacked by a61
+Argument a136	attacks a110, a380, a60, a89
+		attacked by a190, a358, a42, a68
+Argument a137	attacks a343, a356, a365, a70
+		attacked by a91
+Argument a138	attacks a275, a280
+		attacked by a63, a91
+Argument a139	attacks a303, a379, a47
+		attacked by a116, a277, a78
+Argument a14	attacks none
+		attacked by a123, a282, a286, a335
+Argument a140	attacks a113
+		attacked by a110, a130, a379
+Argument a141	attacks a176, a205, a353
+		attacked by none
+Argument a142	attacks a127, a13, a198, a241, a257
+		attacked by a288, a304
+Argument a143	attacks a237, a382
+		attacked by a16, a71
+Argument a144	attacks none
+		attacked by a237, a270, a339
+Argument a145	attacks a149, a328
+		attacked by a122
+Argument a146	attacks a108, a121, a164, a354, a43, a55, a99
+		attacked by a239, a257, a374
+Argument a147	attacks none
+		attacked by a254, a298, a312, a321, a54
+Argument a148	attacks a309, a36
+		attacked by a325, a373
+Argument a149	attacks a234, a319
+		attacked by a145, a289
+Argument a15	attacks a129, a183
+		attacked by a235
+Argument a150	attacks none
+		attacked by a265, a363
+Argument a151	attacks a199, a329
+		attacked by a187, a238
+Argument a152	attacks a339, a7
+		attacked by a166, a362
+Argument a153	attacks a193, a195, a216, a281, a308, a337, a71
+		attacked by none
+Argument a154	attacks a23, a80
+		attacked by a112, a186, a252
+Argument a155	attacks a205
+		attacked by a183, a238, a87
+Argument a156	attacks a214, a77
+		attacked by a182, a81
+Argument a157	attacks a197
+		attacked by a22, a356, a44, a95, a97
+Argument a158	attacks a22, a220
+		attacked by a181, a194, a336
+Argument a159	attacks a118, a22, a29, a95
+		attacked by a112
+Argument a16	attacks a143, a353
+		attacked by a223, a371, a5
+Argument a160	attacks none
+		attacked by a24, a63
+Argument a161	attacks a216, a62, a74
+		attacked by a102, a311
+Argument a162	attacks a11, a171, a20, a279, a353
+		attacked by a184
+Argument a163	attacks a236
+		attacked by a201, a243
+Argument a164	attacks a237, a247, a284, a371
+		attacked by a146, a232
+Argument a165	attacks a180, a210, a298, a3
+		attacked by a111, a234, a243, a315
+Argument a166	attacks a152
+		attacked by a178, a346, a364
+Argument a167	attacks a343, a88
+		attacked by a133
+Argument a168	attacks a88
+		attacked by a134, a17, a365, a75
+Argument a169	attacks a31, a378, a44, a55
+		attacked by a105, a21, a316
+Argument a17	attacks a112, a168, a274
+		attacked by a133, a382
+Argument a170	attacks a305, a318, a368, a375
+		attacked by none
+Argument a171	attacks a253, a377, a81
+		attacked by a162, a285
+Argument a172	attacks a24, a276, a59
+		attacked by a108, a70
+Argument a173	attacks a187
+		attacked by a275, a48
+Argument a174	attacks a245
+		attacked by a108, a327, a352
+Argument a175	attacks a35
+		attacked by a272
+Argument a176	attacks a118, a65, a81
+		attacked by a141, a62
+Argument a177	attacks a25, a282
+		attacked by none
+Argument a178	attacks a123, a166, a245
+		attacked by a350
+Argument a179	attacks a323, a351
+		attacked by a267, a341, a350
+Argument a18	attacks a79, a83
+		attacked by a110, a345
+Argument a180	attacks a338, a38, a86
+		attacked by a12, a165, a274, a301, a53
+Argument a181	attacks a158, a318
+		attacked by a109, a232, a27, a350, a56
+Argument a182	attacks a156, a316, a329, a346
+		attacked by none
+Argument a183	attacks a111, a12, a155, a351
+		attacked by a15, a273, a312, a7
+Argument a184	attacks a108, a162
+		attacked by a194, a32
+Argument a185	attacks a92
+		attacked by a208, a97
+Argument a186	attacks a154, a198, a360, a67
+		attacked by a132, a197, a229
+Argument a187	attacks a151, a291, a74
+		attacked by a173
+Argument a188	attacks a117, a273
+		attacked by none
+Argument a189	attacks a73
+		attacked by none
+Argument a19	attacks a383
+		attacked by a134
+Argument a190	attacks a136, a277, a83
+		attacked by a357
+Argument a191	attacks a264, a280
+		attacked by a45, a98
+Argument a192	attacks a206
+		attacked by a135, a261, a66
+Argument a193	attacks a101, a290, a320, a329
+		attacked by a153, a299, a378
+Argument a194	attacks a158, a184
+		attacked by none
+Argument a195	attacks a204, a42
+		attacked by a153, a258, a29, a317
+Argument a196	attacks a105, a36, a47
+		attacked by a382
+Argument a197	attacks a186, a229, a308, a345, a87
+		attacked by a157, a266, a303, a44
+Argument a198	attacks a130, a74
+		attacked by a142, a186, a255, a256, a295, a329
+Argument a199	attacks a301
+		attacked by a151, a2, a341
+Argument a2	attacks a199, a59
+		attacked by a201
+Argument a20	attacks none
+		attacked by a162, a240, a59
+Argument a200	attacks a229, a354, a376
+		attacked by a367
+Argument a201	attacks a163, a2, a221, a257, a280, a344, a345
+		attacked by a64, a73
+Argument a202	attacks a126
+		attacked by a273
+Argument a203	attacks none
+		attacked by a113, a24, a88
+Argument a204	attacks a229, a234
+		attacked by a128, a195, a342
+Argument a205	attacks a11, a82
+		attacked by a141, a155, a260, a271, a42
+Argument a206	attacks a350, a90, a95
+		attacked by a192, a309, a94
+Argument a207	attacks a111
+		attacked by none
+Argument a208	attacks a185
+		attacked by none
+Argument a209	attacks a274
+		attacked by a255, a268, a293, a355
+Argument a21	attacks a169, a4
+		attacked by none
+Argument a210	attacks a105, a29, a344
+		attacked by a165, a212, a330
+Argument a211	attacks a303, a64
+		attacked by a313, a338, a383
+Argument a212	attacks a210, a366
+		attacked by a251, a29, a319, a365
+Argument a213	attacks a373, a40
+		attacked by a223, a34, a92
+Argument a214	attacks none
+		attacked by a156, a231, a296, a79
+Argument a215	attacks a274, a372, a381, a47
+		attacked by a107
+Argument a216	attacks a225, a314
+		attacked by a130, a153, a161, a250, a378
+Argument a217	attacks a348
+		attacked by a327
+Argument a218	attacks a55
+		attacked by a249, a256
+Argument a219	attacks a88
+		attacked by none
+Argument a22	attacks a131, a157, a51
+		attacked by a158, a159, a325, a343, a4, a41
+Argument a220	attacks a305, a77, a84
+		attacked by a158, a370, a378, a67
+Argument a221	attacks a108, a124, a86
+		attacked by a107, a125, a133, a201, a309, a54
+Argument a222	attacks a120
+		attacked by a29, a316
+Argument a223	attacks a16, a213, a240
+		attacked by a363, a367, a49
+Argument a224	attacks none
+		attacked by a247, a287, a347
+Argument a225	attacks none
+		attacked by a108, a216, a243
+Argument a226	attacks a127, a317, a324, a45, a98
+		attacked by a111, a45
+Argument a227	attacks a10, a371, a379
+		attacked by none
+Argument a228	attacks a106, a48
+		attacked by a123, a28
+Argument a229	attacks a186, a254, a277, a300
+		attacked by a197, a200, a204, a379
+Argument a23	attacks a119, a303
+		attacked by a103, a154
+Argument a230	attacks a342, a349, a65
+		attacked by a114, a356
+Argument a231	attacks a214, a251, a37
+		attacked by a12, a313
+Argument a232	attacks a127, a164, a181, a6
+		attacked by a124, a38, a78
+Argument a233	attacks a280
+		attacked by a282, a294, a347
+Argument a234	attacks a165, a48, a97
+		attacked by a149, a204, a33
+Argument a235	attacks a15, a244
+		attacked by a103, a84
+Argument a236	attacks none
+		attacked by a123, a163, a256, a328, a356, a6
+Argument a237	attacks a144, a349
+		attacked by a143, a164, a30, a36, a372, a47
+Argument a238	attacks a151, a155, a91
+		attacked by a304, a333, a369
+Argument a239	attacks a146, a272, a307, a329, a380
+		attacked by none
+Argument a24	attacks a160, a203, a28, a381
+		attacked by a172, a260, a292, a44
+Argument a240	attacks a20, a308, a332, a34, a56, a91
+		attacked by a223, a30, a301, a362, a383
+Argument a241	attacks a102, a65, a9
+		attacked by a142, a332
+Argument a242	attacks a114, a13, a264, a324
+		attacked by a269, a318
+Argument a243	attacks a134, a163, a165, a225, a329, a53, a66
+		attacked by none
+Argument a244	attacks a299, a370
+		attacked by a235
+Argument a245	attacks a336
+		attacked by a174, a178, a266, a43
+Argument a246	attacks a57
+		attacked by a317
+Argument a247	attacks a224, a288
+		attacked by a164, a312
+Argument a248	attacks a345, a8
+		attacked by a342, a82
+Argument a249	attacks a218, a303, a316, a86
+		attacked by none
+Argument a25	attacks a259
+		attacked by a177, a362, a48
+Argument a250	attacks a216
+		attacked by none
+Argument a251	attacks a212, a29, a76
+		attacked by a231, a288
+Argument a252	attacks a154, a265, a336
+		attacked by a351
+Argument a253	attacks a37
+		attacked by a171, a319, a338, a345
+Argument a254	attacks a147, a359, a51
+		attacked by a229, a362, a99
+Argument a255	attacks a128, a198, a209, a303
+		attacked by a124, a384, a5
+Argument a256	attacks a198, a218, a236
+		attacked by none
+Argument a257	attacks a146, a35, a55
+		attacked by a142, a201, a260, a369
+Argument a258	attacks a195, a298
+		attacked by a342, a344, a375, a383
+Argument a259	attacks none
+		attacked by a121, a25, a30, a40, a79
+Argument a26	attacks none
+		attacked by none
+Argument a260	attacks a205, a24, a257, a45, a91
+		attacked by a342
+Argument a261	attacks a113, a192, a297
+		attacked by none
+Argument a262	attacks none
+		attacked by a134, a317
+Argument a263	attacks a269, a378, a8, a93
+		attacked by none
+Argument a264	attacks none
+		attacked by a191, a242, a329
+Argument a265	attacks a150, a83
+		attacked by a252
+Argument a266	attacks a197, a245, a294, a342, a46, a87
+		attacked by a371
+Argument a267	attacks a179, a383, a95
+		attacked by none
+Argument a268	attacks a209, a347, a358
+		attacked by none
+Argument a269	attacks a242, a285, a7
+		attacked by a263, a35
+Argument a27	attacks a181
+		attacked by a282
+Argument a270	attacks a144, a365, a87
+		attacked by a324, a383, a73
+Argument a271	attacks a205, a325, a359, a369, a74
+		attacked by a107, a28
+Argument a272	attacks a175, a77
+		attacked by a239, a383, a56
+Argument a273	attacks a183, a202, a374
+		attacked by a188
+Argument a274	attacks a180, a36, a40
+		attacked by a17, a209, a215, a86
+Argument a275	attacks a173, a283, a85
+		attacked by a138, a87
+Argument a276	attacks a299, a326
+		attacked by a172, a290, a348, a8
+Argument a277	attacks a139
+		attacked by a190, a229, a48, a86
+Argument a278	attacks none
+		attacked by a65
+Argument a279	attacks none
+		attacked by a162, a96
+Argument a28	attacks a125, a228, a271
+		attacked by a24, a71
+Argument a280	attacks none
+		attacked by a138, a191, a201, a233, a354
+Argument a281	attacks a124, a82
+		attacked by a153, a297
+Argument a282	attacks a14, a233, a27, a289, a368, a78
+		attacked by a177
+Argument a283	attacks a288
+		attacked by a116, a275, a341
+Argument a284	attacks a120
+		attacked by a164, a98
+Argument a285	attacks a171
+		attacked by a269
+Argument a286	attacks a14, a290, a313
+		attacked by a125, a41
+Argument a287	attacks a111, a224, a62
+		attacked by a120, a344
+Argument a288	attacks a117, a142, a251, a80
+		attacked by a1, a105, a126, a247, a283, a310, a331, a80
+Argument a289	attacks a149, a332
+		attacked by a282, a294, a323, a373, a74
+Argument a29	attacks a195, a212, a222
+		attacked by a159, a210, a251, a359
+Argument a290	attacks a119, a127, a276, a42
+		attacked by a193, a286
+Argument a291	attacks a354
+		attacked by a187, a81
+Argument a292	attacks a24
+		attacked by a82, a97
+Argument a293	attacks a209, a84, a87
+		attacked by none
+Argument a294	attacks a102, a233, a289, a337, a77
+		attacked by a109, a125, a266, a34
+Argument a295	attacks a198
+		attacked by a126, a360
+Argument a296	attacks a214, a49
+		attacked by a381, a43, a60, a94
+Argument a297	attacks a281, a381
+		attacked by a115, a261
+Argument a298	attacks a147
+		attacked by a165, a258, a315, a321
+Argument a299	attacks a193, a37
+		attacked by a244, a276, a304
+Argument a3	attacks a32, a75
+		attacked by a165
+Argument a30	attacks a237, a240, a259
+		attacked by a344, a369, a377
+Argument a300	attacks a54
+		attacked by a229
+Argument a301	attacks a102, a180, a240, a314
+		attacked by a199, a332
+Argument a302	attacks a84
+		attacked by a121, a337, a382
+Argument a303	attacks a197, a306
+		attacked by a139, a211, a23, a249, a255
+Argument a304	attacks a122, a142, a238, a299, a345, a355, a86, a89
+		attacked by a309, a39
+Argument a305	attacks a333
+		attacked by a111, a170, a220, a368, a39
+Argument a306	attacks a7
+		attacked by a303, a4
+Argument a307	attacks none
+		attacked by a239, a352
+Argument a308	attacks a65
+		attacked by a129, a153, a197, a240, a313, a70
+Argument a309	attacks a115, a13, a206, a221, a304, a337, a367, a76
+		attacked by a148
+Argument a31	attacks a363, a368, a88
+		attacked by a169
+Argument a310	attacks a288
+		attacked by a120, a362
+Argument a311	attacks a161, a332, a95
+		attacked by a55
+Argument a312	attacks a147, a183, a247, a41
+		attacked by none
+Argument a313	attacks a211, a231, a308, a348, a368, a50, a52
+		attacked by a286, a348
+Argument a314	attacks a120
+		attacked by a216, a301, a326
+Argument a315	attacks a121, a165, a298, a377
+		attacked by none
+Argument a316	attacks a169, a222
+		attacked by a182, a249, a366
+Argument a317	attacks a195, a246, a262
+		attacked by a226, a5
+Argument a318	attacks a102, a242, a336
+		attacked by a170, a181
+Argument a319	attacks a212, a253, a376, a84
+		attacked by a149
+Argument a32	attacks a184, a365
+		attacked by a3, a82, a9
+Argument a320	attacks none
+		attacked by a134, a193, a321, a333
+Argument a321	attacks a125, a147, a298, a320, a60
+		attacked by a106, a135, a339
+Argument a322	attacks none
+		attacked by a325, a71
+Argument a323	attacks a289
+		attacked by a179, a36
+Argument a324	attacks a270
+		attacked by a226, a242, a87
+Argument a325	attacks a148, a22, a322, a374
+		attacked by a134, a271, a371
+Argument a326	attacks a314, a72, a97
+		attacked by a276
+Argument a327	attacks a174, a217
+		attacked by a330, a87
+Argument a328	attacks a236, a382, a92
+		attacked by a145
+Argument a329	attacks a198, a264
+		attacked by a151, a182, a193, a239, a243, a353, a5, a64
+Argument a33	attacks a131, a234, a42
+		attacked by a129, a37
+Argument a330	attacks a210, a327, a94
+		attacked by a338
+Argument a331	attacks a288
+		attacked by a376
+Argument a332	attacks a241, a301, a97
+		attacked by a240, a289, a311, a349, a365, a53, a61, a82
+Argument a333	attacks a238, a320, a8
+		attacked by a123, a305
+Argument a334	attacks none
+		attacked by none
+Argument a335	attacks a14, a348, a68, a90
+		attacked by a75
+Argument a336	attacks a108, a158, a356, a71
+		attacked by a245, a252, a318, a371
+Argument a337	attacks a302, a353
+		attacked by a153, a294, a309, a60
+Argument a338	attacks a211, a253, a330, a59
+		attacked by a180, a7
+Argument a339	attacks a144, a321, a367, a54, a99
+		attacked by a152
+Argument a34	attacks a213, a294, a367
+		attacked by a240, a347
+Argument a340	attacks a348
+		attacked by a109
+Argument a341	attacks a179, a199, a283
+		attacked by a343
+Argument a342	attacks a204, a248, a258, a260, a55
+		attacked by a230, a266, a348, a352
+Argument a343	attacks a22, a341
+		attacked by a103, a137, a167
+Argument a344	attacks a258, a287, a30, a379, a53
+		attacked by a201, a210
+Argument a345	attacks a18, a253
+		attacked by a197, a201, a248, a304
+Argument a346	attacks a166, a368
+		attacked by a131, a182
+Argument a347	attacks a224, a233, a34
+		attacked by a268, a87
+Argument a348	attacks a276, a313, a342, a95
+		attacked by a105, a217, a313, a335, a340, a373
+Argument a349	attacks a332, a42
+		attacked by a230, a237
+Argument a35	attacks a269
+		attacked by a106, a126, a175, a257
+Argument a350	attacks a178, a179, a181
+		attacked by a206
+Argument a351	attacks a252, a58
+		attacked by a179, a183, a63
+Argument a352	attacks a116, a174, a307, a342
+		attacked by a41
+Argument a353	attacks a329, a74
+		attacked by a141, a16, a162, a337
+Argument a354	attacks a280, a6
+		attacked by a146, a200, a291, a90
+Argument a355	attacks a122, a209, a63, a89
+		attacked by a134, a304
+Argument a356	attacks a157, a230, a236
+		attacked by a137, a336, a375
+Argument a357	attacks a190
+		attacked by none
+Argument a358	attacks a136, a41
+		attacked by a120, a268, a373, a89
+Argument a359	attacks a29, a61
+		attacked by a254, a271, a4
+Argument a36	attacks a237, a323
+		attacked by a148, a196, a274, a60
+Argument a360	attacks a295, a64
+		attacked by a186
+Argument a361	attacks none
+		attacked by a72
+Argument a362	attacks a152, a240, a25, a254, a310
+		attacked by a49, a60
+Argument a363	attacks a100, a150, a223, a379, a99
+		attacked by a117, a31
+Argument a364	attacks a166
+		attacked by a91
+Argument a365	attacks a128, a168, a212, a332
+		attacked by a118, a137, a270, a32
+Argument a366	attacks a316, a98
+		attacked by a212
+Argument a367	attacks a200, a223, a78
+		attacked by a309, a339, a34
+Argument a368	attacks a305
+		attacked by a170, a282, a31, a313, a346, a64
+Argument a369	attacks a238, a257, a30, a99
+		attacked by a271, a39, a67
+Argument a37	attacks a33
+		attacked by a231, a253, a299
+Argument a370	attacks a220
+		attacked by a244
+Argument a371	attacks a16, a266, a325, a336, a75, a95
+		attacked by a133, a164, a227
+Argument a372	attacks a237
+		attacked by a215
+Argument a373	attacks a148, a289, a348, a358, a45, a46, a56
+		attacked by a213
+Argument a374	attacks a146
+		attacked by a110, a273, a325
+Argument a375	attacks a258, a356
+		attacked by a170, a381
+Argument a376	attacks a10, a331, a58
+		attacked by a200, a319
+Argument a377	attacks a30
+		attacked by a171, a315
+Argument a378	attacks a193, a216, a220
+		attacked by a169, a263, a382
+Argument a379	attacks a140, a229, a43, a99
+		attacked by a139, a227, a344, a363, a42
+Argument a38	attacks a232
+		attacked by a112, a118, a180, a71
+Argument a380	attacks a50, a79
+		attacked by a136, a239
+Argument a381	attacks a296, a375
+		attacked by a215, a24, a297
+Argument a382	attacks a106, a17, a196, a302, a378, a56
+		attacked by a143, a328
+Argument a383	attacks a211, a240, a258, a270, a272
+		attacked by a105, a19, a267
+Argument a384	attacks a255, a73
+		attacked by none
+Argument a39	attacks a115, a304, a305, a369, a51
+		attacked by a133, a70, a8
+Argument a4	attacks a22, a306, a359
+		attacked by a21
+Argument a40	attacks a259
+		attacked by a213, a274
+Argument a41	attacks a22, a286, a352
+		attacked by a102, a13, a312, a358, a89
+Argument a42	attacks a129, a136, a205, a379, a52, a77
+		attacked by a195, a290, a33, a349, a68
+Argument a43	attacks a245, a296
+		attacked by a146, a379
+Argument a44	attacks a157, a197, a24
+		attacked by a169, a79, a95, a97
+Argument a45	attacks a125, a191, a226
+		attacked by a226, a260, a373
+Argument a46	attacks none
+		attacked by a266, a373, a88
+Argument a47	attacks a237, a74, a79
+		attacked by a139, a196, a215
+Argument a48	attacks a173, a25, a277
+		attacked by a228, a234
+Argument a49	attacks a120, a223, a362
+		attacked by a296
+Argument a5	attacks a16, a255, a317, a329
+		attacked by none
+Argument a50	attacks none
+		attacked by a313, a380
+Argument a51	attacks a1
+		attacked by a109, a22, a254, a39
+Argument a52	attacks a119, a133, a79, a97
+		attacked by a110, a313, a42, a97
+Argument a53	attacks a180, a332
+		attacked by a243, a344
+Argument a54	attacks a117, a121, a127, a147, a221
+		attacked by a300, a339
+Argument a55	attacks a311, a64
+		attacked by a146, a169, a218, a257, a342
+Argument a56	attacks a125, a181, a272
+		attacked by a240, a373, a382
+Argument a57	attacks a76
+		attacked by a13, a246
+Argument a58	attacks a127
+		attacked by a351, a376
+Argument a59	attacks a20
+		attacked by a110, a172, a2, a338
+Argument a6	attacks a1, a236
+		attacked by a232, a354
+Argument a60	attacks a296, a337, a36, a362
+		attacked by a136, a321
+Argument a61	attacks a135, a332
+		attacked by a102, a359
+Argument a62	attacks a176
+		attacked by a161, a287, a91
+Argument a63	attacks a138, a160, a351, a92
+		attacked by a355, a72
+Argument a64	attacks a201, a329, a368
+		attacked by a211, a360, a55
+Argument a65	attacks a278
+		attacked by a124, a176, a230, a241, a308
+Argument a66	attacks a192
+		attacked by a243
+Argument a67	attacks a220, a369
+		attacked by a186, a88
+Argument a68	attacks a136, a42
+		attacked by a335
+Argument a69	attacks none
+		attacked by a104
+Argument a7	attacks a183, a338
+		attacked by a152, a269, a306
+Argument a70	attacks a117, a172, a308, a39, a94
+		attacked by a12, a137
+Argument a71	attacks a107, a143, a28, a322, a38
+		attacked by a13, a153, a336
+Argument a72	attacks a361, a63, a84
+		attacked by a326
+Argument a73	attacks a201, a270
+		attacked by a189, a384, a98
+Argument a74	attacks a289
+		attacked by a161, a187, a198, a271, a353, a47
+Argument a75	attacks a168, a335, a93, a94
+		attacked by a115, a3, a371
+Argument a76	attacks a131
+		attacked by a251, a309, a57
+Argument a77	attacks none
+		attacked by a156, a220, a272, a294, a42
+Argument a78	attacks a139, a232
+		attacked by a107, a282, a367
+Argument a79	attacks a214, a259, a44
+		attacked by a18, a380, a47, a52
+Argument a8	attacks a276, a39, a84
+		attacked by a110, a112, a248, a263, a333
+Argument a80	attacks a288
+		attacked by a154, a288
+Argument a81	attacks a156, a291
+		attacked by a11, a171, a176
+Argument a82	attacks a108, a123, a248, a292, a32, a332
+		attacked by a205, a281
+Argument a83	attacks none
+		attacked by a18, a190, a265
+Argument a84	attacks a235
+		attacked by a220, a293, a302, a319, a72, a8
+Argument a85	attacks a116
+		attacked by a275
+Argument a86	attacks a274, a277
+		attacked by a180, a221, a249, a304
+Argument a87	attacks a155, a275, a324, a327, a347
+		attacked by a197, a266, a270, a293
+Argument a88	attacks a203, a46, a67
+		attacked by a167, a168, a219, a31
+Argument a89	attacks a358, a41
+		attacked by a122, a136, a304, a355
+Argument a9	attacks a32
+		attacked by a113, a241
+Argument a90	attacks a354
+		attacked by a111, a206, a335
+Argument a91	attacks a137, a138, a364, a62
+		attacked by a238, a240, a260
+Argument a92	attacks a213
+		attacked by a185, a328, a63
+Argument a93	attacks a134
+		attacked by a263, a75
+Argument a94	attacks a206, a296
+		attacked by a105, a330, a70, a75
+Argument a95	attacks a157, a44
+		attacked by a1, a159, a206, a267, a311, a348, a371
+Argument a96	attacks a279
+		attacked by none
+Argument a97	attacks a157, a185, a292, a44, a52
+		attacked by a117, a234, a326, a332, a52
+Argument a98	attacks a191, a284, a73
+		attacked by a226, a366
+Argument a99	attacks a254
+		attacked by a125, a146, a339, a363, a369, a379
+
+Entering Grounded
+	New cycle
+		Added a103
+		Added a104
+		Added a132
+		Added a141
+		Added a153
+		Added a170
+		Added a177
+		Added a182
+		Added a188
+		Added a189
+		Added a194
+		Added a207
+		Added a208
+		Added a21
+		Added a219
+		Added a227
+		Added a239
+		Added a243
+		Added a249
+		Added a250
+		Added a256
+		Added a26
+		Added a261
+		Added a263
+		Added a267
+		Added a268
+		Added a293
+		Added a312
+		Added a315
+		Added a334
+		Added a357
+		Added a384
+		Added a5
+		Added a96
+	New cycle
+		Added a101
+		Added a12
+		Added a130
+		Added a143
+		Added a15
+		Added a162
+		Added a175
+		Added a19
+		Added a202
+		Added a242
+		Added a244
+		Added a246
+		Added a262
+		Added a266
+		Added a27
+		Added a285
+		Added a3
+		Added a306
+		Added a31
+		Added a341
+		Added a352
+		Added a360
+		Added a43
+		Added a67
+		Added a82
+	New cycle
+		Added a100
+		Added a107
+		Added a172
+		Added a196
+		Added a201
+		Added a233
+		Added a260
+		Added a270
+		Added a301
+		Added a302
+		Added a333
+		Added a335
+		Added a338
+		Added a49
+		Added a81
+	New cycle
+		Added a124
+		Added a128
+		Added a137
+		Added a155
+		Added a18
+		Added a203
+		Added a226
+		Added a258
+		Added a28
+		Added a287
+		Added a30
+		Added a310
+		Added a323
+		Added a325
+		Added a326
+		Added a327
+		Added a34
+		Added a364
+		Added a37
+		Added a372
+		Added a381
+		Added a55
+		Added a94
+	New cycle
+		Added a106
+		Added a152
+		Added a161
+		Added a164
+		Added a191
+		Added a200
+		Added a214
+		Added a230
+		Added a251
+		Added a278
+		Added a286
+		Added a309
+		Added a350
+		Added a361
+		Added a373
+		Added a44
+	New cycle
+		Added a131
+		Added a142
+		Added a210
+		Added a222
+		Added a300
+		Added a331
+		Added a355
+		Added a366
+		Added a42
+		Added a50
+		Added a6
+		Added a99
+	New cycle
+		Added a119
+		Added a133
+		Added a138
+		Added a145
+		Added a160
+		Added a351
+		Added a359
+		Added a60
+		Added a9
+	New cycle
+		Added a112
+		Added a135
+		Added a168
+		Added a234
+		Added a265
+		Added a274
+		Added a319
+		Added a336
+		Added a85
+		Added a92
+	New cycle
+		Added a118
+		Added a173
+		Added a277
+		Added a340
+		Added a51
+		Added a80
+	New cycle
+		Added a151
+	New cycle
+		No grounded extension found.
+		Final I: {}
+	e: {a100 a101 a103 a104 a106 a107 a112 a118 a119 a12 a124 a128 a130 a131 a132 a133 a135 a137 a138 a141 a142 a143 a145 a15 a151 a152 a153 a155 a160 a161 a162 a164 a168 a170 a172 a173 a175 a177 a18 a182 a188 a189 a19 a191 a194 a196 a200 a201 a202 a203 a207 a208 a21 a210 a214 a219 a222 a226 a227 a230 a233 a234 a239 a242 a243 a244 a246 a249 a250 a251 a256 a258 a26 a260 a261 a262 a263 a265 a266 a267 a268 a27 a270 a274 a277 a278 a28 a285 a286 a287 a293 a3 a30 a300 a301 a302 a306 a309 a31 a310 a312 a315 a319 a323 a325 a326 a327 a331 a333 a334 a335 a336 a338 a34 a340 a341 a350 a351 a352 a355 a357 a359 a360 a361 a364 a366 a37 a372 a373 a381 a384 a42 a43 a44 a49 a5 a50 a51 a55 a6 a60 a67 a80 a81 a82 a85 a9 a92 a94 a96 a99}
+	I: {}
+	First Labelling: {a100 a101 a103 a104 a106 a107 a112 a118 a119 a12 a124 a128 a130 a131 a132 a133 a135 a137 a138 a141 a142 a143 a145 a15 a151 a152 a153 a155 a160 a161 a162 a164 a168 a170 a172 a173 a175 a177 a18 a182 a188 a189 a19 a191 a194 a196 a200 a201 a202 a203 a207 a208 a21 a210 a214 a219 a222 a226 a227 a230 a233 a234 a239 a242 a243 a244 a246 a249 a250 a251 a256 a258 a26 a260 a261 a262 a263 a265 a266 a267 a268 a27 a270 a274 a277 a278 a28 a285 a286 a287 a293 a3 a30 a300 a301 a302 a306 a309 a31 a310 a312 a315 a319 a323 a325 a326 a327 a331 a333 a334 a335 a336 a338 a34 a340 a341 a350 a351 a352 a355 a357 a359 a360 a361 a364 a366 a37 a372 a373 a381 a384 a42 a43 a44 a49 a5 a50 a51 a55 a6 a60 a67 a80 a81 a82 a85 a9 a92 a94 a96 a99}
+	No unlabelled arguments left. Returning.
+Extension 1
+{a100 a101 a103 a104 a106 a107 a112 a118 a119 a12 a124 a128 a130 a131 a132 a133 a135 a137 a138 a141 a142 a143 a145 a15 a151 a152 a153 a155 a160 a161 a162 a164 a168 a170 a172 a173 a175 a177 a18 a182 a188 a189 a19 a191 a194 a196 a200 a201 a202 a203 a207 a208 a21 a210 a214 a219 a222 a226 a227 a230 a233 a234 a239 a242 a243 a244 a246 a249 a250 a251 a256 a258 a26 a260 a261 a262 a263 a265 a266 a267 a268 a27 a270 a274 a277 a278 a28 a285 a286 a287 a293 a3 a30 a300 a301 a302 a306 a309 a31 a310 a312 a315 a319 a323 a325 a326 a327 a331 a333 a334 a335 a336 a338 a34 a340 a341 a350 a351 a352 a355 a357 a359 a360 a361 a364 a366 a37 a372 a373 a381 a384 a42 a43 a44 a49 a5 a50 a51 a55 a6 a60 a67 a80 a81 a82 a85 a9 a92 a94 a96 a99}

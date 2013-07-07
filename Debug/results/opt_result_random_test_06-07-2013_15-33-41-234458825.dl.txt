@@ -1,0 +1,44 @@
+Debug on.
+Input file: ./test-input/random_test_06-07-2013_15-33-41-234458825.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a4, a5
+		attacked by a4, a8
+Argument a10	attacks a7, a8
+		attacked by a6, a7, a9
+Argument a2	attacks a7, a9
+		attacked by a3, a4, a9
+Argument a3	attacks a2
+		attacked by none
+Argument a4	attacks a1, a2
+		attacked by a1, a9
+Argument a5	attacks none
+		attacked by a1
+Argument a6	attacks a10
+		attacked by none
+Argument a7	attacks a10
+		attacked by a10, a2
+Argument a8	attacks a1, a9
+		attacked by a10
+Argument a9	attacks a10, a2, a4
+		attacked by a2, a8
+
+Entering Grounded
+	New cycle
+		Added a3
+		Added a6
+	New cycle
+		Added a7
+		Added a8
+	New cycle
+		Added a4
+		Added a5
+	New cycle
+		No grounded extension found.
+		Final I: {}
+	e: {a3 a4 a5 a6 a7 a8}
+	I: {}
+	First Labelling: {a3 a4 a5 a6 a7 a8}
+	No unlabelled arguments left. Returning.
+Extension 1
+{a3 a4 a5 a6 a7 a8}

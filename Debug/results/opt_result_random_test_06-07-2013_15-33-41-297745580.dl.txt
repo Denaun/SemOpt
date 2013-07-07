@@ -1,0 +1,251 @@
+Debug on.
+Input file: ./test-input/random_test_06-07-2013_15-33-41-297745580.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a11, a12, a2, a9
+		attacked by a4, a7
+Argument a10	attacks none
+		attacked by a7
+Argument a11	attacks a4
+		attacked by a1, a3
+Argument a12	attacks none
+		attacked by a1, a4
+Argument a2	attacks a7
+		attacked by a1, a9
+Argument a3	attacks a11, a8
+		attacked by none
+Argument a4	attacks a1, a12, a8
+		attacked by a11
+Argument a5	attacks a6, a7
+		attacked by a9
+Argument a6	attacks a7, a9
+		attacked by a5, a8
+Argument a7	attacks a1, a10, a8
+		attacked by a2, a5, a6
+Argument a8	attacks a6, a9
+		attacked by a3, a4, a7
+Argument a9	attacks a2, a5
+		attacked by a1, a6, a8
+
+Entering Grounded
+	New cycle
+		Added a3
+	New cycle
+		Added a4
+	New cycle
+		No grounded extension found.
+		Final I: {a10 a2 a5 a6 a7 a9}
+	e: {a3 a4}
+	I: {a10 a2 a5 a6 a7 a9}
+	First Labelling: {a3 a4}
+	New AF ( restricted ):
+Argument a10	attacks none
+		attacked by a7
+Argument a2	attacks a7
+		attacked by a9
+Argument a5	attacks a6, a7
+		attacked by a9
+Argument a6	attacks a7, a9
+		attacked by a5
+Argument a7	attacks a10
+		attacked by a2, a5, a6
+Argument a9	attacks a2, a5
+		attacked by a6
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a10
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a10
+	Calling TarjanAlg for a2
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a7
+		Looking at a7
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a10
+		Looking at a10
+		Searching in stack for a10
+			Node in stack: a7
+			Node in stack: a2
+			Not found in stack.
+		a7's lowlink: 1
+	--- Building SCC ---
+	Finished TarjanAlg on node a7
+		a2's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a2
+	Calling TarjanAlg for a5
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a6
+		Looking at a6
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a7
+		Looking at a7
+		Searching in stack for a7
+			Node in stack: a6
+			Node in stack: a5
+			Not found in stack.
+		a6's lowlink: 1
+		Searching DFSNode corresponding to Argument a9
+		Looking at a9
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a2
+		Looking at a2
+		Searching in stack for a2
+			Node in stack: a9
+			Node in stack: a6
+			Node in stack: a5
+			Not found in stack.
+		a9's lowlink: 2
+		Searching DFSNode corresponding to Argument a5
+		Looking at a5
+		Searching in stack for a5
+			Node in stack: a9
+			Node in stack: a6
+			Node in stack: a5
+			Found in stack.
+		a9's lowlink: 0
+	Finished TarjanAlg on node a9
+		a6's lowlink: 0
+	Finished TarjanAlg on node a6
+		a5's lowlink: 0
+		Searching DFSNode corresponding to Argument a7
+		Looking at a7
+		Searching in stack for a7
+			Node in stack: a9
+			Node in stack: a6
+			Node in stack: a5
+			Not found in stack.
+		a5's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a5
+	SCC: {a5 a6 a9}
+	SCC: {a2}
+	SCC: {a7}
+	SCC: {a10}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a5 a6 a9}
+		Nodes not satisfying the first condition: {}
+	Determined I: {a5 a6 a9}
+O: {}
+I: {a5 a6 a9}
+	Going to call prefSAT.
+		Calling prefSAT.
+Set arguments: 
+{a5 a6 a9}
+C set:
+{a5 a6 a9}
+predecessors of a5: a9 
+predecessors of a6: a5 
+predecessors of a9: a6 
+Preparing the satsolver
+1 4 7 0
+-1 -4 0
+-1 -7 0
+-4 -7 0
+-1 6 0
+-7 -3 0
+-6 1 0
+-7 9 0
+3 -9 7 0
+2 5 8 0
+-2 -5 0
+-2 -8 0
+-5 -8 0
+-2 4 0
+-8 -1 0
+-4 2 0
+-8 7 0
+1 -7 8 0
+3 6 9 0
+-3 -6 0
+-3 -9 0
+-6 -9 0
+-3 5 0
+-9 -2 0
+-5 3 0
+-9 8 0
+2 -8 9 0
+-3 4 0
+-4 3 0
+-1 5 0
+-5 1 0
+-2 6 0
+-6 2 0
+1 2 3 020
+		Found {}
+			Created: {a3 a4}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a2}
+		Nodes not satisfying the first condition: {a2}
+		Not every attacker of a2 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a2
+Set arguments: 
+{a2}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a3 a4}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a7}
+		Nodes not satisfying the first condition: {a7}
+		Not every attacker of a7 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a7
+Set arguments: 
+{a7}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a3 a4}
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a10}
+		Nodes not satisfying the first condition: {a10}
+		Not every attacker of a10 is attacked by e.
+	Determined I: {}
+O: {}
+I: {}
+	Going to call prefSAT.
+		Calling prefSAT.
+Subtraction a10
+Set arguments: 
+{a10}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+		Found {}
+			Created: {a3 a4}
+Extension 1
+{a3 a4}
