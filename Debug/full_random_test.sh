@@ -4,7 +4,7 @@
 
 # Constants
 NOW=$(date +"%Y-%m-%d_%H-%M-%S");
-TIME_CMD='import time\nprint "{:.0f}".format( time.time() * 10 ** 3 )';
+TIME_CMD='import time\nprint "{:.0f}".format( time.time() * 10 ** 1 )';
 
 # Useful paths
 INSTANCES=`ls ./test-input/random*.dl`;
@@ -36,7 +36,7 @@ do
 
 	TIME_DIFFERENCE=$(($(($OPT_STOP-$OPT_START))-$(($PREOPT_STOP-$PREOPT_START))));
 
-	echo -e ".::Instance $FILENAME::.\nTime difference: $TIME_DIFFERENCE ms\nDiffering lines:" >> $SYNTHESIS_FILENAME;
+	echo -e ".::Instance $FILENAME::.\nTime difference: $TIME_DIFFERENCE ds\nDiffering lines:" >> $SYNTHESIS_FILENAME;
 	diff $OPT_FILENAME $PREOPT_FILENAME >> $SYNTHESIS_FILENAME;
 	echo "" >> $SYNTHESIS_FILENAME;
 done;
