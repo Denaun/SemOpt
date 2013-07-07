@@ -122,22 +122,19 @@ bool Labelling::empty()
  */
 void Labelling::adaptTo( AF* other )
 {
-	// Have to iterate over the map
+	// Have to iterate over the map,
 	// because there's no way to access our elements otherwise
+	// Work on a new map because of problems with deletion.
+	map<Argument*, Label>* result = new map<Argument*, Label>();
 	for ( map<Argument*, Label>::iterator it = this->labelling.begin();
 			it != this->labelling.end(); ++it )
 	{
 		// No try-catches because every element of the labelling should be inside the new AF
 		Argument* victim = other->getArgumentByName( it->first->getName() );
 		
-		// Substitute the Label if the victim is changed
-		if ( it->first != victim )
-		{
-			swap( this->labelling[ victim ], it->second );
-
-			this->labelling.erase( it );
-		}
+		result->insert( pair<Argument*, Label>( victim, it->second ) );
 	}
+	this->labelling = *result;
 
 	// Also adapt the internal SetArguments
 	in.adaptTo( other );

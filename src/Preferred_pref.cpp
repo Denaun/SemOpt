@@ -93,19 +93,19 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 	for ( list<SetArguments*>::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
-		Preferred p = Preferred();
 		vector<Labelling> newLabellings = vector<Labelling>();
 
 		for ( vector<Labelling>::iterator aLabelling = this->labellings.begin();
 				aLabelling != this->labellings.end(); ++aLabelling )
 		{
+			Preferred p = Preferred();
 			SetArguments O = SetArguments();
 			I = SetArguments();							// I already exists..
 
 			boundcond( *aSCC, (*aLabelling).inargs(), &O, &I );
 
 			if ( stages )
-				cerr << "O: " << O << endl << "I: " << I << endl;
+				cerr << "\tO: " << O << endl << "\tI: " << I << endl;
 
 			if ( O.empty() )
 			{
@@ -156,6 +156,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 				SetArguments restriction = SetArguments();
 				(*aSCC)->setminus( &O, &restriction );
+
 				if ( restriction.cardinality() <= 1 && restriction == I )
 				{
 					if ( debug )
@@ -174,7 +175,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				else
 				{
 					if ( debug )
-						cerr << "\tCalling pref.\n";
+						cerr << "\t\tCalling pref.\n";
 
 					AF restricted = AF();
 					this->af->restrictTo( &restriction, &restricted );
