@@ -12,6 +12,7 @@
 #include <string>
 #include <iterator>
 #include <algorithm>
+#include <stdexcept>
 using namespace std;
 
 #include "Argument.h"
@@ -50,6 +51,7 @@ public:
 	bool is_subset(SetArguments *);
 	void intersect(SetArguments *, SetArguments *);
 	void setminus(SetArguments *, SetArguments *);
+	void adaptTo( AF* );
 	void remove(Argument *);
 	void clone(SetArguments *);
 	bool operator==(const SetArguments &other) const;

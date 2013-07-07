@@ -114,6 +114,38 @@ bool Labelling::empty()
 }
 
 /**
+ * @brief Adapts the labels of `this` Labelling to the AF.
+ * #details
+ * 	Substitutes the elements matching by name and not by number.
+ *
+ * @param[in]	other	The AF source of the substitution arguments.
+ */
+void Labelling::adaptTo( AF* other )
+{
+	// Have to iterate over the map
+	// because there's no way to access our elements otherwise
+	for ( map<Argument*, Label>::iterator it = this->labelling.begin();
+			it != this->labelling.end(); ++it )
+	{
+		// No try-catches because every element of the labelling should be inside the new AF
+		Argument* victim = other->getArgumentByName( it->first->getName() );
+		
+		// Substitute the Label if the victim is changed
+		if ( it->first != victim )
+		{
+			swap( this->labelling[ victim ], it->second );
+
+			this->labelling.erase( it );
+		}
+	}
+
+	// Also adapt the internal SetArguments
+	in.adaptTo( other );
+	out.adaptTo( other );
+	undec.adaptTo( other );
+}
+
+/**
  * @brief Clone this labelling into a new one
  * @param[out] other A pointer to a Labelling which will be the clone of this one
  * @retval void

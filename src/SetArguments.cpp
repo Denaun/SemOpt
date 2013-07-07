@@ -194,6 +194,33 @@ void SetArguments::intersect(SetArguments *other, SetArguments *res)
 }
 
 /**
+ * @brief Adapts the elements of `this` set to the AF, substituting the matching elements.
+ * @details
+ * 	*NOTE*: This method changes the structure of the SetArguments on which it is called.
+ *
+ * @param[in]	other	The AF source of the substitution arguments.
+ */
+void SetArguments::adaptTo( AF* other )
+{
+	for ( SetArgumentsIterator it = other->begin(); it != other->end(); ++it )
+	{
+		try
+		{
+			Argument* victim = this->getArgumentByName( (*it)->getName() );
+
+			// No exception: the Argument is inside this set
+			// Remove it and substitute it with the new one
+			this->remove( victim );
+			this->add_Argument( *it );
+		}
+		catch ( const out_of_range& oor )
+		{
+			// The Argument is outside this set. Nothing to do.
+		}
+	}
+}
+
+/**
  * @brief 		Overloading of the == operator
  * @param[in] 	other   The other term of the comparison
  * @retval bool

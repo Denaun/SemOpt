@@ -36,7 +36,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	Grounded( &e, &I );
 
 	if ( stages )
-		cerr << "e: " << e << endl << "I: " << I << endl; 
+		cerr << "\te: " << e << endl << "\tI: " << I << endl; 
 
 	// Convert Grounded's output into a Labelling
 	Labelling first = Labelling();
@@ -88,7 +88,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				aLabelling != this->labellings.end(); ++aLabelling )
 		{
 			SetArguments O = SetArguments();
-			I = SetArguments();	// I already exists..
+			I = SetArguments();							// I already exists..
 
 			boundcond( *aSCC, (*aLabelling).inargs(), &O, &I );
 
@@ -103,25 +103,10 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				AF restricted = AF();
 				this->af->restrictTo( *aSCC, &restricted );
 
-				// TODO: prefSAT problem: the nodes in I are different from
+				// prefSAT problem: the nodes in I are different from
 				// the nodes in the restricted AF.
 				// Temporary solution: rebuild I.
-				for ( SetArgumentsIterator it = restricted.begin(); it != restricted.end(); ++it )
-				{
-					try
-					{
-						Argument* victim = I.getArgumentByName( (*it)->getName() );
-
-						// No exception: the Argument is inside I
-						// Remove it and substitute it with the new one
-						I.remove( victim );
-						I.add_Argument( *it );
-					}
-					catch ( const std::out_of_range& oor )
-					{
-						// The Argument is outside of I. Nothing to do.
-					}
-				}
+				I.adaptTo( &restricted );
 
 				// Should be done iff I != Ø (doesn't prefSAT return Ø otherwise..?)
 				p.prefSAT( &restricted, &I );
@@ -135,7 +120,9 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				(*aSCC)->setminus( &O, &restriction );
 				AF restricted = AF();
 				this->af->restrictTo( &restriction, &restricted );
-				// TODO? the same as above for prefSAT.
+
+				// The same as above for prefSAT.
+				I.adaptTo( &restricted );
 
 				p.pref( &restricted, &I );
 			}
@@ -151,9 +138,9 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				if ( debug )
 					cerr << "\t\tFound " << *((*EStar).inargs()) << endl;
 
-				// TODO: Rebuild the Labelling using the original Arguments
+				// Rebuild the Labelling using the original Arguments
 				// Not doing so could cause problems to next boundconds
-				// Currently not possible due to the structure of Labelling
+				(*EStar).adaptTo( theAF );
 
 				(*aLabelling).clone( &(*EStar) );
 
