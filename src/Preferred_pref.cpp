@@ -33,6 +33,10 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 			 << this->af->toString() << endl;
 	}
 
+	// Flag indicating whether theAF == theC,
+	// 	useful for an optimization avoiding the call of boundcond.
+	bool AFequalsC = theAF->get_arguments() == theC;
+
 	SetArguments e = SetArguments(),
 				 I = SetArguments();
 
@@ -103,7 +107,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 	// Indicates to preserve O or not inside the inner cycle
 	// (no boundcond recalculation after the first time, conditions described below)
-	//bool preserveO = true;
+	bool preserveO = true;
 
 	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
@@ -125,24 +129,23 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 			// Determine if the call of boundcond can be avoided
 			// If the current SCC has no fathers, O = empty and I = SCC
-			/*
 			if( preserveO && !O.empty() )
 			{
 				if ( debug )
 					cerr << "\tO and I preserved.\n";
 
-				// Readapt I?
-				//I.adaptTo( this->af );
+				// TODO? Readapt I
+				// Shouldn't be useful,
+				// 	because I is not needed until it is adapted before pref/prefSAT
+				I.adaptTo( this->af );
 			}
 			else
-			*/
 			{
 				// Reset the sets
 				O = SetArguments();
 				I = SetArguments();
 
-				/*
-				if( ( *aSCC ) -> fathers.size() == 0 )
+				if( AFequalsC && ( *aSCC ) -> fathers.size() == 0 )
 				{
 					if ( debug )
 						cerr << "\tO emptied and I filled.\n";
@@ -150,7 +153,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					( *aSCC ) -> argumentList -> clone( &I );
 				}
 				else
-				*/
 				{
 					//if ( debug )
 					//	cerr << "\tCalling boundcond.\n";
@@ -172,7 +174,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				/*
 				if ( ( *aSCC ) -> argumentList -> cardinality() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
@@ -190,7 +191,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					}
 				}
 				else
-				*/
 				{
 					AF restricted = AF();
 					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
@@ -214,7 +214,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				SetArguments restriction = SetArguments();
 				( *aSCC ) -> argumentList -> setminus( &O, &restriction );
 
-				/*
 				if ( restriction.cardinality() <= 1 && restriction == I )
 				{
 					if ( debug )
@@ -231,7 +230,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					}
 				}
 				else
-				*/
 				{
 					if ( debug )
 						cerr << "\t\tCalling pref.\n";
@@ -274,7 +272,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		// The generated Labellings are the new Labellings
 		this->labellings.assign( newLabellings.begin(), newLabellings.end() );
 
-		/*
 		// Check if the actual SCC is a father of the next one
 		preserveO = false;
 
@@ -289,7 +286,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				preserveO = true;
 				break;
 			}
-		*/
 	}
 }
 
