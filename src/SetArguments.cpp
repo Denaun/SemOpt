@@ -68,17 +68,28 @@ bool SetArguments::empty()
 /**
  * @brief	Build and return a SetArguments containing the args attacked by the local args outside the set
  */
-SetArguments* SetArguments::get_attacks() const {
+SetArguments* SetArguments::get_attacks() const
+{
 	SetArguments* attacks = new SetArguments();
 
 	// Iterate over the arguments of the set
-	for( SetArgumentsIterator argument = this -> begin(); argument != this -> end(); argument++ ) {
+	for( SetArgumentsIterator argument = this -> begin();
+			argument != this -> end(); argument++ )
+	{
+		// Add the attacks to the set.
+		// Clone doesn't clear the set nor adds an argument if it already exists.
+		(*argument)->get_attacks()->clone( attacks );
+
+		/*
 		SetArguments* local_attacks = ( *argument ) -> get_attacks();
 
-		// Iterate over the attacks of every argument. An attack is added to the attack list if it's not already there and it's directed to the outside
-		for( SetArgumentsIterator attack = local_attacks -> begin(); attack != local_attacks -> end(); attack++ )
+		// Iterate over the attacks of every argument.
+		// An attack is added to the attack list if it's not already there and it's directed to the outside
+		for( SetArgumentsIterator attack = local_attacks -> begin();
+				attack != local_attacks -> end(); attack++ )
 			if( !( this -> exists( *attack ) ) && !( attacks -> exists( *attack ) ) )
 				attacks -> add_Argument( *attack );
+		*/
 	}
 
 	return attacks;

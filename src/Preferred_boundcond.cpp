@@ -21,7 +21,7 @@
  * @param[out]	O		First output set
  * @param[out]	I		Second output set
  */
-void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
+void Preferred::boundcond( SCC* aSCC, SetArguments* e,
 						   SetArguments* O, SetArguments* I )
 {
 	if ( debug )
@@ -37,12 +37,13 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 	 */
 	
 	// It's easier to determine the inverse of O, which is I before filtering
-	aSCC->clone( I );
-	for ( SetArgumentsIterator it = e->begin(); it != e->end(); ++it )
-		I->setminus( (*it)->get_attacks(), I );
+	aSCC->argumentList->clone( I );
+	I->setminus( e->get_attacks(), I );
+	//for ( SetArgumentsIterator it = e->begin(); it != e->end(); ++it )
+	//	I->setminus( (*it)->get_attacks(), I );
 
 	// Determine S[ i ] \ I = O
-	aSCC->setminus( I, O );
+	aSCC->argumentList->setminus( I, O );
 
 	if ( debug )
 		cerr << "\tDetermined O: " << *O << endl;
@@ -61,13 +62,14 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 	
 	// Nodes of G not in S[ i ]
 	SetArguments external = SetArguments();
-	this->af->get_arguments()->setminus( aSCC, &external );
+	this->af->get_arguments()->setminus( aSCC->argumentList, &external );
 
 	// Keep the nodes of I not attacked by externals and filter the remaining
 	SetArguments toBeRemoved = SetArguments();
 	I->clone( &toBeRemoved );
-	for ( SetArgumentsIterator it = external.begin(); it != external.end(); ++it )
-		I->setminus( (*it)->get_attacks(), I );
+	I->setminus( external.get_attacks(), I );
+	//for ( SetArgumentsIterator it = external.begin(); it != external.end(); ++it )
+	//	I->setminus( (*it)->get_attacks(), I );
 	
 	// Nodes of I attacked by externals
 	// => they can be kept iff they satisfy the second condition
@@ -131,36 +133,9 @@ void Preferred::boundcond( SetArguments* aSCC, SetArguments* e,
 		}
 		else if ( debug )
 			cerr << "\t\tNot every attacker of " << (*it)->getName() << " is attacked by e.\n";
-
-		/*
-		if ( !attackers.empty() )
-		{
-			bool attacked = false;
-			for ( SetArgumentsIterator jt = e->begin(); jt != e->end(); ++jt )
-			{
-				attacked = (*jt)->get_attacks()->exists( *it );
-				if ( attacked )
-					break;
-			}
-			
-			if ( attacked )
-			{
-				if ( debug )
-					cerr << "\t\tKeeping " << (*it)->getName() << endl;
-
-				// Put the node in the set containing the nodes to be kept
-				toBeKept.add_Argument( *it );
-			}
-			else if ( debug )
-				cerr << "\t\t" << (*it)->getName() << " is not attacked.\n";
-
-		}
-		else if ( debug )
-			cerr << "\t\t" << (*it)->getName() << " is not external.\n";
-		*/
 	}
 
-	// Readd the nodes to I
+	// Re-add the nodes to I
 	toBeKept.clone( I );
 
 	if ( debug )

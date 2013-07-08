@@ -27,7 +27,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 	this->af = theAF;
 	this->C = theC;
 
-	if ( stages ) {
+	if ( stages )
+	{
 		cerr << "AF initialized. Showing structure" << endl
 			 << this->af->toString() << endl;
 	}
@@ -91,24 +92,30 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 	// Print SCC and parenthood
 	if ( stages )
-		for ( list< SCC* >::iterator it = S.begin(); it != S.end(); ++it ) {
+		for ( list< SCC* >::iterator it = S.begin(); it != S.end(); ++it )
+		{
 			cerr << "\tSCC: " << *( *it ) -> argumentList << endl;
 
-			for( list< SCC* >::iterator father = ( *it ) -> fathers.begin(); father != ( *it ) -> fathers.end(); father++ )
+			for( list< SCC* >::iterator father = ( *it ) -> fathers.begin();
+					father != ( *it ) -> fathers.end(); father++ )
 				cerr << "\t\tFather: " << *( *father ) -> argumentList << endl;
 		}
 
-	// Indicates to preserveO or not in the inner cycle (no boundcond recalculation after the first time, conditions described below)
-	bool preserveO = true;
+	// Indicates to preserve O or not inside the inner cycle
+	// (no boundcond recalculation after the first time, conditions described below)
+	//bool preserveO = true;
 
 	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
 		vector<Labelling> newLabellings = vector<Labelling>();
 
-		// O is preserved throught the iterations because if the actual SCC has not a father in the previous one, then O remains always the same
-		// This is checked right before the reiteration of the previous cycle (for the first SCC the condition is always true)
+		// O is preserved throught the iterations because,
+		// 	if the actual SCC has not a father in the previous one,
+		// 	then O remains always the same
+		// This is checked right before the reiteration of the previous cycle
+		// (for the first SCC the condition is always true)
 		SetArguments O = SetArguments();
-		// Same for I
+		// ( I already exists... )
 		I = SetArguments();
 
 		for ( vector<Labelling>::iterator aLabelling = this->labellings.begin();
@@ -118,12 +125,39 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 			// Determine if the call of boundcond can be avoided
 			// If the current SCC has no fathers, O = empty and I = SCC
-			/*if( preserveO && !O.empty() && stages )
-				cerr << "O preserved\n";
-			else if( ( *aSCC ) -> fathers.size() == 0 )
-				I = *( *aSCC ) -> argumentList;
-			else*/
-				boundcond( ( *aSCC ) -> argumentList, (*aLabelling).inargs(), &O, &I );
+			/*
+			if( preserveO && !O.empty() )
+			{
+				if ( debug )
+					cerr << "\tO and I preserved.\n";
+
+				// Readapt I?
+				//I.adaptTo( this->af );
+			}
+			else
+			*/
+			{
+				// Reset the sets
+				O = SetArguments();
+				I = SetArguments();
+
+				/*
+				if( ( *aSCC ) -> fathers.size() == 0 )
+				{
+					if ( debug )
+						cerr << "\tO emptied and I filled.\n";
+
+					( *aSCC ) -> argumentList -> clone( &I );
+				}
+				else
+				*/
+				{
+					//if ( debug )
+					//	cerr << "\tCalling boundcond.\n";
+
+					boundcond( *aSCC, (*aLabelling).inargs(), &O, &I );
+				}
+			}
 
 			if ( stages )
 				cerr << "\tO: " << O << endl << "\tI: " << I << endl;
@@ -138,7 +172,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				/*if ( ( *aSCC ) -> argumentList -> cardinality() <= 2 && *( *aSCC ) -> argumentList == I )
+				/*
+				if ( ( *aSCC ) -> argumentList -> cardinality() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
 						cerr << "\t\tNo need to call prefSAT.\n";
@@ -146,8 +181,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					// Empty: no extensions => null iteration
 					// Singlet: still have to iterate over I
 					// Two element: Mutually exclusive arguments
-					for ( SetArgumentsIterator it = ( *aSCC ) -> argumentList -> begin();
-							it != ( *aSCC ) -> argumentList -> end(); ++it )
+					for ( SetArgumentsIterator it = I.begin();
+							it != I.end(); ++it )
 					{
 						Labelling* temp = new Labelling();
 						temp->add_label( *it, Labelling::lab_in );
@@ -155,7 +190,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					}
 				}
 				else
-				{*/
+				*/
+				{
 					AF restricted = AF();
 					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
 
@@ -165,10 +201,10 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					I.adaptTo( &restricted );
 
 					if( debug )
-							cerr << "\t\tCalling PrefSAT.\n";
+							cerr << "\t\tCalling prefSAT.\n";
 
 					p.prefSAT( &restricted, &I );
-				//}
+				}
 			}
 			else
 			{
@@ -178,7 +214,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				SetArguments restriction = SetArguments();
 				( *aSCC ) -> argumentList -> setminus( &O, &restriction );
 
-				/*if ( restriction.cardinality() <= 1 && restriction == I )
+				/*
+				if ( restriction.cardinality() <= 1 && restriction == I )
 				{
 					if ( debug )
 						cerr << "\t\tNo need to call pref.\n";
@@ -194,9 +231,10 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					}
 				}
 				else
-				{*/
+				*/
+				{
 					if ( debug )
-						cerr << "\tCalling pref.\n";
+						cerr << "\t\tCalling pref.\n";
 
 					AF restricted = AF();
 					this->af->restrictTo( &restriction, &restricted );
@@ -204,8 +242,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					// The same as above for prefSAT.
 					I.adaptTo( &restricted );
 
-					p.prefSAT( &restricted, &I );
-				//}
+					p.pref( &restricted, &I );
+				}
 			}
 
 			// prefSAT doesn't put newline at the end of its output...
@@ -236,6 +274,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		// The generated Labellings are the new Labellings
 		this->labellings.assign( newLabellings.begin(), newLabellings.end() );
 
+		/*
 		// Check if the actual SCC is a father of the next one
 		preserveO = false;
 
@@ -243,11 +282,14 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		if( ++next == S.end() )
 			break;
 
-		for( list< SCC* >::iterator fathers = ( *( next ) ) -> fathers.begin(); fathers != ( *( next ) ) -> fathers.end(); fathers++ )
-			if( *fathers == *aSCC ) {
+		for( list< SCC* >::iterator fathers = ( *( next ) ) -> fathers.begin();
+				fathers != ( *( next ) ) -> fathers.end(); fathers++ )
+			if( *fathers == *aSCC )
+			{
 				preserveO = true;
 				break;
 			}
+		*/
 	}
 }
 

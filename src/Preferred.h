@@ -83,7 +83,7 @@ public:
 private:
 	// Metodi aggiunti
 	// Restituisce due set contenente l'uno i nodi dell'insieme passato come secondo parametro che sono attaccati dai nodi del terzo parametro e l'altro tutti gli altri
-	void boundcond( SetArguments*, SetArguments*, SetArguments*, SetArguments* );
+	void boundcond( SCC*, SetArguments*, SetArguments*, SetArguments* );
 	// Dato l'arg framework restituisce tutti i set SCC presenti ordinati per strati (il primo nella sequenza restituita non sarà attaccato da nessuno, i successivi possono essere attaccati solo dai precedenti)
 	// Gli SCCS sono trovati tramite l'algoritmo di Tarjan che prevede l'esecuzione multipla (su più vertici)
 	list< SCC* > SCCSSEQ();

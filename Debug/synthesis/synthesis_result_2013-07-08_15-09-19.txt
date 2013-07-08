@@ -1,0 +1,338 @@
+.::Instance random_test_06-07-2013_16-17-12-587521348.dl::.
+Time difference: -1 ds
+Differing lines:
+1000d999
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1002d1000
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1004d1001
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1006d1002
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1008d1003
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1010d1004
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1012d1005
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1014,1015d1006
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+< 		Father: {a8}
+1017d1007
+< 		Father: {a1 a10 a13 a17 a18 a19 a2 a21 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+1024,1027c1014,1016
+< 	O: {}
+< 	I: {a1 a10 a13 a17 a18 a19 a2 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a1 a10 a13 a17 a18 a19 a2 a22 a23 a25 a26 a27 a3 a30 a31 a32 a33 a34 a35 a36 a38 a39 a4 a42 a43 a44 a46 a7 a9}
+> 	Calling prefSAT.
+3279,3282c3268,3270
+< 	O: {}
+< 	I: {}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {}
+> 	Calling prefSAT.
+3301,3304c3289,3291
+< 	O: {}
+< 	I: {a6}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a6}
+> 	Calling prefSAT.
+3311,3313c3298,3299
+< 1 2 3 0
+< -1 -2 0
+< -1 -3 0
+---
+> -1 0
+> 2 3 0
+3315,3321d3300
+< 1 0
+< 
+< 
+< 1 010a6
+< in 1
+< out 0
+< undec 0
+3323,3324d3301
+< {a6 }
+< Preparing the satsolver
+3332,3335c3309,3311
+< 1 0
+< 20
+< 		Found {a6}
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a6 a7}
+---
+> 1 020
+> 		Found {}
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a7}
+3341,3344c3317,3319
+< 	O: {a29}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a29}
+> I: {}
+> 	Calling pref.
+3348c3323,3326
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3361,3364c3339,3341
+< 	O: {a29}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a29}
+> I: {}
+> 	Calling pref.
+3368c3345,3348
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3375c3355
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a6 a7}
+---
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a7}
+3381,3384c3361,3363
+< 	O: {a40}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a40}
+> I: {}
+> 	Calling pref.
+3388c3367,3370
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3401,3404c3383,3385
+< 	O: {a40}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a40}
+> I: {}
+> 	Calling pref.
+3408c3389,3392
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3415c3399
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a6 a7}
+---
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a7}
+3422,3425c3406,3408
+< 	O: {}
+< 	I: {a37}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a37}
+> 	Calling prefSAT.
+3462,3465c3445,3447
+< 	O: {a37}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a37}
+> I: {}
+> 	Calling pref.
+3469c3451,3454
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3476c3461
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a6 a7}
+---
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a7}
+3482,3485c3467,3469
+< 	O: {a8}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a8}
+> I: {}
+> 	Calling pref.
+3489c3473,3476
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3503,3506c3490,3492
+< 	O: {}
+< 	I: {a8}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a8}
+> 	Calling prefSAT.
+3537c3523
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a6 a7 a8}
+---
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a7 a8}
+3543,3546c3529,3531
+< 	O: {a45}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a45}
+> I: {}
+> 	Calling pref.
+3550c3535,3538
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3564,3567c3552,3554
+< 	O: {}
+< 	I: {a45}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a45}
+> 	Calling prefSAT.
+3598c3585
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a6 a7 a8}
+---
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a7 a8}
+3605,3608c3592,3594
+< 	O: {}
+< 	I: {a12}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a12}
+> 	Calling prefSAT.
+3645,3648c3631,3633
+< 	O: {a12}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a12}
+> I: {}
+> 	Calling pref.
+3652c3637,3640
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3659c3647
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a6 a7 a8}
+---
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a7 a8}
+3666,3669c3654,3656
+< 	O: {}
+< 	I: {}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {}
+> 	Calling prefSAT.
+3687,3690c3674,3676
+< 	O: {a11}
+< 	I: {}
+< 	Going to call pref.
+< 		Calling pref.
+---
+> O: {a11}
+> I: {}
+> 	Calling pref.
+3694c3680,3683
+< 	No need to call Grounded.
+---
+> Entering Grounded
+> 	New cycle
+> 		No grounded extension found.
+> 		Final I: {}
+3701c3690
+< 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a6 a7 a8}
+---
+> 			Created: {a10 a15 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a7 a8}
+3708,3711c3697,3699
+< 	O: {}
+< 	I: {a16}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a16}
+> 	Calling prefSAT.
+3749,3752c3737,3739
+< 	O: {}
+< 	I: {a16}
+< 	Going to call prefSAT.
+< 		Calling prefSAT.
+---
+> O: {}
+> I: {a16}
+> 	Calling prefSAT.
+3765a3753,3760
+> 1 0
+> 1 2 3 0
+> -1 -2 0
+> -1 -3 0
+> -2 -3 0
+> 1 0
+> 
+> 
+3780a3776,3783
+> 1 2 3 0
+> -1 -2 0
+> -1 -3 0
+> -2 -3 0
+> 1 0
+> 
+> 
+> 1 0
+3783c3786
+< 			Created: {a10 a15 a16 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a6 a7 a8}
+---
+> 			Created: {a10 a15 a16 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a7 a8}
+3787c3790
+< {a10 a15 a16 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a6 a7 a8}
+---
+> {a10 a15 a16 a17 a2 a20 a22 a23 a25 a30 a32 a33 a34 a38 a45 a7 a8}
+

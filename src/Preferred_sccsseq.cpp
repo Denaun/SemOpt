@@ -47,15 +47,16 @@ list< SCC* > Preferred::SCCSSEQ() {
   *
   * @param	SCC
   */
-void Preferred::SCCParenthood( list< SCC* >* SCCList ) {
+void Preferred::SCCParenthood( list< SCC* >* SCCList )
+{
 	// Per ogni SCC nella lista i suoi padri possono essere soltanto i precedenti nella lista, faccio una scansione con doppio ciclo verificando se l'intersezione tra i nodi attaccati dalla SCC analizzata e la SCC attuale è vuota o meno (nel secondo caso la SCC analizzata è padre)
 	for( list< SCC* >::iterator aSCC = SCCList -> begin(); aSCC != SCCList -> end(); ++aSCC )
 		for( list< SCC* >::iterator fatherCandidate = SCCList -> begin(); fatherCandidate != aSCC; fatherCandidate++ ) {
-			SetArguments* intersection = new SetArguments();
+			SetArguments intersection = SetArguments();
 
-			( *aSCC ) -> argumentList -> intersect( ( *fatherCandidate ) -> argumentList -> get_attacks(), intersection );
+			( *aSCC ) -> argumentList -> intersect( ( *fatherCandidate ) -> argumentList -> get_attacks(), &intersection );
 
-			if( !intersection -> empty() )
+			if( !intersection.empty() )
 				( *aSCC ) -> fathers.push_back( *fatherCandidate );
 		}
 }
@@ -68,7 +69,8 @@ void Preferred::SCCParenthood( list< SCC* >* SCCList ) {
  * @param s		A temporal stack containing the actual SCC
  * @param index	An integer containing the level actually visited
  */
-void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode* >* s, int index ) {
+void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode* >* s, int index )
+{
 	if ( debug )
 		cerr << "\tEntering TarjanAlg.\n";
 
@@ -134,7 +136,7 @@ void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode*
 }
 
 /**
-  * @brief Initialization of the support structur for DFS (called in constructor)
+  * @brief Initialization of the support structure for DFS (called in constructor)
   */
 void Preferred::initDFSAF() {
 	if ( debug )
