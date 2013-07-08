@@ -42,9 +42,9 @@ class SymbolicArgumentsSet
 
 		// Getters
 		bool isEmpty() const;
-		size_type size() const;
+		size_t size() const;
 		bool exists( const std::string ) const;
-		SymbolicArgumentsSet get_attacks( const AF* ) const;
+		SymbolicArgumentsSet getAttacks( const AF* ) const;
 		SetArguments toSetArguments() const;
 		Labelling toLabelling() const;
 
@@ -56,6 +56,7 @@ class SymbolicArgumentsSet
 		// Operations
 		SymbolicArgumentsSet intersect( const SymbolicArgumentsSet* ) const;
 		SymbolicArgumentsSet minus( const SymbolicArgumentsSet* ) const;
+		SymbolicArgumentsSet merge( const SymbolicArgumentsSet* ) const;
 		SymbolicArgumentsSet& operator=( const SymbolicArgumentsSet* );
 		bool operator==( const SymbolicArgumentsSet& ) const;
 }
