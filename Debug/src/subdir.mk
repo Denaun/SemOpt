@@ -15,6 +15,7 @@ CPP_SRCS += \
 ../src/Preferred_sccsseq.cpp \
 ../src/SATFormulae.cpp \
 ../src/SetArguments.cpp \
+../src/SymbolicArgumentsSet.cpp \
 ../src/main.cpp \
 ../src/misc.cpp 
 
@@ -30,6 +31,7 @@ OBJS += \
 ./src/Preferred_sccsseq.o \
 ./src/SATFormulae.o \
 ./src/SetArguments.o \
+./src/SymbolicArgumentsSet.o \
 ./src/main.o \
 ./src/misc.o 
 
@@ -45,6 +47,7 @@ CPP_DEPS += \
 ./src/Preferred_sccsseq.d \
 ./src/SATFormulae.d \
 ./src/SetArguments.d \
+./src/SymbolicArgumentsSet.d \
 ./src/main.d \
 ./src/misc.d 
 
