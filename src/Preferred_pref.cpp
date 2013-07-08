@@ -112,12 +112,15 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				if ( debug )
 					cerr << "\tGoing to call prefSAT.\n";
 
+				AF restricted = AF();
+				this->af->restrictTo( *aSCC, &restricted );
+
 				// Avoid calling prefSAT if the two parameters are the same
 				// and the size is 2 or less:
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				if ( (*aSCC)->cardinality() <= 2 && **aSCC == I )
+				if ( (*aSCC)->cardinality() <= 2 && *( restricted.get_arguments() ) == I )
 				{
 					if ( debug )
 						cerr << "\t\tNo need to call prefSAT.\n";
@@ -135,9 +138,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				}
 				else
 				{
-					AF restricted = AF();
-					this->af->restrictTo( *aSCC, &restricted );
-
 					// prefSAT problem: the nodes in I are different from
 					// the nodes in the restricted AF.
 					// Temporary solution: rebuild I.
