@@ -34,6 +34,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 	SetArguments e = SetArguments(),
 				 I = SetArguments();
+
 	// Avoid calling Grounded if useless
 	if ( theC->cardinality() <= 1 && *theC == *(theAF->get_arguments()) )
 	{
@@ -113,16 +114,15 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 		for ( vector<Labelling>::iterator aLabelling = this->labellings.begin();
 				aLabelling != this->labellings.end(); ++aLabelling )
 		{
-			//SetArguments O = SetArguments();
-			// I already exists
+			Preferred p = Preferred();
 
 			// Determine if the call of boundcond can be avoided
 			// If the current SCC has no fathers, O = empty and I = SCC
-			if( preserveO && !O.empty() && stages )
+			/*if( preserveO && !O.empty() && stages )
 				cerr << "O preserved\n";
 			else if( ( *aSCC ) -> fathers.size() == 0 )
 				I = *( *aSCC ) -> argumentList;
-			else
+			else*/
 				boundcond( ( *aSCC ) -> argumentList, (*aLabelling).inargs(), &O, &I );
 
 			if ( stages )
@@ -138,7 +138,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				if ( ( *aSCC ) -> argumentList -> cardinality() <= 2 && *( *aSCC ) -> argumentList == I )
+				/*if ( ( *aSCC ) -> argumentList -> cardinality() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
 						cerr << "\t\tNo need to call prefSAT.\n";
@@ -155,7 +155,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					}
 				}
 				else
-				{
+				{*/
 					AF restricted = AF();
 					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
 
@@ -168,7 +168,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 							cerr << "\t\tCalling PrefSAT.\n";
 
 					p.prefSAT( &restricted, &I );
-				}
+				//}
 			}
 			else
 			{
@@ -178,7 +178,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				SetArguments restriction = SetArguments();
 				( *aSCC ) -> argumentList -> setminus( &O, &restriction );
 
-				if ( restriction.cardinality() <= 1 && restriction == I )
+				/*if ( restriction.cardinality() <= 1 && restriction == I )
 				{
 					if ( debug )
 						cerr << "\t\tNo need to call pref.\n";
@@ -194,7 +194,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					}
 				}
 				else
-				{
+				{*/
 					if ( debug )
 						cerr << "\tCalling pref.\n";
 
@@ -205,9 +205,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					I.adaptTo( &restricted );
 
 					p.prefSAT( &restricted, &I );
-				}
+				//}
 			}
-
 
 			// prefSAT doesn't put newline at the end of its output...
 			if ( debug )
