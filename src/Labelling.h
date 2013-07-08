@@ -1,13 +1,13 @@
+#ifndef LABELLING_H_
+#define LABELLING_H_
 
 #include <map>
 #include <string>
 using namespace std;
 
-#include "Argument.h"
+class Argument;
+class SetArguments;
 #include "SetArguments.h"
-
-#ifndef LABELLING_H_
-#define LABELLING_H_
 
 typedef string Label;
 
@@ -33,5 +33,8 @@ public:
 	bool empty();
 	void clone(Labelling *);
 };
+
+#include "Argument.h"
+#include "SetArguments.h"
 
 #endif /* LABELLING_H_ */

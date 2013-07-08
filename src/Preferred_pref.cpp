@@ -18,6 +18,20 @@
  * @param[in]	theAF	The Argument Framework to be considered
  * @param[in]	theC	The subset of arguments to consider
  */
+void Preferred::pref( AF* theAF, SetArguments* theC )
+{
+	SymbolicArgumentsSet symC = SymbolicArgumentsSet( *theC );
+	pref( theAF, &symC );
+}
+
+/**
+ * @brief	Main resolutive function.
+ * @details	Fills the labels of the class with the preferred extensions found.
+ * @todo	Everything
+ *
+ * @param[in]	theAF	The Argument Framework to be considered
+ * @param[in]	theC	The subset of arguments to consider
+ */
 void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 {
 	if ( debug )
@@ -25,7 +39,8 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 	this->cleanlabs();
 	this->af = theAF;
-	this->C = theC;
+
+	vector<SymbolicArgumentsSet> tempLabellings = vector<SymbolicArgumentsSet>();
 
 	if ( stages )
 	{
@@ -35,10 +50,10 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 	// Flag indicating whether theAF == theC,
 	// 	useful for an optimization avoiding the call of boundcond.
-	bool AFequalsC = *( theAF->get_arguments() ) == theC -> toSetArguments();
+	bool AFequalsC = SymbolicArgumentsSet( *theAF->get_arguments() ) == *theC;
 
 	SymbolicArgumentsSet e = SymbolicArgumentsSet(),
-				 I = SymbolicArgumentsSet();
+						 I = SymbolicArgumentsSet();
 
 	// Avoid calling Grounded if useless
 	if ( theC -> size() <= 1 && AFequalsC )
@@ -48,37 +63,35 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 		// Empty: no extensions => null iteration
 		// Singlet: still have to iterate over I
-		for ( SymbolicArgumentsSet::iterator it = theC -> begin(); it != theC -> end(); ++it )
-			e.add( *it );
+		e = *theC;
+		//for ( SymbolicArgumentsSet::iterator it = theC -> begin(); it != theC -> end(); ++it )
+		//	e.add( *it );
 	}
 	else
-		Grounded( &e, &I );
+		Grounded( theC, &e, &I );
 
 	if ( stages )
 		cerr << "\te: " << e << endl << "\tI: " << I << endl; 
 
-	// Convert Grounded's output into a Labelling
-	Labelling first = e.toLabelling();
-	// TODO: Label I as undec and everything else as out?
-
-	if ( stages )
-		cerr << "\tFirst Labelling: " << *(first.inargs()) << endl;
-
 	// Add the Labelling to the solutions
-	this->labellings.push_back( first );
+	tempLabellings.push_back( e );
 
 	if ( I.isEmpty() )
 	{
 		if ( debug )
 			cerr << "\tNo unlabelled arguments left. Returning.\n";
 
+		// Assign the temporary labellings
+		for ( vector<SymbolicArgumentsSet>::iterator it = tempLabellings.begin();
+				it != tempLabellings.end(); ++it )
+			this->labellings.push_back( (*it).toLabelling( this->af ) );
+
 		return;
 	}
 
 	// Generate G restricted to I
 	AF* restricted = new AF();
-	SetArguments ISet = I.toSetArguments();
-	this->af->restrictTo( &ISet, restricted );
+	this->af->restrictTo( &I, restricted );
 	this->af = restricted;
 
 	if ( stages )
@@ -104,13 +117,20 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				cerr << "\t\tFather: " << *( *father ) -> argumentList << endl;
 		}
 
+	// Restore the AF
+	// This makes possible to keep track of every attack and avoids oor exceptions
+	this->af = theAF;
+
 	// Indicates to preserve O or not inside the inner cycle
 	// (no boundcond recalculation after the first time, conditions described below)
 	bool preserveO = true;
 
 	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
-		vector<Labelling> newLabellings = vector<Labelling>();
+		if ( debug )
+			cerr << "\tWorking on " << *(*aSCC)->argumentList << endl;
+
+		vector<SymbolicArgumentsSet> newLabellings = vector<SymbolicArgumentsSet>();
 
 		// O is preserved throught the iterations because,
 		// 	if the actual SCC has not a father in the previous one,
@@ -121,48 +141,56 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		// ( I already exists... )
 		I = SymbolicArgumentsSet();
 
-		for ( vector<Labelling>::iterator aLabelling = this->labellings.begin();
-				aLabelling != this->labellings.end(); ++aLabelling )
+		for ( vector<SymbolicArgumentsSet>::iterator aLabelling = tempLabellings.begin();
+				aLabelling != tempLabellings.end(); ++aLabelling )
 		{
 			Preferred p = Preferred();
 
+			if ( debug )
+				cerr << "\t\tGoing to call boundcond.\n";
+
 			// Determine if the call of boundcond can be avoided
 			// If the current SCC has no fathers, O = empty and I = SCC
-			if( preserveO && !O.isEmpty() )
+			if( AFequalsC && ( *aSCC ) -> fathers.size() == 0 )
 			{
 				if ( debug )
-					cerr << "\tO and I preserved.\n";
+					cerr << "\t\t\tO emptied and I filled.\n";
+
+				O.clear();
+				I = *(*aSCC)->argumentList;
 			}
 			else
 			{
-				// Reset the sets
-				O = SymbolicArgumentsSet();
-				I = SymbolicArgumentsSet();
+				// Reset I
+				I.clear();
 
-				if( AFequalsC && ( *aSCC ) -> fathers.size() == 0 )
+				if( preserveO && !O.isEmpty() )
 				{
 					if ( debug )
-						cerr << "\tO emptied and I filled.\n";
+						cerr << "\t\t\tO preserved.\n";
 
-					I = ( *aSCC ) -> argumentList;
+					// Lo stesso insieme O per ogni e..?
+					// evito.
+					O = SymbolicArgumentsSet();
 				}
 				else
 				{
-					//if ( debug )
-					//	cerr << "\tCalling boundcond.\n";
+					if ( debug )
+						cerr << "\t\t\tO emptied.\n";
 
-					SymbolicArgumentsSet thisLabelling = (*aLabelling).inargs();
-					boundcond( *aSCC, &thisLabelling, &O, &I );
+					O.clear();
 				}
+
+				boundcond( *aSCC, &(*aLabelling), &O, &I );
 			}
 
 			if ( stages )
-				cerr << "\tO: " << O << endl << "\tI: " << I << endl;
+				cerr << "\t\tO: " << O << endl << "\t\tI: " << I << endl;
 
 			if ( O.isEmpty() )
 			{
 				if ( debug )
-					cerr << "\tGoing to call prefSAT.\n";
+					cerr << "\t\tGoing to call prefSAT.\n";
 
 				// Avoid calling prefSAT if the two parameters are the same
 				// and the size is 2 or less:
@@ -172,32 +200,46 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				if ( ( *aSCC ) -> argumentList -> size() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
-						cerr << "\t\tNo need to call prefSAT.\n";
+						cerr << "\t\t\tNo need to call prefSAT.\n";
 
-					// Empty: no extensions => null iteration
-					// Singlet: still have to iterate over I
-					// Two element: Mutually exclusive arguments
-					p.labellings.push_back( I.toLabelling() );
+					if ( I.isEmpty() )
+					{
+						// Empty: no extensions => empty Labelling
+						p.labellings.push_back( Labelling() );
+					}
+					else
+					{
+						// Singlet: still have to iterate over I
+						// Two element: Mutually exclusive arguments
+						SetArguments ISet = I.toSetArguments( this->af );
+						for ( SetArgumentsIterator it = ISet.begin();
+								it != ISet.end(); ++it )
+						{
+							Labelling* temp = new Labelling();
+							temp->add_label( *it, Labelling::lab_in );
+
+							p.labellings.push_back( *temp );
+						}
+					}
 				}
 				else
 				{
 					AF restricted = AF();
-					SetArguments setVersion = ( *aSCC ) -> argumentList -> toSetArguments();
-					this->af->restrictTo( &setVersion, &restricted );
+					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
 
 					// Nobody needs to adapt in the symbolic world 'coz everyone is perfect as it is :D
 
 					if( debug )
-							cerr << "\t\tCalling prefSAT.\n";
+							cerr << "\t\t\tCalling prefSAT.\n";
 
-					SetArguments ISet = I.toSetArguments();
+					SetArguments ISet = I.toSetArguments( &restricted );
 					p.prefSAT( &restricted, &ISet );
 				}
 			}
 			else
 			{
 				if ( debug )
-					cerr << "\tGoing to call pref.\n";
+					cerr << "\t\tGoing to call pref.\n";
 
 				SymbolicArgumentsSet restriction = SymbolicArgumentsSet();
 				restriction = ( *aSCC ) -> argumentList -> minus( &O );
@@ -205,20 +247,33 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				if ( restriction.size() <= 1 && restriction == I )
 				{
 					if ( debug )
-						cerr << "\t\tNo need to call pref.\n";
+						cerr << "\t\t\tNo need to call pref.\n";
 
-					// Empty: no extensions => null iteration
-					// Singlet: still have to iterate over I
-					p.labellings.push_back( I.toLabelling() );
+					if ( I.isEmpty() )
+					{
+						// Empty: no extensions => empty Labelling
+						p.labellings.push_back( Labelling() );
+					}
+					else
+					{
+						// Singlet: still have to iterate over I
+						SetArguments ISet = I.toSetArguments( this->af );
+
+						Labelling* temp = new Labelling();
+						temp->add_label(
+								this->af->getArgumentByName( *I.begin() ),
+								Labelling::lab_in );
+
+						p.labellings.push_back( *temp );
+					}
 				}
 				else
 				{
 					if ( debug )
-						cerr << "\t\tCalling pref.\n";
+						cerr << "\t\t\tCalling pref.\n";
 
 					AF restricted = AF();
-					SetArguments restrictionSet = restriction.toSetArguments();
-					this->af->restrictTo( &restrictionSet, &restricted );
+					this->af->restrictTo( &restriction, &restricted );
 
 					p.pref( &restricted, &I );
 				}
@@ -232,25 +287,23 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 			// by merging the current Labelling with every Labelling found
 			for ( Preferred::iterator EStar = p.begin(); EStar != p.end(); ++EStar )
 			{
-				if ( debug )
-					cerr << "\t\tFound " << *((*EStar).inargs()) << endl;
-
-				// Rebuild the Labelling using the original Arguments
-				// Not doing so could cause problems to next boundconds
-				(*EStar).adaptTo( theAF );
-
-				(*aLabelling).clone( &(*EStar) );
+				SymbolicArgumentsSet found = SymbolicArgumentsSet( *EStar );
 
 				if ( debug )
-					cerr << "\t\t\tCreated: " << *((*EStar).inargs()) << endl;
+					cerr << "\t\t\tFound " << found << endl;
+
+				SymbolicArgumentsSet created = (*aLabelling).merge( &found );
+
+				if ( debug )
+					cerr << "\t\t\t\tCreated: " << created << endl;
 
 				// Add it to the labellings found
-				newLabellings.push_back( *EStar );
+				newLabellings.push_back( created );
 			}
 		}
 		
 		// The generated Labellings are the new Labellings
-		this->labellings.assign( newLabellings.begin(), newLabellings.end() );
+		tempLabellings.assign( newLabellings.begin(), newLabellings.end() );
 
 		// Check if the actual SCC is a father of the next one
 		preserveO = false;
@@ -260,12 +313,17 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 			break;
 
 		for( list< SCC* >::iterator fathers = ( *( next ) ) -> fathers.begin();
-				fathers != ( *( next ) ) -> fathers.end(); fathers++ )
+				fathers != ( *next ) -> fathers.end(); ++fathers )
 			if( *fathers == *aSCC )
 			{
 				preserveO = true;
 				break;
 			}
 	}
+
+	// Finally, assign the temporary labellings
+	for ( vector<SymbolicArgumentsSet>::iterator it = tempLabellings.begin();
+			it != tempLabellings.end(); ++it )
+		this->labellings.push_back( (*it).toLabelling( this->af ) );
 }
 

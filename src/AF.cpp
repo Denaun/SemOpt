@@ -123,11 +123,11 @@ Argument *AF::getArgumentByNumber(int num)
  *
  * @author	Maurizio Zucchelli
  */
-void AF::restrictTo( SetArguments* theSet, AF* dst )
+void AF::restrictTo( SymbolicArgumentsSet* theSet, AF* dst )
 {
 	// Create disjointed copies of the Arguments
 	for ( SetArgumentsIterator it = this->begin(); it != this->end(); ++it )
-		if ( theSet->exists( *it ) )
+		if ( theSet->exists( (*it)->getName() ) )
 			dst->get_arguments()->add_Argument(
 				new Argument
 				(
@@ -146,12 +146,12 @@ void AF::restrictTo( SetArguments* theSet, AF* dst )
 
 		temp = original->get_attacks();
 		for ( SetArgumentsIterator atk = temp->begin(); atk != temp->end(); ++atk )
-			if ( theSet->exists( *atk ) )
+			if ( theSet->exists( (*atk)->getName() ) )
 				(*it)->add_attacks( dst->getArgumentByName( (*atk)->getName() ) );
 
 		temp = original->get_attackers();
 		for ( SetArgumentsIterator atker = temp->begin(); atker != temp->end(); ++atker )
-			if ( theSet->exists( *atker ) )
+			if ( theSet->exists( (*atker)->getName() ) )
 				(*it)->add_attackers( dst->getArgumentByName( (*atker)->getName() ) );
 	}
 }

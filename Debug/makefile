@@ -45,7 +45,7 @@ all: SemOpt
 SemOpt: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o $@ $(OBJS) $(USER_OBJS) $(LIBS)
+	$(CXX)  -o $@ $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -77,8 +77,7 @@ int main(int argc, char *argv[])
 //	C_set1.add_Argument(framework.getArgumentByName("a14"));
 //
 //	p.prefSAT(&framework, &C_set1);
-	SymbolicArgumentsSet arguments = SymbolicArgumentsSet( framework.get_arguments() );
-	p.pref( &framework, &arguments );
+	p.pref( &framework, framework.get_arguments() );
 
 	int n = 1;
 	for (Preferred::iterator it = p.begin(); it != p.end(); it++)

@@ -50,6 +50,11 @@ SymbolicArgumentsSet::SymbolicArgumentsSet( const Labelling source )
 
 /* Destructor */
 
+SymbolicArgumentsSet::~SymbolicArgumentsSet()
+{
+	// Dummy destructor
+}
+
 /* Iterators */
 
 /**
@@ -130,7 +135,14 @@ SetArguments SymbolicArgumentsSet::toSetArguments( const AF* theAF ) const
 	SetArguments result = SetArguments();
 
 	for ( SymbolicArgumentsSet::iterator it = this->begin(); it != this->end(); ++it )
-		result.add_Argument( const_cast<AF*>( theAF )->getArgumentByName( *it ) );
+		try
+		{
+			result.add_Argument( const_cast<AF*>( theAF )->getArgumentByName( *it ) );
+		}
+		catch ( const out_of_range& oor )
+		{
+			// Element not in the AF. Skip it.
+		}
 
 	return result;
 }
@@ -147,9 +159,16 @@ Labelling SymbolicArgumentsSet::toLabelling( const AF* theAF ) const
 	Labelling result = Labelling();
 
 	for ( SymbolicArgumentsSet::iterator it = this->begin(); it != this->end(); ++it )
-		result.add_label(
-				const_cast<AF*>( theAF )->getArgumentByName( *it ),
-				Labelling::lab_in );
+		try
+		{
+			result.add_label(
+					const_cast<AF*>( theAF )->getArgumentByName( *it ),
+					Labelling::lab_in );
+		}
+		catch ( const out_of_range& oor )
+		{
+			// Element not in the AF. Skip it.
+		}
 
 	return result;
 }

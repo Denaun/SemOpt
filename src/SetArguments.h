@@ -15,7 +15,7 @@
 #include <stdexcept>
 using namespace std;
 
-#include "Argument.h"
+class Argument;
 
 /**
  * @brief Class defining a const iterator for the elements of a set of arguments
@@ -52,11 +52,12 @@ public:
 	bool is_subset(SetArguments *);
 	void intersect(SetArguments *, SetArguments *);
 	void setminus(SetArguments *, SetArguments *);
-	void adaptTo( AF* );
 	void remove(Argument *);
 	void clone(SetArguments *);
 	bool operator==(const SetArguments &other) const;
 };
+
+#include "Argument.h"
 
 ostream& operator<<(ostream& , const SetArguments& );
 

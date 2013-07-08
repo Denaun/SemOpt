@@ -8,7 +8,6 @@
 #ifndef PREFERRED_H_
 #define PREFERRED_H_
 
-#include "SymbolicArgumentsSet.h"
 #include <vector>
 #include <list>
 #include <stack>
@@ -59,7 +58,7 @@ class Preferred
 	list< DFSNode* > DFSAF;
 
 	AF *af; //!< @brief The Argumentation Framework considered
-	SymbolicArgumentsSet *C; //!< @brief the set of arguments to consider
+	SetArguments *C; //!< @brief the set of arguments to consider
 	int encoding;
 	SATFormulae sat_new_pigreek;
 	vector<Labelling> labellings;
@@ -74,6 +73,7 @@ public:
 
 	// Metodo aggiunti
 	// Risoluzione
+	void pref( AF*, SetArguments* );
 	void pref( AF*, SymbolicArgumentsSet* );
 
 	iterator begin();
@@ -88,7 +88,7 @@ private:
 	list< SCC* > SCCSSEQ();
 	void TarjanAlg( DFSNode*, list< SCC* >*, stack< DFSNode* >*, int );
 	// Cerca nell'AF i nodi che non sono attaccati da nessuno e li restituisce (altro valore restituito è il set di nodi non attaccati dai nodi liberi contenuti nel primo set)
-	void Grounded( SymbolicArgumentsSet*, SymbolicArgumentsSet* );
+	void Grounded( const SymbolicArgumentsSet*, SymbolicArgumentsSet*, SymbolicArgumentsSet* );
 
 	// Metodi aggiuntivi per SCCSSEQ
 	void SCCParenthood( list< SCC* >* );

@@ -51,7 +51,8 @@ void Preferred::SCCParenthood( list< SCC* >* SCCList )
 {
 	// Per ogni SCC nella lista i suoi padri possono essere soltanto i precedenti nella lista, faccio una scansione con doppio ciclo verificando se l'intersezione tra i nodi attaccati dalla SCC analizzata e la SCC attuale è vuota o meno (nel secondo caso la SCC analizzata è padre)
 	for( list< SCC* >::iterator aSCC = SCCList -> begin(); aSCC != SCCList -> end(); ++aSCC )
-		for( list< SCC* >::iterator fatherCandidate = SCCList -> begin(); fatherCandidate != aSCC; fatherCandidate++ ) {
+		for( list< SCC* >::iterator fatherCandidate = SCCList -> begin(); fatherCandidate != aSCC; fatherCandidate++ )
+		{
 			SymbolicArgumentsSet candidateAttacks = ( *fatherCandidate ) -> argumentList -> getAttacks( this -> af );
 			SymbolicArgumentsSet intersection = ( *aSCC ) -> argumentList -> intersect( &candidateAttacks );
 

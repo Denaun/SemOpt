@@ -18,10 +18,11 @@
  * @details	Calculates the set containing every argument which, if used, ensures to win
  * 			the argument and the set of nodes which can be used on both sides
  *
+ * @param[in]	theC	The subset of arguments to consider.
  * @param[out]	e		The extension
  * @param[out]	I		The set of the indolent arguments
  */
-void Preferred::Grounded( SymbolicArgumentsSet* e, SymbolicArgumentsSet* I )
+void Preferred::Grounded( const SymbolicArgumentsSet* theC, SymbolicArgumentsSet* e, SymbolicArgumentsSet* I )
 {
 	if ( debug )
 		cerr << "Entering Grounded\n";
@@ -32,10 +33,10 @@ void Preferred::Grounded( SymbolicArgumentsSet* e, SymbolicArgumentsSet* I )
 #endif
 
 	// I <- A
-	I = new SymbolicArgumentsSet( this -> af -> get_arguments() );
+	*I = SymbolicArgumentsSet( *this -> af -> get_arguments() );
 
 	// Copy of C to work on
-	SymbolicArgumentsSet C = *( this -> C );
+	SymbolicArgumentsSet C = *theC;
 
 	while ( true )
 	{
@@ -50,7 +51,7 @@ void Preferred::Grounded( SymbolicArgumentsSet* e, SymbolicArgumentsSet* I )
 			// For every element of C, check if it is attacked
 			// if not, add it to N and, later, remove it from C and I
 			bool attacked = false;
-			SymbolicArgumentsSet attackers = SymbolicArgumentsSet( af -> getArgumentByName( *it ) -> get_attackers() );
+			SymbolicArgumentsSet attackers = SymbolicArgumentsSet( *af->getArgumentByName( *it )->get_attackers() );
 
 			for ( SymbolicArgumentsSet::iterator jt = attackers.begin(); jt != attackers.end(); ++jt )
 			{
@@ -74,22 +75,22 @@ void Preferred::Grounded( SymbolicArgumentsSet* e, SymbolicArgumentsSet* I )
 			if ( debug )
 			{
 				cerr << "\t\tNo grounded extension found.\n";
-				cerr << "\t\tFinal I: " << *(I) << endl;
+				cerr << "\t\tFinal I: " << *I << endl;
 			}
 
 			return;
 		}
 
 		// Extend the extension and filter the indolents and the considered set
-		e = &N;
-		C.minus( &N );
-		I -> minus( &N );
+		*e = N.merge( e );
+		C = C.minus( &N );
+		*I = I->minus( &N );
 
 		for ( SymbolicArgumentsSet::iterator it = N.begin(); it != N.end(); ++it )
 		{
-			SymbolicArgumentsSet attacks = SymbolicArgumentsSet( af -> getArgumentByName( *it ) -> get_attacks() ); 
-			C.minus( &attacks );
-			I -> minus( &attacks );
+			SymbolicArgumentsSet attacks = SymbolicArgumentsSet( *af->getArgumentByName( *it )->get_attacks() ); 
+			C = C.minus( &attacks );
+			*I = I->minus( &attacks );
 		}
 	}
 

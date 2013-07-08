@@ -23,7 +23,7 @@ CC_DEPS += \
 src/precosat/%.o: ../src/precosat/%.cc
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -DNDEBUG -DNLOGPRECO -DNSTATSPRECO -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I"/Users/mauzuc90/Desktop/Codice_per_studenti_e_osservazioni_varie/SemOpt_0.2alpha2-SCC_100/src" -I"/Users/mauzuc90/Desktop/Codice_per_studenti_e_osservazioni_varie/SemOpt_0.2alpha2-SCC_100/src/precosat" -O0 -g3 -Wextra -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	g++ -DNDEBUG -DNLOGPRECO -DNSTATSPRECO -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I"../src" -I"../src/precosat" -O0 -g3 -Wextra -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

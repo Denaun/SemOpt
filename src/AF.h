@@ -13,8 +13,11 @@
 #include <fstream>
 
 #include "Argument.h"
-class SetArguments;
-class SetArgumentsIterator;
+//class SetArguments;
+//class SetArgumentsIterator;
+#include "SetArguments.h"
+//class SymbolicArgumentsSet;
+#include "SymbolicArgumentsSet.h"
 
 using namespace std;
 
@@ -36,7 +39,7 @@ public:
 	// Added method
 	// Copies the Framework, restricting it to a subset of nodes and their
 	// relative non-suspended arcs
-	void restrictTo( SetArguments*, AF* );
+	void restrictTo( SymbolicArgumentsSet*, AF* );
 	// Returns a string containing a representation of the nodes and the attacks
 	string toString();
 
@@ -44,6 +47,7 @@ public:
 	SetArgumentsIterator end();
 };
 
-#include "SetArguments.h"
+//#include "SetArguments.h"
+//#include "SymbolicArgumentsSet.h"
 
 #endif /* GRAPH_H_ */

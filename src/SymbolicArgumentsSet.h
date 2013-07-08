@@ -12,20 +12,22 @@
 
 #include <set>
 #include <string>
+#include <stdexcept>
 
-#include "Argument.h"
-#include "Labelling.h"
-#include "SetArguments.h"
+class AF;
+class Argument;
+class SetArguments;
+class Labelling;
 
 /**
- * @brief Class representing a set of arguments in a symbolical way.
+ * @brief Class representing a std::set of arguments in a symbolical way.
  * @details
  * 	(i.e. managing just the names of the arguments).
  */
 class SymbolicArgumentsSet 
 {
 	private:
-		set<std::string> arguments;
+		std::set<std::string> arguments;
 	public:
 		// Constructors
 		SymbolicArgumentsSet();
@@ -36,7 +38,7 @@ class SymbolicArgumentsSet
 		virtual ~SymbolicArgumentsSet();
 
 		// Iterators
-		typedef set<std::string>::iterator iterator;
+		typedef std::set<std::string>::iterator iterator;
 		iterator begin() const;
 		iterator end() const;
 
@@ -60,7 +62,12 @@ class SymbolicArgumentsSet
 		SymbolicArgumentsSet merge( const SymbolicArgumentsSet* ) const;
 		SymbolicArgumentsSet& operator=( const SymbolicArgumentsSet& );
 		bool operator==( const SymbolicArgumentsSet& ) const;
-}
+};
+
+#include "Argument.h"
+#include "SetArguments.h"
+#include "Labelling.h"
+#include "AF.h"
 
 std::ostream& operator<<( std::ostream&, const SymbolicArgumentsSet& );
 

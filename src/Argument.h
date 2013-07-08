@@ -54,10 +54,7 @@ public:
 	SetArguments *get_attackers();
 };
 
-#ifndef GRAPH_H_
 #include "AF.h"
 #include "SetArguments.h"
-#endif
-
 
 #endif /* ARGUMENT_H_ */
