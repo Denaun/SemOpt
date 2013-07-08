@@ -27,26 +27,27 @@ class SymbolicArgumentsSet
 	private:
 		set<std::string> arguments;
 	public:
+		// Constructors
+		SymbolicArgumentsSet();
+		SymbolicArgumentsSet( const SetArguments );
+		SymbolicArgumentsSet( const Labelling );
+
+		// Destructor
+		virtual ~SymbolicArgumentsSet();
+
 		// Iterators
 		typedef set<std::string>::iterator iterator;
 		iterator begin() const;
 		iterator end() const;
 
-		// Constructors
-		SymbolicArgumentsSet();
-		SymbolicArgumentsSet( const SetArguments* );
-		SymbolicArgumentsSet( const Labelling* );
-
-		// Destructor
-		virtual ~SymbolicArgumentsSet();
-
 		// Getters
 		bool isEmpty() const;
-		size_type size() const;
+		size_t size() const;
 		bool exists( const std::string ) const;
-		SymbolicArgumentsSet get_attacks( const AF* ) const;
-		SetArguments toSetArguments() const;
-		Labelling toLabelling() const;
+		SymbolicArgumentsSet getAttacks( const AF* ) const;
+		SymbolicArgumentsSet getAttackers( const AF* ) const;
+		SetArguments toSetArguments( const AF* ) const;
+		Labelling toLabelling( const AF* ) const;
 
 		// Setters
 		void add( const std::string );
@@ -56,10 +57,11 @@ class SymbolicArgumentsSet
 		// Operations
 		SymbolicArgumentsSet intersect( const SymbolicArgumentsSet* ) const;
 		SymbolicArgumentsSet minus( const SymbolicArgumentsSet* ) const;
-		SymbolicArgumentsSet& operator=( const SymbolicArgumentsSet* );
+		SymbolicArgumentsSet merge( const SymbolicArgumentsSet* ) const;
+		SymbolicArgumentsSet& operator=( const SymbolicArgumentsSet& );
 		bool operator==( const SymbolicArgumentsSet& ) const;
 }
 
-ostream& operator<<( ostream&, const SymbolicArgumentsSet& );
+std::ostream& operator<<( std::ostream&, const SymbolicArgumentsSet& );
 
 #endif /* defined SYMBOLIC_ARGUMENTS_SET_H_ */
