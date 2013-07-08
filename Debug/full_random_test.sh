@@ -13,7 +13,6 @@ RESULTS="./results/";
 SYNTHESIS="./synthesis/";
 EXE="./$1/SemOpt-Opt";
 PREOPT_EXE="./$1/SemOpt-PreOpt";
-BASE_EXE="./$1/SemOpt-Base";
 
 # Solve all the random instances with the preopt exec and the actual one
 for i in ${INSTANCES[@]}
@@ -21,12 +20,8 @@ do
 	FILENAME=$(basename $i);
 	OPT_FILENAME=$RESULTS"opt_result_"$FILENAME".txt";
 	PREOPT_FILENAME=$RESULTS"preopt_result_"$FILENAME".txt";
-	BASE_FILENAME=$RESULTS"base_result_"$FILENAME".txt";
 
 	echo ".::Solving $FILENAME::.";
-
-	echo -e "\tBase";
-	$BASE_EXE $3 $i > $BASE_FILENAME 2>&1;
 
 	echo -e "\tPreOpt";
 	PREOPT_START=$( echo -e "$TIME_CMD" | python );
