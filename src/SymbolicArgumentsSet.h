@@ -45,6 +45,7 @@ class SymbolicArgumentsSet
 		size_t size() const;
 		bool exists( const std::string ) const;
 		SymbolicArgumentsSet getAttacks( const AF* ) const;
+		SymbolicArgumentsSet getAttackers( const AF* ) const;
 		SetArguments toSetArguments() const;
 		Labelling toLabelling() const;
 

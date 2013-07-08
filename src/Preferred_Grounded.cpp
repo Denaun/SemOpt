@@ -21,38 +21,38 @@
  * @param[out]	e		The extension
  * @param[out]	I		The set of the indolent arguments
  */
-void Preferred::Grounded( SetArguments* e, SetArguments* I )
+void Preferred::Grounded( SymbolicArgumentsSet* e, SymbolicArgumentsSet* I )
 {
 	if ( debug )
 		cerr << "Entering Grounded\n";
 
 #ifndef NDEBUG
-	assert( e->empty() );
-	assert( I->empty() );
+	assert( e->isEmpty() );
+	assert( I->isEmpty() );
 #endif
 
 	// I <- A
-	this->af->get_arguments()->clone( I );
+	I = new SymbolicArgumentsSet( this -> af -> get_arguments() );
 
 	// Copy of C to work on
-	SetArguments C = SetArguments();
-	this->C->clone( &C );
+	SymbolicArgumentsSet C = *( this -> C );
 
 	while ( true )
 	{
 		if ( debug )
 			cerr << "\tNew cycle\n";
 
-		SetArguments N = SetArguments();
+		SymbolicArgumentsSet N = SymbolicArgumentsSet();
 
 		// Search for a set of all non-attacked arguments
-		for ( SetArgumentsIterator it = C.begin(); it != C.end(); ++it )
+		for ( SymbolicArgumentsSet::iterator it = C.begin(); it != C.end(); ++it )
 		{
 			// For every element of C, check if it is attacked
 			// if not, add it to N and, later, remove it from C and I
 			bool attacked = false;
-			SetArguments* attackers = (*it)->get_attackers();
-			for ( SetArgumentsIterator jt = attackers->begin(); jt != attackers->end(); ++jt )
+			SymbolicArgumentsSet attackers = SymbolicArgumentsSet( af -> getArgumentByName( *it ) -> get_attackers() );
+
+			for ( SymbolicArgumentsSet::iterator jt = attackers.begin(); jt != attackers.end(); ++jt )
 			{
 				attacked = I->exists( *jt );
 				if ( attacked )
@@ -61,15 +61,15 @@ void Preferred::Grounded( SetArguments* e, SetArguments* I )
 
 			if ( !attacked )
 			{
-				N.add_Argument( (*it) );
+				N.add( *it );
 
 				if ( debug )
-					cerr << "\t\tAdded " << (*it)->getName() << endl;
+					cerr << "\t\tAdded " << *it << endl;
 			}
 		}
 
 		// If no nodes have been found, we have finished.
-		if ( N.empty() )
+		if ( N.isEmpty() )
 		{
 			if ( debug )
 			{
@@ -81,13 +81,15 @@ void Preferred::Grounded( SetArguments* e, SetArguments* I )
 		}
 
 		// Extend the extension and filter the indolents and the considered set
-		N.clone( e );
-		C.setminus( &N, &C );
-		I->setminus( &N, I );
-		for ( SetArgumentsIterator it = N.begin(); it != N.end(); ++it )
+		e = &N;
+		C.minus( &N );
+		I -> minus( &N );
+
+		for ( SymbolicArgumentsSet::iterator it = N.begin(); it != N.end(); ++it )
 		{
-			C.setminus( (*it)->get_attacks(), &C );
-			I->setminus( (*it)->get_attacks(), I );
+			SymbolicArgumentsSet attacks = SymbolicArgumentsSet( af -> getArgumentByName( *it ) -> get_attacks() ); 
+			C.minus( &attacks );
+			I -> minus( &attacks );
 		}
 	}
 
