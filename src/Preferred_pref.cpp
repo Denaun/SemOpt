@@ -102,7 +102,6 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
-		Preferred p = Preferred();
 		vector<Labelling> newLabellings = vector<Labelling>();
 
 		// O is preserved throught the iterations because if the actual SCC has not a father in the previous one, then O remains always the same
@@ -127,7 +126,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				boundcond( ( *aSCC ) -> argumentList, (*aLabelling).inargs(), &O, &I );
 
 			if ( stages )
-				cerr << "O: " << O << endl << "I: " << I << endl;
+				cerr << "\tO: " << O << endl << "\tI: " << I << endl;
 
 			if ( O.empty() )
 			{
@@ -160,28 +159,13 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 					AF restricted = AF();
 					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
 
-					// TODO: prefSAT problem: the nodes in I are different from
+					// prefSAT problem: the nodes in I are different from
 					// the nodes in the restricted AF.
 					// Temporary solution: rebuild I.
-					for ( SetArgumentsIterator it = restricted.begin(); it != restricted.end(); ++it )
-					{
-						try
-						{
-							Argument* victim = I.getArgumentByName( (*it)->getName() );
+					I.adaptTo( &restricted );
 
-							// No exception: the Argument is inside I
-							// Remove it and substitute it with the new one
-							I.remove( victim );
-							I.add_Argument( *it );
-						}
-						catch ( const std::out_of_range& oor )
-						{
-							// The Argument is outside of I. Nothing to do.
-						}
-					}
-
-					if ( debug )
-						cerr << "\t\tCalling prefSAT.\n";
+					if( debug )
+							cerr << "\t\tCalling PrefSAT.\n";
 
 					p.prefSAT( &restricted, &I );
 				}
@@ -193,6 +177,7 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 				SetArguments restriction = SetArguments();
 				( *aSCC ) -> argumentList -> setminus( &O, &restriction );
+
 				if ( restriction.cardinality() <= 1 && restriction == I )
 				{
 					if ( debug )
@@ -215,11 +200,14 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 
 					AF restricted = AF();
 					this->af->restrictTo( &restriction, &restricted );
-					// TODO? the same as above for prefSAT.
 
-					p.pref( &restricted, &I );
+					// The same as above for prefSAT.
+					I.adaptTo( &restricted );
+
+					p.prefSAT( &restricted, &I );
 				}
 			}
+
 
 			// prefSAT doesn't put newline at the end of its output...
 			if ( debug )
@@ -232,9 +220,9 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 				if ( debug )
 					cerr << "\t\tFound " << *((*EStar).inargs()) << endl;
 
-				// TODO: Rebuild the Labelling using the original Arguments
+				// Rebuild the Labelling using the original Arguments
 				// Not doing so could cause problems to next boundconds
-				// Currently not possible due to the structure of Labelling
+				(*EStar).adaptTo( theAF );
 
 				(*aLabelling).clone( &(*EStar) );
 
