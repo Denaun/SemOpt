@@ -1,13 +1,14 @@
 #/bin/bash
 # First argument: executable folder (OSX/NIX)
-# Second argument: debug flag or another parameter to be passed
+# Second argument: test folder
+# Third argument: debug flag or another parameter to be passed
 
 # Constants
 NOW=$(date +"%Y-%m-%d_%H-%M-%S");
 TIME_CMD='import time\nprint "{:.0f}".format( time.time() * 10 ** 1 )';
 
 # Useful paths
-INSTANCES=`ls ./test-input/random*.dl`;
+INSTANCES=`ls ./$2/random*.dl`;
 RESULTS="./results/";
 SYNTHESIS="./synthesis/";
 EXE="./$1/SemOpt-Opt";
