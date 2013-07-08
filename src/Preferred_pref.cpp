@@ -200,8 +200,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					cerr << "\tGoing to call pref.\n";
 
 				SymbolicArgumentsSet restriction = SymbolicArgumentsSet();
-				( *aSCC ) -> argumentList = &O;
-				( *aSCC ) -> argumentList -> minus( &restriction );
+				restriction = ( *aSCC ) -> argumentList -> minus( &O );
 
 				if ( restriction.size() <= 1 && restriction == I )
 				{

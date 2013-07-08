@@ -52,11 +52,10 @@ void Preferred::SCCParenthood( list< SCC* >* SCCList )
 	// Per ogni SCC nella lista i suoi padri possono essere soltanto i precedenti nella lista, faccio una scansione con doppio ciclo verificando se l'intersezione tra i nodi attaccati dalla SCC analizzata e la SCC attuale è vuota o meno (nel secondo caso la SCC analizzata è padre)
 	for( list< SCC* >::iterator aSCC = SCCList -> begin(); aSCC != SCCList -> end(); ++aSCC )
 		for( list< SCC* >::iterator fatherCandidate = SCCList -> begin(); fatherCandidate != aSCC; fatherCandidate++ ) {
-			SetArguments intersection = SetArguments();
+			SymbolicArgumentsSet candidateAttacks = ( *fatherCandidate ) -> argumentList -> getAttacks( this -> af );
+			SymbolicArgumentsSet intersection = ( *aSCC ) -> argumentList -> intersect( &candidateAttacks );
 
-			( *aSCC ) -> argumentList -> intersect( ( *fatherCandidate ) -> argumentList -> get_attacks(), &intersection );
-
-			if( !intersection.empty() )
+			if( !intersection.isEmpty() )
 				( *aSCC ) -> fathers.push_back( *fatherCandidate );
 		}
 }
@@ -118,14 +117,14 @@ void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode*
 		if ( debug )
 			cerr << "\t--- Building SCC ---" << endl;
 
-		SetArguments* new_SCC = new SetArguments();
+		SymbolicArgumentsSet* new_SCC = new SymbolicArgumentsSet();
 		DFSNode* temp;
 
 		do {
 			// Vedi il commento in stackSearch
 			temp = s -> top();
 			s -> pop();
-			new_SCC -> add_Argument( temp -> argument );
+			new_SCC -> add( temp -> argument -> getName() );
 		} while( temp -> argument != node -> argument  );
 
 		SCCList -> push_front( new SCC( new_SCC ) );
