@@ -31,7 +31,6 @@ public:
 	SetArguments *outargs();
 	SetArguments *undecargs();
 	bool empty();
-	void adaptTo( AF* );
 	void clone(Labelling *);
 };
 

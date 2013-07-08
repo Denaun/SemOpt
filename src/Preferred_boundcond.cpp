@@ -21,15 +21,15 @@
  * @param[out]	O		First output set
  * @param[out]	I		Second output set
  */
-void Preferred::boundcond( SCC* aSCC, SetArguments* e,
-						   SetArguments* O, SetArguments* I )
+void Preferred::boundcond( SCC* aSCC, SymbolicArgumentsSet* e,
+						   SymbolicArgumentsSet* O, SymbolicArgumentsSet* I )
 {
 	if ( debug )
 		cerr << "Entering boundcond\n";
 
 #ifndef NDEBUG
-	assert( O->empty() );
-	assert( I->empty() );
+	assert( O->isEmpty() );
+	assert( I->isEmpty() );
 #endif
 
 	/* From the description:
@@ -37,13 +37,17 @@ void Preferred::boundcond( SCC* aSCC, SetArguments* e,
 	 */
 	
 	// It's easier to determine the inverse of O, which is I before filtering
-	aSCC->argumentList->clone( I );
-	I->setminus( e->get_attacks(), I );
+	I = aSCC->argumentList;
+	// A pair of useful temps
+	SymbolicArgumentsSet attacks = e -> getAttacks( af );
+	SymbolicArgumentsSet minus = I -> minus( &attacks );
+	I = &minus;
 	//for ( SetArgumentsIterator it = e->begin(); it != e->end(); ++it )
 	//	I->setminus( (*it)->get_attacks(), I );
 
 	// Determine S[ i ] \ I = O
-	aSCC->argumentList->setminus( I, O );
+	minus = aSCC -> argumentList -> minus( I );
+	O = &minus;
 
 	if ( debug )
 		cerr << "\tDetermined O: " << *O << endl;
@@ -61,20 +65,22 @@ void Preferred::boundcond( SCC* aSCC, SetArguments* e,
 		cerr << "\tDetermining I from: " << *I << endl;
 	
 	// Nodes of G not in S[ i ]
-	SetArguments external = SetArguments();
-	this->af->get_arguments()->setminus( aSCC->argumentList, &external );
+	SymbolicArgumentsSet external = SymbolicArgumentsSet();
+	external = ( new SymbolicArgumentsSet( this -> af -> get_arguments() ) ) -> minus( aSCC -> argumentList );
 
 	// Keep the nodes of I not attacked by externals and filter the remaining
-	SetArguments toBeRemoved = SetArguments();
-	I->clone( &toBeRemoved );
-	I->setminus( external.get_attacks(), I );
+	SymbolicArgumentsSet toBeRemoved = *I;
+	attacks = external.getAttacks( af ); 
+	minus = I -> minus( &attacks );
+	I = &minus;
 	//for ( SetArgumentsIterator it = external.begin(); it != external.end(); ++it )
 	//	I->setminus( (*it)->get_attacks(), I );
 	
 	// Nodes of I attacked by externals
 	// => they can be kept iff they satisfy the second condition
-	toBeRemoved.setminus( I, &toBeRemoved );
-	SetArguments toBeKept = SetArguments();
+	toBeRemoved = toBeRemoved.minus( I );
+
+	SymbolicArgumentsSet toBeKept = SymbolicArgumentsSet();
 
 	if ( debug )
 		cerr << "\t\tNodes not satisfying the first condition: " << toBeRemoved << endl;
@@ -83,18 +89,19 @@ void Preferred::boundcond( SCC* aSCC, SetArguments* e,
 	// 	- node in G \ ( S[ i ] U e )
 	// 	- node attacked by e
 	//external.setminus( e, &external );
-	for ( SetArgumentsIterator it = toBeRemoved.begin(); it != toBeRemoved.end(); ++it )
+	for ( SymbolicArgumentsSet::iterator it = toBeRemoved.begin(); it != toBeRemoved.end(); ++it )
 	{
-		SetArguments attackers = SetArguments();
+		SymbolicArgumentsSet attackers = SymbolicArgumentsSet();
 		// Find the external attackers (could be done the opposite way, maybe faster)
-		for ( SetArgumentsIterator jt = external.begin(); jt != external.end(); ++jt )
-			if ( (*jt)->get_attacks()->exists( *it ) )
-				attackers.add_Argument( *jt );
+		for ( SymbolicArgumentsSet::iterator jt = external.begin(); jt != external.end(); ++jt )
+			if ( ( new SymbolicArgumentsSet( af -> getArgumentByName( *jt ) -> get_attacks() ) ) -> exists( *it ) )
+				attackers.add( *jt );
 
 		// Check that no attackers are in e
-		int nAttackers = attackers.cardinality();
-		attackers.setminus( e, &attackers );
-		if ( attackers.cardinality() < nAttackers )
+		int nAttackers = attackers.size();
+		attackers = attackers.minus( e );
+
+		if ( attackers.size() < nAttackers )
 		{
 			if ( debug )
 				cerr << "\t\t" << (*it)->getName() << " attacked by e.\n";
@@ -104,12 +111,12 @@ void Preferred::boundcond( SCC* aSCC, SetArguments* e,
 
 		// Check that every attacker is itself attacked by e
 		bool safe = true;
-		for ( SetArgumentsIterator jt = attackers.begin(); jt != attackers.end(); ++jt )
+		for ( SymbolicArgumentsSet::iterator jt = attackers.begin(); jt != attackers.end(); ++jt )
 		{
 			bool attacked = false;
-			for ( SetArgumentsIterator kt = e->begin(); kt != e->end(); ++kt )
+			for ( SymbolicArgumentsSet::iterator kt = e->begin(); kt != e->end(); ++kt )
 			{
-				attacked = (*kt)->get_attacks()->exists( *jt );
+				attacked = ( new SymbolicArgumentsSet( af -> getArgumentByName( *kt ) -> get_attacks() ) ) -> exists( *jt );
 				if ( attacked )
 					break;
 			}
@@ -129,14 +136,14 @@ void Preferred::boundcond( SCC* aSCC, SetArguments* e,
 			if ( debug )
 				cerr << "\t\t" << (*it)->getName() << "'s attackers are attacked by e.\n";
 
-			toBeKept.add_Argument( *it );
+			toBeKept.add( *it );
 		}
 		else if ( debug )
 			cerr << "\t\tNot every attacker of " << (*it)->getName() << " is attacked by e.\n";
 	}
 
 	// Re-add the nodes to I
-	toBeKept.clone( I );
+	I = &toBeKept;
 
 	if ( debug )
 		cerr << "\tDetermined I: " << *I << endl;
