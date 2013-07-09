@@ -1,8 +1,16 @@
 #/bin/bash
 
 # File generation
-INPUT_PATH="./test-input/random_test_";
-NOW=$(date +"%Y-%m-%d_%H-%M-%S-%N");
+if [[ $# -lt 2 ]]
+then
+	FOLDER="test-input"
+else
+	FOLDER=$2
+fi
+
+INPUT_PATH="./$2/random_test_";
+TIME_CMD='import datetime\nprint datetime.datetime.now().isoformat()';
+NOW=$( echo -e "$TIME_CMD" | python );
 
 # As first parameter the number of nodes must be inserted
 # Generating nodes

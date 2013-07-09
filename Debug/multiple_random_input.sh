@@ -7,5 +7,5 @@ GENERATOR="./random_input.sh";
 for ((i=1; i <= $1; i++))
 do
 	DIMENSION=$(($RANDOM%$(($3-$2))+$2));
-	$GENERATOR $DIMENSION;
+	$GENERATOR $DIMENSION $4;
 done;
