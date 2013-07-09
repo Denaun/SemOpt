@@ -60,15 +60,6 @@ else
 end
 
 # Compare
-=begin
-FileUtils.mkdir_p( File.dirname( resultsFile ) )
-File.open( resultsFile, 'w' ) do |file|
-    file.write( File.basename( input ) + " in #{ourTime}s.\n" )
-    diff = `diff #{benchFile} #{ourFile}`
-    file.write( "Differences:\n" + diff )
-end
-=end
-
 puts File.basename( input ) + " in #{ourTime}s.\n"
 diff = `diff #{benchFile} #{ourFile}`
 if !diff.empty?
