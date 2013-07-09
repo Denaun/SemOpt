@@ -61,11 +61,9 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		if ( debug )
 			cerr << "\tNo need to call Grounded.\n";
 
-		// Empty: no extensions => null iteration
-		// Singlet: still have to iterate over I
+		// Empty: no extensions => empty Labelling
+		// Singlet: single-element Labelling
 		e = *theC;
-		//for ( SymbolicArgumentsSet::iterator it = theC -> begin(); it != theC -> end(); ++it )
-		//	e.add( *it );
 	}
 	else
 		Grounded( theC, &e, &I );
@@ -73,20 +71,20 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 	if ( stages )
 		cerr << "\te: " << e << endl << "\tI: " << I << endl; 
 
-	// Add the Labelling to the solutions
-	tempLabellings.push_back( e );
-
 	if ( I.isEmpty() )
 	{
 		if ( debug )
 			cerr << "\tNo unlabelled arguments left. Returning.\n";
 
-		// Assign the temporary labellings
-		for ( vector<SymbolicArgumentsSet>::iterator it = tempLabellings.begin();
-				it != tempLabellings.end(); ++it )
-			this->labellings.push_back( (*it).toLabelling( this->af ) );
+		// Assign the temporary Labelling
+		this->labellings.push_back( e.toLabelling( this->af ) );
 
 		return;
+	}
+	else
+	{
+		// Add the Labelling to the solutions
+		tempLabellings.push_back( e );
 	}
 
 	// Generate G restricted to I
@@ -117,10 +115,6 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				cerr << "\t\tFather: " << *( *father ) -> argumentList << endl;
 		}
 
-	// Restore the AF
-	// This makes possible to keep track of every attack and avoids oor exceptions
-	this->af = theAF;
-
 	// Indicates to preserve O or not inside the inner cycle
 	// (no boundcond recalculation after the first time, conditions described below)
 	bool preserveO = true;
@@ -139,7 +133,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		// (for the first SCC the condition is always true)
 		SymbolicArgumentsSet O = SymbolicArgumentsSet();
 		// ( I already exists... )
-		I = SymbolicArgumentsSet();
+		I.clear();
 
 		for ( vector<SymbolicArgumentsSet>::iterator aLabelling = tempLabellings.begin();
 				aLabelling != tempLabellings.end(); ++aLabelling )
@@ -171,7 +165,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 					// Lo stesso insieme O per ogni e..?
 					// evito.
-					O = SymbolicArgumentsSet();
+					O.clear();
 				}
 				else
 				{
@@ -321,9 +315,17 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 			}
 	}
 
-	// Finally, assign the temporary labellings
+	if ( stages )
+	{
+		stringstream s;
+		copy( tempLabellings.begin(), tempLabellings.end(), ostream_iterator<SymbolicArgumentsSet>( s, "\n\t" ) );
+
+		cerr << "Actual labellings:\n\t" << s.str() << endl;
+	}
+
+	// Finally, assign the temporary labellings using the original AF
 	for ( vector<SymbolicArgumentsSet>::iterator it = tempLabellings.begin();
 			it != tempLabellings.end(); ++it )
-		this->labellings.push_back( (*it).toLabelling( this->af ) );
+		this->labellings.push_back( (*it).toLabelling( theAF ) );
 }
 

@@ -513,10 +513,8 @@ Entering boundcond
 Entering boundcond
 	Determined O: {}
 	Determining I from: {a12 a14 a23 a29 a5}
-		Nodes not satisfying the first condition: {a14 a23 a29}
-		a14's attackers are attacked by e.
+		Nodes not satisfying the first condition: {a23}
 		a23's attackers are attacked by e.
-		a29's attackers are attacked by e.
 	Determined I: {a12 a14 a23 a29 a5}
 		O: {}
 		I: {a12 a14 a23 a29 a5}
@@ -1011,6 +1009,6 @@ Entering boundcond
 			Found {}
 				Created: {a1 a12 a14 a16 a17 a18 a19 a2 a3 a5 a6 a7 a8}
 Extension 1
-{a1 a16 a17 a18 a19 a2 a22 a23 a26 a29 a6 a7 a8}
+{a17 a19 a22 a23 a26 a29 a7}
 Extension 2
-{a1 a12 a14 a16 a17 a18 a19 a2 a3 a5 a6 a7 a8}
+{a12 a14 a17 a19 a3 a5 a7}

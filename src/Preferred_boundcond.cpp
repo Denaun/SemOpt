@@ -15,11 +15,13 @@
 
 /**
  * @brief Function boundcond.
+ * @details
+ * 	If called with non-empty O, only I is calculated and O is kept as-is.
  *
- * @param[in]	aSCC	The Strongly Connected Component to consider
- * @param[in]	e		The actual extension
- * @param[out]	O		First output set
- * @param[out]	I		Second output set
+ * @param[in]	aSCC	The Strongly Connected Component to consider.
+ * @param[in]	e		The actual extension.
+ * @param[out]	O		First output set.
+ * @param[out]	I		Second output set. Must be empty.
  */
 void Preferred::boundcond( SCC* aSCC, SymbolicArgumentsSet* e,
 						   SymbolicArgumentsSet* O, SymbolicArgumentsSet* I )
@@ -88,20 +90,24 @@ void Preferred::boundcond( SCC* aSCC, SymbolicArgumentsSet* e,
 	// Remove from the set the nodes attacked by nodes satisfying both the conditions:
 	// 	- node in G \ ( S[ i ] U e )
 	// 	- node attacked by e
-	//external.setminus( e, &external );
+	//external = external.minus( e );
 	for ( SymbolicArgumentsSet::iterator it = toBeRemoved.begin(); it != toBeRemoved.end(); ++it )
 	{
-		SymbolicArgumentsSet attackers = SymbolicArgumentsSet();
+		//SymbolicArgumentsSet attackers = SymbolicArgumentsSet();
 		// Find the external attackers (could be done the opposite way, maybe faster)
-		for ( SymbolicArgumentsSet::iterator jt = external.begin(); jt != external.end(); ++jt )
-			if ( SymbolicArgumentsSet( *this->af->getArgumentByName( *jt )->get_attacks() ).exists( *it ) )
-				attackers.add( *jt );
+		//for ( SymbolicArgumentsSet::iterator jt = external.begin(); jt != external.end(); ++jt )
+		//	if ( SymbolicArgumentsSet( *this->af->getArgumentByName( *jt )->get_attacks() ).exists( *it ) )
+		//		attackers.add( *jt );
+
+		SymbolicArgumentsSet attackers =
+			SymbolicArgumentsSet(
+					*this->af
+					->getArgumentByName( *it )
+					->get_attackers() )
+			.intersect( &external );
 
 		// Check that no attackers are in e
-		size_t nAttackers = attackers.size();
-		attackers = attackers.minus( e );
-
-		if ( attackers.size() < nAttackers )
+		if ( !attackers.intersect( e ).isEmpty() )
 		{
 			if ( debug )
 				cerr << "\t\t" << *it << " attacked by e.\n";
@@ -116,7 +122,16 @@ void Preferred::boundcond( SCC* aSCC, SymbolicArgumentsSet* e,
 			bool attacked = false;
 			for ( SymbolicArgumentsSet::iterator kt = e->begin(); kt != e->end(); ++kt )
 			{
-				attacked = SymbolicArgumentsSet( *this->af->getArgumentByName( *kt )->get_attacks() ).exists( *jt );
+				try
+				{
+					attacked = SymbolicArgumentsSet( *this->af->getArgumentByName( *kt )->get_attacks() ).exists( *jt );
+				}
+				catch ( const out_of_range& oor )
+				{
+					// kt doesn't belong to the AF ( => found with Grounded )
+					// Skip it, it surely won't attack anything in the AF
+				}
+
 				if ( attacked )
 					break;
 			}
