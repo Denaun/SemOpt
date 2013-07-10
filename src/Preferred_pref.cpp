@@ -56,7 +56,6 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 						 I = SymbolicArgumentsSet();
 
 	// Avoid calling Grounded if useless
-	/* BASE
 	if ( theC -> size() <= 1 && AFequalsC )
 	{
 		if ( debug )
@@ -67,7 +66,6 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		e = *theC;
 	}
 	else
-	*/
 		Grounded( theC, &e, &I );
 
 	if ( stages )
