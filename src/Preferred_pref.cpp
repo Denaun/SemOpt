@@ -163,14 +163,12 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				I.clear();
 
 				
-				if( preserveO && !O.isEmpty() )
+				if( preserveO )
 				{
 					if ( debug )
-						cerr << "\t\t\tO (should be) preserved.\n";
+						cerr << "\t\t\tO preserved.\n";
 
-					// Lo stesso insieme O per ogni e..?
-					// evito.
-					O.clear();
+					// ???
 				}
 				else
 				
@@ -200,7 +198,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				
+				/* BASE
 				if ( ( *aSCC ) -> argumentList -> size() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
@@ -227,7 +225,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					}
 				}
 				else
-				
+				*/
 				{
 					AF restricted = AF();
 					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
@@ -249,7 +247,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				SymbolicArgumentsSet restriction = SymbolicArgumentsSet();
 				restriction = ( *aSCC ) -> argumentList -> minus( &O );
 
-				
+				/* BASE
 				if ( restriction.size() <= 1 && restriction == I )
 				{
 					if ( debug )
@@ -274,7 +272,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					}
 				}
 				else
-				
+				*/
 				{
 					if ( debug )
 						cerr << "\t\t\tCalling pref.\n";
@@ -314,17 +312,17 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 		
 		// Check if the actual SCC is a father of the next one
-		preserveO = false;
-
 		list< SCC* >::iterator next = aSCC;
 		if( ++next == S.end() )
 			break;
+
+		preserveO = true;
 
 		for( list< SCC* >::iterator fathers = ( *( next ) ) -> fathers.begin();
 				fathers != ( *next ) -> fathers.end(); ++fathers )
 			if( *fathers == *aSCC )
 			{
-				preserveO = true;
+				preserveO = false;
 				break;
 			}
 		
