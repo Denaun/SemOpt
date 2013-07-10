@@ -14,7 +14,8 @@
  * @return A list containing the sets of Strongly
  *		Connected Components found by the algorithm
  */
-list< SCC* > Preferred::SCCSSEQ() {
+list< SCC* > Preferred::SCCSSEQ()
+{
 	if ( debug )
 		cerr << "Entering SCCSSEQ.\n";
 
@@ -50,6 +51,7 @@ list< SCC* > Preferred::SCCSSEQ() {
 void Preferred::SCCParenthood( list< SCC* >* SCCList )
 {
 	// Per ogni SCC nella lista i suoi padri possono essere soltanto i precedenti nella lista, faccio una scansione con doppio ciclo verificando se l'intersezione tra i nodi attaccati dalla SCC analizzata e la SCC attuale è vuota o meno (nel secondo caso la SCC analizzata è padre)
+	/* BASE
 	for( list< SCC* >::iterator aSCC = SCCList -> begin(); aSCC != SCCList -> end(); ++aSCC )
 		for( list< SCC* >::iterator fatherCandidate = SCCList -> begin(); fatherCandidate != aSCC; fatherCandidate++ )
 		{
@@ -59,6 +61,7 @@ void Preferred::SCCParenthood( list< SCC* >* SCCList )
 			if( !intersection.isEmpty() )
 				( *aSCC ) -> fathers.push_back( *fatherCandidate );
 		}
+	*/
 }
 
 /**
@@ -138,7 +141,8 @@ void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode*
 /**
   * @brief Initialization of the support structure for DFS (called in constructor)
   */
-void Preferred::initDFSAF() {
+void Preferred::initDFSAF()
+{
 	if ( debug )
 		cerr << "Initializing DFSAF structure\n";
 
@@ -155,7 +159,8 @@ void Preferred::initDFSAF() {
   * @param s The stack to search in
   * @param node The DFSNode to search for
   */
-bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node ) {
+bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node )
+{
 	if ( debug )
 		cerr << "\t\tSearching in stack for " << node -> argument -> getName() << endl;
 	
@@ -181,7 +186,8 @@ bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node ) {
   *
   * @param node The Argument to search for
   */
-Preferred::DFSNode* Preferred::searchArgument( Argument* node ) {
+Preferred::DFSNode* Preferred::searchArgument( Argument* node )
+{
 	if ( debug )
 		cerr << "\t\tSearching DFSNode corresponding to Argument " << node -> getName() << endl;
 
