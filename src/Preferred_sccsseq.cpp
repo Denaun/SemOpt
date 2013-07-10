@@ -37,8 +37,10 @@ list< SCC* > Preferred::SCCSSEQ()
 			TarjanAlg( *i, &SCCList, &s, index );
 		}
 
+	
 	// Determino i rapporti di parentela tra le SCC
 	SCCParenthood( &SCCList );
+	
 
 	return SCCList;
 }
@@ -51,7 +53,6 @@ list< SCC* > Preferred::SCCSSEQ()
 void Preferred::SCCParenthood( list< SCC* >* SCCList )
 {
 	// Per ogni SCC nella lista i suoi padri possono essere soltanto i precedenti nella lista, faccio una scansione con doppio ciclo verificando se l'intersezione tra i nodi attaccati dalla SCC analizzata e la SCC attuale è vuota o meno (nel secondo caso la SCC analizzata è padre)
-	/* BASE
 	for( list< SCC* >::iterator aSCC = SCCList -> begin(); aSCC != SCCList -> end(); ++aSCC )
 		for( list< SCC* >::iterator fatherCandidate = SCCList -> begin(); fatherCandidate != aSCC; fatherCandidate++ )
 		{
@@ -61,7 +62,6 @@ void Preferred::SCCParenthood( list< SCC* >* SCCList )
 			if( !intersection.isEmpty() )
 				( *aSCC ) -> fathers.push_back( *fatherCandidate );
 		}
-	*/
 }
 
 /**

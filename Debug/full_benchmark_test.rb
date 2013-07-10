@@ -12,12 +12,12 @@ end
 
 # Arguments
 os = ARGV[ 0 ].upcase
-inputFolder = ARGV[ 1 ].sub( /\/$/, "" )
-givenTime = ( ARGV[ 2 ] ? ARGV[ 2 ].to_i : 120 )
+version = ARGV[ 1 ].downcase
+inputFolder = ARGV[ 2 ].sub( /\/$/, "" )
+givenTime = ( ARGV[ 3 ] ? ARGV[ 3 ].to_i : 120 )
 
 # Files
-outputFolder = "./results/" + inputFolder
-resultsFile = "./results/#{inputFolder} #{Time.now.iso8601}.txt"
+resultsFile = "./results/#{version}/#{inputFolder}/#{Time.now.iso8601}.txt"
 
 # Test every file and save the result
 FileUtils.mkdir_p( File.dirname( resultsFile ) )
@@ -30,7 +30,7 @@ File.open( resultsFile, 'w' ) do |file|
 		# Timeout to 2' or the passed time: if it doesn't complete, terminate it
 		begin
 			output = Timeout::timeout( givenTime ) do
-				file.write `ruby ./benchmark_compare.rb #{os} #{input}`
+				file.write `ruby ./benchmark_compare.rb #{os} #{version} #{input}`
 			end
 		rescue Timeout::Error
 			puts "Timed out. Marking the file."
@@ -49,3 +49,9 @@ File.open( resultsFile, 'w' ) do |file|
 		end
 	end
 end
+
+verdict = `ruby ./results_statistics.rb #{resultsFile}`
+File.open( resultsFile, 'a' ) do |file|
+	file.write verdict
+end
+puts verdict

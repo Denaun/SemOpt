@@ -10,18 +10,19 @@ end
 
 # Arguments
 os = ARGV[ 0 ].upcase
-input = ARGV[ 1 ]
+version = ARGV[ 1 ].downcase
+input = ARGV[ 2 ]
 
 # Files
-ourFile = "./solutions/our/" + input + ".txt"
-benchFile = "./solutions/benchmarks/" + input + ".txt"
-resultsFile = "./results/" + input + ".txt"
+ourFile = "./solutions/our_#{version}/#{input}.txt"
+benchFile = "./solutions/benchmarks/#{input}.txt"
+resultsFile = "./results/#{input}.txt"
 
 # Solve with our algorithm
 our = []
 res = []
 ourTime = time do
-	res = `./#{ARGV[ 0 ]}/SemOpt #{input}`
+	res = `./#{ARGV[ 0 ]}/SemOpt-#{version} #{input}`
 end
 
 res.each_line do |line|

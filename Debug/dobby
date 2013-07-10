@@ -1,0 +1,2498 @@
+Debug on.
+Input file: test-input/larger/random_test_2013-07-10T16:58:57.165725.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a45, a7
+		attacked by a60
+Argument a10	attacks none
+		attacked by a33
+Argument a11	attacks a2, a33, a59
+		attacked by a15
+Argument a12	attacks a46
+		attacked by a24, a51, a62
+Argument a13	attacks a31, a33, a42
+		attacked by none
+Argument a14	attacks a21, a34, a45
+		attacked by a21, a61
+Argument a15	attacks a11, a49
+		attacked by none
+Argument a16	attacks a23
+		attacked by none
+Argument a17	attacks a26, a43
+		attacked by a21, a29, a45, a49
+Argument a18	attacks none
+		attacked by a28, a29, a3, a33, a36, a42
+Argument a19	attacks a33, a58
+		attacked by none
+Argument a2	attacks a29, a39, a51
+		attacked by a11, a20, a59
+Argument a20	attacks a2, a5
+		attacked by a38, a52
+Argument a21	attacks a14, a17
+		attacked by a14, a49, a56
+Argument a22	attacks a39
+		attacked by a36, a38
+Argument a23	attacks a26, a59, a8
+		attacked by a16, a54
+Argument a24	attacks a12, a7
+		attacked by a30, a55, a8
+Argument a25	attacks a57, a62
+		attacked by a27
+Argument a26	attacks none
+		attacked by a17, a23, a33
+Argument a27	attacks a25, a64
+		attacked by a3, a47, a7
+Argument a28	attacks a18
+		attacked by a58
+Argument a29	attacks a17, a18, a8
+		attacked by a2, a44, a50
+Argument a3	attacks a18, a27, a43, a44
+		attacked by a5, a50
+Argument a30	attacks a24, a37, a52
+		attacked by none
+Argument a31	attacks a52, a54
+		attacked by a13, a42
+Argument a32	attacks none
+		attacked by a37, a60
+Argument a33	attacks a10, a18, a26, a42, a43
+		attacked by a11, a13, a19
+Argument a34	attacks a42
+		attacked by a14, a40
+Argument a35	attacks a39, a45, a56
+		attacked by a8
+Argument a36	attacks a18, a22, a37, a39
+		attacked by a40, a47
+Argument a37	attacks a32, a42
+		attacked by a30, a36, a6
+Argument a38	attacks a20, a22
+		attacked by a8
+Argument a39	attacks a49
+		attacked by a2, a22, a35, a36, a45, a48, a58
+Argument a4	attacks none
+		attacked by a40, a54
+Argument a40	attacks a34, a36, a4
+		attacked by none
+Argument a41	attacks a49
+		attacked by none
+Argument a42	attacks a18, a31
+		attacked by a13, a33, a34, a37, a46, a51, a55
+Argument a43	attacks a51
+		attacked by a17, a3, a33, a62
+Argument a44	attacks a29, a47, a50
+		attacked by a3
+Argument a45	attacks a17, a39, a48, a49, a58
+		attacked by a1, a14, a35
+Argument a46	attacks a42
+		attacked by a12, a50
+Argument a47	attacks a27, a36
+		attacked by a44
+Argument a48	attacks a39
+		attacked by a45, a7
+Argument a49	attacks a17, a21, a53
+		attacked by a15, a39, a41, a45
+Argument a5	attacks a3
+		attacked by a20, a6
+Argument a50	attacks a29, a3, a46
+		attacked by a44, a55
+Argument a51	attacks a12, a42
+		attacked by a2, a43
+Argument a52	attacks a20
+		attacked by a30, a31
+Argument a53	attacks none
+		attacked by a49
+Argument a54	attacks a23, a4
+		attacked by a31, a57
+Argument a55	attacks a24, a42, a50
+		attacked by a7
+Argument a56	attacks a21
+		attacked by a35
+Argument a57	attacks a54, a62
+		attacked by a25, a6, a64
+Argument a58	attacks a28, a39, a59
+		attacked by a19, a45
+Argument a59	attacks a2, a6, a60, a62
+		attacked by a11, a23, a58, a60
+Argument a6	attacks a37, a5, a57
+		attacked by a59
+Argument a60	attacks a1, a32, a59, a61
+		attacked by a59
+Argument a61	attacks a14
+		attacked by a60
+Argument a62	attacks a12, a43
+		attacked by a25, a57, a59
+Argument a63	attacks none
+		attacked by none
+Argument a64	attacks a57
+		attacked by a27
+Argument a7	attacks a27, a48, a55
+		attacked by a1, a24
+Argument a8	attacks a24, a35, a38
+		attacked by a23, a29
+Argument a9	attacks none
+		attacked by none
+
+Entering Grounded
+	New cycle
+		Added a13
+		Added a15
+		Added a16
+		Added a19
+		Added a30
+		Added a40
+		Added a41
+		Added a63
+		Added a9
+	New cycle
+		Added a10
+		Added a28
+		Added a53
+	New cycle
+		No grounded extension found.
+		Final I: {a1 a12 a14 a17 a2 a20 a21 a22 a25 a26 a27 a29 a3 a32 a35 a38 a39 a43 a44 a45 a46 a47 a48 a5 a50 a51 a54 a55 a56 a57 a59 a6 a60 a61 a62 a64 a7 a8}
+	e: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a63 a9}
+	I: {a1 a12 a14 a17 a2 a20 a21 a22 a25 a26 a27 a29 a3 a32 a35 a38 a39 a43 a44 a45 a46 a47 a48 a5 a50 a51 a54 a55 a56 a57 a59 a6 a60 a61 a62 a64 a7 a8}
+	New AF ( restricted ):
+Argument a1	attacks a45, a7
+		attacked by a60
+Argument a12	attacks a46
+		attacked by a51, a62
+Argument a14	attacks a21, a45
+		attacked by a21, a61
+Argument a17	attacks a26, a43
+		attacked by a21, a29, a45
+Argument a2	attacks a29, a39, a51
+		attacked by a20, a59
+Argument a20	attacks a2, a5
+		attacked by a38
+Argument a21	attacks a14, a17
+		attacked by a14, a56
+Argument a22	attacks a39
+		attacked by a38
+Argument a25	attacks a57, a62
+		attacked by a27
+Argument a26	attacks none
+		attacked by a17
+Argument a27	attacks a25, a64
+		attacked by a3, a47, a7
+Argument a29	attacks a17, a8
+		attacked by a2, a44, a50
+Argument a3	attacks a27, a43, a44
+		attacked by a5, a50
+Argument a32	attacks none
+		attacked by a60
+Argument a35	attacks a39, a45, a56
+		attacked by a8
+Argument a38	attacks a20, a22
+		attacked by a8
+Argument a39	attacks none
+		attacked by a2, a22, a35, a45, a48
+Argument a43	attacks a51
+		attacked by a17, a3, a62
+Argument a44	attacks a29, a47, a50
+		attacked by a3
+Argument a45	attacks a17, a39, a48
+		attacked by a1, a14, a35
+Argument a46	attacks none
+		attacked by a12, a50
+Argument a47	attacks a27
+		attacked by a44
+Argument a48	attacks a39
+		attacked by a45, a7
+Argument a5	attacks a3
+		attacked by a20, a6
+Argument a50	attacks a29, a3, a46
+		attacked by a44, a55
+Argument a51	attacks a12
+		attacked by a2, a43
+Argument a54	attacks none
+		attacked by a57
+Argument a55	attacks a50
+		attacked by a7
+Argument a56	attacks a21
+		attacked by a35
+Argument a57	attacks a54, a62
+		attacked by a25, a6, a64
+Argument a59	attacks a2, a6, a60, a62
+		attacked by a60
+Argument a6	attacks a5, a57
+		attacked by a59
+Argument a60	attacks a1, a32, a59, a61
+		attacked by a59
+Argument a61	attacks a14
+		attacked by a60
+Argument a62	attacks a12, a43
+		attacked by a25, a57, a59
+Argument a64	attacks a57
+		attacked by a27
+Argument a7	attacks a27, a48, a55
+		attacked by a1
+Argument a8	attacks a35, a38
+		attacked by a29
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a1
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a45
+		Looking at a45
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a17
+		Looking at a17
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a26
+		Looking at a26
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a26
+		a17's lowlink: 2
+		Searching DFSNode corresponding to Argument a43
+		Looking at a43
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a51
+		Looking at a51
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a12
+		Looking at a12
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a46
+		Looking at a46
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a46
+		a12's lowlink: 5
+	--- Building SCC ---
+	Finished TarjanAlg on node a12
+		a51's lowlink: 4
+	--- Building SCC ---
+	Finished TarjanAlg on node a51
+		a43's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a43
+		a17's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a17
+		a45's lowlink: 1
+		Searching DFSNode corresponding to Argument a39
+		Looking at a39
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a39
+		a45's lowlink: 1
+		Searching DFSNode corresponding to Argument a48
+		Looking at a48
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a39
+		Looking at a39
+		Searching in stack for a39
+			Node in stack: a48
+			Node in stack: a45
+			Node in stack: a1
+			Not found in stack.
+		a48's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a48
+		a45's lowlink: 1
+	--- Building SCC ---
+	Finished TarjanAlg on node a45
+		a1's lowlink: 0
+		Searching DFSNode corresponding to Argument a7
+		Looking at a7
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a27
+		Looking at a27
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a25
+		Looking at a25
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a57
+		Looking at a57
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a54
+		Looking at a54
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a54
+		a57's lowlink: 4
+		Searching DFSNode corresponding to Argument a62
+		Looking at a62
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a12
+		Looking at a12
+		Searching in stack for a12
+			Node in stack: a62
+			Node in stack: a57
+			Node in stack: a25
+			Node in stack: a27
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a62's lowlink: 5
+		Searching DFSNode corresponding to Argument a43
+		Looking at a43
+		Searching in stack for a43
+			Node in stack: a62
+			Node in stack: a57
+			Node in stack: a25
+			Node in stack: a27
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a62's lowlink: 5
+	--- Building SCC ---
+	Finished TarjanAlg on node a62
+		a57's lowlink: 4
+	--- Building SCC ---
+	Finished TarjanAlg on node a57
+		a25's lowlink: 3
+		Searching DFSNode corresponding to Argument a62
+		Looking at a62
+		Searching in stack for a62
+			Node in stack: a25
+			Node in stack: a27
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a25's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a25
+		a27's lowlink: 2
+		Searching DFSNode corresponding to Argument a64
+		Looking at a64
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a57
+		Looking at a57
+		Searching in stack for a57
+			Node in stack: a64
+			Node in stack: a27
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a64's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a64
+		a27's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a27
+		a7's lowlink: 1
+		Searching DFSNode corresponding to Argument a48
+		Looking at a48
+		Searching in stack for a48
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a7's lowlink: 1
+		Searching DFSNode corresponding to Argument a55
+		Looking at a55
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a50
+		Looking at a50
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a29
+		Looking at a29
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a17
+		Looking at a17
+		Searching in stack for a17
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a29's lowlink: 4
+		Searching DFSNode corresponding to Argument a8
+		Looking at a8
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a35
+		Looking at a35
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a39
+		Looking at a39
+		Searching in stack for a39
+			Node in stack: a35
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a35's lowlink: 6
+		Searching DFSNode corresponding to Argument a45
+		Looking at a45
+		Searching in stack for a45
+			Node in stack: a35
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a35's lowlink: 6
+		Searching DFSNode corresponding to Argument a56
+		Looking at a56
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a21
+		Looking at a21
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a14
+		Looking at a14
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a21
+		Looking at a21
+		Searching in stack for a21
+			Node in stack: a14
+			Node in stack: a21
+			Found in stack.
+		a14's lowlink: 8
+		Searching DFSNode corresponding to Argument a45
+		Looking at a45
+		Searching in stack for a45
+			Node in stack: a14
+			Node in stack: a21
+			Node in stack: a56
+			Node in stack: a35
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a14's lowlink: 8
+	Finished TarjanAlg on node a14
+		a21's lowlink: 8
+		Searching DFSNode corresponding to Argument a17
+		Looking at a17
+		Searching in stack for a17
+			Node in stack: a14
+			Node in stack: a21
+			Node in stack: a56
+			Node in stack: a35
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a21's lowlink: 8
+	--- Building SCC ---
+	Finished TarjanAlg on node a21
+		a56's lowlink: 7
+	--- Building SCC ---
+	Finished TarjanAlg on node a56
+		a35's lowlink: 6
+	--- Building SCC ---
+	Finished TarjanAlg on node a35
+		a8's lowlink: 5
+		Searching DFSNode corresponding to Argument a38
+		Looking at a38
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a20
+		Looking at a20
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a2
+		Looking at a2
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a29
+		Looking at a29
+		Searching in stack for a29
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Found in stack.
+		a2's lowlink: 4
+		Searching DFSNode corresponding to Argument a39
+		Looking at a39
+		Searching in stack for a39
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a2's lowlink: 4
+		Searching DFSNode corresponding to Argument a51
+		Looking at a51
+		Searching in stack for a51
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a2's lowlink: 4
+	Finished TarjanAlg on node a2
+		a20's lowlink: 4
+		Searching DFSNode corresponding to Argument a5
+		Looking at a5
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a3
+		Looking at a3
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a27
+		Looking at a27
+		Searching in stack for a27
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a3's lowlink: 9
+		Searching DFSNode corresponding to Argument a43
+		Looking at a43
+		Searching in stack for a43
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a3's lowlink: 9
+		Searching DFSNode corresponding to Argument a44
+		Looking at a44
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a29
+		Looking at a29
+		Searching in stack for a29
+			Node in stack: a44
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Found in stack.
+		a44's lowlink: 4
+		Searching DFSNode corresponding to Argument a47
+		Looking at a47
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a27
+		Looking at a27
+		Searching in stack for a27
+			Node in stack: a47
+			Node in stack: a44
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a47's lowlink: 11
+	--- Building SCC ---
+	Finished TarjanAlg on node a47
+		a44's lowlink: 4
+		Searching DFSNode corresponding to Argument a50
+		Looking at a50
+		Searching in stack for a50
+			Node in stack: a44
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Found in stack.
+		a44's lowlink: 3
+	Finished TarjanAlg on node a44
+		a3's lowlink: 3
+	Finished TarjanAlg on node a3
+		a5's lowlink: 3
+	Finished TarjanAlg on node a5
+		a20's lowlink: 3
+	Finished TarjanAlg on node a20
+		a38's lowlink: 3
+		Searching DFSNode corresponding to Argument a22
+		Looking at a22
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a39
+		Looking at a39
+		Searching in stack for a39
+			Node in stack: a22
+			Node in stack: a44
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a22's lowlink: 7
+	--- Building SCC ---
+	Finished TarjanAlg on node a22
+		a38's lowlink: 3
+	Finished TarjanAlg on node a38
+		a8's lowlink: 3
+	Finished TarjanAlg on node a8
+		a29's lowlink: 3
+	Finished TarjanAlg on node a29
+		a50's lowlink: 3
+		Searching DFSNode corresponding to Argument a3
+		Looking at a3
+		Searching in stack for a3
+			Node in stack: a44
+			Node in stack: a3
+			Found in stack.
+		a50's lowlink: 3
+		Searching DFSNode corresponding to Argument a46
+		Looking at a46
+		Searching in stack for a46
+			Node in stack: a44
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a50
+			Node in stack: a55
+			Node in stack: a7
+			Node in stack: a1
+			Not found in stack.
+		a50's lowlink: 3
+	--- Building SCC ---
+	Finished TarjanAlg on node a50
+		a55's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a55
+		a7's lowlink: 1
+	--- Building SCC ---
+	Finished TarjanAlg on node a7
+		a1's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a1
+	Calling TarjanAlg for a32
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a32
+	Calling TarjanAlg for a59
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a2
+		Looking at a2
+		Searching in stack for a2
+			Node in stack: a59
+			Not found in stack.
+		a59's lowlink: 0
+		Searching DFSNode corresponding to Argument a6
+		Looking at a6
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a5
+		Looking at a5
+		Searching in stack for a5
+			Node in stack: a6
+			Node in stack: a59
+			Not found in stack.
+		a6's lowlink: 1
+		Searching DFSNode corresponding to Argument a57
+		Looking at a57
+		Searching in stack for a57
+			Node in stack: a6
+			Node in stack: a59
+			Not found in stack.
+		a6's lowlink: 1
+	--- Building SCC ---
+	Finished TarjanAlg on node a6
+		a59's lowlink: 0
+		Searching DFSNode corresponding to Argument a60
+		Looking at a60
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a1
+		Looking at a1
+		Searching in stack for a1
+			Node in stack: a60
+			Node in stack: a59
+			Not found in stack.
+		a60's lowlink: 1
+		Searching DFSNode corresponding to Argument a32
+		Looking at a32
+		Searching in stack for a32
+			Node in stack: a60
+			Node in stack: a59
+			Not found in stack.
+		a60's lowlink: 1
+		Searching DFSNode corresponding to Argument a59
+		Looking at a59
+		Searching in stack for a59
+			Node in stack: a60
+			Node in stack: a59
+			Found in stack.
+		a60's lowlink: 0
+		Searching DFSNode corresponding to Argument a61
+		Looking at a61
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a14
+		Looking at a14
+		Searching in stack for a14
+			Node in stack: a61
+			Node in stack: a60
+			Node in stack: a59
+			Not found in stack.
+		a61's lowlink: 2
+	--- Building SCC ---
+	Finished TarjanAlg on node a61
+		a60's lowlink: 0
+	Finished TarjanAlg on node a60
+		a59's lowlink: 0
+		Searching DFSNode corresponding to Argument a62
+		Looking at a62
+		Searching in stack for a62
+			Node in stack: a60
+			Node in stack: a59
+			Not found in stack.
+		a59's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a59
+	SCC: {a59 a60}
+	SCC: {a61}
+		Father: {a59 a60}
+	SCC: {a6}
+		Father: {a59 a60}
+	SCC: {a32}
+		Father: {a59 a60}
+	SCC: {a1}
+		Father: {a59 a60}
+	SCC: {a7}
+		Father: {a1}
+	SCC: {a55}
+		Father: {a7}
+	SCC: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Father: {a59 a60}
+		Father: {a6}
+		Father: {a55}
+	SCC: {a22}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+	SCC: {a47}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+	SCC: {a35}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+	SCC: {a56}
+		Father: {a35}
+	SCC: {a14 a21}
+		Father: {a61}
+		Father: {a56}
+	SCC: {a27}
+		Father: {a7}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Father: {a47}
+	SCC: {a64}
+		Father: {a27}
+	SCC: {a25}
+		Father: {a27}
+	SCC: {a57}
+		Father: {a6}
+		Father: {a64}
+		Father: {a25}
+	SCC: {a62}
+		Father: {a59 a60}
+		Father: {a25}
+		Father: {a57}
+	SCC: {a54}
+		Father: {a57}
+	SCC: {a45}
+		Father: {a1}
+		Father: {a35}
+		Father: {a14 a21}
+	SCC: {a48}
+		Father: {a7}
+		Father: {a45}
+	SCC: {a39}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Father: {a22}
+		Father: {a35}
+		Father: {a45}
+		Father: {a48}
+	SCC: {a17}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Father: {a14 a21}
+		Father: {a45}
+	SCC: {a43}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Father: {a62}
+		Father: {a17}
+	SCC: {a51}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Father: {a43}
+	SCC: {a12}
+		Father: {a62}
+		Father: {a51}
+	SCC: {a46}
+		Father: {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Father: {a12}
+	SCC: {a26}
+		Father: {a17}
+	Working on {a59 a60}
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a59 a60}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a59}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a59 a63 a9}
+			Found {a60}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a60 a63 a9}
+	Working on {a61}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a61}
+		Nodes not satisfying the first condition: {a61}
+		a61's attackers are attacked by e.
+	Determined I: {a61}
+		O: {}
+		I: {a61}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a61}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a61}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a61}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a60 a63 a9}
+	Working on {a6}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a6}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a6}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a6}
+		Nodes not satisfying the first condition: {a6}
+		a6's attackers are attacked by e.
+	Determined I: {a6}
+		O: {}
+		I: {a6}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a6}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a9}
+	Working on {a32}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a32}
+		Nodes not satisfying the first condition: {a32}
+		a32's attackers are attacked by e.
+	Determined I: {a32}
+		O: {}
+		I: {a32}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a32}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a32}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a32}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a9}
+	Working on {a1}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a1}
+		Nodes not satisfying the first condition: {a1}
+		a1's attackers are attacked by e.
+	Determined I: {a1}
+		O: {}
+		I: {a1}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a1}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a1}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a1}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a9}
+	Working on {a7}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a7}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a7}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a59 a61 a63 a9}
+		Going to call boundcond.
+			O (should be) preserved.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a7}
+		Nodes not satisfying the first condition: {a7}
+		a7's attackers are attacked by e.
+	Determined I: {a7}
+		O: {}
+		I: {a7}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a7}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a55}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a55}
+		Nodes not satisfying the first condition: {a55}
+		a55's attackers are attacked by e.
+	Determined I: {a55}
+		O: {}
+		I: {a55}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a55}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a55}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a55}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a2 a20 a29 a3 a38 a44 a5 a50 a8}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a2 a50}
+	Determining I from: {a20 a29 a3 a38 a44 a5 a8}
+		Nodes not satisfying the first condition: {a5}
+		a5's attackers are attacked by e.
+	Determined I: {a20 a29 a3 a38 a44 a5 a8}
+		O: {a2 a50}
+		I: {a20 a29 a3 a38 a44 a5 a8}
+		Going to call pref.
+			Calling pref.
+Entering pref
+AF initialized. Showing structure
+Argument a20	attacks a5
+		attacked by a38
+Argument a29	attacks a8
+		attacked by a44
+Argument a3	attacks a44
+		attacked by a5
+Argument a38	attacks a20
+		attacked by a8
+Argument a44	attacks a29
+		attacked by a3
+Argument a5	attacks a3
+		attacked by a20
+Argument a8	attacks a38
+		attacked by a29
+
+Entering Grounded
+	New cycle
+		No grounded extension found.
+		Final I: {a20 a29 a3 a38 a44 a5 a8}
+	e: {}
+	I: {a20 a29 a3 a38 a44 a5 a8}
+	New AF ( restricted ):
+Argument a20	attacks a5
+		attacked by a38
+Argument a29	attacks a8
+		attacked by a44
+Argument a3	attacks a44
+		attacked by a5
+Argument a38	attacks a20
+		attacked by a8
+Argument a44	attacks a29
+		attacked by a3
+Argument a5	attacks a3
+		attacked by a20
+Argument a8	attacks a38
+		attacked by a29
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a20
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a5
+		Looking at a5
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a3
+		Looking at a3
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a44
+		Looking at a44
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a29
+		Looking at a29
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a8
+		Looking at a8
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a38
+		Looking at a38
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a20
+		Looking at a20
+		Searching in stack for a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a44
+			Node in stack: a3
+			Node in stack: a5
+			Node in stack: a20
+			Found in stack.
+		a38's lowlink: 0
+	Finished TarjanAlg on node a38
+		a8's lowlink: 0
+	Finished TarjanAlg on node a8
+		a29's lowlink: 0
+	Finished TarjanAlg on node a29
+		a44's lowlink: 0
+	Finished TarjanAlg on node a44
+		a3's lowlink: 0
+	Finished TarjanAlg on node a3
+		a5's lowlink: 0
+	Finished TarjanAlg on node a5
+		a20's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a20
+	SCC: {a20 a29 a3 a38 a44 a5 a8}
+	Working on {a20 a29 a3 a38 a44 a5 a8}
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a20 a29 a3 a38 a44 a5 a8}
+		Going to call prefSAT.
+			Calling prefSAT.
+Set arguments: 
+{a20 a29 a3 a38 a44 a5 a8}
+C set:
+{a20 a29 a3 a38 a44 a5 a8}
+predecessors of a20: a38 
+predecessors of a29: a44 
+predecessors of a3: a5 
+predecessors of a38: a8 
+predecessors of a44: a3 
+predecessors of a5: a20 
+predecessors of a8: a29 
+Preparing the satsolver
+1 8 15 0
+-1 -8 0
+-1 -15 0
+-8 -15 0
+-1 11 0
+-15 -4 0
+-11 1 0
+-15 18 0
+4 -18 15 0
+2 9 16 0
+-2 -9 0
+-2 -16 0
+-9 -16 0
+-2 12 0
+-16 -5 0
+-12 2 0
+-16 19 0
+5 -19 16 0
+3 10 17 0
+-3 -10 0
+-3 -17 0
+-10 -17 0
+-3 13 0
+-17 -6 0
+-13 3 0
+-17 20 0
+6 -20 17 0
+4 11 18 0
+-4 -11 0
+-4 -18 0
+-11 -18 0
+-4 14 0
+-18 -7 0
+-14 4 0
+-18 21 0
+7 -21 18 0
+5 12 19 0
+-5 -12 0
+-5 -19 0
+-12 -19 0
+-5 10 0
+-19 -3 0
+-10 5 0
+-19 17 0
+3 -17 19 0
+6 13 20 0
+-6 -13 0
+-6 -20 0
+-13 -20 0
+-6 8 0
+-20 -1 0
+-8 6 0
+-20 15 0
+1 -15 20 0
+7 14 21 0
+-7 -14 0
+-7 -21 0
+-14 -21 0
+-7 9 0
+-21 -2 0
+-9 7 0
+-21 16 0
+2 -16 21 0
+-4 8 0
+-8 4 0
+-5 9 0
+-9 5 0
+-6 10 0
+-10 6 0
+-7 11 0
+-11 7 0
+-3 12 0
+-12 3 0
+-1 13 0
+-13 1 0
+-2 14 0
+-14 2 0
+1 2 3 4 5 6 7 020
+			Found {}
+				Created: {}
+Actual labellings:
+	{}
+	
+
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O (should be) preserved.
+Entering boundcond
+	Determined O: {a5}
+	Determining I from: {a2 a20 a29 a3 a38 a44 a50 a8}
+		Nodes not satisfying the first condition: {a2 a50}
+		a2's attackers are attacked by e.
+		a50's attackers are attacked by e.
+	Determined I: {a2 a20 a29 a3 a38 a44 a50 a8}
+		O: {a5}
+		I: {a2 a20 a29 a3 a38 a44 a50 a8}
+		Going to call pref.
+			Calling pref.
+Entering pref
+AF initialized. Showing structure
+Argument a2	attacks a29
+		attacked by a20
+Argument a20	attacks a2
+		attacked by a38
+Argument a29	attacks a8
+		attacked by a2, a44, a50
+Argument a3	attacks a44
+		attacked by a50
+Argument a38	attacks a20
+		attacked by a8
+Argument a44	attacks a29, a50
+		attacked by a3
+Argument a50	attacks a29, a3
+		attacked by a44
+Argument a8	attacks a38
+		attacked by a29
+
+Entering Grounded
+	New cycle
+		No grounded extension found.
+		Final I: {a2 a20 a29 a3 a38 a44 a50 a8}
+	e: {}
+	I: {a2 a20 a29 a3 a38 a44 a50 a8}
+	New AF ( restricted ):
+Argument a2	attacks a29
+		attacked by a20
+Argument a20	attacks a2
+		attacked by a38
+Argument a29	attacks a8
+		attacked by a2, a44, a50
+Argument a3	attacks a44
+		attacked by a50
+Argument a38	attacks a20
+		attacked by a8
+Argument a44	attacks a29, a50
+		attacked by a3
+Argument a50	attacks a29, a3
+		attacked by a44
+Argument a8	attacks a38
+		attacked by a29
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a2
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a29
+		Looking at a29
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a8
+		Looking at a8
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a38
+		Looking at a38
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a20
+		Looking at a20
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a2
+		Looking at a2
+		Searching in stack for a2
+			Node in stack: a20
+			Node in stack: a38
+			Node in stack: a8
+			Node in stack: a29
+			Node in stack: a2
+			Found in stack.
+		a20's lowlink: 0
+	Finished TarjanAlg on node a20
+		a38's lowlink: 0
+	Finished TarjanAlg on node a38
+		a8's lowlink: 0
+	Finished TarjanAlg on node a8
+		a29's lowlink: 0
+	Finished TarjanAlg on node a29
+		a2's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a2
+	Calling TarjanAlg for a3
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a44
+		Looking at a44
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a29
+		Looking at a29
+		Searching in stack for a29
+			Node in stack: a44
+			Node in stack: a3
+			Not found in stack.
+		a44's lowlink: 1
+		Searching DFSNode corresponding to Argument a50
+		Looking at a50
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a29
+		Looking at a29
+		Searching in stack for a29
+			Node in stack: a50
+			Node in stack: a44
+			Node in stack: a3
+			Not found in stack.
+		a50's lowlink: 2
+		Searching DFSNode corresponding to Argument a3
+		Looking at a3
+		Searching in stack for a3
+			Node in stack: a50
+			Node in stack: a44
+			Node in stack: a3
+			Found in stack.
+		a50's lowlink: 0
+	Finished TarjanAlg on node a50
+		a44's lowlink: 0
+	Finished TarjanAlg on node a44
+		a3's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a3
+	SCC: {a3 a44 a50}
+	SCC: {a2 a20 a29 a38 a8}
+		Father: {a3 a44 a50}
+	Working on {a3 a44 a50}
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a3 a44 a50}
+		Going to call prefSAT.
+			Calling prefSAT.
+Set arguments: 
+{a3 a44 a50}
+C set:
+{a3 a44 a50}
+predecessors of a3: a50 
+predecessors of a44: a3 
+predecessors of a50: a44 
+Preparing the satsolver
+1 4 7 0
+-1 -4 0
+-1 -7 0
+-4 -7 0
+-1 6 0
+-7 -3 0
+-6 1 0
+-7 9 0
+3 -9 7 0
+2 5 8 0
+-2 -5 0
+-2 -8 0
+-5 -8 0
+-2 4 0
+-8 -1 0
+-4 2 0
+-8 7 0
+1 -7 8 0
+3 6 9 0
+-3 -6 0
+-3 -9 0
+-6 -9 0
+-3 5 0
+-9 -2 0
+-5 3 0
+-9 8 0
+2 -8 9 0
+-3 4 0
+-4 3 0
+-1 5 0
+-5 1 0
+-2 6 0
+-6 2 0
+1 2 3 020
+			Found {}
+				Created: {}
+	Working on {a2 a20 a29 a38 a8}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a2 a20 a29 a38 a8}
+		Nodes not satisfying the first condition: {a29}
+		Not every attacker of a29 is attacked by e.
+	Determined I: {a2 a20 a38 a8}
+		O: {}
+		I: {a2 a20 a38 a8}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a29
+Set arguments: 
+{a2 a20 a29 a38 a8}
+C set:
+{a2 a20 a38 a8}
+predecessors of a2: a20 
+predecessors of a20: a38 
+predecessors of a38: a8 
+predecessors of a8: a29 
+Preparing the satsolver
+-3 0
+8 13 0
+-8 -13 0
+1 6 11 0
+-1 -6 0
+-1 -11 0
+-6 -11 0
+-1 7 0
+-11 -2 0
+-7 1 0
+-11 12 0
+2 -12 11 0
+2 7 12 0
+-2 -7 0
+-2 -12 0
+-7 -12 0
+-2 9 0
+-12 -4 0
+-9 2 0
+-12 14 0
+4 -14 12 0
+4 9 14 0
+-4 -9 0
+-4 -14 0
+-9 -14 0
+-4 10 0
+-14 -5 0
+-10 4 0
+-14 15 0
+5 -15 14 0
+5 10 15 0
+-5 -10 0
+-5 -15 0
+-10 -15 0
+-5 8 0
+-15 -3 0
+-8 5 0
+-15 13 0
+3 -13 15 0
+-2 6 0
+-6 2 0
+-4 7 0
+-7 4 0
+-1 8 0
+-8 1 0
+-5 9 0
+-9 5 0
+-3 10 0
+-10 3 0
+1 2 4 5 020
+			Found {}
+				Created: {}
+Actual labellings:
+	{}
+	
+
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a22}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a22}
+		Nodes not satisfying the first condition: {a22}
+		Not every attacker of a22 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a22
+Set arguments: 
+{a22}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a22}
+		Nodes not satisfying the first condition: {a22}
+		Not every attacker of a22 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a22
+Set arguments: 
+{a22}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a47}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a47}
+		Nodes not satisfying the first condition: {a47}
+		Not every attacker of a47 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a47
+Set arguments: 
+{a47}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a47}
+		Nodes not satisfying the first condition: {a47}
+		Not every attacker of a47 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a47
+Set arguments: 
+{a47}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a35}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a35}
+		Nodes not satisfying the first condition: {a35}
+		Not every attacker of a35 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a35
+Set arguments: 
+{a35}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a35}
+		Nodes not satisfying the first condition: {a35}
+		Not every attacker of a35 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a35
+Set arguments: 
+{a35}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a56}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a56}
+		Nodes not satisfying the first condition: {a56}
+		Not every attacker of a56 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a56
+Set arguments: 
+{a56}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a56}
+		Nodes not satisfying the first condition: {a56}
+		Not every attacker of a56 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a56
+Set arguments: 
+{a56}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a14 a21}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a14}
+	Determining I from: {a21}
+		Nodes not satisfying the first condition: {a21}
+		Not every attacker of a21 is attacked by e.
+	Determined I: {}
+		O: {a14}
+		I: {}
+		Going to call pref.
+			Calling pref.
+Entering pref
+AF initialized. Showing structure
+Argument a21	attacks none
+		attacked by none
+
+Entering Grounded
+	New cycle
+		No grounded extension found.
+		Final I: {a21}
+	e: {}
+	I: {a21}
+	New AF ( restricted ):
+Argument a21	attacks none
+		attacked by none
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a21
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a21
+	SCC: {a21}
+	Working on {a21}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a21}
+		Nodes not satisfying the first condition: {}
+	Determined I: {a21}
+		O: {}
+		I: {a21}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a21}
+				Created: {a21}
+Actual labellings:
+	{a21}
+	
+
+			Found {a21}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O (should be) preserved.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a14 a21}
+		Nodes not satisfying the first condition: {a14 a21}
+		a14's attackers are attacked by e.
+		Not every attacker of a21 is attacked by e.
+	Determined I: {a14}
+		O: {}
+		I: {a14}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a21
+Set arguments: 
+{a14 a21}
+C set:
+{a14}
+predecessors of a14: a21 
+Preparing the satsolver
+-2 0
+4 6 0
+-4 -6 0
+1 3 5 0
+-1 -3 0
+-1 -5 0
+-3 -5 0
+-1 4 0
+-5 -2 0
+-4 1 0
+-5 6 0
+2 -6 5 0
+-2 3 0
+-3 2 0
+-1 4 0
+-4 1 0
+1 010a14
+in 1
+out 1
+undec 0
+
+{a14 }
+Preparing the satsolver
+-2 0
+4 6 0
+-4 -6 0
+1 3 5 0
+-1 -3 0
+-1 -5 0
+-3 -5 0
+-1 4 0
+-5 -2 0
+-4 1 0
+-5 6 0
+2 -6 5 0
+-2 3 0
+-3 2 0
+-1 4 0
+-4 1 0
+1 0
+20
+			Found {a14}
+				Created: {a10 a13 a14 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a27}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a27}
+		Nodes not satisfying the first condition: {a27}
+		Not every attacker of a27 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a27
+Set arguments: 
+{a27}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a27}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a27}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a7 a9}
+	Working on {a64}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a64}
+		Nodes not satisfying the first condition: {a64}
+		Not every attacker of a64 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a64
+Set arguments: 
+{a64}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a64}
+		Nodes not satisfying the first condition: {a64}
+		a64's attackers are attacked by e.
+	Determined I: {a64}
+		O: {}
+		I: {a64}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a64}
+				Created: {a10 a13 a14 a15 a16 a19 a28 a30 a40 a41 a53 a6 a60 a63 a64 a7 a9}
+	Working on {a25}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a25}
+		Nodes not satisfying the first condition: {a25}
+		Not every attacker of a25 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a25
+Set arguments: 
+{a25}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a25}
+		Nodes not satisfying the first condition: {a25}
+		a25's attackers are attacked by e.
+	Determined I: {a25}
+		O: {}
+		I: {a25}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a25}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a6 a60 a63 a64 a7 a9}
+	Working on {a57}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a57}
+		Nodes not satisfying the first condition: {a57}
+		Not every attacker of a57 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a57
+Set arguments: 
+{a57}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a57}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a57}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a6 a60 a63 a64 a7 a9}
+	Working on {a62}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a62}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a62}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O (should be) preserved.
+Entering boundcond
+	Determined O: {a62}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a62}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a6 a60 a63 a64 a7 a9}
+	Working on {a54}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a54}
+		Nodes not satisfying the first condition: {a54}
+		Not every attacker of a54 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a54
+Set arguments: 
+{a54}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a54}
+		Nodes not satisfying the first condition: {a54}
+		a54's attackers are attacked by e.
+	Determined I: {a54}
+		O: {}
+		I: {a54}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a54}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a45}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a45}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a45}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a45}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a45}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a48}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a48}
+		Nodes not satisfying the first condition: {a48}
+		a48's attackers are attacked by e.
+	Determined I: {a48}
+		O: {}
+		I: {a48}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a48}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a48}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a48}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a39}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a39}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a39}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O (should be) preserved.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a39}
+		Nodes not satisfying the first condition: {a39}
+		Not every attacker of a39 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a39
+Set arguments: 
+{a39}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a17}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {a17}
+	Determining I from: {}
+		Nodes not satisfying the first condition: {}
+	Determined I: {}
+		O: {a17}
+		I: {}
+		Going to call pref.
+			No need to call pref.
+
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a17}
+		Nodes not satisfying the first condition: {a17}
+		Not every attacker of a17 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a17
+Set arguments: 
+{a17}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a43}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a43}
+		Nodes not satisfying the first condition: {a43}
+		Not every attacker of a43 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a43
+Set arguments: 
+{a43}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a43}
+		Nodes not satisfying the first condition: {a43}
+		Not every attacker of a43 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a43
+Set arguments: 
+{a43}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a51}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a51}
+		Nodes not satisfying the first condition: {a51}
+		Not every attacker of a51 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a51
+Set arguments: 
+{a51}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a51}
+		Nodes not satisfying the first condition: {a51}
+		Not every attacker of a51 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a51
+Set arguments: 
+{a51}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a12}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a12}
+		Nodes not satisfying the first condition: {a12}
+		Not every attacker of a12 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a12
+Set arguments: 
+{a12}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a12}
+		Nodes not satisfying the first condition: {a12}
+		Not every attacker of a12 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a12
+Set arguments: 
+{a12}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a46}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a46}
+		Nodes not satisfying the first condition: {a46}
+		Not every attacker of a46 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a46
+Set arguments: 
+{a46}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a46}
+		Nodes not satisfying the first condition: {a46}
+		Not every attacker of a46 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a46
+Set arguments: 
+{a46}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	Working on {a26}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a26}
+		Nodes not satisfying the first condition: {a26}
+		a26's attackers are attacked by e.
+	Determined I: {a26}
+		O: {}
+		I: {a26}
+		Going to call prefSAT.
+			No need to call prefSAT.
+
+			Found {a26}
+				Created: {a1 a10 a13 a15 a16 a19 a21 a26 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+		Going to call boundcond.
+			O emptied.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a26}
+		Nodes not satisfying the first condition: {a26}
+		Not every attacker of a26 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+Subtraction a26
+Set arguments: 
+{a26}
+C set:
+{}
+Preparing the satsolver
+-1 0
+2 3 0
+-2 -3 0
+20
+			Found {}
+				Created: {a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+Actual labellings:
+	{a1 a10 a13 a15 a16 a19 a21 a26 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+	{a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}
+	
+Extension 1
+{a1 a10 a13 a15 a16 a19 a21 a26 a28 a30 a32 a40 a41 a48 a53 a55 a59 a61 a63 a9}
+Extension 2
+{a10 a13 a14 a15 a16 a19 a25 a28 a30 a40 a41 a53 a54 a6 a60 a63 a64 a7 a9}

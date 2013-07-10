@@ -1,2 +1,0 @@
-Extension 1
-{a1 a10 a12 a13 a22 a25 a26 a3 a4 a6 a7}

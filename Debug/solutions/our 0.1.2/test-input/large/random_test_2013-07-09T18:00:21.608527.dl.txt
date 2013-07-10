@@ -1,2 +1,0 @@
-{a1 a11 a12 a14 a17 a21 a23 a3 a30 a31 a32 a34 a37 a38 a46 a47 a51 a53 a9}
-{a1 a11 a14 a17 a2 a21 a23 a3 a30 a31 a32 a33 a37 a38 a46 a47 a53 a55 a9}

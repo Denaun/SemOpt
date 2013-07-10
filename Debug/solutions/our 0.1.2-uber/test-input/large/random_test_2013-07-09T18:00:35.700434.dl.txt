@@ -1,3 +1,0 @@
-{a11 a14 a15 a16 a2 a24 a25 a26 a29 a31 a32 a33 a35 a38 a44 a45 a46 a48 a5 a50 a52 a7 a8 a9}
-{a11 a14 a15 a16 a2 a24 a25 a29 a31 a32 a33 a35 a45 a46 a5 a50 a8}
-{a14 a16 a24 a25 a29 a31 a32 a33 a46 a50 a8}

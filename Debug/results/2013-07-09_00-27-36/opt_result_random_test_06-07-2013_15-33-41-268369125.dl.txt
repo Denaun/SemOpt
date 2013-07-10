@@ -1,4 +1,0 @@
-Extension 1
-{a1 a16 a17 a18 a19 a2 a22 a23 a26 a29 a6 a7 a8}
-Extension 2
-{a1 a12 a14 a16 a17 a18 a19 a2 a5 a6 a7 a8}

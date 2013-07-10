@@ -1,2 +1,0 @@
-{a1 a13 a15 a18 a22 a24 a26 a3 a30 a32 a34 a36 a37 a39 a41 a44 a46 a53 a54 a55 a56 a57 a6 a8}
-{a1 a13 a15 a18 a22 a24 a26 a3 a30 a37 a39 a41 a44 a46 a53 a54 a55 a56 a57 a8 a9}
