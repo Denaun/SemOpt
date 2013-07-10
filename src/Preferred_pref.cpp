@@ -55,7 +55,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 	SymbolicArgumentsSet e = SymbolicArgumentsSet(),
 						 I = SymbolicArgumentsSet();
 
-	/* BASE
+	
 	// Avoid calling Grounded if useless
 	if ( theC -> size() <= 1 && AFequalsC )
 	{
@@ -67,7 +67,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		e = *theC;
 	}
 	else
-	*/
+	
 		Grounded( theC, &e, &I );
 
 	if ( stages )
@@ -147,7 +147,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 			// Determine if the call of boundcond can be avoided
 			// If the current SCC has no fathers, O = empty and I = SCC
-			/* BASE
+			
 			if( AFequalsC && ( *aSCC ) -> fathers.size() == 0 )
 			{
 				if ( debug )
@@ -157,12 +157,12 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				I = *(*aSCC)->argumentList;
 			}
 			else
-			*/
+			
 			{
 				// Reset I
 				I.clear();
 
-				/* BASE
+				
 				if( preserveO && !O.isEmpty() )
 				{
 					if ( debug )
@@ -173,7 +173,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					O.clear();
 				}
 				else
-				*/
+				
 				{
 					if ( debug )
 						cerr << "\t\t\tO emptied.\n";
@@ -200,7 +200,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				/* BASE
+				
 				if ( ( *aSCC ) -> argumentList -> size() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
@@ -227,7 +227,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					}
 				}
 				else
-				*/
+				
 				{
 					AF restricted = AF();
 					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
@@ -249,7 +249,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				SymbolicArgumentsSet restriction = SymbolicArgumentsSet();
 				restriction = ( *aSCC ) -> argumentList -> minus( &O );
 
-				/* BASE
+				
 				if ( restriction.size() <= 1 && restriction == I )
 				{
 					if ( debug )
@@ -274,7 +274,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					}
 				}
 				else
-				*/
+				
 				{
 					if ( debug )
 						cerr << "\t\t\tCalling pref.\n";
@@ -312,7 +312,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		// The generated Labellings are the new Labellings
 		tempLabellings.assign( newLabellings.begin(), newLabellings.end() );
 
-		/* BASE
+		
 		// Check if the actual SCC is a father of the next one
 		preserveO = false;
 
@@ -327,7 +327,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				preserveO = true;
 				break;
 			}
-		*/
+		
 	}
 
 	if ( stages )

@@ -37,10 +37,10 @@ list< SCC* > Preferred::SCCSSEQ()
 			index = TarjanAlg( *i, &SCCList, &s, index );
 		}
 
-	/* BASE
+	
 	// Determino i rapporti di parentela tra le SCC
 	SCCParenthood( &SCCList );
-	*/
+	
 	
 
 	return SCCList;
