@@ -34,12 +34,13 @@ list< SCC* > Preferred::SCCSSEQ()
 			if ( debug )
 				cerr << "\tCalling TarjanAlg for " << (*i)->argument->getName() << endl;
 
-			TarjanAlg( *i, &SCCList, &s, index );
+			index = TarjanAlg( *i, &SCCList, &s, index );
 		}
 
-	
+	/* BASE
 	// Determino i rapporti di parentela tra le SCC
 	SCCParenthood( &SCCList );
+	*/
 	
 
 	return SCCList;
@@ -72,7 +73,7 @@ void Preferred::SCCParenthood( list< SCC* >* SCCList )
  * @param s		A temporal stack containing the actual SCC
  * @param index	An integer containing the level actually visited
  */
-void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode* >* s, int index )
+int Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode* >* s, int index )
 {
 	if ( debug )
 		cerr << "\tEntering TarjanAlg.\n";
@@ -101,13 +102,13 @@ void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode*
 			if ( debug )
 				cerr << "\t\t\tNot yet visited. Recurring\n";
 
-			TarjanAlg( actual, SCCList, s, index );
+			index = TarjanAlg( actual, SCCList, s, index );
 			node -> lowlink = min( node -> lowlink, actual -> lowlink );
 		} else if( stackSearch( *s, actual ) ) {
 			if ( debug )
 				cerr << "\t\t\tFound in stack.\n";
 
-			node -> lowlink = min( node -> lowlink, actual -> lowlink );
+			node -> lowlink = min( node -> lowlink, actual -> index );
 		} else if ( debug )
 			cerr << "\t\t\tNot found in stack.\n";
 
@@ -136,6 +137,7 @@ void Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode*
 
 	if ( debug )
 		cerr << "\tFinished TarjanAlg on node " << node -> argument -> getName() << endl;
+	return index;
 }
 
 /**
@@ -171,8 +173,10 @@ bool Preferred::stackSearch( stack< DFSNode* > s, DFSNode* node )
 		actual = s.top();
 		s.pop();
 
+		/*
 		if ( debug )
 			cerr << "\t\t\tNode in stack: " << actual -> argument -> getName() << endl;
+		*/
 
 		if( actual -> argument == node -> argument )
 			return true;

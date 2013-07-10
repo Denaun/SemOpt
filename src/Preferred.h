@@ -86,7 +86,7 @@ private:
 	// Dato l'arg framework restituisce tutti i set SCC presenti ordinati per strati (il primo nella sequenza restituita non sarà attaccato da nessuno, i successivi possono essere attaccati solo dai precedenti)
 	// Gli SCCS sono trovati tramite l'algoritmo di Tarjan che prevede l'esecuzione multipla (su più vertici)
 	list< SCC* > SCCSSEQ();
-	void TarjanAlg( DFSNode*, list< SCC* >*, stack< DFSNode* >*, int );
+	int TarjanAlg( DFSNode*, list< SCC* >*, stack< DFSNode* >*, int );
 	// Cerca nell'AF i nodi che non sono attaccati da nessuno e li restituisce (altro valore restituito è il set di nodi non attaccati dai nodi liberi contenuti nel primo set)
 	void Grounded( const SymbolicArgumentsSet*, SymbolicArgumentsSet*, SymbolicArgumentsSet* );
 

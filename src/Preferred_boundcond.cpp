@@ -93,11 +93,13 @@ void Preferred::boundcond( SCC* aSCC, SymbolicArgumentsSet* e,
 	//external = external.minus( e );
 	for ( SymbolicArgumentsSet::iterator it = toBeRemoved.begin(); it != toBeRemoved.end(); ++it )
 	{
-		//SymbolicArgumentsSet attackers = SymbolicArgumentsSet();
 		// Find the external attackers (could be done the opposite way, maybe faster)
-		//for ( SymbolicArgumentsSet::iterator jt = external.begin(); jt != external.end(); ++jt )
-		//	if ( SymbolicArgumentsSet( *this->af->getArgumentByName( *jt )->get_attacks() ).exists( *it ) )
-		//		attackers.add( *jt );
+		/*
+		SymbolicArgumentsSet attackers = SymbolicArgumentsSet();
+		for ( SymbolicArgumentsSet::iterator jt = external.begin(); jt != external.end(); ++jt )
+			if ( SymbolicArgumentsSet( *this->af->getArgumentByName( *jt )->get_attacks() ).exists( *it ) )
+				attackers.add( *jt );
+		*/
 
 		SymbolicArgumentsSet attackers =
 			SymbolicArgumentsSet(
@@ -117,6 +119,7 @@ void Preferred::boundcond( SCC* aSCC, SymbolicArgumentsSet* e,
 
 		// Check that every attacker is itself attacked by e
 		bool safe = true;
+		/*
 		for ( SymbolicArgumentsSet::iterator jt = attackers.begin(); jt != attackers.end(); ++jt )
 		{
 			bool attacked = false;
@@ -142,6 +145,20 @@ void Preferred::boundcond( SCC* aSCC, SymbolicArgumentsSet* e,
 				break;
 			}
 		}
+		*/
+
+		for ( SymbolicArgumentsSet::iterator jt = attackers.begin();
+				jt != attackers.end(); ++jt )
+			if ( SymbolicArgumentsSet(
+						*this->af
+						->getArgumentByName( *jt )
+						->get_attackers() )
+					.intersect( e )
+					.isEmpty() )
+			{
+				safe = false;
+				break;
+			}
 
 		if ( safe )
 		{
