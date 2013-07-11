@@ -1,6 +1,5 @@
 /**
  * @file	Preferred_boundcond.cpp
- * @class	Preferred
  * @brief	Implementation of the function `boundcond`
  * @author	Maurizio Zucchelli
  * @version	1
@@ -15,8 +14,7 @@
 
 /**
  * @brief Function boundcond.
- * @details
- * 	If called with non-empty O, only I is calculated and O is kept as-is.
+ * @details If called with non-empty O, only I is calculated and O is kept as-is.
  *
  * @param[in]	aSCC	The Strongly Connected Component to consider.
  * @param[in]	e		The actual extension.

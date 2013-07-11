@@ -1,6 +1,5 @@
 /**
  * @file	Preferred_sccsseq.cpp
- * @class	Preferred
  * @brief	Implementation of SCCSSEQ
  * @author	Mattia Rizzini
  * @date	2013-06-25
@@ -72,6 +71,7 @@ void Preferred::SCCParenthood( list< SCC* >* SCCList )
  * @param SCC	The list of SCCs found
  * @param s		A temporal stack containing the actual SCC
  * @param index	An integer containing the level actually visited
+ * @return	The updated index, containing the last level visited.
  */
 int Preferred::TarjanAlg( DFSNode* node, list< SCC* >* SCCList, stack< DFSNode* >* s, int index )
 {

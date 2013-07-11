@@ -8,6 +8,6 @@ var classAF =
     [ "getArgumentByNumber", "classAF.html#a370edb6cf152935b65e848d1ae209546", null ],
     [ "numArgs", "classAF.html#a48e30f0573d51a9995093644bb19bb33", null ],
     [ "readFile", "classAF.html#a40b85b5c4cb3d96273dd0becacad1a79", null ],
-    [ "restrictTo", "classAF.html#adf9b6f5fda083a194d7f22a28b2fdff5", null ],
+    [ "restrictTo", "classAF.html#a4cedca2ce81ac1a4aa0be5931dce4a51", null ],
     [ "toString", "classAF.html#afb49c1335663b94a968f553eefc11f95", null ]
 ];

@@ -8,5 +8,6 @@ var annotated =
     [ "SATFormulae", "classSATFormulae.html", "classSATFormulae" ],
     [ "SetArguments", "classSetArguments.html", "classSetArguments" ],
     [ "SetArgumentsIterator", "classSetArgumentsIterator.html", null ],
+    [ "SymbolicArgumentsSet", "classSymbolicArgumentsSet.html", "classSymbolicArgumentsSet" ],
     [ "Variable", "classVariable.html", null ]
 ];

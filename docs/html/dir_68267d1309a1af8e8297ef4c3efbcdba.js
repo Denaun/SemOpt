@@ -21,5 +21,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "SATFormulae.h", "SATFormulae_8h_source.html", null ],
     [ "semopt.h", "semopt_8h.html", "semopt_8h" ],
     [ "SetArguments.cpp", "SetArguments_8cpp.html", null ],
-    [ "SetArguments.h", "SetArguments_8h_source.html", null ]
+    [ "SetArguments.h", "SetArguments_8h_source.html", null ],
+    [ "SymbolicArgumentsSet.cpp", "SymbolicArgumentsSet_8cpp.html", "SymbolicArgumentsSet_8cpp" ],
+    [ "SymbolicArgumentsSet.h", "SymbolicArgumentsSet_8h.html", "SymbolicArgumentsSet_8h" ]
 ];

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['random',['random',['../structPrecoSat_1_1Stats.html#a387060411c3f39af94cfa99acab0018e',1,'PrecoSat::Stats::random()'],['../structPrecoSat_1_1Opts.html#a7521177353f31d3c5bdfef8338de5429',1,'PrecoSat::Opts::random()']]],
+  ['reason',['reason',['../structPrecoSat_1_1Var.html#a44f45c869269c8026cc5673629c3d96e',1,'PrecoSat::Var']]],
+  ['rebias',['rebias',['../structPrecoSat_1_1Stats.html#ab0ea59fb47933be23358a7c3358e471b',1,'PrecoSat::Stats::rebias()'],['../structPrecoSat_1_1Limit.html#aef1664af86c025379d2ddd04b0f7df09',1,'PrecoSat::Limit::rebias()'],['../structPrecoSat_1_1Opts.html#a9e1b63b10f6e5d2b1b9f7683067d801d',1,'PrecoSat::Opts::rebias()']]],
+  ['rebiasint',['rebiasint',['../structPrecoSat_1_1Opts.html#aff520996fbc9818066b59da344449821',1,'PrecoSat::Opts']]],
+  ['rebiasorgonly',['rebiasorgonly',['../structPrecoSat_1_1Opts.html#a21bad9eeddcc1bbe9f75cb65d70ce164',1,'PrecoSat::Opts']]],
+  ['red',['red',['../structPrecoSat_1_1Stats.html#a41f32315ede8ff60778ec72ed2230335',1,'PrecoSat::Stats::red()'],['../structPrecoSat_1_1Limit.html#ab45e30afa55438f45447d3701bb95d2f',1,'PrecoSat::Limit::red()']]],
+  ['redsub',['redsub',['../structPrecoSat_1_1Opts.html#ae748ad68fb15e7c94638d683daf05c83',1,'PrecoSat::Opts']]],
+  ['reduce',['reduce',['../structPrecoSat_1_1Limit.html#a0ebf306722ffc411d6ce3ebb47d35dee',1,'PrecoSat::Limit::reduce()'],['../structPrecoSat_1_1Limit.html#a95063933aa1a1033d4094611bb2738d1',1,'PrecoSat::Limit::reduce()']]],
+  ['reductions',['reductions',['../structPrecoSat_1_1Stats.html#ac45c4f5efdd9ed730cc28baa06d8cda6',1,'PrecoSat::Stats']]],
+  ['removable',['removable',['../structPrecoSat_1_1Var.html#a023c3d2501e299cc39b4c1272720e1c4',1,'PrecoSat::Var']]],
+  ['reports',['reports',['../structPrecoSat_1_1Stats.html#a03ed545a8af217b776f8414dcb1dbf7a',1,'PrecoSat::Stats']]],
+  ['res',['res',['../structPrecoSat_1_1Stats.html#ac37beaa4c1d01a7130979bdb116a5aed',1,'PrecoSat::Stats']]],
+  ['rescored',['rescored',['../structPrecoSat_1_1Stats.html#a57c510a494a0b3efd6b95bcd6be95b47',1,'PrecoSat::Stats']]],
+  ['reslim',['reslim',['../structPrecoSat_1_1Opts.html#a9f6dece44fe91c6449c6afe165aaad86',1,'PrecoSat::Opts']]],
+  ['resolutions',['resolutions',['../structPrecoSat_1_1Stats.html#ac49fa5631ac225c486a914edd36d61bc',1,'PrecoSat::Stats']]],
+  ['restart',['restart',['../structPrecoSat_1_1Stats.html#a5b53b5a12fe2c1d1756c2f92eba80385',1,'PrecoSat::Stats::restart()'],['../structPrecoSat_1_1Limit.html#a0ae8fdf16c47e757ff93554a76633572',1,'PrecoSat::Limit::restart()'],['../structPrecoSat_1_1Opts.html#aaaa1ed3573cd13c756ef8690e6b02fbe',1,'PrecoSat::Opts::restart()']]],
+  ['restartinner',['restartinner',['../structPrecoSat_1_1Opts.html#a0e492afc25eab29cc7732281c0352299',1,'PrecoSat::Opts']]],
+  ['restartint',['restartint',['../structPrecoSat_1_1Opts.html#a3062409d80a4d9a55625f0c8a4f3f773',1,'PrecoSat::Opts']]],
+  ['restartminlevel',['restartminlevel',['../structPrecoSat_1_1Opts.html#a3d4cc067d6dc1c0f6be4cb30e72547a1',1,'PrecoSat::Opts']]],
+  ['restartouter',['restartouter',['../structPrecoSat_1_1Opts.html#addf22ca971f77f90121eeb99bcd1f4aa',1,'PrecoSat::Opts']]],
+  ['rounds',['rounds',['../structPrecoSat_1_1Stats.html#a11eed8e6620f9943158efb23e9faa9c0',1,'PrecoSat::Stats']]],
+  ['rtc',['rtc',['../structPrecoSat_1_1Opts.html#a1292610dc09b12decfaf1a724cfbce73',1,'PrecoSat::Opts']]]
+];

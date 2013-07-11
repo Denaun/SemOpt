@@ -1,7 +1,6 @@
 /**
  * @file SymbolicArgumentsSet.h
  * @class SymbolicArgumentsSet
- * @brief Class representing a set of arguments in a symbolical way (i.e. managing just the names of the arguments).
  * @author Maurizio Zucchelli
  * @version 0.1.0
  * @date 2013-07-08
@@ -20,7 +19,7 @@ class SetArguments;
 class Labelling;
 
 /**
- * @brief Class representing a std::set of arguments in a symbolical way.
+ * @brief Class representing a set of Arguments in a symbolical way.
  * @details
  * 	(i.e. managing just the names of the arguments).
  */

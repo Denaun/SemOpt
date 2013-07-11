@@ -1,0 +1,26 @@
+var namespacePrecoSat =
+[
+    [ "Progress", "classPrecoSat_1_1Progress.html", "classPrecoSat_1_1Progress" ],
+    [ "LitScore", "structPrecoSat_1_1LitScore.html", "structPrecoSat_1_1LitScore" ],
+    [ "FreeVarsLt", "structPrecoSat_1_1FreeVarsLt.html", "structPrecoSat_1_1FreeVarsLt" ],
+    [ "Sorter", "classPrecoSat_1_1Sorter.html", "classPrecoSat_1_1Sorter" ],
+    [ "Mem", "classPrecoSat_1_1Mem.html", "classPrecoSat_1_1Mem" ],
+    [ "Stack", "classPrecoSat_1_1Stack.html", "classPrecoSat_1_1Stack" ],
+    [ "Heap", "classPrecoSat_1_1Heap.html", "classPrecoSat_1_1Heap" ],
+    [ "Anchor", "structPrecoSat_1_1Anchor.html", "structPrecoSat_1_1Anchor" ],
+    [ "Rnk", "structPrecoSat_1_1Rnk.html", "structPrecoSat_1_1Rnk" ],
+    [ "Hotter", "structPrecoSat_1_1Hotter.html", "structPrecoSat_1_1Hotter" ],
+    [ "Var", "structPrecoSat_1_1Var.html", "structPrecoSat_1_1Var" ],
+    [ "Cls", "structPrecoSat_1_1Cls.html", "structPrecoSat_1_1Cls" ],
+    [ "Frame", "structPrecoSat_1_1Frame.html", "structPrecoSat_1_1Frame" ],
+    [ "GateStats", "structPrecoSat_1_1GateStats.html", "structPrecoSat_1_1GateStats" ],
+    [ "Stats", "structPrecoSat_1_1Stats.html", "structPrecoSat_1_1Stats" ],
+    [ "Limit", "structPrecoSat_1_1Limit.html", "structPrecoSat_1_1Limit" ],
+    [ "Opt", "structPrecoSat_1_1Opt.html", "structPrecoSat_1_1Opt" ],
+    [ "Opts", "structPrecoSat_1_1Opts.html", "structPrecoSat_1_1Opts" ],
+    [ "SCC", "structPrecoSat_1_1SCC.html", "structPrecoSat_1_1SCC" ],
+    [ "RNG", "classPrecoSat_1_1RNG.html", "classPrecoSat_1_1RNG" ],
+    [ "Occ", "structPrecoSat_1_1Occ.html", "structPrecoSat_1_1Occ" ],
+    [ "Occs", "structPrecoSat_1_1Occs.html", "structPrecoSat_1_1Occs" ],
+    [ "Solver", "classPrecoSat_1_1Solver.html", "classPrecoSat_1_1Solver" ]
+];

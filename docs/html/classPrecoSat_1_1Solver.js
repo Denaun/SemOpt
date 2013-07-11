@@ -1,0 +1,28 @@
+var classPrecoSat_1_1Solver =
+[
+    [ "Solver", "classPrecoSat_1_1Solver.html#a59e5e8160d7903d4844d598de293e202", null ],
+    [ "add", "classPrecoSat_1_1Solver.html#ab7a615e5cee530dc2c3ad1766845abbc", null ],
+    [ "fixed", "classPrecoSat_1_1Solver.html#a81194038858ae85d7656ba9d96e56eec", null ],
+    [ "fxopts", "classPrecoSat_1_1Solver.html#a7f80c19e5b6f37c92a9cdd33aa0e3219", null ],
+    [ "getAddedOrigClauses", "classPrecoSat_1_1Solver.html#a56f9d7ff1ffbbaccb23f1ea51d924286", null ],
+    [ "getMaxVar", "classPrecoSat_1_1Solver.html#ab490b61dbbc3c2c51fa0d4808a76baff", null ],
+    [ "init", "classPrecoSat_1_1Solver.html#a0a95a15c7f1b85be0ada9d78c4ff34c6", null ],
+    [ "next", "classPrecoSat_1_1Solver.html#a28b40a80a6b5c082a87a3d247b6ed74d", null ],
+    [ "operator bool", "classPrecoSat_1_1Solver.html#acdf83d828bb765bb5a10baa4664faca6", null ],
+    [ "propts", "classPrecoSat_1_1Solver.html#a6551ee4e576ace0b1e165a19b7c05085", null ],
+    [ "prstats", "classPrecoSat_1_1Solver.html#af9be4958eb45126d0a1e1cefb628d87a", null ],
+    [ "reset", "classPrecoSat_1_1Solver.html#a5e8705b4f1604a3b141ca0e312561837", null ],
+    [ "satisfied", "classPrecoSat_1_1Solver.html#a8e1bb2320d0262ffeda3d2c46a1f87f3", null ],
+    [ "seconds", "classPrecoSat_1_1Solver.html#a4895f7d50bdc33c54a9d1fb626b69b10", null ],
+    [ "set", "classPrecoSat_1_1Solver.html#a6a1a142e3151be03f78722d5e350976f", null ],
+    [ "set", "classPrecoSat_1_1Solver.html#a1141673b1a003b724b9c6711d783bb2d", null ],
+    [ "set", "classPrecoSat_1_1Solver.html#a17b7b1c213d234aceae9be5b0d10d749", null ],
+    [ "set", "classPrecoSat_1_1Solver.html#a340f79f85264424345d04dfd2e8fdc6c", null ],
+    [ "setprfx", "classPrecoSat_1_1Solver.html#aefed57011911ceb992b4beaec0cae28a", null ],
+    [ "solve", "classPrecoSat_1_1Solver.html#af2f84b737043eb4dfe23d430ead0a6ce", null ],
+    [ "val", "classPrecoSat_1_1Solver.html#abba718af6517837688b33d60be800c74", null ],
+    [ "Progress", "classPrecoSat_1_1Solver.html#a2ea33e7cf2066229950427458adbb939", null ],
+    [ "block", "classPrecoSat_1_1Solver.html#a341151c8d0f529c30bd38d4da843a29f", null ],
+    [ "decide", "classPrecoSat_1_1Solver.html#aca9c37d5fd0b2c5649d6114acdf6fa93", null ],
+    [ "elim", "classPrecoSat_1_1Solver.html#ac9fbab2eed8743c7f5d7ad70b845376b", null ]
+];

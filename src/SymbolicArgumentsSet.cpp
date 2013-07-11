@@ -1,7 +1,6 @@
 /**
  * @file SymbolicArgumentsSet.cpp
  * @class SymbolicArgumentsSet
- * @brief Class representing a set of arguments in a symbolical way.
  * @author Maurizio Zucchelli
  * @version 0.1.0
  * @date 2013-07-08
@@ -34,8 +33,7 @@ SymbolicArgumentsSet::SymbolicArgumentsSet( const SetArguments source )
 
 /**
  * @brief Constructor from a Labelling.
- * @details
- * 	The resulting object will contain only the Arguments labelled as "in".
+ * @details The resulting object will contain only the Arguments labelled as `in`.
  *
  * @param[in]	source	The Labelling to be represented symbolically.
  */

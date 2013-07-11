@@ -1,10 +1,9 @@
 /**
  * @file	Preferred_pref.cpp
- * @class	Preferred
  * @brief	Implementation of the recursive function `pref`
  * @author	Maurizio Zucchelli
  * @author	Mattia Rizzini
- * @version	1.1
+ * @version	2.3
  * @date	2013-06-25
  */
 
@@ -12,11 +11,12 @@
 
 /**
  * @brief	Main resolutive function.
- * @details	Fills the labels of the class with the preferred extensions found.
- * @todo	Everything
+ * @details	Fills the labels of the class with the preferred extensions found.<br />
+ * 	This version just calls pref with theC as a SymbolicArgumentsSet instead of
+ * 	a SetArguments.
  *
- * @param[in]	theAF	The Argument Framework to be considered
- * @param[in]	theC	The subset of arguments to consider
+ * @param[in]	theAF	The AF to be considered
+ * @param[in]	theC	The subset of Arguments to consider
  */
 void Preferred::pref( AF* theAF, SetArguments* theC )
 {
@@ -27,10 +27,9 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
 /**
  * @brief	Main resolutive function.
  * @details	Fills the labels of the class with the preferred extensions found.
- * @todo	Everything
  *
- * @param[in]	theAF	The Argument Framework to be considered
- * @param[in]	theC	The subset of arguments to consider
+ * @param[in]	theAF	The AF to be considered
+ * @param[in]	theC	The subset of Arguments to consider
  */
 void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 {
@@ -169,6 +168,9 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 						cerr << "\t\t\tO preserved.\n";
 
 					// ???
+
+					// Avoid for now
+					O.clear();
 				}
 				else
 				

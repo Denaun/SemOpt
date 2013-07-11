@@ -1,6 +1,5 @@
 /**
  * @file	Preferred_grounded.cpp
- * @class	Preferred
  * @brief	Implementation of the function `grounded`
  * @author	Maurizio Zucchelli
  * @version	1
