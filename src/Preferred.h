@@ -2,7 +2,6 @@
  * Preferred.h
  *
  *  Created on: 10 Jun 2013
- *      Author: geryo
  */
 
 #ifndef PREFERRED_H_
@@ -11,6 +10,7 @@
 #include <vector>
 #include <list>
 #include <stack>
+#include <map>
 #include "AF.h"
 #include "SATFormulae.h"
 #include <iostream>
@@ -54,6 +54,8 @@ class Preferred
 			this -> lowlink = -1;
 		}
 	};
+
+	map< SymbolicArgumentsSet*, SymbolicArgumentsSet* > optimizationTrack;
 
 	list< DFSNode* > DFSAF;
 

@@ -282,6 +282,18 @@ bool SymbolicArgumentsSet::operator==( const SymbolicArgumentsSet& other ) const
 	return this->arguments == other.arguments;
 }
 
+/**
+ * @brief Minority operator.
+ *
+ * @param[in]	other	The other operand.
+ *
+ * @return `true` if the two sets have the same elements, `false` otherwise.
+ */
+bool SymbolicArgumentsSet::operator<( const SymbolicArgumentsSet& other ) const
+{
+	return this->arguments.size() < other.arguments.size();
+}
+
 /* Output */
 
 /**

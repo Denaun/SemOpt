@@ -66,7 +66,6 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		e = *theC;
 	}
 	else
-	
 		Grounded( theC, &e, &I );
 
 	if ( stages )
@@ -116,7 +115,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				cerr << "\t\tFather: " << *( *father ) -> argumentList << endl;
 		}
 
-	// Indicates to preserve O or not inside the inner cycle
+	// True if the actual SCC hasn't a father in the previous one, false otherwise
 	// (no boundcond recalculation after the first time, conditions described below)
 	bool preserveO = true;
 
@@ -127,26 +126,20 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 		vector<SymbolicArgumentsSet> newLabellings = vector<SymbolicArgumentsSet>();
 
-		// O is preserved throught the iterations because,
-		// 	if the actual SCC has not a father in the previous one,
-		// 	then O remains always the same
-		// This is checked right before the reiteration of the previous cycle
-		// (for the first SCC the condition is always true)
-		SymbolicArgumentsSet O = SymbolicArgumentsSet();
-		// ( I already exists... )
-		I.clear();
-
 		for ( vector<SymbolicArgumentsSet>::iterator aLabelling = tempLabellings.begin();
 				aLabelling != tempLabellings.end(); ++aLabelling )
 		{
 			Preferred p = Preferred();
+
+			// O may be preserved if preserveO is true and it is already been registered in the optimizationTrack map
+			SymbolicArgumentsSet O = SymbolicArgumentsSet();
+			I.clear();
 
 			if ( debug )
 				cerr << "\t\tGoing to call boundcond.\n";
 
 			// Determine if the call of boundcond can be avoided
 			// If the current SCC has no fathers, O = empty and I = SCC
-			
 			if( AFequalsC && ( *aSCC ) -> fathers.size() == 0 )
 			{
 				if ( debug )
@@ -156,32 +149,36 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				I = *(*aSCC)->argumentList;
 			}
 			else
-			
 			{
 				// Reset I
 				I.clear();
 
-				
-				if( preserveO )
+				// Test if the e set is already in the map using a very ugly workaround
+				// By indexing the map with e, if e is not present it is added, so I get the size of the map before indexing
+				// and the size after indexing; if the difference is zero then it means that the element was already in the map
+				bool ePresent = false;
+
+				int sizeCheck = optimizationTrack.size();
+				optimizationTrack[ e ];
+				sizeCheck -= optimizationTrack.size();
+
+				if( preserveO && sizeCheck == 0 )
 				{
 					if ( debug )
 						cerr << "\t\t\tO preserved.\n";
 
-					// ???
-
-					// Avoid for now
-					O.clear();
+					O = optimizationTrack[ e ];
 				}
 				else
-				
 				{
 					if ( debug )
-						cerr << "\t\t\tO emptied.\n";
+						cerr << "\t\t\tO recalculated.\n";
 
-					O.clear();
+					boundcond( *aSCC, &(*aLabelling), &O, &I );
+
+					optimizationTrack[ e ] = O;
 				}
 
-				boundcond( *aSCC, &(*aLabelling), &O, &I );
 			}
 
 			if ( stages )
