@@ -1,0 +1,484 @@
+\hypertarget{classArgument}{\section{Argument Class Reference}
+\label{classArgument}\index{Argument@{Argument}}
+}
+
+
+Class representing an \hyperlink{classArgument}{Argument}.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classArgument_aa312e97860b77b102739b7c836f7c253}{Argument} (string, int, \hyperlink{classAF}{A\-F} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+string \hyperlink{classArgument_a95323c2bfcbb4c0d494acc13f76cc28a}{get\-Name} () const 
+\begin{DoxyCompactList}\small\item\em Method returning the name of the argument. \end{DoxyCompactList}\item 
+int \hyperlink{classArgument_aa26daf8c55afbe7d0970b23fbdbc96ca}{get\-Number} () const 
+\begin{DoxyCompactList}\small\item\em Method returning the unique integer identifier of this argument. \end{DoxyCompactList}\item 
+\hyperlink{classAF}{A\-F} $\ast$ \hyperlink{classArgument_ad2e1361e07c13c5ec5784d33e58ef76e}{get\-\_\-af} ()
+\begin{DoxyCompactList}\small\item\em Method returning the \hyperlink{classAF}{A\-F} to which this argument belongs. \end{DoxyCompactList}\item 
+\hyperlink{classVariable}{Variable} \hyperlink{classArgument_a0f0599741585650c3bf44714d6a06df9}{In\-Var} ()
+\begin{DoxyCompactList}\small\item\em Method for determining a propositional variable representing that this argument should be labelled as {\ttfamily I\-N} \end{DoxyCompactList}\item 
+\hyperlink{classVariable}{Variable} \hyperlink{classArgument_a22f8d770c9dabeee5400104f11cd94e9}{Out\-Var} ()
+\begin{DoxyCompactList}\small\item\em Method for determining a propositional variable representing that this argument should be labelled as {\ttfamily O\-U\-T} \end{DoxyCompactList}\item 
+\hyperlink{classVariable}{Variable} \hyperlink{classArgument_a6b6fc0ba74c480e9186fe2860487008c}{Undec\-Var} ()
+\begin{DoxyCompactList}\small\item\em Method for determining a propositional variable representing that this argument should be labelled as {\ttfamily U\-N\-D\-E\-C} \end{DoxyCompactList}\item 
+\hyperlink{classVariable}{Variable} \hyperlink{classArgument_a19efdd00a8dbf15271a311a720e300a4}{Not\-In\-Var} ()
+\begin{DoxyCompactList}\small\item\em Method for determining {\bfseries the negation} of the propositional variable representing that this argument should be labelled as {\ttfamily I\-N} \end{DoxyCompactList}\item 
+\hyperlink{classVariable}{Variable} \hyperlink{classArgument_a0db86f8dcbb8aed850aa5d7c0a689372}{Not\-Out\-Var} ()
+\begin{DoxyCompactList}\small\item\em Method for determining {\bfseries the negation} of the propositional variable representing that this argument should be labelled as {\ttfamily O\-U\-T} \end{DoxyCompactList}\item 
+\hyperlink{classVariable}{Variable} \hyperlink{classArgument_a0b8fb438e4de8a4348e754714363fbf3}{Not\-Undec\-Var} ()
+\begin{DoxyCompactList}\small\item\em Method for determining {\bfseries the negation} of the propositional variable representing that this argument should be labelled as {\ttfamily U\-N\-D\-E\-C} \end{DoxyCompactList}\item 
+bool \hyperlink{classArgument_a44a615fda392650c5dc42036d9f4b1fc}{operator==} (const \hyperlink{classArgument}{Argument} \&other) const 
+\begin{DoxyCompactList}\small\item\em Overloading of the == operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classArgument_a6f035645e46115d0f5a3f3ca98461bce}{operator!=} (const \hyperlink{classArgument}{Argument} \&other) const 
+\begin{DoxyCompactList}\small\item\em Overloading of the != operator. \end{DoxyCompactList}\item 
+void \hyperlink{classArgument_a8a5cddf583929099b8228ed9300e2759}{add\-\_\-attacks} (\hyperlink{classArgument}{Argument} $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for adding an attacks originated from this argument. \end{DoxyCompactList}\item 
+void \hyperlink{classArgument_ad295236fa6d55121e37e90ec05289c8c}{add\-\_\-attackers} (\hyperlink{classArgument}{Argument} $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for adding an attacker. \end{DoxyCompactList}\item 
+\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classArgument_ae8c77c2d0676845f250d77dfb3ce4378}{get\-\_\-attacks} ()
+\begin{DoxyCompactList}\small\item\em Method returning the set of attackers. \end{DoxyCompactList}\item 
+\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classArgument_aa57914a9e5a27af3c3dbd1db8c0d3602}{get\-\_\-attackers} ()
+\begin{DoxyCompactList}\small\item\em Method returning the set of attacked arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing an \hyperlink{classArgument}{Argument}. 
+
+\begin{DoxyAuthor}{Author}
+Federico Cerutti \href{mailto:f.cerutti@abdn.ac.uk}{\tt f.\-cerutti@abdn.\-ac.\-uk} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License v2 
+\end{DoxyCopyright}
+
+
+Definition at line 30 of file Argument.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classArgument_aa312e97860b77b102739b7c836f7c253}{\index{Argument@{Argument}!Argument@{Argument}}
+\index{Argument@{Argument}!Argument@{Argument}}
+\subsubsection[{Argument}]{\setlength{\rightskip}{0pt plus 5cm}Argument\-::\-Argument (
+\begin{DoxyParamCaption}
+\item[{string}]{name, }
+\item[{int}]{num, }
+\item[{{\bf A\-F} $\ast$}]{theaf}
+\end{DoxyParamCaption}
+)}}\label{classArgument_aa312e97860b77b102739b7c836f7c253}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The name of the argument. It {\bfseries must} be unique \\
+\hline
+\mbox{\tt in}  & {\em num} & A number identifying this argument. It {\bfseries must} be unique \\
+\hline
+\mbox{\tt in}  & {\em theaf} & The pointer to the Argumentation Framework to which this argument belongs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file Argument.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classArgument_ad295236fa6d55121e37e90ec05289c8c}{\index{Argument@{Argument}!add\-\_\-attackers@{add\-\_\-attackers}}
+\index{add\-\_\-attackers@{add\-\_\-attackers}!Argument@{Argument}}
+\subsubsection[{add\-\_\-attackers}]{\setlength{\rightskip}{0pt plus 5cm}void Argument\-::add\-\_\-attackers (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{classArgument_ad295236fa6d55121e37e90ec05289c8c}
+
+
+Method for adding an attacker. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 152 of file Argument.\-cpp.
+
+
+
+References Set\-Arguments\-::add\-\_\-\-Argument().
+
+\hypertarget{classArgument_a8a5cddf583929099b8228ed9300e2759}{\index{Argument@{Argument}!add\-\_\-attacks@{add\-\_\-attacks}}
+\index{add\-\_\-attacks@{add\-\_\-attacks}!Argument@{Argument}}
+\subsubsection[{add\-\_\-attacks}]{\setlength{\rightskip}{0pt plus 5cm}void Argument\-::add\-\_\-attacks (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{classArgument_a8a5cddf583929099b8228ed9300e2759}
+
+
+Method for adding an attacks originated from this argument. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 142 of file Argument.\-cpp.
+
+
+
+References Set\-Arguments\-::add\-\_\-\-Argument().
+
+
+
+Referenced by A\-F\-::read\-File().
+
+\hypertarget{classArgument_ad2e1361e07c13c5ec5784d33e58ef76e}{\index{Argument@{Argument}!get\-\_\-af@{get\-\_\-af}}
+\index{get\-\_\-af@{get\-\_\-af}!Argument@{Argument}}
+\subsubsection[{get\-\_\-af}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-F} $\ast$ Argument\-::get\-\_\-af (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_ad2e1361e07c13c5ec5784d33e58ef76e}
+
+
+Method returning the \hyperlink{classAF}{A\-F} to which this argument belongs. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em A\-F$\ast$} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 179 of file Argument.\-cpp.
+
+\hypertarget{classArgument_aa57914a9e5a27af3c3dbd1db8c0d3602}{\index{Argument@{Argument}!get\-\_\-attackers@{get\-\_\-attackers}}
+\index{get\-\_\-attackers@{get\-\_\-attackers}!Argument@{Argument}}
+\subsubsection[{get\-\_\-attackers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments} $\ast$ Argument\-::get\-\_\-attackers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_aa57914a9e5a27af3c3dbd1db8c0d3602}
+
+
+Method returning the set of attacked arguments. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Set\-Arguments$\ast$} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 170 of file Argument.\-cpp.
+
+
+
+Referenced by Preferred\-::\-Grounded(), and A\-F\-::restrict\-To().
+
+\hypertarget{classArgument_ae8c77c2d0676845f250d77dfb3ce4378}{\index{Argument@{Argument}!get\-\_\-attacks@{get\-\_\-attacks}}
+\index{get\-\_\-attacks@{get\-\_\-attacks}!Argument@{Argument}}
+\subsubsection[{get\-\_\-attacks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments} $\ast$ Argument\-::get\-\_\-attacks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_ae8c77c2d0676845f250d77dfb3ce4378}
+
+
+Method returning the set of attackers. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Set\-Arguments$\ast$} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 161 of file Argument.\-cpp.
+
+
+
+Referenced by Preferred\-::\-Grounded(), and A\-F\-::restrict\-To().
+
+\hypertarget{classArgument_a95323c2bfcbb4c0d494acc13f76cc28a}{\index{Argument@{Argument}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Argument@{Argument}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}string Argument\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classArgument_a95323c2bfcbb4c0d494acc13f76cc28a}
+
+
+Method returning the name of the argument. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em string} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 35 of file Argument.\-cpp.
+
+
+
+Referenced by Set\-Arguments\-::add\-\_\-\-Argument(), Set\-Arguments\-::exists(), operator!=(), operator==(), Preferred\-::pref\-S\-A\-T(), Set\-Arguments\-::remove(), and Preferred\-::satlab().
+
+\hypertarget{classArgument_aa26daf8c55afbe7d0970b23fbdbc96ca}{\index{Argument@{Argument}!get\-Number@{get\-Number}}
+\index{get\-Number@{get\-Number}!Argument@{Argument}}
+\subsubsection[{get\-Number}]{\setlength{\rightskip}{0pt plus 5cm}int Argument\-::get\-Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classArgument_aa26daf8c55afbe7d0970b23fbdbc96ca}
+
+
+Method returning the unique integer identifier of this argument. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 44 of file Argument.\-cpp.
+
+
+
+Referenced by Set\-Arguments\-::add\-\_\-\-Argument(), operator!=(), and operator==().
+
+\hypertarget{classArgument_a0f0599741585650c3bf44714d6a06df9}{\index{Argument@{Argument}!In\-Var@{In\-Var}}
+\index{In\-Var@{In\-Var}!Argument@{Argument}}
+\subsubsection[{In\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} Argument\-::\-In\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_a0f0599741585650c3bf44714d6a06df9}
+
+
+Method for determining a propositional variable representing that this argument should be labelled as {\ttfamily I\-N} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classVariable}{Variable}} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 54 of file Argument.\-cpp.
+
+
+
+Referenced by Not\-In\-Var().
+
+\hypertarget{classArgument_a19efdd00a8dbf15271a311a720e300a4}{\index{Argument@{Argument}!Not\-In\-Var@{Not\-In\-Var}}
+\index{Not\-In\-Var@{Not\-In\-Var}!Argument@{Argument}}
+\subsubsection[{Not\-In\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} Argument\-::\-Not\-In\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_a19efdd00a8dbf15271a311a720e300a4}
+
+
+Method for determining {\bfseries the negation} of the propositional variable representing that this argument should be labelled as {\ttfamily I\-N} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classVariable}{Variable}} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 84 of file Argument.\-cpp.
+
+
+
+References In\-Var().
+
+\hypertarget{classArgument_a0db86f8dcbb8aed850aa5d7c0a689372}{\index{Argument@{Argument}!Not\-Out\-Var@{Not\-Out\-Var}}
+\index{Not\-Out\-Var@{Not\-Out\-Var}!Argument@{Argument}}
+\subsubsection[{Not\-Out\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} Argument\-::\-Not\-Out\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_a0db86f8dcbb8aed850aa5d7c0a689372}
+
+
+Method for determining {\bfseries the negation} of the propositional variable representing that this argument should be labelled as {\ttfamily O\-U\-T} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classVariable}{Variable}} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 94 of file Argument.\-cpp.
+
+
+
+References Out\-Var().
+
+\hypertarget{classArgument_a0b8fb438e4de8a4348e754714363fbf3}{\index{Argument@{Argument}!Not\-Undec\-Var@{Not\-Undec\-Var}}
+\index{Not\-Undec\-Var@{Not\-Undec\-Var}!Argument@{Argument}}
+\subsubsection[{Not\-Undec\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} Argument\-::\-Not\-Undec\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_a0b8fb438e4de8a4348e754714363fbf3}
+
+
+Method for determining {\bfseries the negation} of the propositional variable representing that this argument should be labelled as {\ttfamily U\-N\-D\-E\-C} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classVariable}{Variable}} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 104 of file Argument.\-cpp.
+
+
+
+References Undec\-Var().
+
+\hypertarget{classArgument_a6f035645e46115d0f5a3f3ca98461bce}{\index{Argument@{Argument}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!Argument@{Argument}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool Argument\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classArgument_a6f035645e46115d0f5a3f3ca98461bce}
+
+
+Overloading of the != operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other term of the comparison \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 128 of file Argument.\-cpp.
+
+
+
+References get\-Name(), and get\-Number().
+
+\hypertarget{classArgument_a44a615fda392650c5dc42036d9f4b1fc}{\index{Argument@{Argument}!operator==@{operator==}}
+\index{operator==@{operator==}!Argument@{Argument}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Argument\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classArgument_a44a615fda392650c5dc42036d9f4b1fc}
+
+
+Overloading of the == operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other term of the comparison \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 114 of file Argument.\-cpp.
+
+
+
+References get\-Name(), and get\-Number().
+
+\hypertarget{classArgument_a22f8d770c9dabeee5400104f11cd94e9}{\index{Argument@{Argument}!Out\-Var@{Out\-Var}}
+\index{Out\-Var@{Out\-Var}!Argument@{Argument}}
+\subsubsection[{Out\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} Argument\-::\-Out\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_a22f8d770c9dabeee5400104f11cd94e9}
+
+
+Method for determining a propositional variable representing that this argument should be labelled as {\ttfamily O\-U\-T} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classVariable}{Variable}} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 64 of file Argument.\-cpp.
+
+
+
+References A\-F\-::num\-Args().
+
+
+
+Referenced by Not\-Out\-Var().
+
+\hypertarget{classArgument_a6b6fc0ba74c480e9186fe2860487008c}{\index{Argument@{Argument}!Undec\-Var@{Undec\-Var}}
+\index{Undec\-Var@{Undec\-Var}!Argument@{Argument}}
+\subsubsection[{Undec\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable} Argument\-::\-Undec\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classArgument_a6b6fc0ba74c480e9186fe2860487008c}
+
+
+Method for determining a propositional variable representing that this argument should be labelled as {\ttfamily U\-N\-D\-E\-C} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classVariable}{Variable}} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 74 of file Argument.\-cpp.
+
+
+
+References A\-F\-::num\-Args().
+
+
+
+Referenced by Not\-Undec\-Var().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/Argument.\-h\item 
+src/\hyperlink{Argument_8cpp}{Argument.\-cpp}\end{DoxyCompactItemize}

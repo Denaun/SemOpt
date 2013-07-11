@@ -1,0 +1,13 @@
+digraph "Preferred"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Preferred",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sat_new_pigreek" ];
+  Node2 [label="SATFormulae",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSATFormulae.html",tooltip="Class encompassing a list of OrClause linked by and operators. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" af" ];
+  Node3 [label="AF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAF.html",tooltip="Class encompassing an Argumentation Framework. "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" arguments" ];
+  Node4 [label="SetArguments",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSetArguments.html",tooltip="Class encompassing a set of arguments. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" C" ];
+}

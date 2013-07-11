@@ -1,0 +1,183 @@
+\hypertarget{classSATFormulae}{\section{S\-A\-T\-Formulae Class Reference}
+\label{classSATFormulae}\index{S\-A\-T\-Formulae@{S\-A\-T\-Formulae}}
+}
+
+
+Class encompassing a list of {\ttfamily \hyperlink{classOrClause}{Or\-Clause}} linked by and operators.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSATFormulae_a5120c3a2469b8124be715fa0d97fc545}{\hyperlink{classSATFormulae_a5120c3a2469b8124be715fa0d97fc545}{S\-A\-T\-Formulae} ()}\label{classSATFormulae_a5120c3a2469b8124be715fa0d97fc545}
+
+\begin{DoxyCompactList}\small\item\em Simple constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSATFormulae_a24f192aef15c7338da94440fbf11a1fd}{append\-Or\-Clause} (\hyperlink{classOrClause}{Or\-Clause})
+\begin{DoxyCompactList}\small\item\em Method for appending a new \hyperlink{classOrClause}{Or\-Clause} to the other clause. \end{DoxyCompactList}\item 
+void \hyperlink{classSATFormulae_aa2f0f69c190ff01d8ab48e426d89e665}{to\-S\-S} (stringstream $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Method for transforming the S\-A\-T formulae into a string {\ttfamily D\-I\-M\-A\-C\-S} compliant. \end{DoxyCompactList}\item 
+void \hyperlink{classSATFormulae_a613cef1d45631a255b65718f51c5024c}{clone} (\hyperlink{classSATFormulae}{S\-A\-T\-Formulae} $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for cloning (not coping the pointers) this object into a new one. \end{DoxyCompactList}\item 
+int \hyperlink{classSATFormulae_a8f519b3240b275633769ed70c9583d5d}{size} ()
+\begin{DoxyCompactList}\small\item\em Method returning the number of \hyperlink{classOrClause}{Or\-Clause}. \end{DoxyCompactList}\item 
+bool \hyperlink{classSATFormulae_a7c56233149efa47f3533010b09daf42b}{empty} ()
+\begin{DoxyCompactList}\small\item\em Check if there are no formulae. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class encompassing a list of {\ttfamily \hyperlink{classOrClause}{Or\-Clause}} linked by and operators. 
+
+\begin{DoxyAuthor}{Author}
+Federico Cerutti \href{mailto:f.cerutti@abdn.ac.uk}{\tt f.\-cerutti@abdn.\-ac.\-uk} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License v2 
+\end{DoxyCopyright}
+
+
+Definition at line 19 of file S\-A\-T\-Formulae.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSATFormulae_a24f192aef15c7338da94440fbf11a1fd}{\index{S\-A\-T\-Formulae@{S\-A\-T\-Formulae}!append\-Or\-Clause@{append\-Or\-Clause}}
+\index{append\-Or\-Clause@{append\-Or\-Clause}!SATFormulae@{S\-A\-T\-Formulae}}
+\subsubsection[{append\-Or\-Clause}]{\setlength{\rightskip}{0pt plus 5cm}void S\-A\-T\-Formulae\-::append\-Or\-Clause (
+\begin{DoxyParamCaption}
+\item[{{\bf Or\-Clause}}]{c}
+\end{DoxyParamCaption}
+)}}\label{classSATFormulae_a24f192aef15c7338da94440fbf11a1fd}
+
+
+Method for appending a new \hyperlink{classOrClause}{Or\-Clause} to the other clause. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em c} & The \hyperlink{classOrClause}{Or\-Clause} to append \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 24 of file S\-A\-T\-Formulae.\-cpp.
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek(), and Preferred\-::pref\-S\-A\-T().
+
+\hypertarget{classSATFormulae_a613cef1d45631a255b65718f51c5024c}{\index{S\-A\-T\-Formulae@{S\-A\-T\-Formulae}!clone@{clone}}
+\index{clone@{clone}!SATFormulae@{S\-A\-T\-Formulae}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}void S\-A\-T\-Formulae\-::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-A\-T\-Formulae} $\ast$}]{newsat}
+\end{DoxyParamCaption}
+)}}\label{classSATFormulae_a613cef1d45631a255b65718f51c5024c}
+
+
+Method for cloning (not coping the pointers) this object into a new one. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em newsat} & A pointer to an initialised \hyperlink{classSATFormulae_a5120c3a2469b8124be715fa0d97fc545}{S\-A\-T\-Formulae()} object which will contain the copy of this object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 68 of file S\-A\-T\-Formulae.\-cpp.
+
+
+
+References S\-A\-T\-Formulae(), and size().
+
+
+
+Referenced by Preferred\-::pref\-S\-A\-T().
+
+\hypertarget{classSATFormulae_a7c56233149efa47f3533010b09daf42b}{\index{S\-A\-T\-Formulae@{S\-A\-T\-Formulae}!empty@{empty}}
+\index{empty@{empty}!SATFormulae@{S\-A\-T\-Formulae}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool S\-A\-T\-Formulae\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSATFormulae_a7c56233149efa47f3533010b09daf42b}
+
+
+Check if there are no formulae. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 84 of file S\-A\-T\-Formulae.\-cpp.
+
+\hypertarget{classSATFormulae_a8f519b3240b275633769ed70c9583d5d}{\index{S\-A\-T\-Formulae@{S\-A\-T\-Formulae}!size@{size}}
+\index{size@{size}!SATFormulae@{S\-A\-T\-Formulae}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int S\-A\-T\-Formulae\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSATFormulae_a8f519b3240b275633769ed70c9583d5d}
+
+
+Method returning the number of \hyperlink{classOrClause}{Or\-Clause}. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & The number of \hyperlink{classOrClause}{Or\-Clause} \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 58 of file S\-A\-T\-Formulae.\-cpp.
+
+
+
+Referenced by clone(), Preferred\-::compute\-\_\-new\-\_\-pigreek(), and Preferred\-::satlab().
+
+\hypertarget{classSATFormulae_aa2f0f69c190ff01d8ab48e426d89e665}{\index{S\-A\-T\-Formulae@{S\-A\-T\-Formulae}!to\-S\-S@{to\-S\-S}}
+\index{to\-S\-S@{to\-S\-S}!SATFormulae@{S\-A\-T\-Formulae}}
+\subsubsection[{to\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}void S\-A\-T\-Formulae\-::to\-S\-S (
+\begin{DoxyParamCaption}
+\item[{stringstream $\ast$}]{ss}
+\end{DoxyParamCaption}
+) const}}\label{classSATFormulae_aa2f0f69c190ff01d8ab48e426d89e665}
+
+
+Method for transforming the S\-A\-T formulae into a string {\ttfamily D\-I\-M\-A\-C\-S} compliant. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em ss} & A pointer to a stringstream object already initialised \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 34 of file S\-A\-T\-Formulae.\-cpp.
+
+
+
+Referenced by Preferred\-::satlab().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/S\-A\-T\-Formulae.\-h\item 
+src/\hyperlink{SATFormulae_8cpp}{S\-A\-T\-Formulae.\-cpp}\end{DoxyCompactItemize}

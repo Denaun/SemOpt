@@ -1,0 +1,488 @@
+\hypertarget{classPreferred}{\section{Preferred Class Reference}
+\label{classPreferred}\index{Preferred@{Preferred}}
+}
+
+
+Class used to generate the preferred extensions.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPreferred_af11979bfbee65a273e2f8a0a3112442c}{\hyperlink{classPreferred_af11979bfbee65a273e2f8a0a3112442c}{Preferred} ()}\label{classPreferred_af11979bfbee65a273e2f8a0a3112442c}
+
+\begin{DoxyCompactList}\small\item\em Simple constructor. \end{DoxyCompactList}\item 
+\hypertarget{classPreferred_a31af87bcce662056b83c622b31985097}{virtual \hyperlink{classPreferred_a31af87bcce662056b83c622b31985097}{$\sim$\-Preferred} ()}\label{classPreferred_a31af87bcce662056b83c622b31985097}
+
+\begin{DoxyCompactList}\small\item\em Simple destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classPreferred_a934eaa21aa97fc2e50a74a2f77a9ba33}{pref\-S\-A\-T} (\hyperlink{classAF}{A\-F} $\ast$, \hyperlink{classSetArguments}{Set\-Arguments} $\ast$)
+\begin{DoxyCompactList}\small\item\em Method to generate the \hyperlink{classPreferred}{Preferred} Extensions. \end{DoxyCompactList}\item 
+void \hyperlink{classPreferred_a9e9df230cf6e6f66462a622fcc0031c2}{pref} (\hyperlink{classAF}{A\-F} $\ast$, \hyperlink{classSetArguments}{Set\-Arguments} $\ast$)
+\begin{DoxyCompactList}\small\item\em Main resolutive function. \end{DoxyCompactList}\item 
+void \hyperlink{classPreferred_a176d69d511bc416e967cf41204a99ca0}{pref} (\hyperlink{classAF}{A\-F} $\ast$, \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$)
+\begin{DoxyCompactList}\small\item\em Main resolutive function. \end{DoxyCompactList}\item 
+iterator \hyperlink{classPreferred_a93ec882a74edb90e5852b2445312180a}{begin} ()
+\begin{DoxyCompactList}\small\item\em Begin of the iterator for the preferred extension. \end{DoxyCompactList}\item 
+iterator \hyperlink{classPreferred_a8966d2602ab8c81706b9b26cffe57b92}{end} ()
+\begin{DoxyCompactList}\small\item\em End of the iterator for the preferred extension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPreferred_af0e6b73b494712fa6a7161b5dc88b52a}{int \hyperlink{classPreferred_af0e6b73b494712fa6a7161b5dc88b52a}{compute\-\_\-new\-\_\-pigreek} ()}\label{classPreferred_af0e6b73b494712fa6a7161b5dc88b52a}
+
+\begin{DoxyCompactList}\small\item\em Method for filling in the attribute sat\-\_\-new\-\_\-pigreek. \end{DoxyCompactList}\item 
+bool \hyperlink{classPreferred_a6c2181d87c45714ea90ee69eb233d093}{satlab} (\hyperlink{classSATFormulae}{S\-A\-T\-Formulae}, \hyperlink{classLabelling}{Labelling} $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for deriving a labelling from a S\-A\-T Formulae. \end{DoxyCompactList}\item 
+\hypertarget{classPreferred_a1dffeb709a014c7356cb074b7bae241c}{void \hyperlink{classPreferred_a1dffeb709a014c7356cb074b7bae241c}{cleanlabs} ()}\label{classPreferred_a1dffeb709a014c7356cb074b7bae241c}
+
+\begin{DoxyCompactList}\small\item\em Method to clean the labels. \end{DoxyCompactList}\item 
+void \hyperlink{classPreferred_a2d3b394a6be2108f0f48c9b09dc36758}{boundcond} (S\-C\-C $\ast$, \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$, \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$, \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$)
+\begin{DoxyCompactList}\small\item\em Function boundcond. \end{DoxyCompactList}\item 
+list$<$ S\-C\-C $\ast$ $>$ \hyperlink{classPreferred_af24ffe3288d46356340d5cf45e40248e}{S\-C\-C\-S\-S\-E\-Q} ()
+\begin{DoxyCompactList}\small\item\em S\-C\-C sequence finder. \end{DoxyCompactList}\item 
+int \hyperlink{classPreferred_ab08f6c2c7e23bf3a0f2f643cc13513af}{Tarjan\-Alg} (D\-F\-S\-Node $\ast$, list$<$ S\-C\-C $\ast$ $>$ $\ast$, stack$<$ D\-F\-S\-Node $\ast$ $>$ $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Tarjan Algorithm for S\-C\-C determination. \end{DoxyCompactList}\item 
+void \hyperlink{classPreferred_a5adce58891acc06715313ece50428c7c}{Grounded} (const \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$, \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$, \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$)
+\begin{DoxyCompactList}\small\item\em Function to calculate the grounded extensions. \end{DoxyCompactList}\item 
+void \hyperlink{classPreferred_a904892d7633a4ddbef1fb9cc84cf8a04}{S\-C\-C\-Parenthood} (list$<$ S\-C\-C $\ast$ $>$ $\ast$)
+\begin{DoxyCompactList}\small\item\em Function to determine the parenthood between S\-C\-Cs. \end{DoxyCompactList}\item 
+\hypertarget{classPreferred_aea3b9aa9920702ddba75d5ccc0cb320e}{void \hyperlink{classPreferred_aea3b9aa9920702ddba75d5ccc0cb320e}{init\-D\-F\-S\-A\-F} ()}\label{classPreferred_aea3b9aa9920702ddba75d5ccc0cb320e}
+
+\begin{DoxyCompactList}\small\item\em Initialization of the support structure for D\-F\-S (called in constructor) \end{DoxyCompactList}\item 
+bool \hyperlink{classPreferred_a9a619edb7db3960d8f86c92538488a33}{stack\-Search} (stack$<$ D\-F\-S\-Node $\ast$ $>$, D\-F\-S\-Node $\ast$)
+\begin{DoxyCompactList}\small\item\em Searches for an element in a stack. \end{DoxyCompactList}\item 
+D\-F\-S\-Node $\ast$ \hyperlink{classPreferred_a2647e7beb57edc3b9b8c5966a69b5f81}{search\-Argument} (\hyperlink{classArgument}{Argument} $\ast$)
+\begin{DoxyCompactList}\small\item\em Searches the D\-F\-S\-Node corresponding to the given \hyperlink{classArgument}{Argument} in D\-F\-S\-A\-F. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPreferred_a8d0d12e32a4950a77edff0f8751a65b9}{\hyperlink{classAF}{A\-F} $\ast$ \hyperlink{classPreferred_a8d0d12e32a4950a77edff0f8751a65b9}{af}}\label{classPreferred_a8d0d12e32a4950a77edff0f8751a65b9}
+
+\begin{DoxyCompactList}\small\item\em The Argumentation Framework considered. \end{DoxyCompactList}\item 
+\hypertarget{classPreferred_a25df148cc2682a163261b532dc3b60d5}{\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classPreferred_a25df148cc2682a163261b532dc3b60d5}{C}}\label{classPreferred_a25df148cc2682a163261b532dc3b60d5}
+
+\begin{DoxyCompactList}\small\item\em the set of arguments to consider \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class used to generate the preferred extensions. 
+
+\begin{DoxyAuthor}{Author}
+geryo 
+
+Mattia Rizzini 
+
+Maurizio Zucchelli 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2013-\/06-\/10 
+
+2013-\/06-\/25 
+\end{DoxyDate}
+
+
+Definition at line 42 of file Preferred.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPreferred_a93ec882a74edb90e5852b2445312180a}{\index{Preferred@{Preferred}!begin@{begin}}
+\index{begin@{begin}!Preferred@{Preferred}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}Preferred\-::iterator Preferred\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPreferred_a93ec882a74edb90e5852b2445312180a}
+
+
+Begin of the iterator for the preferred extension. 
+
+\begin{DoxyReturn}{Returns}
+An iterator pointing at the first element of the preferred extension 
+\end{DoxyReturn}
+
+
+Definition at line 398 of file Preferred.\-cpp.
+
+
+
+Referenced by init\-D\-F\-S\-A\-F(), pref(), S\-C\-C\-Parenthood(), and Tarjan\-Alg().
+
+\hypertarget{classPreferred_a2d3b394a6be2108f0f48c9b09dc36758}{\index{Preferred@{Preferred}!boundcond@{boundcond}}
+\index{boundcond@{boundcond}!Preferred@{Preferred}}
+\subsubsection[{boundcond}]{\setlength{\rightskip}{0pt plus 5cm}void Preferred\-::boundcond (
+\begin{DoxyParamCaption}
+\item[{S\-C\-C $\ast$}]{a\-S\-C\-C, }
+\item[{{\bf Symbolic\-Arguments\-Set} $\ast$}]{e, }
+\item[{{\bf Symbolic\-Arguments\-Set} $\ast$}]{O, }
+\item[{{\bf Symbolic\-Arguments\-Set} $\ast$}]{I}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_a2d3b394a6be2108f0f48c9b09dc36758}
+
+
+Function boundcond. 
+
+If called with non-\/empty O, only I is calculated and O is kept as-\/is.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a\-S\-C\-C} & The Strongly Connected Component to consider. \\
+\hline
+\mbox{\tt in}  & {\em e} & The actual extension. \\
+\hline
+\mbox{\tt out}  & {\em O} & First output set. \\
+\hline
+\mbox{\tt out}  & {\em I} & Second output set. Must be empty. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Preferred\-\_\-boundcond.\-cpp.
+
+
+
+References Symbolic\-Arguments\-Set\-::add(), af, Symbolic\-Arguments\-Set\-::begin(), Symbolic\-Arguments\-Set\-::end(), A\-F\-::get\-\_\-arguments(), Symbolic\-Arguments\-Set\-::get\-Attacks(), Symbolic\-Arguments\-Set\-::intersect(), Symbolic\-Arguments\-Set\-::is\-Empty(), Symbolic\-Arguments\-Set\-::merge(), and Symbolic\-Arguments\-Set\-::minus().
+
+
+
+Referenced by pref().
+
+\hypertarget{classPreferred_a8966d2602ab8c81706b9b26cffe57b92}{\index{Preferred@{Preferred}!end@{end}}
+\index{end@{end}!Preferred@{Preferred}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Preferred\-::iterator Preferred\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPreferred_a8966d2602ab8c81706b9b26cffe57b92}
+
+
+End of the iterator for the preferred extension. 
+
+\begin{DoxyReturn}{Returns}
+An iterator pointing at the last element of the preferred extension 
+\end{DoxyReturn}
+
+
+Definition at line 409 of file Preferred.\-cpp.
+
+
+
+Referenced by init\-D\-F\-S\-A\-F(), pref(), S\-C\-C\-Parenthood(), and Tarjan\-Alg().
+
+\hypertarget{classPreferred_a5adce58891acc06715313ece50428c7c}{\index{Preferred@{Preferred}!Grounded@{Grounded}}
+\index{Grounded@{Grounded}!Preferred@{Preferred}}
+\subsubsection[{Grounded}]{\setlength{\rightskip}{0pt plus 5cm}void Preferred\-::\-Grounded (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbolic\-Arguments\-Set} $\ast$}]{the\-C, }
+\item[{{\bf Symbolic\-Arguments\-Set} $\ast$}]{e, }
+\item[{{\bf Symbolic\-Arguments\-Set} $\ast$}]{I}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_a5adce58891acc06715313ece50428c7c}
+
+
+Function to calculate the grounded extensions. 
+
+Calculates the set containing every argument which, if used, ensures to win the argument and the set of nodes which can be used on both sides
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-C} & The subset of arguments to consider. \\
+\hline
+\mbox{\tt out}  & {\em e} & The extension \\
+\hline
+\mbox{\tt out}  & {\em I} & The set of the indolent arguments \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Preferred\-\_\-\-Grounded.\-cpp.
+
+
+
+References Symbolic\-Arguments\-Set\-::add(), af, Symbolic\-Arguments\-Set\-::begin(), C, Symbolic\-Arguments\-Set\-::end(), Symbolic\-Arguments\-Set\-::exists(), Argument\-::get\-\_\-attackers(), Argument\-::get\-\_\-attacks(), A\-F\-::get\-Argument\-By\-Name(), Symbolic\-Arguments\-Set\-::is\-Empty(), Symbolic\-Arguments\-Set\-::merge(), and Symbolic\-Arguments\-Set\-::minus().
+
+
+
+Referenced by pref().
+
+\hypertarget{classPreferred_a9e9df230cf6e6f66462a622fcc0031c2}{\index{Preferred@{Preferred}!pref@{pref}}
+\index{pref@{pref}!Preferred@{Preferred}}
+\subsubsection[{pref}]{\setlength{\rightskip}{0pt plus 5cm}void Preferred\-::pref (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-F} $\ast$}]{the\-A\-F, }
+\item[{{\bf Set\-Arguments} $\ast$}]{the\-C}
+\end{DoxyParamCaption}
+)}}\label{classPreferred_a9e9df230cf6e6f66462a622fcc0031c2}
+
+
+Main resolutive function. 
+
+Fills the labels of the class with the preferred extensions found.\par
+ This version just calls pref with the\-C as a \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} instead of a \hyperlink{classSetArguments}{Set\-Arguments}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-A\-F} & The \hyperlink{classAF}{A\-F} to be considered \\
+\hline
+\mbox{\tt in}  & {\em the\-C} & The subset of Arguments to consider \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Preferred\-\_\-pref.\-cpp.
+
+
+
+Referenced by pref().
+
+\hypertarget{classPreferred_a176d69d511bc416e967cf41204a99ca0}{\index{Preferred@{Preferred}!pref@{pref}}
+\index{pref@{pref}!Preferred@{Preferred}}
+\subsubsection[{pref}]{\setlength{\rightskip}{0pt plus 5cm}void Preferred\-::pref (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-F} $\ast$}]{the\-A\-F, }
+\item[{{\bf Symbolic\-Arguments\-Set} $\ast$}]{the\-C}
+\end{DoxyParamCaption}
+)}}\label{classPreferred_a176d69d511bc416e967cf41204a99ca0}
+
+
+Main resolutive function. 
+
+Fills the labels of the class with the preferred extensions found.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-A\-F} & The \hyperlink{classAF}{A\-F} to be considered \\
+\hline
+\mbox{\tt in}  & {\em the\-C} & The subset of Arguments to consider \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Preferred\-\_\-pref.\-cpp.
+
+
+
+References af, begin(), boundcond(), cleanlabs(), end(), A\-F\-::get\-\_\-arguments(), Grounded(), init\-D\-F\-S\-A\-F(), Symbolic\-Arguments\-Set\-::merge(), pref(), Preferred(), pref\-S\-A\-T(), A\-F\-::restrict\-To(), S\-C\-C\-S\-S\-E\-Q(), and A\-F\-::to\-String().
+
+\hypertarget{classPreferred_a934eaa21aa97fc2e50a74a2f77a9ba33}{\index{Preferred@{Preferred}!pref\-S\-A\-T@{pref\-S\-A\-T}}
+\index{pref\-S\-A\-T@{pref\-S\-A\-T}!Preferred@{Preferred}}
+\subsubsection[{pref\-S\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}void Preferred\-::pref\-S\-A\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-F} $\ast$}]{the\-\_\-af, }
+\item[{{\bf Set\-Arguments} $\ast$}]{the\-\_\-c}
+\end{DoxyParamCaption}
+)}}\label{classPreferred_a934eaa21aa97fc2e50a74a2f77a9ba33}
+
+
+Method to generate the \hyperlink{classPreferred}{Preferred} Extensions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-\_\-af} & The \hyperlink{classAF}{A\-F} on which calculate the extensions \\
+\hline
+\mbox{\tt in}  & {\em the\-\_\-c} & The subset of arguments to consider \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 293 of file Preferred.\-cpp.
+
+
+
+References af, S\-A\-T\-Formulae\-::append\-Or\-Clause(), Or\-Clause\-::append\-Variable(), Set\-Arguments\-::begin(), C, Set\-Arguments\-::cardinality(), cleanlabs(), S\-A\-T\-Formulae\-::clone(), Labelling\-::clone(), compute\-\_\-new\-\_\-pigreek(), Labelling\-::empty(), Set\-Arguments\-::end(), Argument\-::get\-Name(), Labelling\-::inargs(), satlab(), and Set\-Arguments\-::setminus().
+
+
+
+Referenced by pref().
+
+\hypertarget{classPreferred_a6c2181d87c45714ea90ee69eb233d093}{\index{Preferred@{Preferred}!satlab@{satlab}}
+\index{satlab@{satlab}!Preferred@{Preferred}}
+\subsubsection[{satlab}]{\setlength{\rightskip}{0pt plus 5cm}bool Preferred\-::satlab (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-A\-T\-Formulae}}]{sat, }
+\item[{{\bf Labelling} $\ast$}]{lab}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_a6c2181d87c45714ea90ee69eb233d093}
+
+
+Method for deriving a labelling from a S\-A\-T Formulae. 
+
+This method is a wrapper for a S\-A\-T Solver 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sat} & The \hyperlink{classSATFormulae}{S\-A\-T\-Formulae} as input \\
+\hline
+\mbox{\tt out}  & {\em sat} & The computed \hyperlink{classLabelling}{Labelling} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & {\ttfamily true} if a solution is found, {\ttfamily false} otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 233 of file Preferred.\-cpp.
+
+
+
+References Labelling\-::add\-\_\-label(), af, Set\-Arguments\-::cardinality(), A\-F\-::get\-Argument\-By\-Number(), Argument\-::get\-Name(), Labelling\-::inargs(), Labelling\-::lab\-\_\-in, Labelling\-::lab\-\_\-out, Labelling\-::lab\-\_\-undec, A\-F\-::num\-Args(), Labelling\-::outargs(), S\-A\-T\-Formulae\-::size(), S\-A\-T\-Formulae\-::to\-S\-S(), and Labelling\-::undecargs().
+
+
+
+Referenced by pref\-S\-A\-T().
+
+\hypertarget{classPreferred_a904892d7633a4ddbef1fb9cc84cf8a04}{\index{Preferred@{Preferred}!S\-C\-C\-Parenthood@{S\-C\-C\-Parenthood}}
+\index{S\-C\-C\-Parenthood@{S\-C\-C\-Parenthood}!Preferred@{Preferred}}
+\subsubsection[{S\-C\-C\-Parenthood}]{\setlength{\rightskip}{0pt plus 5cm}void Preferred\-::\-S\-C\-C\-Parenthood (
+\begin{DoxyParamCaption}
+\item[{list$<$ S\-C\-C $\ast$ $>$ $\ast$}]{S\-C\-C\-List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_a904892d7633a4ddbef1fb9cc84cf8a04}
+
+
+Function to determine the parenthood between S\-C\-Cs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\-C\-C} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file Preferred\-\_\-sccsseq.\-cpp.
+
+
+
+References af, begin(), end(), and Symbolic\-Arguments\-Set\-::is\-Empty().
+
+
+
+Referenced by S\-C\-C\-S\-S\-E\-Q().
+
+\hypertarget{classPreferred_af24ffe3288d46356340d5cf45e40248e}{\index{Preferred@{Preferred}!S\-C\-C\-S\-S\-E\-Q@{S\-C\-C\-S\-S\-E\-Q}}
+\index{S\-C\-C\-S\-S\-E\-Q@{S\-C\-C\-S\-S\-E\-Q}!Preferred@{Preferred}}
+\subsubsection[{S\-C\-C\-S\-S\-E\-Q}]{\setlength{\rightskip}{0pt plus 5cm}list$<$ S\-C\-C $\ast$ $>$ Preferred\-::\-S\-C\-C\-S\-S\-E\-Q (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_af24ffe3288d46356340d5cf45e40248e}
+
+
+S\-C\-C sequence finder. 
+
+\begin{DoxyReturn}{Returns}
+A list containing the sets of Strongly Connected Components found by the algorithm 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file Preferred\-\_\-sccsseq.\-cpp.
+
+
+
+References S\-C\-C\-Parenthood(), and Tarjan\-Alg().
+
+
+
+Referenced by pref().
+
+\hypertarget{classPreferred_a2647e7beb57edc3b9b8c5966a69b5f81}{\index{Preferred@{Preferred}!search\-Argument@{search\-Argument}}
+\index{search\-Argument@{search\-Argument}!Preferred@{Preferred}}
+\subsubsection[{search\-Argument}]{\setlength{\rightskip}{0pt plus 5cm}Preferred\-::\-D\-F\-S\-Node $\ast$ Preferred\-::search\-Argument (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_a2647e7beb57edc3b9b8c5966a69b5f81}
+
+
+Searches the D\-F\-S\-Node corresponding to the given \hyperlink{classArgument}{Argument} in D\-F\-S\-A\-F. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The \hyperlink{classArgument}{Argument} to search for \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 193 of file Preferred\-\_\-sccsseq.\-cpp.
+
+
+
+Referenced by Tarjan\-Alg().
+
+\hypertarget{classPreferred_a9a619edb7db3960d8f86c92538488a33}{\index{Preferred@{Preferred}!stack\-Search@{stack\-Search}}
+\index{stack\-Search@{stack\-Search}!Preferred@{Preferred}}
+\subsubsection[{stack\-Search}]{\setlength{\rightskip}{0pt plus 5cm}bool Preferred\-::stack\-Search (
+\begin{DoxyParamCaption}
+\item[{stack$<$ D\-F\-S\-Node $\ast$ $>$}]{s, }
+\item[{D\-F\-S\-Node $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_a9a619edb7db3960d8f86c92538488a33}
+
+
+Searches for an element in a stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The stack to search in \\
+\hline
+{\em node} & The D\-F\-S\-Node to search for \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 164 of file Preferred\-\_\-sccsseq.\-cpp.
+
+
+
+Referenced by Tarjan\-Alg().
+
+\hypertarget{classPreferred_ab08f6c2c7e23bf3a0f2f643cc13513af}{\index{Preferred@{Preferred}!Tarjan\-Alg@{Tarjan\-Alg}}
+\index{Tarjan\-Alg@{Tarjan\-Alg}!Preferred@{Preferred}}
+\subsubsection[{Tarjan\-Alg}]{\setlength{\rightskip}{0pt plus 5cm}int Preferred\-::\-Tarjan\-Alg (
+\begin{DoxyParamCaption}
+\item[{D\-F\-S\-Node $\ast$}]{node, }
+\item[{list$<$ S\-C\-C $\ast$ $>$ $\ast$}]{S\-C\-C\-List, }
+\item[{stack$<$ D\-F\-S\-Node $\ast$ $>$ $\ast$}]{s, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classPreferred_ab08f6c2c7e23bf3a0f2f643cc13513af}
+
+
+Tarjan Algorithm for S\-C\-C determination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The Node for which the argument is executed \\
+\hline
+{\em S\-C\-C} & The list of S\-C\-Cs found \\
+\hline
+{\em s} & A temporal stack containing the actual S\-C\-C \\
+\hline
+{\em index} & An integer containing the level actually visited \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated index, containing the last level visited. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Preferred\-\_\-sccsseq.\-cpp.
+
+
+
+References begin(), end(), search\-Argument(), and stack\-Search().
+
+
+
+Referenced by S\-C\-C\-S\-S\-E\-Q().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/Preferred.\-h\item 
+src/\hyperlink{Preferred_8cpp}{Preferred.\-cpp}\item 
+src/\hyperlink{Preferred__boundcond_8cpp}{Preferred\-\_\-boundcond.\-cpp}\item 
+src/\hyperlink{Preferred__Grounded_8cpp}{Preferred\-\_\-\-Grounded.\-cpp}\item 
+src/\hyperlink{Preferred__pref_8cpp}{Preferred\-\_\-pref.\-cpp}\item 
+src/\hyperlink{Preferred__sccsseq_8cpp}{Preferred\-\_\-sccsseq.\-cpp}\end{DoxyCompactItemize}

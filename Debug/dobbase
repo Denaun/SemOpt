@@ -1,0 +1,164 @@
+Debug on.
+Input file: test-input/example1.dl
+Entering pref
+AF initialized. Showing structure
+Argument a1	attacks a2, a5, a7
+		attacked by none
+Argument a10	attacks a11
+		attacked by a12
+Argument a11	attacks a12
+		attacked by a10
+Argument a12	attacks a10, a9
+		attacked by a11
+Argument a13	attacks a14
+		attacked by a14, a8
+Argument a14	attacks a13
+		attacked by a13, a4
+Argument a2	attacks a3
+		attacked by a1, a3
+Argument a3	attacks a2, a4
+		attacked by a2
+Argument a4	attacks a14
+		attacked by a3
+Argument a5	attacks a6
+		attacked by a1
+Argument a6	attacks a8
+		attacked by a5, a7
+Argument a7	attacks a6
+		attacked by a1, a9
+Argument a8	attacks a13, a9
+		attacked by a6
+Argument a9	attacks a7
+		attacked by a12, a8
+
+Entering Grounded
+	New cycle
+		Added a1
+	New cycle
+		Added a3
+		Added a6
+	New cycle
+		No grounded extension found.
+		Final I: {a10 a11 a12 a13 a14 a9}
+	e: {a1 a3 a6}
+	I: {a10 a11 a12 a13 a14 a9}
+
+Initializing DFSAF structure
+	DFSAF structure initialized
+Entering SCCSSEQ.
+	Calling TarjanAlg for a10
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a11
+		Looking at a11
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a12
+		Looking at a12
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a10
+		Looking at a10
+		Searching in stack for a10
+			Found in stack.
+		a12's lowlink: 0
+		Searching DFSNode corresponding to Argument a9
+		Looking at a9
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+	--- Building SCC ---
+	Finished TarjanAlg on node a9
+		a12's lowlink: 0
+	Finished TarjanAlg on node a12
+		a11's lowlink: 0
+	Finished TarjanAlg on node a11
+		a10's lowlink: 0
+	--- Building SCC ---
+	Finished TarjanAlg on node a10
+	Calling TarjanAlg for a13
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a14
+		Looking at a14
+			Not yet visited. Recurring
+	Entering TarjanAlg.
+		Searching DFSNode corresponding to Argument a13
+		Looking at a13
+		Searching in stack for a13
+			Found in stack.
+		a14's lowlink: 4
+	Finished TarjanAlg on node a14
+		a13's lowlink: 4
+	--- Building SCC ---
+	Finished TarjanAlg on node a13
+	SCC: {a13 a14}
+	SCC: {a10 a11 a12}
+	SCC: {a9}
+	Working on {a13 a14}
+		Going to call boundcond.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a13 a14}
+		Nodes not satisfying the first condition: {}
+	Determined I: {a13 a14}
+		O: {}
+		I: {a13 a14}
+		Going to call prefSAT.
+			Calling prefSAT.
+			Found {a13}
+				Created: {a1 a13 a3 a6}
+			Found {a14}
+				Created: {a1 a14 a3 a6}
+	Working on {a10 a11 a12}
+		Going to call boundcond.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a10 a11 a12}
+		Nodes not satisfying the first condition: {}
+	Determined I: {a10 a11 a12}
+		O: {}
+		I: {a10 a11 a12}
+		Going to call prefSAT.
+			Calling prefSAT.
+			Found {}
+				Created: {a1 a13 a3 a6}
+		Going to call boundcond.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a10 a11 a12}
+		Nodes not satisfying the first condition: {}
+	Determined I: {a10 a11 a12}
+		O: {}
+		I: {a10 a11 a12}
+		Going to call prefSAT.
+			Calling prefSAT.
+			Found {}
+				Created: {a1 a14 a3 a6}
+	Working on {a9}
+		Going to call boundcond.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a9}
+		Nodes not satisfying the first condition: {a9}
+		Not every attacker of a9 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+			Found {}
+				Created: {a1 a13 a3 a6}
+		Going to call boundcond.
+Entering boundcond
+	Determined O: {}
+	Determining I from: {a9}
+		Nodes not satisfying the first condition: {a9}
+		Not every attacker of a9 is attacked by e.
+	Determined I: {}
+		O: {}
+		I: {}
+		Going to call prefSAT.
+			Calling prefSAT.
+			Found {}
+				Created: {a1 a14 a3 a6}
+Actual labellings:
+	{a1 a13 a3 a6}
+	{a1 a14 a3 a6}

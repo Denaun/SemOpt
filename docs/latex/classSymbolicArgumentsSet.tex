@@ -1,0 +1,516 @@
+\hypertarget{classSymbolicArgumentsSet}{\section{Symbolic\-Arguments\-Set Class Reference}
+\label{classSymbolicArgumentsSet}\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}}
+}
+
+
+Class representing a set of Arguments in a symbolical way.  
+
+
+
+
+{\ttfamily \#include $<$Symbolic\-Arguments\-Set.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSymbolicArgumentsSet_ab0973eb5562e3e3f9e396af5e732ccf0}{\hyperlink{classSymbolicArgumentsSet_ab0973eb5562e3e3f9e396af5e732ccf0}{Symbolic\-Arguments\-Set} ()}\label{classSymbolicArgumentsSet_ab0973eb5562e3e3f9e396af5e732ccf0}
+
+\begin{DoxyCompactList}\small\item\em Simple constructor. \end{DoxyCompactList}\item 
+\hyperlink{classSymbolicArgumentsSet_a7a7604c19e464d3e15886ee6bdf302bf}{Symbolic\-Arguments\-Set} (const \hyperlink{classSetArguments}{Set\-Arguments})
+\begin{DoxyCompactList}\small\item\em Constructor from a real set of objects. \end{DoxyCompactList}\item 
+\hyperlink{classSymbolicArgumentsSet_a0cc84042b81c4c2f0f955f4482eca606}{Symbolic\-Arguments\-Set} (const \hyperlink{classLabelling}{Labelling})
+\begin{DoxyCompactList}\small\item\em Constructor from a \hyperlink{classLabelling}{Labelling}. \end{DoxyCompactList}\item 
+iterator \hyperlink{classSymbolicArgumentsSet_a59a99619c5b304c6f01e132934321c67}{begin} () const 
+\begin{DoxyCompactList}\small\item\em Iterator to the begin of this set. \end{DoxyCompactList}\item 
+iterator \hyperlink{classSymbolicArgumentsSet_abd40271284aa0d02770f2b057e61a303}{end} () const 
+\begin{DoxyCompactList}\small\item\em Iterator to the end of this set. \end{DoxyCompactList}\item 
+bool \hyperlink{classSymbolicArgumentsSet_a83e4dcc71db80e28af62724b64c46662}{is\-Empty} () const 
+\begin{DoxyCompactList}\small\item\em Checks whether or not this set is empty. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classSymbolicArgumentsSet_ae3bc682d1a405137041fff1e60f5031d}{size} () const 
+\begin{DoxyCompactList}\small\item\em Returns the cardinality of this set. \end{DoxyCompactList}\item 
+bool \hyperlink{classSymbolicArgumentsSet_a2134e56e21ea277d3dab21433da1962a}{exists} (const std\-::string) const 
+\begin{DoxyCompactList}\small\item\em Checks whether an argument exists in this set. \end{DoxyCompactList}\item 
+\hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} \hyperlink{classSymbolicArgumentsSet_a7cc8a64f0bd474b133e4481bfc7134ee}{get\-Attacks} (const \hyperlink{classAF}{A\-F} $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Returns a new set containing the attack of this set. \end{DoxyCompactList}\item 
+\hyperlink{classSetArguments}{Set\-Arguments} \hyperlink{classSymbolicArgumentsSet_ace624bdb96d794cd432c49c23eec28f3}{to\-Set\-Arguments} (const \hyperlink{classAF}{A\-F} $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Converts this set in a set containing the real arguments. \end{DoxyCompactList}\item 
+\hyperlink{classLabelling}{Labelling} \hyperlink{classSymbolicArgumentsSet_aae3a59c875c3f91e2879b9a8d67546d8}{to\-Labelling} (const \hyperlink{classAF}{A\-F} $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Converts this set in a \hyperlink{classLabelling}{Labelling} containing the real arguments marked as {\ttfamily in}. \end{DoxyCompactList}\item 
+void \hyperlink{classSymbolicArgumentsSet_a70bbd33b7e2f7da410890094a02d75b7}{add} (const std\-::string)
+\begin{DoxyCompactList}\small\item\em Adds an element to this set. \end{DoxyCompactList}\item 
+void \hyperlink{classSymbolicArgumentsSet_a480ef00aa7796e49c212f28633aa1f1c}{remove} (const std\-::string)
+\begin{DoxyCompactList}\small\item\em Removes an element from this set. \end{DoxyCompactList}\item 
+\hypertarget{classSymbolicArgumentsSet_a3e7efb6f37c1998153411a1cc22438e3}{void \hyperlink{classSymbolicArgumentsSet_a3e7efb6f37c1998153411a1cc22438e3}{clear} ()}\label{classSymbolicArgumentsSet_a3e7efb6f37c1998153411a1cc22438e3}
+
+\begin{DoxyCompactList}\small\item\em Removes every element from this set. \end{DoxyCompactList}\item 
+\hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} \hyperlink{classSymbolicArgumentsSet_af56c54ab11f50f779bc9db1be185ae23}{intersect} (const \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Calculates the intersection between the elements of this set and the other. \end{DoxyCompactList}\item 
+\hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} \hyperlink{classSymbolicArgumentsSet_a3c525d48917ac7fd7717b166cb15c9b7}{minus} (const \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Calculates the difference between the elements of this set and the other. \end{DoxyCompactList}\item 
+\hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} \hyperlink{classSymbolicArgumentsSet_a4a20118a7831846281b7419e43b5446d}{merge} (const \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Calculates the union between the elements of this set and the other. \end{DoxyCompactList}\item 
+\hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} \& \hyperlink{classSymbolicArgumentsSet_a5a666e499b5d78bd85f0ec64c6ba1d20}{operator=} (const \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} \&)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classSymbolicArgumentsSet_a093d415d52b21476c998a4a130a30fc7}{operator==} (const \hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} \&) const 
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a set of Arguments in a symbolical way. 
+
+(i.\-e. managing just the names of the arguments).
+
+\begin{DoxyAuthor}{Author}
+Maurizio Zucchelli 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\-1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2013-\/07-\/08 
+\end{DoxyDate}
+
+
+Definition at line 26 of file Symbolic\-Arguments\-Set.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSymbolicArgumentsSet_a7a7604c19e464d3e15886ee6bdf302bf}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}}
+\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{Symbolic\-Arguments\-Set}]{\setlength{\rightskip}{0pt plus 5cm}Symbolic\-Arguments\-Set\-::\-Symbolic\-Arguments\-Set (
+\begin{DoxyParamCaption}
+\item[{const {\bf Set\-Arguments}}]{source}
+\end{DoxyParamCaption}
+)}}\label{classSymbolicArgumentsSet_a7a7604c19e464d3e15886ee6bdf302bf}
+
+
+Constructor from a real set of objects. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & The set to be represented symbolically. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+References Set\-Arguments\-::begin(), and Set\-Arguments\-::end().
+
+\hypertarget{classSymbolicArgumentsSet_a0cc84042b81c4c2f0f955f4482eca606}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}}
+\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{Symbolic\-Arguments\-Set}]{\setlength{\rightskip}{0pt plus 5cm}Symbolic\-Arguments\-Set\-::\-Symbolic\-Arguments\-Set (
+\begin{DoxyParamCaption}
+\item[{const {\bf Labelling}}]{source}
+\end{DoxyParamCaption}
+)}}\label{classSymbolicArgumentsSet_a0cc84042b81c4c2f0f955f4482eca606}
+
+
+Constructor from a \hyperlink{classLabelling}{Labelling}. 
+
+The resulting object will contain only the Arguments labelled as {\ttfamily in}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & The \hyperlink{classLabelling}{Labelling} to be represented symbolically. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+References Set\-Arguments\-::begin(), Set\-Arguments\-::end(), and Labelling\-::inargs().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSymbolicArgumentsSet_a70bbd33b7e2f7da410890094a02d75b7}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!add@{add}}
+\index{add@{add}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}void Symbolic\-Arguments\-Set\-::add (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{}
+\end{DoxyParamCaption}
+)}}\label{classSymbolicArgumentsSet_a70bbd33b7e2f7da410890094a02d75b7}
+
+
+Adds an element to this set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em element} & The name of the element to be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 181 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+Referenced by Preferred\-::boundcond(), Preferred\-::\-Grounded(), intersect(), and merge().
+
+\hypertarget{classSymbolicArgumentsSet_a59a99619c5b304c6f01e132934321c67}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!begin@{begin}}
+\index{begin@{begin}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}Symbolic\-Arguments\-Set\-::iterator Symbolic\-Arguments\-Set\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_a59a99619c5b304c6f01e132934321c67}
+
+
+Iterator to the begin of this set. 
+
+\begin{DoxyReturn}{Returns}
+An iterator pointing at the first of the elements in this set. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+Referenced by Preferred\-::boundcond(), and Preferred\-::\-Grounded().
+
+\hypertarget{classSymbolicArgumentsSet_abd40271284aa0d02770f2b057e61a303}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!end@{end}}
+\index{end@{end}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}Symbolic\-Arguments\-Set\-::iterator Symbolic\-Arguments\-Set\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_abd40271284aa0d02770f2b057e61a303}
+
+
+Iterator to the end of this set. 
+
+\begin{DoxyReturn}{Returns}
+An iterator pointing at the last of the elements in this set. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+Referenced by Preferred\-::boundcond(), and Preferred\-::\-Grounded().
+
+\hypertarget{classSymbolicArgumentsSet_a2134e56e21ea277d3dab21433da1962a}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!exists@{exists}}
+\index{exists@{exists}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}bool Symbolic\-Arguments\-Set\-::exists (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_a2134e56e21ea277d3dab21433da1962a}
+
+
+Checks whether an argument exists in this set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em element} & The element to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the element belongs to the set, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+Referenced by Preferred\-::\-Grounded(), intersect(), minus(), and A\-F\-::restrict\-To().
+
+\hypertarget{classSymbolicArgumentsSet_a7cc8a64f0bd474b133e4481bfc7134ee}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!get\-Attacks@{get\-Attacks}}
+\index{get\-Attacks@{get\-Attacks}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{get\-Attacks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbolic\-Arguments\-Set} Symbolic\-Arguments\-Set\-::get\-Attacks (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\-F} $\ast$}]{the\-A\-F}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_a7cc8a64f0bd474b133e4481bfc7134ee}
+
+
+Returns a new set containing the attack of this set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-A\-F} & The \hyperlink{classAF}{A\-F} containing the description of the attacks of this set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A symbolic representation of the attacks of this set. 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+Referenced by Preferred\-::boundcond().
+
+\hypertarget{classSymbolicArgumentsSet_af56c54ab11f50f779bc9db1be185ae23}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!intersect@{intersect}}
+\index{intersect@{intersect}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbolic\-Arguments\-Set} Symbolic\-Arguments\-Set\-::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbolic\-Arguments\-Set} $\ast$}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_af56c54ab11f50f779bc9db1be185ae23}
+
+
+Calculates the intersection between the elements of this set and the other. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other operand.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set containing the elements belonging to both the sets. 
+\end{DoxyReturn}
+
+
+Definition at line 213 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+References add(), and exists().
+
+
+
+Referenced by Preferred\-::boundcond().
+
+\hypertarget{classSymbolicArgumentsSet_a83e4dcc71db80e28af62724b64c46662}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Symbolic\-Arguments\-Set\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_a83e4dcc71db80e28af62724b64c46662}
+
+
+Checks whether or not this set is empty. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the set is empty, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+Referenced by Preferred\-::boundcond(), Preferred\-::\-Grounded(), and Preferred\-::\-S\-C\-C\-Parenthood().
+
+\hypertarget{classSymbolicArgumentsSet_a4a20118a7831846281b7419e43b5446d}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!merge@{merge}}
+\index{merge@{merge}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{merge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbolic\-Arguments\-Set} Symbolic\-Arguments\-Set\-::merge (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbolic\-Arguments\-Set} $\ast$}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_a4a20118a7831846281b7419e43b5446d}
+
+
+Calculates the union between the elements of this set and the other. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other operand.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set containing the elements belonging to at least one of the sets. 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+References add().
+
+
+
+Referenced by Preferred\-::boundcond(), Preferred\-::\-Grounded(), and Preferred\-::pref().
+
+\hypertarget{classSymbolicArgumentsSet_a3c525d48917ac7fd7717b166cb15c9b7}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!minus@{minus}}
+\index{minus@{minus}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{minus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbolic\-Arguments\-Set} Symbolic\-Arguments\-Set\-::minus (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbolic\-Arguments\-Set} $\ast$}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_a3c525d48917ac7fd7717b166cb15c9b7}
+
+
+Calculates the difference between the elements of this set and the other. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other operand.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set containing the elements belonging to this set but not the other. 
+\end{DoxyReturn}
+
+
+Definition at line 231 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+References exists(), and remove().
+
+
+
+Referenced by Preferred\-::boundcond(), and Preferred\-::\-Grounded().
+
+\hypertarget{classSymbolicArgumentsSet_a5a666e499b5d78bd85f0ec64c6ba1d20}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!operator=@{operator=}}
+\index{operator=@{operator=}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbolic\-Arguments\-Set} \& Symbolic\-Arguments\-Set\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbolic\-Arguments\-Set} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classSymbolicArgumentsSet_a5a666e499b5d78bd85f0ec64c6ba1d20}
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The set source of the assignment.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to this set, now a copy of the other one. 
+\end{DoxyReturn}
+
+
+Definition at line 266 of file Symbolic\-Arguments\-Set.\-cpp.
+
+\hypertarget{classSymbolicArgumentsSet_a093d415d52b21476c998a4a130a30fc7}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!operator==@{operator==}}
+\index{operator==@{operator==}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Symbolic\-Arguments\-Set\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbolic\-Arguments\-Set} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_a093d415d52b21476c998a4a130a30fc7}
+
+
+Equality operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other operand.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the two sets have the same elements, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 280 of file Symbolic\-Arguments\-Set.\-cpp.
+
+\hypertarget{classSymbolicArgumentsSet_a480ef00aa7796e49c212f28633aa1f1c}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!remove@{remove}}
+\index{remove@{remove}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void Symbolic\-Arguments\-Set\-::remove (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{}
+\end{DoxyParamCaption}
+)}}\label{classSymbolicArgumentsSet_a480ef00aa7796e49c212f28633aa1f1c}
+
+
+Removes an element from this set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em element} & The name of the element to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 191 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+Referenced by minus().
+
+\hypertarget{classSymbolicArgumentsSet_ae3bc682d1a405137041fff1e60f5031d}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!size@{size}}
+\index{size@{size}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t Symbolic\-Arguments\-Set\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_ae3bc682d1a405137041fff1e60f5031d}
+
+
+Returns the cardinality of this set. 
+
+\begin{DoxyReturn}{Returns}
+The number of elements in this set. 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Symbolic\-Arguments\-Set.\-cpp.
+
+\hypertarget{classSymbolicArgumentsSet_aae3a59c875c3f91e2879b9a8d67546d8}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!to\-Labelling@{to\-Labelling}}
+\index{to\-Labelling@{to\-Labelling}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{to\-Labelling}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Labelling} Symbolic\-Arguments\-Set\-::to\-Labelling (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\-F} $\ast$}]{the\-A\-F}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_aae3a59c875c3f91e2879b9a8d67546d8}
+
+
+Converts this set in a \hyperlink{classLabelling}{Labelling} containing the real arguments marked as {\ttfamily in}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-A\-F} & The \hyperlink{classAF}{A\-F} with the real elements of this set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{classLabelling}{Labelling} containing the elements of the \hyperlink{classAF}{A\-F} indexed by this set marked as {\ttfamily in}. 
+\end{DoxyReturn}
+
+
+Definition at line 155 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+References Labelling\-::add\-\_\-label(), and Labelling\-::lab\-\_\-in.
+
+\hypertarget{classSymbolicArgumentsSet_ace624bdb96d794cd432c49c23eec28f3}{\index{Symbolic\-Arguments\-Set@{Symbolic\-Arguments\-Set}!to\-Set\-Arguments@{to\-Set\-Arguments}}
+\index{to\-Set\-Arguments@{to\-Set\-Arguments}!SymbolicArgumentsSet@{Symbolic\-Arguments\-Set}}
+\subsubsection[{to\-Set\-Arguments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments} Symbolic\-Arguments\-Set\-::to\-Set\-Arguments (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\-F} $\ast$}]{the\-A\-F}
+\end{DoxyParamCaption}
+) const}}\label{classSymbolicArgumentsSet_ace624bdb96d794cd432c49c23eec28f3}
+
+
+Converts this set in a set containing the real arguments. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-A\-F} & The \hyperlink{classAF}{A\-F} with the real elements of this set.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set containing the elements of the \hyperlink{classAF}{A\-F} indexed by this set. 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file Symbolic\-Arguments\-Set.\-cpp.
+
+
+
+References Set\-Arguments\-::add\-\_\-\-Argument().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{SymbolicArgumentsSet_8h}{Symbolic\-Arguments\-Set.\-h}\item 
+src/\hyperlink{SymbolicArgumentsSet_8cpp}{Symbolic\-Arguments\-Set.\-cpp}\end{DoxyCompactItemize}

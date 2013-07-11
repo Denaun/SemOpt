@@ -1,0 +1,285 @@
+\hypertarget{classLabelling}{\section{Labelling Class Reference}
+\label{classLabelling}\index{Labelling@{Labelling}}
+}
+
+
+Class representing a single labelling assignment.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLabelling_a1b39efa4639854ab11d540037e24c425}{\hyperlink{classLabelling_a1b39efa4639854ab11d540037e24c425}{Labelling} ()}\label{classLabelling_a1b39efa4639854ab11d540037e24c425}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classLabelling_a79e25a77b942e8395431fceceea2bb63}{add\-\_\-label} (\hyperlink{classArgument}{Argument} $\ast$, Label)
+\begin{DoxyCompactList}\small\item\em Add a new label to this set of labelling. \end{DoxyCompactList}\item 
+bool \hyperlink{classLabelling_a7d3ce55a661689eaa83408d4d9424117}{exists\-\_\-argument\-\_\-labelling} (\hyperlink{classArgument}{Argument} $\ast$)
+\begin{DoxyCompactList}\small\item\em Check whether an argument is in this labelling or not. \end{DoxyCompactList}\item 
+Label \hyperlink{classLabelling_a37bb1885f6412e0a2c66bde384413e43}{get\-\_\-label} (\hyperlink{classArgument}{Argument} $\ast$)
+\begin{DoxyCompactList}\small\item\em Returns the label of a given argument. \end{DoxyCompactList}\item 
+\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classLabelling_af8aa0d976a665c1a9ebbdb801d0a867d}{inargs} ()
+\begin{DoxyCompactList}\small\item\em Returns the set of arguments labelled as {\ttfamily in} \end{DoxyCompactList}\item 
+\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classLabelling_afc828a13d1a3e406f56fa1f212b4824d}{outargs} ()
+\begin{DoxyCompactList}\small\item\em Returns the set of arguments labelled as {\ttfamily out} \end{DoxyCompactList}\item 
+\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classLabelling_aedf4e3c3b0150317e5350945f088a424}{undecargs} ()
+\begin{DoxyCompactList}\small\item\em Returns the set of arguments labelled as {\ttfamily undec} \end{DoxyCompactList}\item 
+bool \hyperlink{classLabelling_ac717b73662047c2ab68e0828ff3dc54e}{empty} ()
+\begin{DoxyCompactList}\small\item\em Check whether or not this labelling is empty. \end{DoxyCompactList}\item 
+void \hyperlink{classLabelling_a600661b61ebd7f0da5faea3fdef97b6c}{clone} (\hyperlink{classLabelling}{Labelling} $\ast$)
+\begin{DoxyCompactList}\small\item\em Clone this labelling into a new one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classLabelling_aaf7f367dd2253b297cad3c622a0d2f49}{static const Label \hyperlink{classLabelling_aaf7f367dd2253b297cad3c622a0d2f49}{lab\-\_\-in} = \char`\"{}in\char`\"{}}\label{classLabelling_aaf7f367dd2253b297cad3c622a0d2f49}
+
+\begin{DoxyCompactList}\small\item\em Label representing an {\ttfamily in} argument. \end{DoxyCompactList}\item 
+\hypertarget{classLabelling_afed946f9be5cb9f3d60ca37e4baf45ba}{static const Label \hyperlink{classLabelling_afed946f9be5cb9f3d60ca37e4baf45ba}{lab\-\_\-out} = \char`\"{}out\char`\"{}}\label{classLabelling_afed946f9be5cb9f3d60ca37e4baf45ba}
+
+\begin{DoxyCompactList}\small\item\em Label representing an {\ttfamily out} argument. \end{DoxyCompactList}\item 
+\hypertarget{classLabelling_a4ae2c985855b2a4c084618b6493b0d92}{static const Label \hyperlink{classLabelling_a4ae2c985855b2a4c084618b6493b0d92}{lab\-\_\-undec} = \char`\"{}undec\char`\"{}}\label{classLabelling_a4ae2c985855b2a4c084618b6493b0d92}
+
+\begin{DoxyCompactList}\small\item\em Label representing an {\ttfamily undec} argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class representing a single labelling assignment. 
+
+\begin{DoxyAuthor}{Author}
+Federico Cerutti \href{mailto:federico.cerutti@acm.org}{\tt federico.\-cerutti@acm.\-org} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License v2 
+\end{DoxyCopyright}
+
+
+Definition at line 14 of file Labelling.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classLabelling_a79e25a77b942e8395431fceceea2bb63}{\index{Labelling@{Labelling}!add\-\_\-label@{add\-\_\-label}}
+\index{add\-\_\-label@{add\-\_\-label}!Labelling@{Labelling}}
+\subsubsection[{add\-\_\-label}]{\setlength{\rightskip}{0pt plus 5cm}void Labelling\-::add\-\_\-label (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg, }
+\item[{Label}]{l}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_a79e25a77b942e8395431fceceea2bb63}
+
+
+Add a new label to this set of labelling. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & The argument to which this labelling applies \\
+\hline
+\mbox{\tt in}  & {\em l} & The label. Valid values for are\-:
+\begin{DoxyItemize}
+\item \hyperlink{classLabelling_aaf7f367dd2253b297cad3c622a0d2f49}{Labelling\-::lab\-\_\-in}
+\item \hyperlink{classLabelling_afed946f9be5cb9f3d60ca37e4baf45ba}{Labelling\-::lab\-\_\-out}
+\item \hyperlink{classLabelling_a4ae2c985855b2a4c084618b6493b0d92}{Labelling\-::lab\-\_\-undec} 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file Labelling.\-cpp.
+
+
+
+References Set\-Arguments\-::add\-\_\-\-Argument(), lab\-\_\-in, lab\-\_\-out, and lab\-\_\-undec.
+
+
+
+Referenced by clone(), Preferred\-::satlab(), and Symbolic\-Arguments\-Set\-::to\-Labelling().
+
+\hypertarget{classLabelling_a600661b61ebd7f0da5faea3fdef97b6c}{\index{Labelling@{Labelling}!clone@{clone}}
+\index{clone@{clone}!Labelling@{Labelling}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}void Labelling\-::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Labelling} $\ast$}]{other}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_a600661b61ebd7f0da5faea3fdef97b6c}
+
+
+Clone this labelling into a new one. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em other} & A pointer to a \hyperlink{classLabelling}{Labelling} which will be the clone of this one \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 121 of file Labelling.\-cpp.
+
+
+
+References add\-\_\-label().
+
+
+
+Referenced by Preferred\-::pref\-S\-A\-T().
+
+\hypertarget{classLabelling_ac717b73662047c2ab68e0828ff3dc54e}{\index{Labelling@{Labelling}!empty@{empty}}
+\index{empty@{empty}!Labelling@{Labelling}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Labelling\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_ac717b73662047c2ab68e0828ff3dc54e}
+
+
+Check whether or not this labelling is empty. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 111 of file Labelling.\-cpp.
+
+
+
+References Set\-Arguments\-::empty().
+
+
+
+Referenced by Preferred\-::pref\-S\-A\-T().
+
+\hypertarget{classLabelling_a7d3ce55a661689eaa83408d4d9424117}{\index{Labelling@{Labelling}!exists\-\_\-argument\-\_\-labelling@{exists\-\_\-argument\-\_\-labelling}}
+\index{exists\-\_\-argument\-\_\-labelling@{exists\-\_\-argument\-\_\-labelling}!Labelling@{Labelling}}
+\subsubsection[{exists\-\_\-argument\-\_\-labelling}]{\setlength{\rightskip}{0pt plus 5cm}bool Labelling\-::exists\-\_\-argument\-\_\-labelling (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_a7d3ce55a661689eaa83408d4d9424117}
+
+
+Check whether an argument is in this labelling or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & A pointer to an \hyperlink{classArgument}{Argument} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 65 of file Labelling.\-cpp.
+
+\hypertarget{classLabelling_a37bb1885f6412e0a2c66bde384413e43}{\index{Labelling@{Labelling}!get\-\_\-label@{get\-\_\-label}}
+\index{get\-\_\-label@{get\-\_\-label}!Labelling@{Labelling}}
+\subsubsection[{get\-\_\-label}]{\setlength{\rightskip}{0pt plus 5cm}Label Labelling\-::get\-\_\-label (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_a37bb1885f6412e0a2c66bde384413e43}
+
+
+Returns the label of a given argument. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & A pointer to an argument \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Label} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 75 of file Labelling.\-cpp.
+
+\hypertarget{classLabelling_af8aa0d976a665c1a9ebbdb801d0a867d}{\index{Labelling@{Labelling}!inargs@{inargs}}
+\index{inargs@{inargs}!Labelling@{Labelling}}
+\subsubsection[{inargs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments} $\ast$ Labelling\-::inargs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_af8aa0d976a665c1a9ebbdb801d0a867d}
+
+
+Returns the set of arguments labelled as {\ttfamily in} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classSetArguments}{Set\-Arguments}} & $\ast$ \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 84 of file Labelling.\-cpp.
+
+
+
+Referenced by Preferred\-::pref\-S\-A\-T(), Preferred\-::satlab(), and Symbolic\-Arguments\-Set\-::\-Symbolic\-Arguments\-Set().
+
+\hypertarget{classLabelling_afc828a13d1a3e406f56fa1f212b4824d}{\index{Labelling@{Labelling}!outargs@{outargs}}
+\index{outargs@{outargs}!Labelling@{Labelling}}
+\subsubsection[{outargs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments} $\ast$ Labelling\-::outargs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_afc828a13d1a3e406f56fa1f212b4824d}
+
+
+Returns the set of arguments labelled as {\ttfamily out} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classSetArguments}{Set\-Arguments}} & $\ast$ \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 93 of file Labelling.\-cpp.
+
+
+
+Referenced by Preferred\-::satlab().
+
+\hypertarget{classLabelling_aedf4e3c3b0150317e5350945f088a424}{\index{Labelling@{Labelling}!undecargs@{undecargs}}
+\index{undecargs@{undecargs}!Labelling@{Labelling}}
+\subsubsection[{undecargs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments} $\ast$ Labelling\-::undecargs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLabelling_aedf4e3c3b0150317e5350945f088a424}
+
+
+Returns the set of arguments labelled as {\ttfamily undec} 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classSetArguments}{Set\-Arguments}} & $\ast$ \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 102 of file Labelling.\-cpp.
+
+
+
+Referenced by Preferred\-::satlab().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/Labelling.\-h\item 
+src/\hyperlink{Labelling_8cpp}{Labelling.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,298 @@
+\hypertarget{classAF}{\section{A\-F Class Reference}
+\label{classAF}\index{A\-F@{A\-F}}
+}
+
+
+Class encompassing an Argumentation Framework.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAF_ad40517371141b07b06a072d3365bb6de}{\hyperlink{classAF_ad40517371141b07b06a072d3365bb6de}{A\-F} ()}\label{classAF_ad40517371141b07b06a072d3365bb6de}
+
+\begin{DoxyCompactList}\small\item\em Simple constructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classAF_a40b85b5c4cb3d96273dd0becacad1a79}{read\-File} (string file)
+\begin{DoxyCompactList}\small\item\em Method for parsing a A\-S\-P\-A\-R\-T\-I\-X compliant file. \end{DoxyCompactList}\item 
+int \hyperlink{classAF_a48e30f0573d51a9995093644bb19bb33}{num\-Args} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of arguments. \end{DoxyCompactList}\item 
+\hyperlink{classArgument}{Argument} $\ast$ \hyperlink{classAF_ab2eccb345f0ebfc6fc2b5cb9f456651b}{get\-Argument\-By\-Name} (string)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the \hyperlink{classArgument}{Argument} whose name is given as parameter. \end{DoxyCompactList}\item 
+\hyperlink{classArgument}{Argument} $\ast$ \hyperlink{classAF_a370edb6cf152935b65e848d1ae209546}{get\-Argument\-By\-Number} (int position)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the \hyperlink{classArgument}{Argument} whose identification number is given as parameter. \end{DoxyCompactList}\item 
+\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classAF_ac415a440c526e9a06a938544503fe741}{get\-\_\-arguments} () const 
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the set of arguments. \end{DoxyCompactList}\item 
+void \hyperlink{classAF_a4cedca2ce81ac1a4aa0be5931dce4a51}{restrict\-To} (\hyperlink{classSymbolicArgumentsSet}{Symbolic\-Arguments\-Set} $\ast$, \hyperlink{classAF}{A\-F} $\ast$)
+\begin{DoxyCompactList}\small\item\em Creates a copy of the Framework containing only the selected nodes and their relative non-\/suspended arcs. \end{DoxyCompactList}\item 
+\hypertarget{classAF_afb49c1335663b94a968f553eefc11f95}{string \hyperlink{classAF_afb49c1335663b94a968f553eefc11f95}{to\-String} ()}\label{classAF_afb49c1335663b94a968f553eefc11f95}
+
+\begin{DoxyCompactList}\small\item\em Returns a description of arguments and attacks. \end{DoxyCompactList}\item 
+\hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator} \hyperlink{classAF_ab5db00d34fb90c9dd41272fd8953a5b4}{begin} ()
+\begin{DoxyCompactList}\small\item\em Begin of the iterator for the set of arguments. \end{DoxyCompactList}\item 
+\hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator} \hyperlink{classAF_afc7210c999f6af6172e06b984b13ad1a}{end} ()
+\begin{DoxyCompactList}\small\item\em End of the iterator for the set of arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class encompassing an Argumentation Framework. 
+
+\begin{DoxyAuthor}{Author}
+Mauro Vallati \href{mailto:m.vallati@hud.ac.uk}{\tt m.\-vallati@hud.\-ac.\-uk} 
+
+Mattia Rizzini 
+
+Maurizio Zucchelli 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License v2 
+\end{DoxyCopyright}
+
+
+Definition at line 24 of file A\-F.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAF_ab5db00d34fb90c9dd41272fd8953a5b4}{\index{A\-F@{A\-F}!begin@{begin}}
+\index{begin@{begin}!AF@{A\-F}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments\-Iterator} A\-F\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAF_ab5db00d34fb90c9dd41272fd8953a5b4}
+
+
+Begin of the iterator for the set of arguments. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator}} & An iterator pointing at the first of the elements of the set of arguments \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 208 of file A\-F.\-cpp.
+
+
+
+References Set\-Arguments\-::begin().
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek(), restrict\-To(), and to\-String().
+
+\hypertarget{classAF_afc7210c999f6af6172e06b984b13ad1a}{\index{A\-F@{A\-F}!end@{end}}
+\index{end@{end}!AF@{A\-F}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments\-Iterator} A\-F\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAF_afc7210c999f6af6172e06b984b13ad1a}
+
+
+End of the iterator for the set of arguments. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator}} & An iterator pointing at the last of the elements of the set of arguments \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 217 of file A\-F.\-cpp.
+
+
+
+References Set\-Arguments\-::end().
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek(), restrict\-To(), and to\-String().
+
+\hypertarget{classAF_ac415a440c526e9a06a938544503fe741}{\index{A\-F@{A\-F}!get\-\_\-arguments@{get\-\_\-arguments}}
+\index{get\-\_\-arguments@{get\-\_\-arguments}!AF@{A\-F}}
+\subsubsection[{get\-\_\-arguments}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments} $\ast$ A\-F\-::get\-\_\-arguments (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classAF_ac415a440c526e9a06a938544503fe741}
+
+
+Returns a pointer to the set of arguments. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Set\-Arguments$\ast$} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 226 of file A\-F.\-cpp.
+
+
+
+Referenced by Preferred\-::boundcond(), Preferred\-::compute\-\_\-new\-\_\-pigreek(), Preferred\-::pref(), and restrict\-To().
+
+\hypertarget{classAF_ab2eccb345f0ebfc6fc2b5cb9f456651b}{\index{A\-F@{A\-F}!get\-Argument\-By\-Name@{get\-Argument\-By\-Name}}
+\index{get\-Argument\-By\-Name@{get\-Argument\-By\-Name}!AF@{A\-F}}
+\subsubsection[{get\-Argument\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument} $\ast$ A\-F\-::get\-Argument\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classAF_ab2eccb345f0ebfc6fc2b5cb9f456651b}
+
+
+This method returns the pointer to the \hyperlink{classArgument}{Argument} whose name is given as parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The name of the argument \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Argument$\ast$} & The pointer to the \hyperlink{classArgument}{Argument} object, or N\-U\-L\-L if not found \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 92 of file A\-F.\-cpp.
+
+
+
+References Set\-Arguments\-::get\-Argument\-By\-Name().
+
+
+
+Referenced by Preferred\-::\-Grounded(), read\-File(), and restrict\-To().
+
+\hypertarget{classAF_a370edb6cf152935b65e848d1ae209546}{\index{A\-F@{A\-F}!get\-Argument\-By\-Number@{get\-Argument\-By\-Number}}
+\index{get\-Argument\-By\-Number@{get\-Argument\-By\-Number}!AF@{A\-F}}
+\subsubsection[{get\-Argument\-By\-Number}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument} $\ast$ A\-F\-::get\-Argument\-By\-Number (
+\begin{DoxyParamCaption}
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}}\label{classAF_a370edb6cf152935b65e848d1ae209546}
+
+
+This method returns the pointer to the \hyperlink{classArgument}{Argument} whose identification number is given as parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em num} & The name of the argument \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Argument$\ast$} & The pointer to the \hyperlink{classArgument}{Argument} object, or N\-U\-L\-L if not found \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 112 of file A\-F.\-cpp.
+
+
+
+References Set\-Arguments\-::get\-Argument\-By\-Number().
+
+
+
+Referenced by Preferred\-::satlab().
+
+\hypertarget{classAF_a48e30f0573d51a9995093644bb19bb33}{\index{A\-F@{A\-F}!num\-Args@{num\-Args}}
+\index{num\-Args@{num\-Args}!AF@{A\-F}}
+\subsubsection[{num\-Args}]{\setlength{\rightskip}{0pt plus 5cm}int A\-F\-::num\-Args (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAF_a48e30f0573d51a9995093644bb19bb33}
+
+
+Returns the number of arguments. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 101 of file A\-F.\-cpp.
+
+
+
+References Set\-Arguments\-::cardinality().
+
+
+
+Referenced by Argument\-::\-Out\-Var(), read\-File(), restrict\-To(), Preferred\-::satlab(), and Argument\-::\-Undec\-Var().
+
+\hypertarget{classAF_a40b85b5c4cb3d96273dd0becacad1a79}{\index{A\-F@{A\-F}!read\-File@{read\-File}}
+\index{read\-File@{read\-File}!AF@{A\-F}}
+\subsubsection[{read\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool A\-F\-::read\-File (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)}}\label{classAF_a40b85b5c4cb3d96273dd0becacad1a79}
+
+
+Method for parsing a A\-S\-P\-A\-R\-T\-I\-X compliant file. 
+
+It uses part of the code from Samer Nofal's, University of Liverpool 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file} & A string representing the (relative/absolute) path to the A\-S\-P\-A\-R\-T\-I\-X compliant file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & It returns {\ttfamily True} if it can correctly parse the file, {\ttfamily False} otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 37 of file A\-F.\-cpp.
+
+
+
+References Set\-Arguments\-::add\-\_\-\-Argument(), Argument\-::add\-\_\-attacks(), get\-Argument\-By\-Name(), and num\-Args().
+
+\hypertarget{classAF_a4cedca2ce81ac1a4aa0be5931dce4a51}{\index{A\-F@{A\-F}!restrict\-To@{restrict\-To}}
+\index{restrict\-To@{restrict\-To}!AF@{A\-F}}
+\subsubsection[{restrict\-To}]{\setlength{\rightskip}{0pt plus 5cm}void A\-F\-::restrict\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf Symbolic\-Arguments\-Set} $\ast$}]{the\-Set, }
+\item[{{\bf A\-F} $\ast$}]{dst}
+\end{DoxyParamCaption}
+)}}\label{classAF_a4cedca2ce81ac1a4aa0be5931dce4a51}
+
+
+Creates a copy of the Framework containing only the selected nodes and their relative non-\/suspended arcs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em the\-Set} & The restraining set. \\
+\hline
+\mbox{\tt out}  & {\em dst} & The destination framework.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Maurizio Zucchelli 
+\end{DoxyAuthor}
+
+
+Definition at line 126 of file A\-F.\-cpp.
+
+
+
+References Set\-Arguments\-::add\-\_\-\-Argument(), begin(), end(), Symbolic\-Arguments\-Set\-::exists(), get\-\_\-arguments(), Argument\-::get\-\_\-attackers(), Argument\-::get\-\_\-attacks(), get\-Argument\-By\-Name(), and num\-Args().
+
+
+
+Referenced by Preferred\-::pref().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/A\-F.\-h\item 
+src/\hyperlink{AF_8cpp}{A\-F.\-cpp}\end{DoxyCompactItemize}

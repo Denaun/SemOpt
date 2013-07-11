@@ -1,0 +1,208 @@
+\hypertarget{classOrClause}{\section{Or\-Clause Class Reference}
+\label{classOrClause}\index{Or\-Clause@{Or\-Clause}}
+}
+
+
+Class encompassing a list of S\-A\-T variables (type {\ttfamily \hyperlink{classVariable}{Variable}}) linked by or operators.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOrClause_a4631acd310d445535a08e84d51c84f6e}{Or\-Clause} ()
+\begin{DoxyCompactList}\small\item\em Simple constructor. \end{DoxyCompactList}\item 
+\hyperlink{classOrClause_ae85000bdcd5e0c96cb5369cf4d59240e}{Or\-Clause} (int,...)
+\begin{DoxyCompactList}\small\item\em Constructor that can receive as input a list of variables. \end{DoxyCompactList}\item 
+void \hyperlink{classOrClause_a09a95fb8ce2a1d10ae7c22295265725c}{append\-Variable} (\hyperlink{classVariable}{Variable})
+\begin{DoxyCompactList}\small\item\em Method for adding a variable at the end of the clause. \end{DoxyCompactList}\item 
+void \hyperlink{classOrClause_a3ad02fa758db9d8b4a432e4c5ee7638e}{add\-Head\-Variable} (\hyperlink{classVariable}{Variable})
+\begin{DoxyCompactList}\small\item\em Method for adding a variable at the beginning of the clause. \end{DoxyCompactList}\item 
+void \hyperlink{classOrClause_a4602e98acda51523bf55cc2ca1d59ad6}{to\-S\-S} (stringstream $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Method for returning a string representation of the Or clause in a {\ttfamily stringstream} object. \end{DoxyCompactList}\item 
+void \hyperlink{classOrClause_ae8edb2f491a3b4f5d8bd402ef1788d82}{clone} (\hyperlink{classOrClause}{Or\-Clause} $\ast$)
+\begin{DoxyCompactList}\small\item\em Method for cloning this \hyperlink{classOrClause}{Or\-Clause} into a new \hyperlink{classOrClause}{Or\-Clause} that is passed as input output parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class encompassing a list of S\-A\-T variables (type {\ttfamily \hyperlink{classVariable}{Variable}}) linked by or operators. 
+
+For example, the or clause \char`\"{}var1 O\-R var2 O\-R var3 O\-R not var 4 O\-R var 5\char`\"{} can be defined as Or\-Clause(5, var1, var2, var3, not var4, var5) \begin{DoxyAuthor}{Author}
+Federico Cerutti \href{mailto:f.cerutti@abdn.ac.uk}{\tt f.\-cerutti@abdn.\-ac.\-uk} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License v2 
+\end{DoxyCopyright}
+
+
+Definition at line 11 of file Or\-Clause.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classOrClause_a4631acd310d445535a08e84d51c84f6e}{\index{Or\-Clause@{Or\-Clause}!Or\-Clause@{Or\-Clause}}
+\index{Or\-Clause@{Or\-Clause}!OrClause@{Or\-Clause}}
+\subsubsection[{Or\-Clause}]{\setlength{\rightskip}{0pt plus 5cm}Or\-Clause\-::\-Or\-Clause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classOrClause_a4631acd310d445535a08e84d51c84f6e}
+
+
+Simple constructor. 
+
+No parameters required, it initializes the data structure but it adds no variables to the clause 
+
+Definition at line 18 of file Or\-Clause.\-cpp.
+
+
+
+Referenced by clone().
+
+\hypertarget{classOrClause_ae85000bdcd5e0c96cb5369cf4d59240e}{\index{Or\-Clause@{Or\-Clause}!Or\-Clause@{Or\-Clause}}
+\index{Or\-Clause@{Or\-Clause}!OrClause@{Or\-Clause}}
+\subsubsection[{Or\-Clause}]{\setlength{\rightskip}{0pt plus 5cm}Or\-Clause\-::\-Or\-Clause (
+\begin{DoxyParamCaption}
+\item[{int}]{count, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{classOrClause_ae85000bdcd5e0c96cb5369cf4d59240e}
+
+
+Constructor that can receive as input a list of variables. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em count} & The number of variables that follows \\
+\hline
+\mbox{\tt in}  & {\em ....} & The list of variables that follows, instances of type {\ttfamily \hyperlink{classVariable}{Variable}}\\
+\hline
+\end{DoxyParams}
+For instance, Or\-Clause(3, var1, var2, var3) 
+
+Definition at line 29 of file Or\-Clause.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classOrClause_a3ad02fa758db9d8b4a432e4c5ee7638e}{\index{Or\-Clause@{Or\-Clause}!add\-Head\-Variable@{add\-Head\-Variable}}
+\index{add\-Head\-Variable@{add\-Head\-Variable}!OrClause@{Or\-Clause}}
+\subsubsection[{add\-Head\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Or\-Clause\-::add\-Head\-Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf Variable}}]{x}
+\end{DoxyParamCaption}
+)}}\label{classOrClause_a3ad02fa758db9d8b4a432e4c5ee7638e}
+
+
+Method for adding a variable at the beginning of the clause. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & The variable to add (of type {\ttfamily \hyperlink{classVariable}{Variable}}) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 56 of file Or\-Clause.\-cpp.
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek().
+
+\hypertarget{classOrClause_a09a95fb8ce2a1d10ae7c22295265725c}{\index{Or\-Clause@{Or\-Clause}!append\-Variable@{append\-Variable}}
+\index{append\-Variable@{append\-Variable}!OrClause@{Or\-Clause}}
+\subsubsection[{append\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Or\-Clause\-::append\-Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf Variable}}]{x}
+\end{DoxyParamCaption}
+)}}\label{classOrClause_a09a95fb8ce2a1d10ae7c22295265725c}
+
+
+Method for adding a variable at the end of the clause. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & The variable to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 46 of file Or\-Clause.\-cpp.
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek(), and Preferred\-::pref\-S\-A\-T().
+
+\hypertarget{classOrClause_ae8edb2f491a3b4f5d8bd402ef1788d82}{\index{Or\-Clause@{Or\-Clause}!clone@{clone}}
+\index{clone@{clone}!OrClause@{Or\-Clause}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}void Or\-Clause\-::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Or\-Clause} $\ast$}]{newclause}
+\end{DoxyParamCaption}
+)}}\label{classOrClause_ae8edb2f491a3b4f5d8bd402ef1788d82}
+
+
+Method for cloning this \hyperlink{classOrClause}{Or\-Clause} into a new \hyperlink{classOrClause}{Or\-Clause} that is passed as input output parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em newclause} & Pointer to another {\ttfamily \hyperlink{classOrClause}{Or\-Clause}} object, which is newly initialised, and then which will become a clone ({\itshape not a pointer}) of this object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 87 of file Or\-Clause.\-cpp.
+
+
+
+References Or\-Clause().
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek().
+
+\hypertarget{classOrClause_a4602e98acda51523bf55cc2ca1d59ad6}{\index{Or\-Clause@{Or\-Clause}!to\-S\-S@{to\-S\-S}}
+\index{to\-S\-S@{to\-S\-S}!OrClause@{Or\-Clause}}
+\subsubsection[{to\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}void Or\-Clause\-::to\-S\-S (
+\begin{DoxyParamCaption}
+\item[{stringstream $\ast$}]{ss}
+\end{DoxyParamCaption}
+) const}}\label{classOrClause_a4602e98acda51523bf55cc2ca1d59ad6}
+
+
+Method for returning a string representation of the Or clause in a {\ttfamily stringstream} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em ss} & A pointer to an already initialised {\ttfamily stringstream} object which will contain the string representation of this object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 68 of file Or\-Clause.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/Or\-Clause.\-h\item 
+src/\hyperlink{OrClause_8cpp}{Or\-Clause.\-cpp}\end{DoxyCompactItemize}

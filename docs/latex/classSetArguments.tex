@@ -1,0 +1,511 @@
+\hypertarget{classSetArguments}{\section{Set\-Arguments Class Reference}
+\label{classSetArguments}\index{Set\-Arguments@{Set\-Arguments}}
+}
+
+
+Class encompassing a set of arguments.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSetArguments_acbba23977f0c9fc09a827b0b1c9df7a3}{\hyperlink{classSetArguments_acbba23977f0c9fc09a827b0b1c9df7a3}{Set\-Arguments} ()}\label{classSetArguments_acbba23977f0c9fc09a827b0b1c9df7a3}
+
+\begin{DoxyCompactList}\small\item\em Simple constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSetArguments_a989d8986ecf49baa0dc982766c0a5df4}{add\-\_\-\-Argument} (\hyperlink{classArgument}{Argument} $\ast$)
+\begin{DoxyCompactList}\small\item\em Add an argument to the set. \end{DoxyCompactList}\item 
+\hyperlink{classArgument}{Argument} $\ast$ \hyperlink{classSetArguments_ab4ddcd0942b0fa06de4ab9726e12edef}{get\-Argument\-By\-Name} (string)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the \hyperlink{classArgument}{Argument} whose name is given as parameter. \end{DoxyCompactList}\item 
+\hyperlink{classArgument}{Argument} $\ast$ \hyperlink{classSetArguments_a119cb47c6e77b8faf10135d90c5b68b9}{get\-Argument\-By\-Number} (int num)
+\begin{DoxyCompactList}\small\item\em This method returns the pointer to the \hyperlink{classArgument}{Argument} whose identification number is given as parameter. \end{DoxyCompactList}\item 
+int \hyperlink{classSetArguments_a66d5b1cc6b684700c2394a8cf62ef7f0}{cardinality} () const 
+\begin{DoxyCompactList}\small\item\em Retuns the cardinality of this set. \end{DoxyCompactList}\item 
+bool \hyperlink{classSetArguments_a91e548daa6d0859946c8604b1ebb8c5a}{empty} ()
+\begin{DoxyCompactList}\small\item\em Check wether or not this set is empty. \end{DoxyCompactList}\item 
+\hypertarget{classSetArguments_a55ce09615ed88aee975e10569ddfcd75}{\hyperlink{classSetArguments}{Set\-Arguments} $\ast$ \hyperlink{classSetArguments_a55ce09615ed88aee975e10569ddfcd75}{get\-\_\-attacks} () const }\label{classSetArguments_a55ce09615ed88aee975e10569ddfcd75}
+
+\begin{DoxyCompactList}\small\item\em Build and return a \hyperlink{classSetArguments}{Set\-Arguments} containing the args attacked by the local args outside the set. \end{DoxyCompactList}\item 
+\hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator} \hyperlink{classSetArguments_aaee058feaed861edf27739fa04f374ef}{begin} () const 
+\begin{DoxyCompactList}\small\item\em Begin of the iterator for this set of arguments. \end{DoxyCompactList}\item 
+\hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator} \hyperlink{classSetArguments_a551272d71c803f64efc155b04f41e775}{end} () const 
+\begin{DoxyCompactList}\small\item\em End of the iterator for this set of arguments. \end{DoxyCompactList}\item 
+bool \hyperlink{classSetArguments_a64faa4938649c26acdfddd41da5af333}{exists} (\hyperlink{classArgument}{Argument} $\ast$) const 
+\begin{DoxyCompactList}\small\item\em Check whether or not an argument exists in this set. \end{DoxyCompactList}\item 
+bool \hyperlink{classSetArguments_a097087545407fc1eac981e31786e8168}{is\-\_\-subset\-\_\-equal} (\hyperlink{classSetArguments}{Set\-Arguments} $\ast$)
+\begin{DoxyCompactList}\small\item\em Check whether this set is a subset of {\ttfamily other} \end{DoxyCompactList}\item 
+bool \hyperlink{classSetArguments_a3d0a8527f2fa9ad3a888eb387c980a78}{is\-\_\-subset} (\hyperlink{classSetArguments}{Set\-Arguments} $\ast$)
+\begin{DoxyCompactList}\small\item\em Check whether this set is a proper subset of {\ttfamily other} \end{DoxyCompactList}\item 
+void \hyperlink{classSetArguments_ae6761b6c360e440de55c2060ae70981c}{intersect} (\hyperlink{classSetArguments}{Set\-Arguments} $\ast$, \hyperlink{classSetArguments}{Set\-Arguments} $\ast$)
+\begin{DoxyCompactList}\small\item\em Intersect this set the {\ttfamily other} set and write the result in {\ttfamily res} \end{DoxyCompactList}\item 
+void \hyperlink{classSetArguments_a80e626de391cabfc0a20da509c328055}{setminus} (\hyperlink{classSetArguments}{Set\-Arguments} $\ast$, \hyperlink{classSetArguments}{Set\-Arguments} $\ast$)
+\begin{DoxyCompactList}\small\item\em Set Minus. \end{DoxyCompactList}\item 
+void \hyperlink{classSetArguments_a11b8009ff9cd0961731eac8ee95c4b55}{remove} (\hyperlink{classArgument}{Argument} $\ast$)
+\begin{DoxyCompactList}\small\item\em Remove an argument from this set. \end{DoxyCompactList}\item 
+void \hyperlink{classSetArguments_a3a3052b05dff877886f84ab99280d6f7}{clone} (\hyperlink{classSetArguments}{Set\-Arguments} $\ast$)
+\begin{DoxyCompactList}\small\item\em Clone this set. \end{DoxyCompactList}\item 
+bool \hyperlink{classSetArguments_a22ed014efa057dd385c5ea89b6de5e94}{operator==} (const \hyperlink{classSetArguments}{Set\-Arguments} \&other) const 
+\begin{DoxyCompactList}\small\item\em Overloading of the == operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class encompassing a set of arguments. 
+
+\begin{DoxyAuthor}{Author}
+Federico Cerutti \href{mailto:federico.cerutti@acm.org}{\tt federico.\-cerutti@acm.\-org} 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+G\-N\-U Public License v2 
+\end{DoxyCopyright}
+
+
+Definition at line 35 of file Set\-Arguments.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSetArguments_a989d8986ecf49baa0dc982766c0a5df4}{\index{Set\-Arguments@{Set\-Arguments}!add\-\_\-\-Argument@{add\-\_\-\-Argument}}
+\index{add\-\_\-\-Argument@{add\-\_\-\-Argument}!SetArguments@{Set\-Arguments}}
+\subsubsection[{add\-\_\-\-Argument}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Arguments\-::add\-\_\-\-Argument (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a989d8986ecf49baa0dc982766c0a5df4}
+
+
+Add an argument to the set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & Pointer to an \hyperlink{classArgument}{Argument} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Set\-Arguments.\-cpp.
+
+
+
+References Argument\-::get\-Name(), and Argument\-::get\-Number().
+
+
+
+Referenced by Argument\-::add\-\_\-attackers(), Argument\-::add\-\_\-attacks(), Labelling\-::add\-\_\-label(), clone(), intersect(), A\-F\-::read\-File(), A\-F\-::restrict\-To(), and Symbolic\-Arguments\-Set\-::to\-Set\-Arguments().
+
+\hypertarget{classSetArguments_aaee058feaed861edf27739fa04f374ef}{\index{Set\-Arguments@{Set\-Arguments}!begin@{begin}}
+\index{begin@{begin}!SetArguments@{Set\-Arguments}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments\-Iterator} Set\-Arguments\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSetArguments_aaee058feaed861edf27739fa04f374ef}
+
+
+Begin of the iterator for this set of arguments. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator}} & An iterator pointing at the first of the elements of this set \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 102 of file Set\-Arguments.\-cpp.
+
+
+
+Referenced by A\-F\-::begin(), clone(), Preferred\-::compute\-\_\-new\-\_\-pigreek(), get\-\_\-attacks(), intersect(), is\-\_\-subset\-\_\-equal(), operator==(), Preferred\-::pref\-S\-A\-T(), setminus(), and Symbolic\-Arguments\-Set\-::\-Symbolic\-Arguments\-Set().
+
+\hypertarget{classSetArguments_a66d5b1cc6b684700c2394a8cf62ef7f0}{\index{Set\-Arguments@{Set\-Arguments}!cardinality@{cardinality}}
+\index{cardinality@{cardinality}!SetArguments@{Set\-Arguments}}
+\subsubsection[{cardinality}]{\setlength{\rightskip}{0pt plus 5cm}int Set\-Arguments\-::cardinality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSetArguments_a66d5b1cc6b684700c2394a8cf62ef7f0}
+
+
+Retuns the cardinality of this set. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 34 of file Set\-Arguments.\-cpp.
+
+
+
+Referenced by is\-\_\-subset(), is\-\_\-subset\-\_\-equal(), A\-F\-::num\-Args(), operator==(), Preferred\-::pref\-S\-A\-T(), and Preferred\-::satlab().
+
+\hypertarget{classSetArguments_a3a3052b05dff877886f84ab99280d6f7}{\index{Set\-Arguments@{Set\-Arguments}!clone@{clone}}
+\index{clone@{clone}!SetArguments@{Set\-Arguments}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Arguments\-::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Set\-Arguments} $\ast$}]{set}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a3a3052b05dff877886f84ab99280d6f7}
+
+
+Clone this set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em set} & The set that will be the new clone \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 196 of file Set\-Arguments.\-cpp.
+
+
+
+References add\-\_\-\-Argument(), begin(), and end().
+
+
+
+Referenced by setminus().
+
+\hypertarget{classSetArguments_a91e548daa6d0859946c8604b1ebb8c5a}{\index{Set\-Arguments@{Set\-Arguments}!empty@{empty}}
+\index{empty@{empty}!SetArguments@{Set\-Arguments}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Set\-Arguments\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a91e548daa6d0859946c8604b1ebb8c5a}
+
+
+Check wether or not this set is empty. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 63 of file Set\-Arguments.\-cpp.
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek(), Labelling\-::empty(), and is\-\_\-subset\-\_\-equal().
+
+\hypertarget{classSetArguments_a551272d71c803f64efc155b04f41e775}{\index{Set\-Arguments@{Set\-Arguments}!end@{end}}
+\index{end@{end}!SetArguments@{Set\-Arguments}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Set\-Arguments\-Iterator} Set\-Arguments\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classSetArguments_a551272d71c803f64efc155b04f41e775}
+
+
+End of the iterator for this set of arguments. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{classSetArgumentsIterator}{Set\-Arguments\-Iterator}} & An iterator pointing at the last of the elements of this set \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 111 of file Set\-Arguments.\-cpp.
+
+
+
+Referenced by clone(), Preferred\-::compute\-\_\-new\-\_\-pigreek(), A\-F\-::end(), get\-\_\-attacks(), intersect(), is\-\_\-subset\-\_\-equal(), operator==(), Preferred\-::pref\-S\-A\-T(), setminus(), and Symbolic\-Arguments\-Set\-::\-Symbolic\-Arguments\-Set().
+
+\hypertarget{classSetArguments_a64faa4938649c26acdfddd41da5af333}{\index{Set\-Arguments@{Set\-Arguments}!exists@{exists}}
+\index{exists@{exists}!SetArguments@{Set\-Arguments}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}bool Set\-Arguments\-::exists (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg}
+\end{DoxyParamCaption}
+) const}}\label{classSetArguments_a64faa4938649c26acdfddd41da5af333}
+
+
+Check whether or not an argument exists in this set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 176 of file Set\-Arguments.\-cpp.
+
+
+
+References Argument\-::get\-Name().
+
+
+
+Referenced by is\-\_\-subset\-\_\-equal(), and setminus().
+
+\hypertarget{classSetArguments_ab4ddcd0942b0fa06de4ab9726e12edef}{\index{Set\-Arguments@{Set\-Arguments}!get\-Argument\-By\-Name@{get\-Argument\-By\-Name}}
+\index{get\-Argument\-By\-Name@{get\-Argument\-By\-Name}!SetArguments@{Set\-Arguments}}
+\subsubsection[{get\-Argument\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument} $\ast$ Set\-Arguments\-::get\-Argument\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_ab4ddcd0942b0fa06de4ab9726e12edef}
+
+
+This method returns the pointer to the \hyperlink{classArgument}{Argument} whose name is given as parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The name of the argument \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Argument$\ast$} & The pointer to the \hyperlink{classArgument}{Argument} object, or N\-U\-L\-L if not found \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 44 of file Set\-Arguments.\-cpp.
+
+
+
+Referenced by A\-F\-::get\-Argument\-By\-Name().
+
+\hypertarget{classSetArguments_a119cb47c6e77b8faf10135d90c5b68b9}{\index{Set\-Arguments@{Set\-Arguments}!get\-Argument\-By\-Number@{get\-Argument\-By\-Number}}
+\index{get\-Argument\-By\-Number@{get\-Argument\-By\-Number}!SetArguments@{Set\-Arguments}}
+\subsubsection[{get\-Argument\-By\-Number}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Argument} $\ast$ Set\-Arguments\-::get\-Argument\-By\-Number (
+\begin{DoxyParamCaption}
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a119cb47c6e77b8faf10135d90c5b68b9}
+
+
+This method returns the pointer to the \hyperlink{classArgument}{Argument} whose identification number is given as parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em num} & The name of the argument \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Argument$\ast$} & The pointer to the \hyperlink{classArgument}{Argument} object, or N\-U\-L\-L if not found \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 54 of file Set\-Arguments.\-cpp.
+
+
+
+Referenced by A\-F\-::get\-Argument\-By\-Number().
+
+\hypertarget{classSetArguments_ae6761b6c360e440de55c2060ae70981c}{\index{Set\-Arguments@{Set\-Arguments}!intersect@{intersect}}
+\index{intersect@{intersect}!SetArguments@{Set\-Arguments}}
+\subsubsection[{intersect}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Arguments\-::intersect (
+\begin{DoxyParamCaption}
+\item[{{\bf Set\-Arguments} $\ast$}]{other, }
+\item[{{\bf Set\-Arguments} $\ast$}]{res}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_ae6761b6c360e440de55c2060ae70981c}
+
+
+Intersect this set the {\ttfamily other} set and write the result in {\ttfamily res} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other term of the intersection \\
+\hline
+\mbox{\tt out}  & {\em res} & The result of the intersection \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 210 of file Set\-Arguments.\-cpp.
+
+
+
+References add\-\_\-\-Argument(), begin(), and end().
+
+\hypertarget{classSetArguments_a3d0a8527f2fa9ad3a888eb387c980a78}{\index{Set\-Arguments@{Set\-Arguments}!is\-\_\-subset@{is\-\_\-subset}}
+\index{is\-\_\-subset@{is\-\_\-subset}!SetArguments@{Set\-Arguments}}
+\subsubsection[{is\-\_\-subset}]{\setlength{\rightskip}{0pt plus 5cm}bool Set\-Arguments\-::is\-\_\-subset (
+\begin{DoxyParamCaption}
+\item[{{\bf Set\-Arguments} $\ast$}]{other}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a3d0a8527f2fa9ad3a888eb387c980a78}
+
+
+Check whether this set is a proper subset of {\ttfamily other} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other set to check \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 144 of file Set\-Arguments.\-cpp.
+
+
+
+References cardinality(), and is\-\_\-subset\-\_\-equal().
+
+\hypertarget{classSetArguments_a097087545407fc1eac981e31786e8168}{\index{Set\-Arguments@{Set\-Arguments}!is\-\_\-subset\-\_\-equal@{is\-\_\-subset\-\_\-equal}}
+\index{is\-\_\-subset\-\_\-equal@{is\-\_\-subset\-\_\-equal}!SetArguments@{Set\-Arguments}}
+\subsubsection[{is\-\_\-subset\-\_\-equal}]{\setlength{\rightskip}{0pt plus 5cm}bool Set\-Arguments\-::is\-\_\-subset\-\_\-equal (
+\begin{DoxyParamCaption}
+\item[{{\bf Set\-Arguments} $\ast$}]{other}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a097087545407fc1eac981e31786e8168}
+
+
+Check whether this set is a subset of {\ttfamily other} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other set to check \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 121 of file Set\-Arguments.\-cpp.
+
+
+
+References begin(), cardinality(), empty(), end(), and exists().
+
+
+
+Referenced by is\-\_\-subset().
+
+\hypertarget{classSetArguments_a22ed014efa057dd385c5ea89b6de5e94}{\index{Set\-Arguments@{Set\-Arguments}!operator==@{operator==}}
+\index{operator==@{operator==}!SetArguments@{Set\-Arguments}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Set\-Arguments\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Set\-Arguments} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classSetArguments_a22ed014efa057dd385c5ea89b6de5e94}
+
+
+Overloading of the == operator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other term of the comparison \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 231 of file Set\-Arguments.\-cpp.
+
+
+
+References begin(), cardinality(), and end().
+
+\hypertarget{classSetArguments_a11b8009ff9cd0961731eac8ee95c4b55}{\index{Set\-Arguments@{Set\-Arguments}!remove@{remove}}
+\index{remove@{remove}!SetArguments@{Set\-Arguments}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Arguments\-::remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Argument} $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a11b8009ff9cd0961731eac8ee95c4b55}
+
+
+Remove an argument from this set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em arg} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 186 of file Set\-Arguments.\-cpp.
+
+
+
+References Argument\-::get\-Name().
+
+
+
+Referenced by setminus().
+
+\hypertarget{classSetArguments_a80e626de391cabfc0a20da509c328055}{\index{Set\-Arguments@{Set\-Arguments}!setminus@{setminus}}
+\index{setminus@{setminus}!SetArguments@{Set\-Arguments}}
+\subsubsection[{setminus}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Arguments\-::setminus (
+\begin{DoxyParamCaption}
+\item[{{\bf Set\-Arguments} $\ast$}]{other, }
+\item[{{\bf Set\-Arguments} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}}\label{classSetArguments_a80e626de391cabfc0a20da509c328055}
+
+
+Set Minus. 
+
+Outputs a set containing the difference between this Set and the other one specified. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em other} & The other term of the subtraction \\
+\hline
+\mbox{\tt out}  & {\em res} & The result of the subtraction \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em void} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 161 of file Set\-Arguments.\-cpp.
+
+
+
+References begin(), clone(), end(), exists(), and remove().
+
+
+
+Referenced by Preferred\-::compute\-\_\-new\-\_\-pigreek(), and Preferred\-::pref\-S\-A\-T().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/Set\-Arguments.\-h\item 
+src/\hyperlink{SetArguments_8cpp}{Set\-Arguments.\-cpp}\end{DoxyCompactItemize}
