@@ -2,11 +2,16 @@
 
 ### Licence
     SemOpt: Computing argumentation semantics as optimisation problem
-    (Lite version)
+    
+    Copyleft 2013		Mattia Rizzini <m.rizzini006@studenti.unibs.it>
+    	     			Maurizio Zucchelli <m.zucchelli005@studenti.unibs.it>
+    	     			
     Copyright (C) 2012-2013  	Federico Cerutti <f.cerutti@abdn.ac.uk>
 				Mauro Vallati <m.vallati@hud.ac.uk>
 
-    Authors: Federico Cerutti <f.cerutti@abdn.ac.uk>
+    Authors: Mattia Rizzini <m.rizzini006@studenti.unibs.it>
+    	     Maurizio Zucchelli <m.zucchelli005@studenti.unibs.it>
+    	     Federico Cerutti <f.cerutti@abdn.ac.uk>
 	     Mauro Vallati <m.vallati@hud.ac.uk>
 
     This program is free software: you can redistribute it and/or modify
@@ -25,10 +30,13 @@ Glucose and Precosat are distributed under their own Licence.
 
 GTest is distributed under its own Licence.
 
+ASPARTIX is distributed under its own Licence.
+
 ### Description
 
-SemOpt uses SAT solvers for computing the semantics extensions on a
-Dung's argumentation framework. Currently it works for preferred extensions only.
+SemOpt uses SAT solvers and a bunch of other methods for computing the
+semantics extensions on a Dung's argumentation framework. Currently
+it works for preferred extensions only.
 
 ### Quick Start
 
@@ -36,14 +44,18 @@ Dung's argumentation framework. Currently it works for preferred extensions only
 
 For building the Release version:
 
-Open the eclipse project and compile with the Release Build Configuration
+Use make
 
-#### Running
+#### Multiple test running and instances generation
+
+See extensive latex documentation
 
 #### Running
 ./SemOpt <inputfile.dl> <param1> ... <paramN>
 
 -d 			 *HIGH* level of debug (very slow, very dense output)
+
+-d2			 LOWER level of debug, less dense and informative output
 
 -ExtSAT <satsolver> 	 uses as engine an external SAT Solver. Currently: GLUCOSE, PRECOSAT
 
@@ -62,4 +74,6 @@ Open the eclipse project and compile with the Release Build Configuration
 -sem <semantics> 	 Currently: complete, preferred, preferred-df, grounded, grounded-poly, stable, semistable
 
 ### Authors
+Copyleft holders: Mattia Rizzini <m.rizzini006@studenti.unibs.it>, Maurizio Zucchelli <m.zucchelli005@studenti.unibs.it>, 2013
+
 Copyright holder: Federico Cerutti PhD <f.cerutti@abdn.ac.uk>, (c) 2013
