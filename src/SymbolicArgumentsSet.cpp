@@ -291,7 +291,7 @@ bool SymbolicArgumentsSet::operator==( const SymbolicArgumentsSet& other ) const
  */
 bool SymbolicArgumentsSet::operator<( const SymbolicArgumentsSet& other ) const
 {
-	return this->arguments.size() < other.arguments.size();
+	return this -> arguments.size() < other.arguments.size();
 }
 
 /* Output */

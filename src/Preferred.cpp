@@ -376,10 +376,10 @@ void Preferred::prefSAT(AF *the_af, SetArguments *the_c)
  */
 Preferred::Preferred()
 {
-this->encoding = 0;
-this->labellings = vector<Labelling>();
-this->sat_new_pigreek = SATFormulae();
-this->optimizationTrack = map< SymbolicArgumentsSet*, SymbolicArgumentsSet* >;
+	this->encoding = 0;
+	this->labellings = vector<Labelling>();
+	this->sat_new_pigreek = SATFormulae();
+	this->optimizationTrack = map< SymbolicArgumentsSet, SymbolicArgumentsSet >();
 }
 
 /**

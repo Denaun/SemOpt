@@ -60,7 +60,7 @@ class SymbolicArgumentsSet
 		SymbolicArgumentsSet minus( const SymbolicArgumentsSet* ) const;
 		SymbolicArgumentsSet merge( const SymbolicArgumentsSet* ) const;
 		SymbolicArgumentsSet& operator=( const SymbolicArgumentsSet& );
-		SymbolicArgumentsSet& operator<( const SymbolicArgumentsSet& );
+		bool operator<( const SymbolicArgumentsSet& ) const;
 		bool operator==( const SymbolicArgumentsSet& ) const;
 };
 

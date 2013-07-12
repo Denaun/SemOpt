@@ -55,7 +55,7 @@ class Preferred
 		}
 	};
 
-	map< SymbolicArgumentsSet*, SymbolicArgumentsSet* > optimizationTrack;
+	map< SymbolicArgumentsSet, SymbolicArgumentsSet > optimizationTrack;
 
 	list< DFSNode* > DFSAF;
 

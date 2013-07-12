@@ -55,3 +55,5 @@ File.open( resultsFile, 'a' ) do |file|
 	file.write verdict
 end
 puts verdict
+
+puts `ruby ./win_rename.rb`
