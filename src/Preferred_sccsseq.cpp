@@ -38,7 +38,7 @@ list< SCC* > Preferred::SCCSSEQ()
 
 	
 	// Determino i rapporti di parentela tra le SCC
-	SCCParenthood( &SCCList );
+	//SCCParenthood( &SCCList );
 	
 	
 
