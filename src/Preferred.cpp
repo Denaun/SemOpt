@@ -379,7 +379,6 @@ Preferred::Preferred()
 	this->encoding = 0;
 	this->labellings = vector<Labelling>();
 	this->sat_new_pigreek = SATFormulae();
-	this->optimizationTrack = map< SymbolicArgumentsSet, SymbolicArgumentsSet >();
 }
 
 /**

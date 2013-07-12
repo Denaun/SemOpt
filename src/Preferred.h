@@ -23,6 +23,7 @@ int precosat_lib(stringstream *the_cnf, int num_var, int num_cl, vector<int> *re
 
 extern bool debug;
 extern bool stages;
+extern bool scc_only;
 
 // Una SCC è composta da un SetArgument e dalla lista di SCC padri (necessario per i miglioramenti)
 // Deve essere una struttura globale
@@ -54,8 +55,6 @@ class Preferred
 			this -> lowlink = -1;
 		}
 	};
-
-	map< SymbolicArgumentsSet, SymbolicArgumentsSet > optimizationTrack;
 
 	list< DFSNode* > DFSAF;
 

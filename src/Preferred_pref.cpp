@@ -33,8 +33,8 @@ void Preferred::pref( AF* theAF, SetArguments* theC )
  */
 void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 {
-	if ( debug )
-		cerr << "Entering pref\n";
+	if ( debug || scc_only )
+		cerr << "***************Entering pref\n";
 
 	this->cleanlabs();
 	this->af = theAF;
@@ -105,7 +105,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 	list< SCC* > S = SCCSSEQ();
 
 	// Print SCC and parenthood
-	if ( stages )
+	if ( stages || scc_only )
 		for ( list< SCC* >::iterator it = S.begin(); it != S.end(); ++it )
 		{
 			cerr << "\tSCC: " << *( *it ) -> argumentList << endl;
@@ -121,67 +121,66 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 
 	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
-		if ( debug )
+		if ( debug || scc_only )
 			cerr << "\tWorking on " << *(*aSCC)->argumentList << endl;
 
 		vector<SymbolicArgumentsSet> newLabellings = vector<SymbolicArgumentsSet>();
+
+		if ( debug || scc_only )
+			cerr << "\tNew optimizationTrack for the actual SCC" << endl;
+
+		map< SymbolicArgumentsSet, SymbolicArgumentsSet > optimizationTrack = map< SymbolicArgumentsSet, SymbolicArgumentsSet >();
 
 		for ( vector<SymbolicArgumentsSet>::iterator aLabelling = tempLabellings.begin();
 				aLabelling != tempLabellings.end(); ++aLabelling )
 		{
 			Preferred p = Preferred();
 
-			// O may be preserved if preserveO is true and it is already been registered in the optimizationTrack map
+			// O recalculation may be avoided if the actual e is already contained in the optimizationTrack map
 			SymbolicArgumentsSet O = SymbolicArgumentsSet();
 			I.clear();
 
-			if ( debug )
+			if ( debug || scc_only )
 				cerr << "\t\tGoing to call boundcond.\n";
 
 			// Determine if the call of boundcond can be avoided
 			// If the current SCC has no fathers, O = empty and I = SCC
 			if( AFequalsC && ( *aSCC ) -> fathers.size() == 0 )
 			{
-				if ( debug )
+				if ( debug || scc_only )
 					cerr << "\t\t\tO emptied and I filled.\n";
 
-				O.clear();
 				I = *(*aSCC)->argumentList;
 			}
 			else
 			{
-				// Reset I
-				I.clear();
-
-				// Test if the e set is already in the map using a very ugly workaround
-				// By indexing the map with e, if e is not present it is added, so I get the size of the map before indexing
-				// and the size after indexing; if the difference is zero then it means that the element was already in the map
-				bool ePresent = false;
-
-				int sizeCheck = optimizationTrack.size();
-				optimizationTrack[ e ];
-				sizeCheck -= optimizationTrack.size();
-
-				if( preserveO && sizeCheck == 0 )
+				// Test if the e set is already a key in the map
+				if( preserveO && optimizationTrack.count( e ) ) 
 				{
-					if ( debug )
-						cerr << "\t\t\tO preserved.\n";
+					if ( debug || scc_only )
+						cerr << "\t\t\tO preserved.\n\t\t\te: " << ( *aLabelling ) << endl;
 
-					O = optimizationTrack[ e ];
+					O = optimizationTrack[ ( *aLabelling ) ];
 				}
 				else
 				{
-					if ( debug )
-						cerr << "\t\t\tO recalculated.\n";
+					if ( debug || scc_only )
+						cerr << "\t\t\tO recalculated.\n\t\t\te: " << (*aLabelling) << endl;
 
 					boundcond( *aSCC, &(*aLabelling), &O, &I );
 
-					optimizationTrack[ e ] = O;
+					if( preserveO ) {
+						optimizationTrack[ (*aLabelling) ] = O;
+
+						if ( debug || scc_only )
+							cerr << "\t\t\tO added to the optimizationTrack: " << optimizationTrack[ (*aLabelling) ] << endl;
+					} else if ( debug || scc_only )
+						cerr << "\t\t\tO preservation not requested\n";
 				}
 
 			}
 
-			if ( stages )
+			if ( stages || scc_only )
 				cerr << "\t\tO: " << O << endl << "\t\tI: " << I << endl;
 
 			// Restrict I to just the nodes of interest
@@ -197,7 +196,6 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 				// 	0:	out = { {} }
 				//	1:	out = { {singlet} }
 				//	2:	out = { {singlet}, {singlet} }
-				/* BASE
 				if ( ( *aSCC ) -> argumentList -> size() <= 2 && *( *aSCC ) -> argumentList == I )
 				{
 					if ( debug )
@@ -224,7 +222,6 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					}
 				}
 				else
-				*/
 				{
 					AF restricted = AF();
 					this->af->restrictTo( ( *aSCC ) -> argumentList, &restricted );
@@ -240,13 +237,12 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 			}
 			else
 			{
-				if ( debug )
+				if ( debug || scc_only )
 					cerr << "\t\tGoing to call pref.\n";
 
 				SymbolicArgumentsSet restriction = SymbolicArgumentsSet();
 				restriction = ( *aSCC ) -> argumentList -> minus( &O );
 
-				/* BASE
 				if ( restriction.size() <= 1 && restriction == I )
 				{
 					if ( debug )
@@ -271,9 +267,8 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 					}
 				}
 				else
-				*/
 				{
-					if ( debug )
+					if ( debug || scc_only )
 						cerr << "\t\t\tCalling pref.\n";
 
 					AF restricted = AF();
@@ -284,7 +279,7 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 			}
 
 			// prefSAT doesn't put newline at the end of its output...
-			if ( debug )
+			if ( debug || scc_only )
 				cerr << endl;
 
 			// Create the new Labellings
@@ -322,6 +317,10 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 			if( *fathers == *aSCC )
 			{
 				preserveO = false;
+
+				if ( scc_only )
+					cerr << "\tMy son! " << *(*aSCC)->argumentList << endl;
+
 				break;
 			}
 		
@@ -339,5 +338,9 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 	for ( vector<SymbolicArgumentsSet>::iterator it = tempLabellings.begin();
 			it != tempLabellings.end(); ++it )
 		this->labellings.push_back( (*it).toLabelling( theAF ) );
+
+
+	if ( debug || scc_only )
+		cerr << "***************Exiting pref\n";
 }
 

@@ -13,6 +13,7 @@
  */
 bool debug = false;
 bool stages = false;
+bool scc_only = false;
 bool externalsat = true;
 string satsolver;
 int labellingconditions = 0;
@@ -37,6 +38,7 @@ int main(int argc, char *argv[])
 			// More verbose
 			debug = true;
 			stages = true;
+			scc_only = true;
 			
 			cerr << "Debug on.\n";
 		}
@@ -46,6 +48,12 @@ int main(int argc, char *argv[])
 			stages = true;
 
 			cerr << "Stages output on.\n";
+		}
+		else if( !strcmp( argv[ i ], "-d3" ) )
+		{
+			cerr << "Uberspecific debug on.\n";
+
+			scc_only = true;
 		}
 		else
 		{
