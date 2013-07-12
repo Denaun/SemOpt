@@ -1,0 +1,135 @@
+Uberspecific debug on.
+***************Entering pref
+	SCC: {a17 a33 a4 a43 a45 a50 a70}
+	SCC: {a20}
+		Father: {a17 a33 a4 a43 a45 a50 a70}
+	SCC: {a71}
+		Father: {a20}
+	SCC: {a41}
+		Father: {a17 a33 a4 a43 a45 a50 a70}
+	SCC: {a35}
+		Father: {a17 a33 a4 a43 a45 a50 a70}
+	SCC: {a48}
+		Father: {a17 a33 a4 a43 a45 a50 a70}
+	SCC: {a65}
+		Father: {a48}
+	SCC: {a56}
+		Father: {a65}
+	SCC: {a23}
+		Father: {a48}
+	SCC: {a64}
+		Father: {a23}
+	SCC: {a53}
+		Father: {a17 a33 a4 a43 a45 a50 a70}
+		Father: {a64}
+	Working on {a17 a33 a4 a43 a45 a50 a70}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a17 a33 a4 a43 a45 a50 a70}
+
+	My son! {a17 a33 a4 a43 a45 a50 a70}
+	Working on {a20}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a21 a24 a3 a36 a39 a4 a40 a44 a45 a46 a54 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O preservation not requested
+		O: {}
+		I: {a20}
+
+	My son! {a20}
+	Working on {a71}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a36 a39 a4 a40 a44 a45 a46 a54 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O preservation not requested
+		O: {a71}
+		I: {}
+		Going to call pref.
+
+	Working on {a41}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a36 a39 a4 a40 a44 a45 a46 a54 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O added to the optimizationTrack: {a41}
+		O: {a41}
+		I: {}
+		Going to call pref.
+
+	Working on {a35}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a36 a39 a4 a40 a44 a45 a46 a54 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O added to the optimizationTrack: {}
+		O: {}
+		I: {a35}
+
+	Working on {a48}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a35 a36 a39 a4 a40 a44 a45 a46 a54 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O added to the optimizationTrack: {}
+		O: {}
+		I: {a48}
+
+	My son! {a48}
+	Working on {a65}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a35 a36 a39 a4 a40 a44 a45 a46 a48 a54 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O preservation not requested
+		O: {a65}
+		I: {}
+		Going to call pref.
+
+	My son! {a65}
+	Working on {a56}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a35 a36 a39 a4 a40 a44 a45 a46 a48 a54 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O preservation not requested
+		O: {}
+		I: {a56}
+
+	Working on {a23}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a35 a36 a39 a4 a40 a44 a45 a46 a48 a54 a56 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O added to the optimizationTrack: {a23}
+		O: {a23}
+		I: {}
+		Going to call pref.
+
+	My son! {a23}
+	Working on {a64}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a35 a36 a39 a4 a40 a44 a45 a46 a48 a54 a56 a57 a58 a6 a60 a61 a67 a68 a70 a74 a75 a76 a77}
+			O preservation not requested
+		O: {}
+		I: {a64}
+
+	My son! {a64}
+	Working on {a53}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a35 a36 a39 a4 a40 a44 a45 a46 a48 a54 a56 a57 a58 a6 a60 a61 a64 a67 a68 a70 a74 a75 a76 a77}
+			O preservation not requested
+		O: {a53}
+		I: {}
+		Going to call pref.
+
+***************Exiting pref
+Extension 1
+{a1 a15 a16 a18 a19 a2 a20 a21 a24 a3 a35 a36 a39 a4 a40 a44 a45 a46 a48 a54 a56 a57 a58 a6 a60 a61 a64 a67 a68 a70 a74 a75 a76 a77}

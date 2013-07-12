@@ -75,7 +75,6 @@ int main(int argc, char *argv[])
 		exit( EXIT_FAILURE );
 	}
 
-
 	// Use examples for scc-test.dl
 	Preferred p = Preferred();
 

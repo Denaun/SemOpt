@@ -1,0 +1,15 @@
+Uberspecific debug on.
+***************Entering pref
+	SCC: {a15 a41}
+	Working on {a15 a41}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a15 a41}
+
+***************Exiting pref
+Extension 1
+{a1 a15 a16 a19 a23 a27 a34 a37 a38 a4 a42 a43 a47 a48 a52 a54 a55 a56 a58 a59 a6 a61 a62 a7}
+Extension 2
+{a1 a16 a19 a23 a27 a34 a37 a38 a4 a41 a42 a43 a47 a48 a52 a54 a55 a56 a58 a59 a6 a61 a62 a7}

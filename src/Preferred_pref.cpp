@@ -119,6 +119,8 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 	// (no boundcond recalculation after the first time, conditions described below)
 	bool preserveO = true;
 
+	map< SymbolicArgumentsSet, SymbolicArgumentsSet > optimizationTrack = map< SymbolicArgumentsSet, SymbolicArgumentsSet >();
+
 	for ( list< SCC* >::iterator aSCC = S.begin(); aSCC != S.end(); ++aSCC )
 	{
 		if ( debug || scc_only )
@@ -129,7 +131,8 @@ void Preferred::pref( AF* theAF, SymbolicArgumentsSet* theC )
 		if ( debug || scc_only )
 			cerr << "\tNew optimizationTrack for the actual SCC" << endl;
 
-		map< SymbolicArgumentsSet, SymbolicArgumentsSet > optimizationTrack = map< SymbolicArgumentsSet, SymbolicArgumentsSet >();
+		//map< SymbolicArgumentsSet, SymbolicArgumentsSet > optimizationTrack = map< SymbolicArgumentsSet, SymbolicArgumentsSet >();
+		optimizationTrack.clear();
 
 		for ( vector<SymbolicArgumentsSet>::iterator aLabelling = tempLabellings.begin();
 				aLabelling != tempLabellings.end(); ++aLabelling )

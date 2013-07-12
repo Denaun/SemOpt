@@ -1,0 +1,98 @@
+Uberspecific debug on.
+***************Entering pref
+	SCC: {a1 a10 a21 a3}
+	SCC: {a53}
+		Father: {a1 a10 a21 a3}
+	SCC: {a49}
+		Father: {a1 a10 a21 a3}
+	SCC: {a26}
+		Father: {a49}
+	SCC: {a30}
+		Father: {a26}
+	SCC: {a23}
+		Father: {a49}
+	SCC: {a15}
+		Father: {a1 a10 a21 a3}
+	SCC: {a46}
+		Father: {a1 a10 a21 a3}
+	Working on {a1 a10 a21 a3}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a1 a10 a21 a3}
+
+	My son! {a1 a10 a21 a3}
+	Working on {a53}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a17 a18 a19 a2 a20 a22 a25 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}
+			O preservation not requested
+		O: {a53}
+		I: {}
+		Going to call pref.
+
+	Working on {a49}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a17 a18 a19 a2 a20 a22 a25 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}
+			O added to the optimizationTrack: {a49}
+		O: {a49}
+		I: {}
+		Going to call pref.
+
+	My son! {a49}
+	Working on {a26}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a17 a18 a19 a2 a20 a22 a25 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}
+			O preservation not requested
+		O: {}
+		I: {a26}
+
+	My son! {a26}
+	Working on {a30}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a17 a18 a19 a2 a20 a22 a25 a26 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}
+			O preservation not requested
+		O: {a30}
+		I: {}
+		Going to call pref.
+
+	Working on {a23}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a17 a18 a19 a2 a20 a22 a25 a26 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}
+			O added to the optimizationTrack: {}
+		O: {}
+		I: {a23}
+
+	Working on {a15}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a17 a18 a19 a2 a20 a22 a23 a25 a26 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}
+			O added to the optimizationTrack: {a15}
+		O: {a15}
+		I: {}
+		Going to call pref.
+
+	Working on {a46}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a17 a18 a19 a2 a20 a22 a23 a25 a26 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}
+			O added to the optimizationTrack: {a46}
+		O: {a46}
+		I: {}
+		Going to call pref.
+
+***************Exiting pref
+Extension 1
+{a10 a11 a17 a18 a19 a2 a20 a22 a23 a25 a26 a27 a29 a3 a31 a32 a34 a35 a36 a37 a38 a39 a4 a45 a56 a58 a6 a60 a8}

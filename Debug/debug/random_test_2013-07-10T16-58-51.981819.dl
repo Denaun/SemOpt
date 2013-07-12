@@ -1,0 +1,74 @@
+Uberspecific debug on.
+***************Entering pref
+	SCC: {a43 a48}
+	SCC: {a5}
+		Father: {a43 a48}
+	SCC: {a18}
+		Father: {a43 a48}
+	SCC: {a29}
+		Father: {a18}
+	Working on {a43 a48}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a43 a48}
+
+	My son! {a43 a48}
+	Working on {a5}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a12 a17 a20 a22 a25 a26 a28 a3 a30 a31 a33 a36 a4 a41 a42 a43 a46 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}
+			O preservation not requested
+		O: {a5}
+		I: {}
+		Going to call pref.
+
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a12 a17 a20 a22 a25 a26 a28 a3 a30 a31 a33 a36 a4 a41 a42 a46 a48 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}
+			O preservation not requested
+		O: {}
+		I: {a5}
+
+	Working on {a18}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a12 a17 a20 a22 a25 a26 a28 a3 a30 a31 a33 a36 a4 a41 a42 a43 a46 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}
+			O added to the optimizationTrack: {a18}
+		O: {a18}
+		I: {}
+		Going to call pref.
+
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a12 a17 a20 a22 a25 a26 a28 a3 a30 a31 a33 a36 a4 a41 a42 a46 a48 a5 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}
+			O added to the optimizationTrack: {}
+		O: {}
+		I: {a18}
+
+	My son! {a18}
+	Working on {a29}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a12 a17 a20 a22 a25 a26 a28 a3 a30 a31 a33 a36 a4 a41 a42 a43 a46 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}
+			O preservation not requested
+		O: {}
+		I: {a29}
+
+		Going to call boundcond.
+			O recalculated.
+			e: {a10 a11 a12 a17 a18 a20 a22 a25 a26 a28 a3 a30 a31 a33 a36 a4 a41 a42 a46 a48 a5 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}
+			O preservation not requested
+		O: {a29}
+		I: {}
+		Going to call pref.
+
+***************Exiting pref
+Extension 1
+{a10 a11 a12 a17 a20 a22 a25 a26 a28 a29 a3 a30 a31 a33 a36 a4 a41 a42 a43 a46 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}
+Extension 2
+{a10 a11 a12 a17 a18 a20 a22 a25 a26 a28 a3 a30 a31 a33 a36 a4 a41 a42 a46 a48 a5 a50 a53 a55 a56 a58 a65 a67 a69 a7 a72 a73 a9}

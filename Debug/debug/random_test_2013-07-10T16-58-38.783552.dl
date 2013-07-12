@@ -1,0 +1,25 @@
+Uberspecific debug on.
+***************Entering pref
+	SCC: {a45 a55 a9}
+	SCC: {a3}
+		Father: {a45 a55 a9}
+	Working on {a45 a55 a9}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a45 a55 a9}
+
+	My son! {a45 a55 a9}
+	Working on {a3}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a13 a16 a17 a20 a23 a24 a26 a27 a28 a31 a32 a37 a38 a39 a40 a41 a43 a47 a5 a52 a54 a56 a57 a60 a64 a65 a7 a73 a74 a75 a76 a78 a8}
+			O preservation not requested
+		O: {}
+		I: {}
+
+***************Exiting pref
+Extension 1
+{a13 a16 a17 a20 a23 a24 a26 a27 a28 a31 a32 a37 a38 a39 a40 a41 a43 a47 a5 a52 a54 a56 a57 a60 a64 a65 a7 a73 a74 a75 a76 a78 a8}

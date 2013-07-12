@@ -1,0 +1,74 @@
+Uberspecific debug on.
+***************Entering pref
+	SCC: {a1 a10 a13 a18 a21 a28 a35 a63}
+	SCC: {a29}
+		Father: {a1 a10 a13 a18 a21 a28 a35 a63}
+	SCC: {a24}
+		Father: {a1 a10 a13 a18 a21 a28 a35 a63}
+	SCC: {a44}
+		Father: {a24}
+	SCC: {a37}
+		Father: {a24}
+	SCC: {a9}
+		Father: {a37}
+	Working on {a1 a10 a13 a18 a21 a28 a35 a63}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O emptied and I filled.
+		O: {}
+		I: {a1 a10 a13 a18 a21 a28 a35 a63}
+
+	My son! {a1 a10 a13 a18 a21 a28 a35 a63}
+	Working on {a29}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a11 a12 a15 a18 a19 a25 a26 a28 a3 a30 a32 a35 a39 a4 a43 a45 a48 a49 a5 a50 a51 a52 a54 a55 a6 a62 a65 a68 a70}
+			O preservation not requested
+		O: {a29}
+		I: {}
+		Going to call pref.
+
+	Working on {a24}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a11 a12 a15 a18 a19 a25 a26 a28 a3 a30 a32 a35 a39 a4 a43 a45 a48 a49 a5 a50 a51 a52 a54 a55 a6 a62 a65 a68 a70}
+			O added to the optimizationTrack: {a24}
+		O: {a24}
+		I: {}
+		Going to call pref.
+
+	My son! {a24}
+	Working on {a44}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a11 a12 a15 a18 a19 a25 a26 a28 a3 a30 a32 a35 a39 a4 a43 a45 a48 a49 a5 a50 a51 a52 a54 a55 a6 a62 a65 a68 a70}
+			O preservation not requested
+		O: {}
+		I: {a44}
+
+	Working on {a37}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a11 a12 a15 a18 a19 a25 a26 a28 a3 a30 a32 a35 a39 a4 a43 a44 a45 a48 a49 a5 a50 a51 a52 a54 a55 a6 a62 a65 a68 a70}
+			O added to the optimizationTrack: {}
+		O: {}
+		I: {a37}
+
+	My son! {a37}
+	Working on {a9}
+	New optimizationTrack for the actual SCC
+		Going to call boundcond.
+			O recalculated.
+			e: {a1 a11 a12 a15 a18 a19 a25 a26 a28 a3 a30 a32 a35 a37 a39 a4 a43 a44 a45 a48 a49 a5 a50 a51 a52 a54 a55 a6 a62 a65 a68 a70}
+			O preservation not requested
+		O: {a9}
+		I: {}
+		Going to call pref.
+
+***************Exiting pref
+Extension 1
+{a1 a11 a12 a15 a18 a19 a25 a26 a28 a3 a30 a32 a35 a37 a39 a4 a43 a44 a45 a48 a49 a5 a50 a51 a52 a54 a55 a6 a62 a65 a68 a70}
